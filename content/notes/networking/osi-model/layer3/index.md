@@ -8,7 +8,7 @@ title: "Layer 3"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "Layer 3 description."
+description: "Structuring and managing a multi-node network, including addressing, routing and traffic control."
 ### The datetime assigned to this page.
 date: 2020-03-10T16:33:40+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
