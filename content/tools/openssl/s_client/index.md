@@ -37,30 +37,69 @@ weight : 0
 
 ## s_client
 
-### Installation
-
-```bash
-
-```
-
 ### Usage
 
 ```bash
-
-```
-
-### Flags
-
-```bash
-
+openssl s_client OPTIONS ARGUMENTS
 ```
 
 ### Examples
 
-```bash
+#### Check an SSL connection
 
+```bash
+openssl s_client -connect example.com:443
+openssl s_client -host example.com -port 443
 ```
 
-### Also see
+#### Make an SSL connection. Hide most info
 
-* [a url](https://a.url)
+```bash
+openssl s_client --connect 127.0.0.1:30001 -quiet
+depth=0 CN = localhost
+verify error:num=18:self signed certificate
+verify return:1
+depth=0 CN = localhost
+verify return:1
+```
+
+#### show full certificate chain
+
+```bash
+openssl s_client -showcerts -host example.com -port 443 </dev/null
+```
+
+#### Extract the certificate
+
+```bash
+openssl s_client -connect example.com:443 2>&1 < /dev/null | sed -n '/-----BEGIN/,/-----END/p' > certificate.pem
+```
+
+#### Test for TLS/SSL version cipher
+
+```bash
+openssl s_client -host example.com -port 443 -ssl3 2>&1 </dev/null
+```
+
+Options
+
+```bash
+-ssl2  
+-ssl3  
+-tls1  
+-tls1_1  
+-tls1_2
+```
+
+#### Test for specific cipher
+
+```bash
+openssl s_client -host example.com -port 443 -cipher        ECDHE-RSA-AES128-GCM-SHA256 2>&1 </dev/null
+```
+
+#### Measure SSL connection time without/with session reuse
+
+```bash
+openssl s_time -connect example.com:443 -new
+openssl s_time -connect example.com:443 -reuse
+```

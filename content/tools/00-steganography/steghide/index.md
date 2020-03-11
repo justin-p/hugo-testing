@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "binwalk"
+title : "steghide"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "binwalk"
+# menuTitle : "steghide"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "binwalk description."
+description : "steghide description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:31+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "binwalk"
+# slug : "steghide"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,32 +35,26 @@ weight : 0
 # tags : [""]
 ---
 
-## binwalk
+## steghide
 
-### Installation
-
-```bash
-
-```
-
-### Usage
+### get info
 
 ```bash
-
+root@kali:/mnt/hgfs/_shared_folder# steghide  info hawking
+"hawking":
+  format: jpeg
+  capacity: 3.3 KB
+Try to get information about embedded data ? (y/n) y
+Enter passphrase:
+  embedded file "flag.txt":
+    size: 1.6 KB
+    encrypted: rijndael-128, cbc
+    compressed: yes
 ```
 
-### Flags
+### extract data
 
 ```bash
-
+root@kali:/mnt/hgfs/_shared_folder# steghide --extract -sf hawking -p hawking
+wrote extracted data to "flag.txt".
 ```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)

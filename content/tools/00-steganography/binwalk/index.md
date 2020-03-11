@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "steghide"
+title : "binwalk"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "steghide"
+# menuTitle : "binwalk"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "steghide description."
+description : "binwalk description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:31+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "steghide"
+# slug : "binwalk"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,32 +35,10 @@ weight : 0
 # tags : [""]
 ---
 
-## steghide
+## binwalk
 
-### Installation
-
-```bash
-
-```
-
-### Usage
+Binwalk is a tool for searching binary files like images and audio files for embedded files and data.
 
 ```bash
-
+binwalk file
 ```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)

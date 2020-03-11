@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "usbrip"
+title : "ssh sha256 to public key"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "usbrip"
+# menuTitle : "ssh sha256 to public key"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "usbrip description."
+description : "ssh sha256 to public key description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:31+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "usbrip"
+# slug : "ssh-sha256-to-public-key"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,32 +35,13 @@ weight : 0
 # tags : [""]
 ---
 
-## usbrip
-
-### Installation
+## ssh sha256 to public key
 
 ```bash
-
+Accepted publickey for beheer from 10.0.0.1 port 17073 ssh2: RSA SHA256:13456798132456789123
 ```
-
-### Usage
 
 ```bash
-
+ssh-keygen -lf ~/.ssh/authorized_keys
+9999 SHA256:13456798132456789123 JustinPerdok@some-PC (RSA)
 ```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)

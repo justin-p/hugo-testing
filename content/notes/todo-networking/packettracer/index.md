@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "foremost"
+title : "Packettracer"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "foremost"
+# menuTitle : "tcpip model"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "foremost description."
+description : "Packettracer description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:36:30+01:00
+date : 2020-03-10T16:43:48+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "foremost"
+# slug : "tcpip-model"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,32 +35,6 @@ weight : 0
 # tags : [""]
 ---
 
-## foremost
+## Packettracer
 
-### Installation
-
-```bash
-
-```
-
-### Usage
-
-```bash
-
-```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)
+See github.

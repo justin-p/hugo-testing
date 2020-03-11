@@ -4,7 +4,7 @@ title : "steganography"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "steganography"
 ### The title of the page in menu will be prefixed by this HTML content
-# pre : ""
+pre: "<i class='fas fa-folder'></i> "
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
