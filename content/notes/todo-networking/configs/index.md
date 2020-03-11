@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "multi_tenant"
+title: "Configs"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "multi_tenant"
+# menuTitle : "todo networking"
 ### The title of the page in menu will be prefixed by this HTML content
-# pre : ""
+# pre: "<i class='fas fa-network-wired'></i> "
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "multi_tenant description."
+description: "Configs description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:43:49+01:00
+date: 2020-03-10T16:33:39+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "multi_tenant"
+# slug : "todo-networking"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -29,38 +29,15 @@ date : 2020-03-10T16:43:49+01:00
 # draft : true
 ### Used for ordering your content in lists. Lower weight gets higher precedence. So content with lower weight will come first.
 ### 0 does nothing !
-weight : 0
+weight: 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+#tags: ["Notes"]
+### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade.
+#cascade:
+#  tags: ["Networking"]
 ---
 
-## multi_tenant
+## Configs
 
-### Installation
-
-```bash
-
-```
-
-### Usage
-
-```bash
-
-```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)
+See github
