@@ -66,7 +66,6 @@ Print a unicode character
 |---------------------------------|------------------------------|
 | `Python -c "print unichr(234)"`   | `Python3 -c "print(chr(234))"` |
 
-
 ### Handystuff
 
 #### get current function name
