@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "php"
+title : "PHP"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "php"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "php"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "php description."
+description : "PHP description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:33:40+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -35,9 +35,9 @@ weight : 0
 # tags : [""]
 ### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade. 
 cascade:
-    tags: ['Php']
+    tags: ['PHP']
 ---
 
-## php
+## PHP
 
 {{< children style="card" depth="1" description="true" sort="Name" >}}

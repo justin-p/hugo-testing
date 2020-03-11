@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "handystuff"
+title : "Handystuff"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "handystuff"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "handystuff"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "handystuff description."
+description : "Handystuff description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:49+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -35,7 +35,8 @@ weight : 0
 # tags : [""]
 ---
 
-## handystuff
+## Handystuff
+
 ### get current function name
 
 ```python

@@ -35,32 +35,6 @@ weight : 0
 # tags : [""]
 ---
 
-## common ports
+## Common Ports
 
-### Installation
-
-```bash
-
-```
-
-### Usage
-
-```bash
-
-```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)
+![ports](https://raw.githubusercontent.com/justin-p/my-notes-and-snippets/master/.gitbook/assets/IMG/commen-ports-packetlife.png)

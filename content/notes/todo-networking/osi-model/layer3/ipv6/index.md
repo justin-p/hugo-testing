@@ -35,32 +35,4 @@ weight : 0
 # tags : [""]
 ---
 
-## ipv6
-
-### Installation
-
-```bash
-
-```
-
-### Usage
-
-```bash
-
-```
-
-### Flags
-
-```bash
-
-```
-
-### Examples
-
-```bash
-
-```
-
-### Also see
-
-* [a url](https://a.url)
+## IPv6

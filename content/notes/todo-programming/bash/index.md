@@ -35,7 +35,7 @@ weight : 0
 # tags : [""]
 ---
 
-## bash
+## Bash
 
 ### Getting started
 
