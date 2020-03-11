@@ -4,7 +4,7 @@ title : "VulnHub"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "vulnhub"
 ### The title of the page in menu will be prefixed by this HTML content
-# pre : ""
+pre: "<i class='fas fa-folder'></i> "
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
@@ -36,7 +36,6 @@ tags : ["CTFs"]
 ### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade. 
 cascade:
     tags: ['VulnHub']
-    pre: "<i class='fas fa-server'></i> "
 ---
 
 ## VulnHub

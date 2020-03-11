@@ -24,7 +24,7 @@ date: 2020-03-10T16:33:39+01:00
 ### Set the page as a chapter, changing the way it's displayed
 # chapter : true
 ### Hide a menu entry by setting this to true
-# hidden : true
+hidden : true
 ### If true, the content will not be rendered unless the --buildDrafts flag is passed to the hugo command.
 # draft : true
 ### Used for ordering your content in lists. Lower weight gets higher precedence. So content with lower weight will come first.
