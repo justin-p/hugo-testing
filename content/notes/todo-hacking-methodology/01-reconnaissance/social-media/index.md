@@ -32,13 +32,17 @@ date : 2020-03-10T16:43:44+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["Social Media"]
 ---
 
 ## social media
 
-## LinkedIn
+### LinkedIn
 
 Company -> Images
 
 Company -> People
+
+### Related tools
+
+{{< related_pages_table tag="Social Media" >}}

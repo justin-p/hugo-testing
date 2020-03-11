@@ -35,24 +35,22 @@ weight : 0
 # tags : [""]
 ### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade. 
 cascade:
-    tags: ['Scanning and Enumeration']
+    tags: ['Scanning and Enumeration','Port Discovery']
 ---
 
 ## Discover Open Ports
 
 ### netdiscover
 
-
 ```bash
 netdiscover -r 192.168.1.0/24
 ```
-
 
 ### masscan
 
 #### scan all ports
 
-```bash	
+```bash
 masscan 10.11.0.0/16
 ```
 
@@ -74,38 +72,4 @@ masscan 10.11.0.0/16 ‐‐top-ports 100 --rate 1000
 -oX filename: Output to filename in XML.
 -oG filename: Output to filename in Grepable format.
 -oJ filename: Output to filename in JSON format.
-```
-
-### nmap
-
-#### General scan
-
-```bash
-nmap -T4 -A -oA outputfolder 10.10.10.10
-```
-
-#### Scan for all TCP ports
-
-```bash
-nmap -T4 -p- -A 10.10.10.10
-```
-
-#### General UDP scan
-
-```bash
-nmap -T4 -p -sU 10.10.10.10
-```
-
-#### ARP scan
-
-```bash
-nmap -n -sn -PR 10.10.10.0/24
-```
-
-#### Host discovery
-
-ARP,ICMP,SYN 443/tcp, ACK 80/tcp
-
-```bash
-nmap -n -sn 10.10.10.10
 ```

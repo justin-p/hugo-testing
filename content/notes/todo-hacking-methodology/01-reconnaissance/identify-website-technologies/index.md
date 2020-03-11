@@ -32,25 +32,24 @@ date : 2020-03-10T16:43:44+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["Identify Website Technologies"]
 ---
 
-## Identify Website Technologies"
+## Identify Website Technologies
 
-## External services
+### External services
 
 | Service                                            | info                                            |
 |----------------------------------------------------|-------------------------------------------------|
 | [builtwith](https://builtwith.com/)                | Find out what websites are Built With           |
 
-## Browser plugins
+### Browser plugins
 
 | Service                                            | info                                            |
 |----------------------------------------------------|-------------------------------------------------|
 | [Wappalyzer](https://www.wappalyzer.com/)          | Uncovers technologies used on websites          |
 
-## whatweb
 
-```bash
-whatweb https://justin-p.me
-```
+### Related tools
+
+{{< related_pages_table tag="Identify Website Technologies" >}}
