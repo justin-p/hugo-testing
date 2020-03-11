@@ -33,7 +33,7 @@
   --TABLE-bordercolor:#1c1e20;
   --TABLE-TH-backgroundcolor:#1c1e20;
   --TABLE-TH-bordercolor:#1c1e20;
-
+  --TABLE-TD-backgroundcolor:#1F2226;
 
   --MENU-HEADER-BG-color: #212b40; /* Background color of menu header */
   --MENU-HEADER-BORDER-color: #3c4e73; /*Color of menu header border */
@@ -52,12 +52,6 @@
   --MENU-VISITED-color: #3c4e73; /* Color of 'page visited' icons in menu */
   --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
 }
-
-pre {
-  background: #282c34;
-  background-color: #282c34;
-}
-
 
 body {
   color: var(--MAIN-TEXT-color) !important;
@@ -237,4 +231,5 @@ th {
 
 td {
   border: 1px solid var(--TABLE-TH-bordercolor);
+  background: var(--TABLE-TD-backgroundcolor);
 }

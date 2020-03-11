@@ -39,6 +39,6 @@ cascade:
     pre: "<i class='fas fa-server'></i> "
 ---
 
-## htb
+## HTB
 
 {{< children style="card" depth="1" description="true" sort="Name" >}}
