@@ -47,6 +47,7 @@ weight : 0
 | Function        |Transmission and reception of raw bit streams over a physical medium|
 
 The lowest layer of the OSI reference model is the physical layer. It is responsible for the actual physical connection between the devices. The physical layer contains information in the form of bits. It is responsible for the actual physical connection between the devices. When receiving data, this layer will get the signal received and convert it into 0s and 1s and send them to the Data Link layer (layer 2), which will put the frame back together
+
 |      |      |      |      |
 | ---- | ---- | ---- | ---- |
 | 0101 | 1001 | 0100 | 1110 |
@@ -58,4 +59,6 @@ The functions of the physical layer are :
 - Physical topologies: Physical layer specifies the way in which the different, devices/nodes are arranged in a network i.e. bus, star or mesh topolgy.
 - Transmission mode: Physical layer also defines the way in which the data flows between the two connected devices. The various transmission modes possible are: Simplex, half-duplex and full-duplex.
 
-![physical_terminations](https://raw.githubusercontent.com/justin-p/my-notes-and-snippets/master/.gitbook/assets/IMG/physical_terminations-packetlife.png)
+### Physical Terminations
+
+![Physical Terminations](images/physical_terminations-packetlife.png)

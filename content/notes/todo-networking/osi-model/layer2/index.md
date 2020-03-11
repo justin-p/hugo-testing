@@ -63,11 +63,13 @@ The functions of the data Link layer are :
 - Flow Control: The data rate must be constant on both sides else the data may get corrupted thus, flow control coordinates that amount of data that can be sent before receiving acknowledgement.
 - Access control: When a single communication channel is shared by multiple devices, MAC sub-layer of data link layer helps to determine which device has control over the channel at a given time.
 
-## MAC Addresses
+### MAC Addresses
 
 First 3 pairs of MAC = Vendor.  
 
 Also called OUI.
 
-[OUI list](http://standards-oui.ieee.org/oui/oui.txt)  
-[Online lookup - macvendors](https://macvendors.com/)  
+### Also see
+
+* [OUI list](http://standards-oui.ieee.org/oui/oui.txt)  
+* [Online lookup - macvendors](https://macvendors.com/)  

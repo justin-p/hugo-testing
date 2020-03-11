@@ -95,7 +95,7 @@ Large mask = Small network
 | --------- | --------- | --------- | --------- |
 | 1111 1111 | 1111 1111 | 1111 1100 | 0000 0000 |
 
-##### school example
+**school example**
 
 ```txt
 IP 192.168.1.0
@@ -190,7 +190,7 @@ BC        192.168.100.255
 
 ##### Table example
 
-###### Subnet Table
+**Subnet Table**
 
 | Octect | Subnet: 128 | Subnet: 192 | Subnet: 224 | Subnet: 240 | Subnet: 248 | Subnet: 252 | Subnet: 254 | subnet: 255 |
 | ------ | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -199,7 +199,7 @@ BC        192.168.100.255
 | 3      | /17         | /18         | /19         | /20         | /21         | /22         | /23         | /24         |
 | 4      | /25         | /26         | /27         | /28         | /29         | /30         | /31         | /32         |
 
-###### Host Table
+**Host Table**
 
 | Octect | Hosts:             | Hosts              | Hosts             | Hosts             | Hosts             | Hosts            | Hosts            | Hosts            |
 | ------ | ------------------ | ------------------ | ----------------- | ----------------- | ----------------- | ---------------- | ---------------- | ---------------- |
@@ -208,7 +208,7 @@ BC        192.168.100.255
 | 3      | /17 <br> 32768     | /18 <br> 16384     | /19 <br> 8192     | /20 <br> 4096     | /21 <br> 2048     | /22 <br> 1024    | /23 <br> 512     | /24 <br> 256     |
 | 4      | /25 <br> 128       | /26 <br> 64        | /27 <br> 32       | /28 <br> 16       | /29 <br> 8        | /30 <br> 4       | /31 <br> 2       | /32 <br> 1       |
 
-###### Willdcard Mask Table
+**Willdcard Mask Table**
 
 | Slash | Netmask         | Wildcard Mask   |
 | ----- | --------------- | --------------- |
@@ -246,7 +246,7 @@ BC        192.168.100.255
 | /1    | 128.0.0.0       | 127.255.255.255 |
 | /0    | 0.0.0.0         | 255.255.255.255 |
 
-###### Example 1
+##### Example 1
 
 ```txt
 Subnet to calculate 192.168.1.X/25
@@ -274,7 +274,7 @@ HU        192.168.1.254
 BC        192.168.1.255
 ```
 
-###### Example 2
+##### Example 2
 
 ```txt
 Subnet to calculate 10.0.X.X/10
@@ -317,8 +317,6 @@ BC        10.255.255.255
 
 #### Network Classes
 
-[Source](https://gist.githubusercontent.com/inadarei/86968c7e5b8f322db260e56723e105ec/raw/407176bef50505055dd8a4f332e54d60c429495b/ipaddressclasses.md)
-
 IP Addresses identify both a network as well as host on a network. Depending on the class of a network, certain amount of bits in the IP (32 bits overall) are allocated for network adressing and the rest is for: adressing the host on the network.
 
 1. Class A: first octet is network, last three: host
@@ -349,11 +347,9 @@ Additional, Special IP Rules:
 
 #### Classless Inter-Domain Routing (CIDR)
 
-[Source](https://gist.githubusercontent.com/inadarei/86968c7e5b8f322db260e56723e105ec/raw/407176bef50505055dd8a4f332e54d60c429495b/ipaddressclasses.md)
-
 CIDR notation indicates how many bits are taken in the mask by network + subnet. Remembering that overall there are 32 bits, the remaining bits can be used for host addresses. For instance: /25 indicates that 32-25 = 7 bits are available for the host portion, making 2^7=128 (in reality 128-2 = 126) host addresses available for assignment. The full CIDR address includes an IP (usually: lowest IP) of the range, e.g.: 192.168.100.14/24
 
-###### Example CIDR -> IP Range Calculation
+##### Example CIDR -> IP Range Calculation
 
 CIDR: `212.100.105.0/22`
 
@@ -372,8 +368,6 @@ There're also some really nice online calculators for these, e.g.: http://www.ip
 **Please note:** as a practical matter most commonly, CIDR ranges do indicate the lowest IP, since lowest IP is the network IP and the highest is broadcast IP, for that network. However, as we saw - we can calculate the proper range even if any other IP from the range is given (possibly: by mistake).
 
 #### NAT types
-
-[source](https://github.com/pion/webrtc/wiki/Network-Address-Translation/)
 
 An old version of the stun spec ([RFC3489](https://tools.ietf.org/html/rfc3489)) defined the following [NAT variations](https://tools.ietf.org/html/rfc3489#section-5):
 
@@ -409,24 +403,24 @@ Additional research can be found in [RFC5780](https://tools.ietf.org/html/rfc578
 
 [ccding/go-stun](https://github.com/ccding/go-stun) may be helpful to figure out your nat type(s).
 
-###### NAT considerations
+##### NAT considerations
 
 NAT bindings should not be considered to be deterministic:
 
 - If an external port is already mapped to another host the NAT has to assign you another port.
 - Some routers implement randomized port mapping.
 
-###### Hole punching
+##### Hole punching
 
 Hole punching is an easy way to circumvent a NAT. Peers try to establish a direct connection by learning their respective public addresses using a 3rd party server. The 3rd party server is also used to keep the NAT binding alive.
 
 The hole punching examples below can be used to get through the Full Cone, Restricted Cone and Port Restricted Cone NAT types. Symmetric NATs require more complex processes. However, this NAT type is more rare and can still be circumvented using a TURN server to relay traffic.
 
-####### UDP hole punching
+##### UDP hole punching
 
 First establisch a local connection by listening using [`net.ListenUDP`](https://godoc.org/net#ListenUDP). Next use [`WriteTo`](https://godoc.org/net#UDPConn.WriteTo) and [`ReadFrom`](https://godoc.org/net#UDPConn.ReadFrom) to send and receive packets to and from the desired remote addresses.
 
-####### TCP hole punching
+##### TCP hole punching
 
 TCP hole punching is a little more involved. In order to keep the NAT binding alive the same local TCP port should be used. This can be done by setting the SO_REUSEADDR and SO_REUSEPORT socket options on most operating systems. Sadly this isn't well supported until go1.11 as discussed in [golang/go#9661](https://github.com/golang/go/issues/9661). Starting from go1.11 the flag can be set using the [Dialer.Control](https://tip.golang.org/pkg/net/#Dialer.Control) function.
 
@@ -489,7 +483,7 @@ func controlOnConnSetup(network string, address string, c syscall.RawConn) error
 }
 ```
 
-###### Candidate types and combinations of NAT types
+#### Candidate types and combinations of NAT types
 
 Following chart summarises which types of candidates contribute to a successful NAT traversal in each combination of local and remote NAT types.
 
@@ -511,7 +505,7 @@ Following chart summarises which types of candidates contribute to a successful 
 - prflx: Peer reflexive candidate
 - relay: Relay NAT (a candidate derived from TURN)
 
-##### P.A.T. Port Address Translation
+#### P.A.T. Port Address Translation
 
 `> 1024`
 
@@ -522,3 +516,8 @@ Following chart summarises which types of candidates contribute to a successful 
 | 192.168.3.3 | :1025         | 9.2.1.33       | :1027            | 188.1.3.15  |
 
 ### IPv6
+
+### Also see
+
+- [IP Address Classes](https://gist.githubusercontent.com/inadarei/86968c7e5b8f322db260e56723e105ec/raw/407176bef50505055dd8a4f332e54d60c429495b/ipaddressclasses.md)
+- [NAT](https://github.com/pion/webrtc/wiki/Network-Address-Translation/)

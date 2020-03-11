@@ -52,7 +52,7 @@ TCP employs network congestion avoidance. However, there are vulnerabilities to 
 
 #### Three-way handshake
 
-![handshake](https://www.inetdaemon.com/img/internet/3-way-handshake.gif)
+![handshake](images/3-way-handshake.gif)
 
 | Steps |
 | - |
@@ -72,10 +72,10 @@ With UDP computer applications can send messages, in this case referred to as da
 
 UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues, and thus exposes the user's program to any unreliability of the underlying network; there is no guarantee of delivery, ordering, or duplicate protection, like there is with TCP.
 
-### Common Ports
+###  Ports
 
-![ports](https://raw.githubusercontent.com/justin-p/my-notes-and-snippets/master/.gitbook/assets/IMG/commen-ports-packetlife.png)
+![Common Ports](images/commen-ports-packetlife.png)
 
 ### TCP vs UDP
 
-![tcpvsudp](https://camo.githubusercontent.com/331bc07b92b04155ec8482a1c8fa9aa796fdab7b/68747470733a2f2f7765622e617263686976652e6f72672f7765622f3230313730373036323031393336696d5f2f687474703a2f2f7465616d756c74696d6174652e696e2f77702d636f6e74656e742f75706c6f6164732f323031362f31322f544350372e6a7067)
+![TCP vs UDP](images/tcp-vs-udp.png)

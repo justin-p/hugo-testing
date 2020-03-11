@@ -1,8 +1,8 @@
 ---
 ### The title for the content.
-title: "Private"
+title: "Z_Private"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "private"
+menuTitle : "Private"
 ### The title of the page in menu will be prefixed by this HTML content
 pre: "<i class='fas fa-lock'></i>  "
 ### The title of the page in menu will be postfixed by this HTML content
