@@ -15,20 +15,25 @@
   --MAIN-TEXT-color: #9da8bf; /* Color of text by default */
   --MAIN-TITLES-TEXT-color: #3c4e73; /* Color of titles h2-h3-h4-h5 */
   --MAIN-LINK-color: #3c4e73; /* Color of links */
-  --MAIN-LINK-HOVER-color: #212B40; /* Color of hovered links */
+  --MAIN-LINK-HOVER-color: #212b40; /* Color of hovered links */
   --MAIN-ANCHOR-color: #9da8bf; /* color of anchors on titles */
 
   --CHILD-CARD-color: #1c1e20; /* color of card on children */
   --CHILD-SPAN-color: #26282b; /* color of span on children */
 
-  --SINGLE-CODE-color:#9da8bf;
-  --SINGLE-CODE-backgroundcolor:#282c34;
-  --SINGLE-CODE-bordercolor:#9da8bf;
-  
-  --COPY-CLIPBOARD-backgroundcolor: #949bab;
-  --COPY-CLIPBOARD-hover-backgroundcolor: #656c72;
+  --SINGLE-CODE-color: #9da8bf; /* `code blocks` */
+  --SINGLE-CODE-backgroundcolor: #282c34; /* `code blocks` */
+  --SINGLE-CODE-bordercolor: #9da8bf; /* `code blocks` */
 
-  --TOP-BAR-backgroundcolor:#1c1e20;
+  --COPY-CLIPBOARD-backgroundcolor: #949bab; /* copy to clipboard icon */
+  --COPY-CLIPBOARD-hover-backgroundcolor: #656c72; /* copy to clipboard icon */
+
+  --TOP-BAR-backgroundcolor: #1c1e20; /* top bar menu thingy */
+
+  --TABLE-bordercolor:#1c1e20;
+  --TABLE-TH-backgroundcolor:#1c1e20;
+  --TABLE-TH-bordercolor:#1c1e20;
+
 
   --MENU-HEADER-BG-color: #212b40; /* Background color of menu header */
   --MENU-HEADER-BORDER-color: #3c4e73; /*Color of menu header border */
@@ -47,6 +52,12 @@
   --MENU-VISITED-color: #3c4e73; /* Color of 'page visited' icons in menu */
   --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
 }
+
+pre {
+  background: #282c34;
+  background-color: #282c34;
+}
+
 
 body {
   color: var(--MAIN-TEXT-color) !important;
@@ -157,26 +168,24 @@ a:hover {
 /* single code block */
 
 code {
-  color:var(--SINGLE-CODE-color);
-  background:var(--SINGLE-CODE-backgroundcolor);
+  color: var(--SINGLE-CODE-color);
+  background: var(--SINGLE-CODE-backgroundcolor);
   border: 1px solid var(--SINGLE-CODE-bordercolor);
 }
 
 /* top bar */
 
 #top-bar {
-  background:var(--TOP-BAR-backgroundcolor);
+  background: var(--TOP-BAR-backgroundcolor);
 }
-
 
 /* copy to clipboard */
 
 .copy-to-clipboard {
-    background-color: var(--COPY-CLIPBOARD-backgroundcolor);
+  background-color: var(--COPY-CLIPBOARD-backgroundcolor);
 }
 .copy-to-clipboard:hover {
-    background-color: var(--COPY-CLIPBOARD-hover-backgroundcolor);
-
+  background-color: var(--COPY-CLIPBOARD-hover-backgroundcolor);
 }
 
 /* Children shortcode card style */
@@ -215,4 +224,17 @@ ul.children.children-card > span p {
   margin: 1.7rem 0;
   box-sizing: border-box;
   color: #e6e6e6;
+}
+
+/* Tables */
+table {
+  border: var(--TABLE-bordercolor);
+}
+
+th {
+  background: var(--TABLE-TH-backgroundcolor);
+}
+
+td {
+  border: 1px solid var(--TABLE-TH-bordercolor);
 }

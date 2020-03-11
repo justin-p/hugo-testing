@@ -3,6 +3,8 @@ languageCode = "en-us"
 title = "My notes and snippets"
 pluralizelisttitles = false
 
+
+
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
@@ -54,3 +56,32 @@ ordersectionsby = "title"
 
 # Change default color scheme with a variant one. Can be "red", "blue", "green".
 themeVariant = "darkblue"
+
+# Menu shortcuts listed under 'More'. 
+[[menu.shortcuts]] 
+name = "<i class='fab fa-github'></i> Github"
+identifier = "Github"
+url = "https://github.com/justin-p/"
+weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fas fa-kiss-wink-heart'></i> Blog"
+identifier = "Blog"
+url = "https://justin-p.me/"
+weight = 11
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-twitter'></i> Twitter"
+identifier = "Twitter"
+url = "https://twitter.com/JustinPerdok"
+weight = 20
+
+[[menu.shortcuts]]
+name = "<i class='fab fa-linkedin-in'></i> LinkedIn"
+url = "https://www.linkedin.com/in/justinperdok/"
+weight = 30
+
+# Disable inline styling of code blocks
+[markup]
+  [markup.highlight]
+    codeFences = false
