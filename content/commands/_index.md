@@ -32,7 +32,7 @@ date : 2020-03-10T16:33:38+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["Main Page"]
 ### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade. 
 # cascade:
 #   tags: ['']

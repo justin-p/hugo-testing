@@ -53,4 +53,4 @@ disableNextPrev = true
 ordersectionsby = "title"
 
 # Change default color scheme with a variant one. Can be "red", "blue", "green".
-themeVariant = "blue"
+themeVariant = "darkblue"
