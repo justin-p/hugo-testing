@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "DNS Recon"
+title : "PSDNSDumpsterAPI"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "dns"
+# menuTitle : "psdnsdumpsterapi"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "DNS Recon, if you don't know where stuff is its gonna get hard to hack it."
+description : "(Unofficial) PowerShell API for htttps://www.dnsdumpster.com."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:43:44+01:00
+date : 2020-03-11T15:16:39+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "dns"
+# slug : "psdnsdumpsterapi"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,15 +35,35 @@ weight : 0
 tags : ["DNS Recon"]
 ---
 
-## DNS Recon
+## PSDNSDumpsterAPI
 
-## External services
+### Installation
 
-| Service                                            | info                                            |
-|----------------------------------------------------|-------------------------------------------------|
-| [dnsdumpster](https://dnsdumpster.com/)            | dns recon & research, find & lookup dns records |
-| [cert.sh](https://cert.sh)                         | Certficate fingerprint search engine            |
+```powershell
+Install-Module PSDNSDumpsterAPI
+```
 
-### Related tools
+### Usage
 
-{{< related_pages_table tag="DNS Recon" >}}
+```powershell
+Invoke-PSDNSDumpsterAPI -Domain 'domain.tld'
+```
+
+### Flags
+
+```powershell
+.PARAMETER Domains
+One or more domains to get DNSDumpster results for.
+```
+
+### Examples
+
+#### Return the results from dnsdumpster as a PSObject
+
+```powershell
+$DomainInfo=Invoke-PSDnsDumpsterAPI -Domains 'justin-p.me'
+```
+
+### Also see
+
+* [Github](https://github.com/justin-p/PSDNSDumpsterAPI)

@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "DNS Recon"
+title : "sublist3r"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "dns"
+# menuTitle : "sublist3r"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "DNS Recon, if you don't know where stuff is its gonna get hard to hack it."
+description : "sublist3r description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:43:44+01:00
+date : 2020-03-11T15:15:29+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "dns"
+# slug : "sublist3r"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,15 +35,47 @@ weight : 0
 tags : ["DNS Recon"]
 ---
 
-## DNS Recon
+## Sublist3r
 
-## External services
+### Installation
 
-| Service                                            | info                                            |
-|----------------------------------------------------|-------------------------------------------------|
-| [dnsdumpster](https://dnsdumpster.com/)            | dns recon & research, find & lookup dns records |
-| [cert.sh](https://cert.sh)                         | Certficate fingerprint search engine            |
+```bash
 
-### Related tools
+```
 
-{{< related_pages_table tag="DNS Recon" >}}
+### Usage
+
+```bash
+
+```
+
+### Flags
+
+```bash
+
+```
+
+### Examples
+
+#### Enumerate subdomains of specific domain
+
+```bash
+sublist3r -d example.com
+```
+
+#### Show only subdomains which have ports 80 and 443 open
+
+```bash
+sublist3r -d example.com -p 80,443
+```
+
+#### Save results in txt file
+
+```bash
+sublist3r -d example.com -o ~/output/file.txt
+```
+
+
+### Also see
+
+* [Github](https://github.com/aboul3la/Sublist3r)

@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "DNS Recon"
+title : "amass"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "dns"
+# menuTitle : "amass"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "DNS Recon, if you don't know where stuff is its gonna get hard to hack it."
+description : "amass description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:43:44+01:00
+date : 2020-03-11T15:22:08+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "dns"
+# slug : "amass"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,15 +35,41 @@ weight : 0
 tags : ["DNS Recon"]
 ---
 
-## DNS Recon
+## amass
 
-## External services
+### Installation
 
-| Service                                            | info                                            |
-|----------------------------------------------------|-------------------------------------------------|
-| [dnsdumpster](https://dnsdumpster.com/)            | dns recon & research, find & lookup dns records |
-| [cert.sh](https://cert.sh)                         | Certficate fingerprint search engine            |
+```bash
 
-### Related tools
+```
 
-{{< related_pages_table tag="DNS Recon" >}}
+### Usage
+
+```bash
+
+```
+
+### Flags
+
+```bash
+
+```
+
+### Examples
+
+#### The most basic use of the tool for subdomain enumeration
+
+```bash
+amass enum -d example.com
+```
+
+#### Typical parameters for DNS enumeration
+
+```bash
+amass enum -v -src -ip -brute -min-for-recursive 2 -d example.com
+```
+
+### Also see
+
+* [Github](https://github.com/OWASP/Amass/blob/master/doc/user_guide.md)
+* [Documentation](https://github.com/OWASP/Amass/blob/master/doc/user_guide.md)
