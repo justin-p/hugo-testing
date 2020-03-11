@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title: "ipv4"
+title: "Layer 3"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "ipv4"
+# menuTitle : "osi model"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "ipv4 description."
+description: "Layer 3 description."
 ### The datetime assigned to this page.
-date: 2020-03-10T16:43:49+01:00
+date: 2020-03-10T16:33:40+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "ipv4"
+# slug : "osi-model"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -33,48 +33,69 @@ weight: 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
 # tags : [""]
+### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade.
+cascade:
+  tags: ["Layer 3"]
 ---
 
-## IPv4
+## Layer 3
 
-### Subnetting
+|                 |                                                                                                  |
+| --------------- | ------------------------------------------------------------------------------------------------ |
+| Num             | 3                                                                                                |
+| Name            | Network                                                                                          |
+| Acronim         | Not                                                                                              |
+| PDU             | Packet                                                                                           |
+| What is 'on it' | Router                                                                                           |
+| Function        | Structuring and managing a multi-node network, including addressing, routing and traffic control |
+
+Network layer works for the transmission of data from one host to the other located in different networks. It also takes care of packet routing i.e. selection of the shortest path to transmit the packet, from the number of routes available. The sender & receiver’s IP address are placed in the header by network layer.
+
+The functions of the Network layer are :
+
+- Routing: The network layer protocols determine which route is suitable from source to destination. This function of network layer is known as routing.
+- Logical Addressing: In order to identify each device on internetwork uniquely, network layer defines an addressing scheme. The sender & receiver’s IP address are placed in the header by network layer. Such an address distinguishes each device uniquely and universally.
+
+### IPv4
+
+#### Subnetting
 
 Netmask depends the range of the network. `1's` in the netmask lockdown the IP address.
 
 Small mask = Large network  
 Large mask = Small network
 
-#### Binary - 255
+##### Binary - 255
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1   | 1   | 1   | 1   | 1   | 1   | 1   | 1   |
 
-#### Binary - 7
+##### Binary - 7
 
 | 128 | 64  | 32  | 16  | 8   | 4   | 2   | 1   |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | 0   | 0   | 0   | 0   | 0   | 1   | 1   | 1   |
 
-#### CIDR - /32
+##### CIDR - /32
 
 | 255       | 255       | 255       | 255       |
 | --------- | --------- | --------- | --------- |
 | 1111 1111 | 1111 1111 | 1111 1111 | 1111 1111 |
 
-#### CIDR - /24
+##### CIDR - /24
 
 | 255       | 255       | 255       | 0         |
 | --------- | --------- | --------- | --------- |
 | 1111 1111 | 1111 1111 | 1111 1111 | 0000 0000 |
 
-#### CIDR - /22
+##### CIDR - /22
 
 | 255       | 255       | 252       | 0         |
 | --------- | --------- | --------- | --------- |
 | 1111 1111 | 1111 1111 | 1111 1100 | 0000 0000 |
 
-#### school example
+##### school example
 
 ```txt
 IP 192.168.1.0
@@ -167,9 +188,9 @@ HB        192.168.100.253
 BC        192.168.100.255
 ```
 
-#### Table example
+##### Table example
 
-##### Subnet Table
+###### Subnet Table
 
 | Octect | Subnet: 128 | Subnet: 192 | Subnet: 224 | Subnet: 240 | Subnet: 248 | Subnet: 252 | Subnet: 254 | subnet: 255 |
 | ------ | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
@@ -178,7 +199,7 @@ BC        192.168.100.255
 | 3      | /17         | /18         | /19         | /20         | /21         | /22         | /23         | /24         |
 | 4      | /25         | /26         | /27         | /28         | /29         | /30         | /31         | /32         |
 
-##### Host Table
+###### Host Table
 
 | Octect | Hosts:             | Hosts              | Hosts             | Hosts             | Hosts             | Hosts            | Hosts            | Hosts            |
 | ------ | ------------------ | ------------------ | ----------------- | ----------------- | ----------------- | ---------------- | ---------------- | ---------------- |
@@ -187,7 +208,7 @@ BC        192.168.100.255
 | 3      | /17 <br> 32768     | /18 <br> 16384     | /19 <br> 8192     | /20 <br> 4096     | /21 <br> 2048     | /22 <br> 1024    | /23 <br> 512     | /24 <br> 256     |
 | 4      | /25 <br> 128       | /26 <br> 64        | /27 <br> 32       | /28 <br> 16       | /29 <br> 8        | /30 <br> 4       | /31 <br> 2       | /32 <br> 1       |
 
-##### Willdcard Mask Table
+###### Willdcard Mask Table
 
 | Slash | Netmask         | Wildcard Mask   |
 | ----- | --------------- | --------------- |
@@ -225,7 +246,7 @@ BC        192.168.100.255
 | /1    | 128.0.0.0       | 127.255.255.255 |
 | /0    | 0.0.0.0         | 255.255.255.255 |
 
-##### Example 1
+###### Example 1
 
 ```txt
 Subnet to calculate 192.168.1.X/25
@@ -253,7 +274,7 @@ HU        192.168.1.254
 BC        192.168.1.255
 ```
 
-##### Example 2
+###### Example 2
 
 ```txt
 Subnet to calculate 10.0.X.X/10
@@ -294,7 +315,7 @@ HU        10.255.255.254
 BC        10.255.255.255
 ```
 
-### Network Classes
+#### Network Classes
 
 [Source](https://gist.githubusercontent.com/inadarei/86968c7e5b8f322db260e56723e105ec/raw/407176bef50505055dd8a4f332e54d60c429495b/ipaddressclasses.md)
 
@@ -326,13 +347,13 @@ Additional, Special IP Rules:
    3. `192.168.%` - `192.168.%`
 5. Reserved for Autoconfiguration Range: `169.254.%` to `169.%`
 
-### Classless Inter-Domain Routing (CIDR)
+#### Classless Inter-Domain Routing (CIDR)
 
 [Source](https://gist.githubusercontent.com/inadarei/86968c7e5b8f322db260e56723e105ec/raw/407176bef50505055dd8a4f332e54d60c429495b/ipaddressclasses.md)
 
 CIDR notation indicates how many bits are taken in the mask by network + subnet. Remembering that overall there are 32 bits, the remaining bits can be used for host addresses. For instance: /25 indicates that 32-25 = 7 bits are available for the host portion, making 2^7=128 (in reality 128-2 = 126) host addresses available for assignment. The full CIDR address includes an IP (usually: lowest IP) of the range, e.g.: 192.168.100.14/24
 
-##### Example CIDR -> IP Range Calculation
+###### Example CIDR -> IP Range Calculation
 
 CIDR: `212.100.105.0/22`
 
@@ -350,7 +371,7 @@ There're also some really nice online calculators for these, e.g.: http://www.ip
 
 **Please note:** as a practical matter most commonly, CIDR ranges do indicate the lowest IP, since lowest IP is the network IP and the highest is broadcast IP, for that network. However, as we saw - we can calculate the proper range even if any other IP from the range is given (possibly: by mistake).
 
-### NAT types
+#### NAT types
 
 [source](https://github.com/pion/webrtc/wiki/Network-Address-Translation/)
 
@@ -388,24 +409,24 @@ Additional research can be found in [RFC5780](https://tools.ietf.org/html/rfc578
 
 [ccding/go-stun](https://github.com/ccding/go-stun) may be helpful to figure out your nat type(s).
 
-##### NAT considerations
+###### NAT considerations
 
 NAT bindings should not be considered to be deterministic:
 
 - If an external port is already mapped to another host the NAT has to assign you another port.
 - Some routers implement randomized port mapping.
 
-##### Hole punching
+###### Hole punching
 
 Hole punching is an easy way to circumvent a NAT. Peers try to establish a direct connection by learning their respective public addresses using a 3rd party server. The 3rd party server is also used to keep the NAT binding alive.
 
 The hole punching examples below can be used to get through the Full Cone, Restricted Cone and Port Restricted Cone NAT types. Symmetric NATs require more complex processes. However, this NAT type is more rare and can still be circumvented using a TURN server to relay traffic.
 
-###### UDP hole punching
+####### UDP hole punching
 
 First establisch a local connection by listening using [`net.ListenUDP`](https://godoc.org/net#ListenUDP). Next use [`WriteTo`](https://godoc.org/net#UDPConn.WriteTo) and [`ReadFrom`](https://godoc.org/net#UDPConn.ReadFrom) to send and receive packets to and from the desired remote addresses.
 
-###### TCP hole punching
+####### TCP hole punching
 
 TCP hole punching is a little more involved. In order to keep the NAT binding alive the same local TCP port should be used. This can be done by setting the SO_REUSEADDR and SO_REUSEPORT socket options on most operating systems. Sadly this isn't well supported until go1.11 as discussed in [golang/go#9661](https://github.com/golang/go/issues/9661). Starting from go1.11 the flag can be set using the [Dialer.Control](https://tip.golang.org/pkg/net/#Dialer.Control) function.
 
@@ -468,7 +489,7 @@ func controlOnConnSetup(network string, address string, c syscall.RawConn) error
 }
 ```
 
-##### Candidate types and combinations of NAT types
+###### Candidate types and combinations of NAT types
 
 Following chart summarises which types of candidates contribute to a successful NAT traversal in each combination of local and remote NAT types.
 
@@ -490,7 +511,7 @@ Following chart summarises which types of candidates contribute to a successful 
 - prflx: Peer reflexive candidate
 - relay: Relay NAT (a candidate derived from TURN)
 
-#### P.A.T. Port Address Translation
+##### P.A.T. Port Address Translation
 
 `> 1024`
 
@@ -499,3 +520,5 @@ Following chart summarises which types of candidates contribute to a successful 
 | 192.168.3.1 | :1025         | 9.2.1.33       | :1025            | 188.1.3.15  |
 | 192.168.3.2 | :1025         | 9.2.1.33       | :1026            | 188.1.3.15  |
 | 192.168.3.3 | :1025         | 9.2.1.33       | :1027            | 188.1.3.15  |
+
+### IPv6

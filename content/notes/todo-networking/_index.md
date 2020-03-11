@@ -36,9 +36,10 @@ tags: ["Notes"]
 ### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade.
 cascade:
   tags: ["Networking"]
+  pre: "<i class='fas fa-ethernet'></i> "
 ---
 
-## todo networking
+## Networking
 
 It should be obvious that page is _not_ a complete description of IP, UDP or TCP, etc!  
 Dedicated pages go more in depth.

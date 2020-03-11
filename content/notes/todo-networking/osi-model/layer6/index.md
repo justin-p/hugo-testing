@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title: "layer6"
+title: "Layer 6"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "layer6"
 ### The title of the page in menu will be prefixed by this HTML content

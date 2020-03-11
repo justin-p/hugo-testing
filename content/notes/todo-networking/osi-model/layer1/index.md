@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "layer1"
+title : "Layer 1"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "layer1"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "layer1"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "layer1 description."
+description : "Layer 1 description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:48+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.

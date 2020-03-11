@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "tcp"
+title : "Layer 4"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "tcp"
+# menuTitle : "layer4"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "tcp description."
+description : "Layer 4 description."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:43:49+01:00
+date : 2020-03-11T11:11:28+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "tcp"
+# slug : "layer4"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,7 +35,10 @@ weight : 0
 # tags : [""]
 ---
 
-## TCP
+## Layer 4
+
+
+### TCP
 
 Transmission Control Protocol (TCP) is one of the main protocols of the 'Internet protocol suite'.
 
@@ -47,7 +50,7 @@ Three-way handshake, retransmission, and error-detection adds to reliability but
 
 TCP employs network congestion avoidance. However, there are vulnerabilities to TCP including denial of service, connection hijacking, TCP veto, and reset attack. For network security, monitoring, and debugging, TCP traffic can be intercepted and logged with a packet sniffer.
 
-##  Three-way handshake
+#### Three-way handshake
 
 ![handshake](https://www.inetdaemon.com/img/internet/3-way-handshake.gif)
 
@@ -60,3 +63,19 @@ TCP employs network congestion avoidance. However, there are vulnerabilities to 
 |Host A sends ACKnowledge |
 |Host B receives ACK. |
 |TCP socket connection is ESTABLISHED. |
+
+### UDP
+
+User Datagram Protocol (UDP) is one of the core members of the 'Internet protocol suite'.
+
+With UDP computer applications can send messages, in this case referred to as datagrams,to other hosts on an Internet Protocol (IP) network. Prior communications are not required in order to set up communication channels or data paths. UDP uses a simple connectionless communication model with a minimum of protocol mechanisms.  
+
+UDP provides checksums for data integrity, and port numbers for addressing different functions at the source and destination of the datagram. It has no handshaking dialogues, and thus exposes the user's program to any unreliability of the underlying network; there is no guarantee of delivery, ordering, or duplicate protection, like there is with TCP.
+
+### Common Ports
+
+![ports](https://raw.githubusercontent.com/justin-p/my-notes-and-snippets/master/.gitbook/assets/IMG/commen-ports-packetlife.png)
+
+### TCP vs UDP
+
+![tcpvsudp](https://camo.githubusercontent.com/331bc07b92b04155ec8482a1c8fa9aa796fdab7b/68747470733a2f2f7765622e617263686976652e6f72672f7765622f3230313730373036323031393336696d5f2f687474703a2f2f7465616d756c74696d6174652e696e2f77702d636f6e74656e742f75706c6f6164732f323031362f31322f544350372e6a7067)

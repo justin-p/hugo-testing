@@ -4,7 +4,7 @@ title: "Kioptrix"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "kioptrix"
 ### The title of the page in menu will be prefixed by this HTML content
-pre: "<i class='fas fa-server'></i> "
+pre: "<i class='fas fa-folder'></i> "
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
