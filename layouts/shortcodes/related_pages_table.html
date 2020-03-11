@@ -1,0 +1,27 @@
+{{ $_tag :=  (.Get "tag") }}
+{{ $_tag := replace $_tag " " "-" | lower }}
+{{ $_current_Permalink := .Page.Permalink }}
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Tools</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        {{ range $taxonomyname, $taxonomy := .Site.Taxonomies.tags }}
+          {{ if eq $taxonomyname $_tag }}
+            {{ range $key, $value := $taxonomy }}
+              {{ if ne $_current_Permalink $value.Page.Permalink }}
+                <tr>
+                  <td><a href="{{ $value.Page.Permalink }}"> {{ .LinkTitle }} </a></td>
+                  <td>{{.Description}}</td>
+                </tr>
+              {{ end }}
+            {{ end }}        
+          {{ end }}
+        {{ end }}
+    </tbody>
+  </table>
+</section>

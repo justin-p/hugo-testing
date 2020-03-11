@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "Docker compose"
+title : "Docker-Compose"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "docker compose"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "Docker compose"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Docker compose description."
+description : "Docker-Compose YAML."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:30+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -37,10 +37,7 @@ weight : 0
 
 ## Docker compose
 
-
-[source](https://devhints.io/docker-compose)
-
-## Basic example
+### Basic example
 
 ```yaml
 # docker-compose.yml
@@ -60,7 +57,7 @@ services:
     image: redis
 ```
 
-## Commands
+### Commands
 
 ```bash
 docker-compose start
@@ -78,9 +75,9 @@ docker-compose up
 docker-compose down
 ```
 
-## Reference
+### Reference
 
-### Building
+#### Building
 
 ```yaml
 web:
@@ -104,7 +101,7 @@ web:
   image: a4bc65fd
 ```
 
-### Ports
+#### Ports
 
 ```yaml
   ports:
@@ -117,7 +114,7 @@ web:
   expose: ["3000"]
 ```
 
-### Commands
+#### Commands
 
 ```yaml
   # command to execute
@@ -131,7 +128,7 @@ web:
   entrypoint: [php, -d, vendor/bin/phpunit]
 ```
 
-### Environment variables
+#### Environment variables
 
 ```yaml
   # environment vars
@@ -147,7 +144,7 @@ web:
   env_file: [.env, .development.env]
 ```
 
-### Dependencies
+#### Dependencies
 
 ```yaml
   # makes the `db` service available as the hostname `database`
@@ -163,7 +160,7 @@ web:
     - db
 ```
 
-### Other options
+#### Other options
 
 ```yaml
   # make this service extend another
@@ -178,9 +175,9 @@ web:
     - ./_data:/var/lib/mysql
 ```
 
-## Advanced features
+### Advanced features
 
-### Labels
+#### Labels
 
 ```yaml
 services:
@@ -189,7 +186,7 @@ services:
       com.example.description: "Accounting web app"
 ```
 
-### DNS servers
+#### DNS servers
 
 ```yaml
 services:
@@ -200,7 +197,7 @@ services:
       - 8.8.4.4
 ```
 
-### Devices
+#### Devices
 
 ```yaml
 services:
@@ -209,7 +206,7 @@ services:
     - "/dev/ttyUSB0:/dev/ttyUSB0"
 ```
 
-### External links
+#### External links
 
 ```yaml
 services:
@@ -219,7 +216,7 @@ services:
       - project_db_1:mysql
 ```
 
-### Hosts
+#### Hosts
 
 ```yaml
 services:
@@ -228,7 +225,7 @@ services:
       - "somehost:192.168.1.100"
 ```
 
-### Network
+#### Network
 
 ```yaml
 # creates a custom network called `frontend`
@@ -236,7 +233,7 @@ networks:
   frontend:
 ```
 
-### External network
+#### External network
 
 ```yaml
 # join a pre-existing network

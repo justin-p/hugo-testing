@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "markdown"
+title : "Markdown"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "markdown"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "markdown"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "markdown description."
+description : "Markdown description."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:50+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -105,10 +105,6 @@ __bold__
 ![Image alt text][img]
 ```
 
-```text
-
-```
-
 ### Code
 
 ```text
@@ -116,15 +112,7 @@ __bold__
     makes a code block
 ```
 
-```text
-
-```
-
 code fences
-
-```text
-
-```
 
 ```text
 ```js
@@ -165,4 +153,3 @@ Column 1 Heading | Column 2 Heading
 --- | ---
 Some content | Other content
 ```
-
