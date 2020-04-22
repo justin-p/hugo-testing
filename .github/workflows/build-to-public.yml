@@ -18,3 +18,11 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
+    # Deploy to local repo
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: self
+          BRANCH: public
+          FOLDER: public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
