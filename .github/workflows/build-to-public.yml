@@ -23,7 +23,7 @@ jobs:
       - name: Build hugo site
         run: hugo --minify
         
-      - name: Deploy
+      - name: Deploy hugo site to public branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
