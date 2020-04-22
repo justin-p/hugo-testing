@@ -8,7 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone this repo
+        uses: actions/checkout@v2
         with:
           submodules: true  # Fetch Hugo themes
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
@@ -18,8 +19,11 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
-    # Deploy to local repo
-      - name: Deploy
+      
+      - name: Build hugo site
+        run: hugo --minify
+        
+      - name: Deploy to public branch
         uses: s0/git-publish-subdir-action@master
         env:
           REPO: git@github.com/justin-p/hugo-testing.git
