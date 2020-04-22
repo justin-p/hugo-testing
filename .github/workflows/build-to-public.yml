@@ -22,7 +22,7 @@ jobs:
       - name: Deploy
         uses: s0/git-publish-subdir-action@master
         env:
-          REPO: self
+          REPO: git@github.com/justin-p/hugo-testing.git
           BRANCH: public
           FOLDER: public
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
