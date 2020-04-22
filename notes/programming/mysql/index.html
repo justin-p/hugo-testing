@@ -1,0 +1,659 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.69.1"><meta name=description content="MySQL description."><meta name=author content="Justin Perdok"><link rel=icon href=/images/favicon.png type=image/png><title>MySQL :: My notes and snippets</title><link href=/css/nucleus.css rel=stylesheet><link href=/css/fontawesome-all.min.css rel=stylesheet><link href=/css/hybrid.css rel=stylesheet><link href=/css/featherlight.min.css rel=stylesheet><link href=/css/perfect-scrollbar.min.css rel=stylesheet><link href=/css/auto-complete.css rel=stylesheet><link href=/css/atom-one-dark-reasonable.css rel=stylesheet><link href=/css/theme.css rel=stylesheet><link href=/css/hugo-theme.css rel=stylesheet><link href=/css/theme-darkblue.css rel=stylesheet><link href=/css/style.css rel=stylesheet><script src=/js/jquery-3.3.1.min.js></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/notes/programming/mysql/><nav id=sidebar><div id=header-wrapper><div id=header><a id=logo href=https://confident-austin-c176a7.netlify.com/></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=/js/lunr.min.js></script><script type=text/javascript src=/js/auto-complete.js></script><script type=text/javascript>var baseurl="https:\/\/confident-austin-c176a7.netlify.com\/";</script><script type=text/javascript src=/js/search.js></script></div><div class=highlightable><ul class=topics><li data-nav-id=/commands/ title=Commands class=dd-item><a href=/commands/><i class="fas fa-keyboard"></i>Commands</a><ul><li data-nav-id=/commands/unix/ title=Unix class=dd-item><a href=/commands/unix/><i class="fab fa-linux"></i>Unix</a><ul><li data-nav-id=/commands/unix/awk/ title=awk class=dd-item><a href=/commands/unix/awk/><i class="fas fa-terminal"></i>awk</a></li><li data-nav-id=/commands/unix/base64/ title=base64 class=dd-item><a href=/commands/unix/base64/><i class="fas fa-terminal"></i>base64</a></li><li data-nav-id=/commands/unix/bzip2/ title=bzip2 class=dd-item><a href=/commands/unix/bzip2/><i class="fas fa-terminal"></i>bzip2</a></li><li data-nav-id=/commands/unix/cron/ title=cron class=dd-item><a href=/commands/unix/cron/><i class="fas fa-terminal"></i>cron</a></li><li data-nav-id=/commands/unix/curl/ title=curl class=dd-item><a href=/commands/unix/curl/><i class="fas fa-terminal"></i>curl</a></li><li data-nav-id=/commands/unix/cut/ title=cut class=dd-item><a href=/commands/unix/cut/><i class="fas fa-terminal"></i>cut</a></li><li data-nav-id=/commands/unix/file/ title=file class=dd-item><a href=/commands/unix/file/><i class="fas fa-terminal"></i>file</a></li><li data-nav-id=/commands/unix/find/ title=find class=dd-item><a href=/commands/unix/find/><i class="fas fa-terminal"></i>find</a></li><li data-nav-id=/commands/unix/grep/ title=grep class=dd-item><a href=/commands/unix/grep/><i class="fas fa-terminal"></i>grep</a></li><li data-nav-id=/commands/unix/gzip-gunzip-zcat/ title="gzip gunzip zcat" class=dd-item><a href=/commands/unix/gzip-gunzip-zcat/><i class="fas fa-terminal"></i>gzip gunzip zcat</a></li><li data-nav-id=/commands/unix/md5sum/ title=md5sum class=dd-item><a href=/commands/unix/md5sum/><i class="fas fa-terminal"></i>md5sum</a></li><li data-nav-id=/commands/unix/random/ title=random class=dd-item><a href=/commands/unix/random/><i class="fas fa-terminal"></i>random</a></li><li data-nav-id=/commands/unix/rev/ title=rev class=dd-item><a href=/commands/unix/rev/><i class="fas fa-terminal"></i>rev</a></li><li data-nav-id=/commands/unix/scp/ title=scp class=dd-item><a href=/commands/unix/scp/><i class="fas fa-terminal"></i>scp</a></li><li data-nav-id=/commands/unix/sed/ title=sed class=dd-item><a href=/commands/unix/sed/><i class="fas fa-terminal"></i>sed</a></li><li data-nav-id=/commands/unix/sort/ title=sort class=dd-item><a href=/commands/unix/sort/><i class="fas fa-terminal"></i>sort</a></li><li data-nav-id=/commands/unix/strings/ title=strings class=dd-item><a href=/commands/unix/strings/><i class="fas fa-terminal"></i>strings</a></li><li data-nav-id=/commands/unix/tar/ title=tar class=dd-item><a href=/commands/unix/tar/><i class="fas fa-terminal"></i>tar</a></li><li data-nav-id=/commands/unix/touch/ title=touch class=dd-item><a href=/commands/unix/touch/><i class="fas fa-terminal"></i>touch</a></li><li data-nav-id=/commands/unix/tr/ title=tr class=dd-item><a href=/commands/unix/tr/><i class="fas fa-terminal"></i>tr</a></li><li data-nav-id=/commands/unix/uniq/ title=uniq class=dd-item><a href=/commands/unix/uniq/><i class="fas fa-terminal"></i>uniq</a></li><li data-nav-id=/commands/unix/xxd/ title=xxd class=dd-item><a href=/commands/unix/xxd/><i class="fas fa-terminal"></i>xxd</a></li></ul></li></ul></li><li data-nav-id=/guides/ title=Guides class=dd-item><a href=/guides/><i class="fas fa-arrow-alt-circle-right"></i>Guides</a><ul><li data-nav-id=/guides/ubuntu-vps/ title="Ubuntu VPS" class=dd-item><a href=/guides/ubuntu-vps/><i class="fab fa-ubuntu"></i>Ubuntu VPS</a><ul><li data-nav-id=/guides/ubuntu-vps/00-intro/ title="00. Introduction" class=dd-item><a href=/guides/ubuntu-vps/00-intro/>00. Introduction</a></li><li data-nav-id=/guides/ubuntu-vps/01-users/ title="01. Adding users" class=dd-item><a href=/guides/ubuntu-vps/01-users/>01. Adding users</a></li><li data-nav-id=/guides/ubuntu-vps/02-packges/ title="02. Managing of packages" class=dd-item><a href=/guides/ubuntu-vps/02-packges/>02. Managing of packages</a></li><li data-nav-id=/guides/ubuntu-vps/03-vim/ title="03. File editor: vim" class=dd-item><a href=/guides/ubuntu-vps/03-vim/>03. File editor: vim</a></li><li data-nav-id=/guides/ubuntu-vps/04-ufw/ title="04. UFW" class=dd-item><a href=/guides/ubuntu-vps/04-ufw/>04. UFW</a></li><li data-nav-id=/guides/ubuntu-vps/05-ssh-keys/ title="05. SSH Keys" class=dd-item><a href=/guides/ubuntu-vps/05-ssh-keys/>05. SSH Keys</a></li><li data-nav-id=/guides/ubuntu-vps/06-setup-sshd/ title="06. Setup sshd" class=dd-item><a href=/guides/ubuntu-vps/06-setup-sshd/>06. Setup sshd</a></li><li data-nav-id=/guides/ubuntu-vps/07-unattended-upgrades/ title="07. Unattended Upgrades" class=dd-item><a href=/guides/ubuntu-vps/07-unattended-upgrades/>07. Unattended Upgrades</a></li><li data-nav-id=/guides/ubuntu-vps/08-fail2ban/ title="08. Fail2ban" class=dd-item><a href=/guides/ubuntu-vps/08-fail2ban/>08. Fail2ban</a></li><li data-nav-id=/guides/ubuntu-vps/09-logwatch/ title="09. Logwatch" class=dd-item><a href=/guides/ubuntu-vps/09-logwatch/>09. Logwatch</a></li><li data-nav-id=/guides/ubuntu-vps/10-sysctl-optimization/ title="10. Sysctl Optimization" class=dd-item><a href=/guides/ubuntu-vps/10-sysctl-optimization/>10. Sysctl Optimization</a></li></ul></li></ul></li><li data-nav-id=/notes/ title=Notes class=dd-item><a href=/notes/><i class="fas fa-book-reader"></i>Notes</a><ul><li data-nav-id=/notes/courses/ title=Courses class=dd-item><a href=/notes/courses/><i class="fas fa-school"></i>Courses</a></li><li data-nav-id=/notes/ctfs/ title=CTFs class=dd-item><a href=/notes/ctfs/><i class="fas fa-flag"></i>CTFs</a><ul><li data-nav-id=/notes/ctfs/graficomspoorzoeker/ title="Graficom Spoorzoeker" class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/><i class="fas fa-folder"></i>Graficom Spoorzoeker</a><ul><li data-nav-id=/notes/ctfs/graficomspoorzoeker/challanges/ title=Challanges class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/challanges/><i class="fas fa-question-circle"></i>Challanges</a></li><li data-nav-id=/notes/ctfs/graficomspoorzoeker/solutions/ title=Solutions class=dd-item><a href=/notes/ctfs/graficomspoorzoeker/solutions/><i class="fas fa-check-circle"></i>Solutions</a></li></ul></li><li data-nav-id=/notes/ctfs/htb/ title=HTB class=dd-item><a href=/notes/ctfs/htb/><i class="fas fa-folder"></i>HTB</a><ul><li data-nav-id=/notes/ctfs/htb/bashed/ title=Bashed class=dd-item><a href=/notes/ctfs/htb/bashed/><i class="fas fa-server"></i>Bashed</a></li><li data-nav-id=/notes/ctfs/htb/blue/ title=Blue class=dd-item><a href=/notes/ctfs/htb/blue/><i class="fas fa-server"></i>Blue</a></li><li data-nav-id=/notes/ctfs/htb/devel/ title=Devel class=dd-item><a href=/notes/ctfs/htb/devel/><i class="fas fa-server"></i>Devel</a></li><li data-nav-id=/notes/ctfs/htb/grandpa/ title=Grandpa class=dd-item><a href=/notes/ctfs/htb/grandpa/><i class="fas fa-server"></i>Grandpa</a></li><li data-nav-id=/notes/ctfs/htb/granny/ title=Granny class=dd-item><a href=/notes/ctfs/htb/granny/><i class="fas fa-server"></i>Granny</a></li><li data-nav-id=/notes/ctfs/htb/jerry/ title=Jerry class=dd-item><a href=/notes/ctfs/htb/jerry/><i class="fas fa-server"></i>Jerry</a></li><li data-nav-id=/notes/ctfs/htb/lame/ title=Lame class=dd-item><a href=/notes/ctfs/htb/lame/><i class="fas fa-server"></i>Lame</a></li><li data-nav-id=/notes/ctfs/htb/legacy/ title=Legacy class=dd-item><a href=/notes/ctfs/htb/legacy/><i class="fas fa-server"></i>Legacy</a></li><li data-nav-id=/notes/ctfs/htb/metmon/ title=Netmon class=dd-item><a href=/notes/ctfs/htb/metmon/><i class="fas fa-server"></i>Netmon</a></li><li data-nav-id=/notes/ctfs/htb/nibbles/ title=Nibbles class=dd-item><a href=/notes/ctfs/htb/nibbles/><i class="fas fa-server"></i>Nibbles</a></li><li data-nav-id=/notes/ctfs/htb/optimum/ title=Optimum class=dd-item><a href=/notes/ctfs/htb/optimum/><i class="fas fa-server"></i>Optimum</a></li></ul></li><li data-nav-id=/notes/ctfs/overthewire/ title=OverTheWire class=dd-item><a href=/notes/ctfs/overthewire/><i class="fas fa-folder"></i>OverTheWire</a><ul><li data-nav-id=/notes/ctfs/overthewire/bandit/ title=Bandit class=dd-item><a href=/notes/ctfs/overthewire/bandit/><i class="fas fa-layer-group"></i>Bandit</a></li><li data-nav-id=/notes/ctfs/overthewire/natasa/ title=Natasa class=dd-item><a href=/notes/ctfs/overthewire/natasa/><i class="fas fa-layer-group"></i>Natasa</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/ title=VulnHub class=dd-item><a href=/notes/ctfs/vulnhub/><i class="fas fa-folder"></i>VulnHub</a><ul><li data-nav-id=/notes/ctfs/vulnhub/fristileaks/ title=Fristileaks class=dd-item><a href=/notes/ctfs/vulnhub/fristileaks/><i class="fas fa-folder"></i>Fristileaks</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/ title=Kioptrix class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/><i class="fas fa-folder"></i>Kioptrix</a><ul><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level1/ title="Level 1" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level1/><i class="fas fa-layer-group"></i>Level 1</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level2/ title="Level 2" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level2/><i class="fas fa-layer-group"></i>Level 2</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level3/ title="Level 3" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level3/><i class="fas fa-layer-group"></i>Level 3</a></li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level4/ title="Level 4" class=dd-item><a href=/notes/ctfs/vulnhub/kioptrix/level4/><i class="fas fa-layer-group"></i>Level 4</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/pwnlab/ title=Pwnlab class=dd-item><a href=/notes/ctfs/vulnhub/pwnlab/><i class="fas fa-folder"></i>Pwnlab</a></li><li data-nav-id=/notes/ctfs/vulnhub/stapler/ title=Stapler class=dd-item><a href=/notes/ctfs/vulnhub/stapler/><i class="fas fa-folder"></i>Stapler</a></li><li data-nav-id=/notes/ctfs/vulnhub/vulnix/ title=Vulnix class=dd-item><a href=/notes/ctfs/vulnhub/vulnix/><i class="fas fa-folder"></i>Vulnix</a></li></ul></li><li data-nav-id=/notes/ctfs/vulnserver/ title=Vulnserver class=dd-item><a href=/notes/ctfs/vulnserver/><i class="fas fa-folder"></i>Vulnserver</a><ul><li data-nav-id=/notes/ctfs/vulnserver/trun/ title=TRUN class=dd-item><a href=/notes/ctfs/vulnserver/trun/><i class="fas fa-layer-group"></i>TRUN</a></li></ul></li></ul></li><li data-nav-id=/notes/exploit-development/ title="Exploit Development" class=dd-item><a href=/notes/exploit-development/><i class="fas fa-biohazard"></i>Exploit Development</a><ul><li data-nav-id=/notes/exploit-development/buffer-overflow/ title="Buffer Overflow" class=dd-item><a href=/notes/exploit-development/buffer-overflow/><i class="fas fa-layer-group"></i>Buffer Overflow</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/ title="Hacking Methodology" class=dd-item><a href=/notes/todo-hacking-methodology/><i class="fas fa-road"></i>Hacking Methodology</a><ul><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/ title="01. Reconnaissance" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/>01. Reconnaissance</a><ul><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/ title="Credential Gathering" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/>Credential Gathering</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/ title="DNS Recon" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/>DNS Recon</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/e-mail-gathering/ title="E-Mail Gathering" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/e-mail-gathering/>E-Mail Gathering</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/ title="Google Dorking" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/>Google Dorking</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/identify-website-technologies/ title="Identify Website Technologies" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/identify-website-technologies/>Identify Website Technologies</a></li><li data-nav-id=/notes/todo-hacking-methodology/01-reconnaissance/social-media/ title="Social Media" class=dd-item><a href=/notes/todo-hacking-methodology/01-reconnaissance/social-media/>Social Media</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/ title="02. Scanning and Enumeration" class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/>02. Scanning and Enumeration</a><ul><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/ title="Discover Open Ports" class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/>Discover Open Ports</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/ title=Finger class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/>Finger</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/ title=NFS class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/>NFS</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/ title=searchsploit class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/>searchsploit</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/ title=smb class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/>smb</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/ title=smtp class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/>smtp</a></li><li data-nav-id=/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/ title=Web class=dd-item><a href=/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/>Web</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/ title="03. Exploitation" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/>03. Exploitation</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/ title="Active Directory" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/>Active Directory</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ title="Attack Tools" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/>Attack Tools</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/ title=mitm6 class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/>mitm6</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/ title=ntlmrelayx class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/>ntlmrelayx</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/ title=psexec class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/>psexec</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/ title=responder class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/>responder</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/ title="IPv6 DNS Takeover" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/>IPv6 DNS Takeover</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/ title="LLMNR and NBT-NS" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/>LLMNR and NBT-NS</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/ title="SMB Relay" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/>SMB Relay</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/ title=WPAD class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/>WPAD</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/credential-stuffing/ title="Credential Stuffing" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/credential-stuffing/>Credential Stuffing</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/hydra/ title=Hydra class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/hydra/>Hydra</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/password-spraying/ title="Password Spraying" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/brute-forceing/password-spraying/>Password Spraying</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/redis/ title=Redis class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/redis/>Redis</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/ title=Shells class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/>Shells</a><ul><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/ title=msfvenom class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/>msfvenom</a></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/shells/payloads/ title=payloads class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/shells/payloads/>payloads</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/03-exploitation/sql-injection/ title="SQL Injection" class=dd-item><a href=/notes/todo-hacking-methodology/03-exploitation/sql-injection/>SQL Injection</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/ title="04. Post Exploitation" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/>04. Post Exploitation</a><ul><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/ title=activedirectory class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/>activedirectory</a><ul><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/ title=credentialaccess class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/>credentialaccess</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/ title=powerview class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/>powerview</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/ title="encrypted password protected pdf" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/>encrypted password protected pdf</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/ title="encrypted password protected zip" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/>encrypted password protected zip</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/ title="hash identifier" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/>hash identifier</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/ title=hashcat class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/>hashcat</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/ title="priv esc" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/>priv esc</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/ title="shell escaping" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/>shell escaping</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/ title=unshadow class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/>unshadow</a></li><li data-nav-id=/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/ title="wpadmin plugin upload" class=dd-item><a href=/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/>wpadmin plugin upload</a></li></ul></li><li data-nav-id=/notes/todo-hacking-methodology/05-cleanup/ title="05. Cleanup" class=dd-item><a href=/notes/todo-hacking-methodology/05-cleanup/>05. Cleanup</a></li></ul></li><li data-nav-id=/notes/networking/ title=Networking class=dd-item><a href=/notes/networking/><i class="fas fa-network-wired"></i>Networking</a><ul><li data-nav-id=/notes/networking/osi-model/ title="OSI Model" class=dd-item><a href=/notes/networking/osi-model/><i class="fas fa-ethernet"></i>OSI Model</a><ul><li data-nav-id=/notes/networking/osi-model/layer1/ title="Layer 1" class=dd-item><a href=/notes/networking/osi-model/layer1/><i class="fas fa-ethernet"></i>Layer 1</a></li><li data-nav-id=/notes/networking/osi-model/layer2/ title="Layer 2" class=dd-item><a href=/notes/networking/osi-model/layer2/><i class="fas fa-ethernet"></i>Layer 2</a></li><li data-nav-id=/notes/networking/osi-model/layer3/ title="Layer 3" class=dd-item><a href=/notes/networking/osi-model/layer3/><i class="fas fa-ethernet"></i>Layer 3</a></li><li data-nav-id=/notes/networking/osi-model/layer4/ title="Layer 4" class=dd-item><a href=/notes/networking/osi-model/layer4/><i class="fas fa-ethernet"></i>Layer 4</a></li><li data-nav-id=/notes/networking/osi-model/layer5/ title="Layer 5" class=dd-item><a href=/notes/networking/osi-model/layer5/><i class="fas fa-ethernet"></i>Layer 5</a></li><li data-nav-id=/notes/networking/osi-model/layer6/ title="Layer 6" class=dd-item><a href=/notes/networking/osi-model/layer6/><i class="fas fa-ethernet"></i>Layer 6</a></li><li data-nav-id=/notes/networking/osi-model/layer7/ title="Layer 7" class=dd-item><a href=/notes/networking/osi-model/layer7/><i class="fas fa-ethernet"></i>Layer 7</a></li></ul></li><li data-nav-id=/notes/networking/tcpip-model/ title="TCP/IP Model" class=dd-item><a href=/notes/networking/tcpip-model/><i class="fas fa-ethernet"></i>TCP/IP Model</a></li></ul></li><li data-nav-id=/notes/programming/ title=Programming class="dd-item
+parent"><a href=/notes/programming/><i class="fas fa-code"></i>Programming</a><ul><li data-nav-id=/notes/programming/bash/ title=Bash class=dd-item><a href=/notes/programming/bash/><i class="fas fa-layer-group"></i>Bash</a></li><li data-nav-id=/notes/programming/docker-compose/ title=Docker-Compose class=dd-item><a href=/notes/programming/docker-compose/><i class="fas fa-layer-group"></i>Docker-Compose</a></li><li data-nav-id=/notes/programming/dockerfile/ title=Dockerfile class=dd-item><a href=/notes/programming/dockerfile/><i class="fas fa-layer-group"></i>Dockerfile</a></li><li data-nav-id=/notes/programming/markdown/ title=Markdown class=dd-item><a href=/notes/programming/markdown/><i class="fas fa-layer-group"></i>Markdown</a></li><li data-nav-id=/notes/programming/mysql/ title=MySQL class="dd-item active"><a href=/notes/programming/mysql/><i class="fas fa-layer-group"></i>MySQL</a></li><li data-nav-id=/notes/programming/python/ title=Python class=dd-item><a href=/notes/programming/python/><i class="fas fa-layer-group"></i>Python</a></li></ul></li><li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item><a href=/notes/z_private/><i class="fas fa-lock"></i>Private</a></li></ul></li><li data-nav-id=/tools/ title=Tools class=dd-item><a href=/tools/><i class="fas fa-tools"></i>Tools</a><ul><li data-nav-id=/tools/00-forensic/ title=00-Forensic class=dd-item><a href=/tools/00-forensic/><i class="fas fa-folder"></i>Forensic</a><ul><li data-nav-id=/tools/00-forensic/exiftool/ title=exiftool class=dd-item><a href=/tools/00-forensic/exiftool/><i class="fas fa-wrench"></i>exiftool</a></li><li data-nav-id=/tools/00-forensic/ssh-sha256-to-public-key/ title="ssh sha256 to public key" class=dd-item><a href=/tools/00-forensic/ssh-sha256-to-public-key/><i class="fas fa-wrench"></i>ssh sha256 to public key</a></li><li data-nav-id=/tools/00-forensic/usbrip/ title=usbrip class=dd-item><a href=/tools/00-forensic/usbrip/><i class="fas fa-wrench"></i>usbrip</a></li></ul></li><li data-nav-id=/tools/00-frameworks/ title=00-Frameworks class=dd-item><a href=/tools/00-frameworks/><i class="fas fa-folder"></i>Frameworks</a><ul><li data-nav-id=/tools/00-frameworks/empire/ title=empire class=dd-item><a href=/tools/00-frameworks/empire/><i class="fas fa-wrench"></i>empire</a></li><li data-nav-id=/tools/00-frameworks/metasploit/ title=metasploit class=dd-item><a href=/tools/00-frameworks/metasploit/><i class="fas fa-wrench"></i>metasploit</a></li></ul></li><li data-nav-id=/tools/00-steganography/ title=00-Steganography class=dd-item><a href=/tools/00-steganography/><i class="fas fa-folder"></i>Steganography</a><ul><li data-nav-id=/tools/00-steganography/binwalk/ title=binwalk class=dd-item><a href=/tools/00-steganography/binwalk/><i class="fas fa-wrench"></i>binwalk</a></li><li data-nav-id=/tools/00-steganography/foremost/ title=foremost class=dd-item><a href=/tools/00-steganography/foremost/><i class="fas fa-wrench"></i>foremost</a></li><li data-nav-id=/tools/00-steganography/steghide/ title=steghide class=dd-item><a href=/tools/00-steganography/steghide/><i class="fas fa-wrench"></i>steghide</a></li></ul></li><li data-nav-id=/tools/amass/ title=amass class=dd-item><a href=/tools/amass/><i class="fas fa-wrench"></i>amass</a></li><li data-nav-id=/tools/h8mail/ title=h8mail class=dd-item><a href=/tools/h8mail/><i class="fas fa-wrench"></i>h8mail</a></li><li data-nav-id=/tools/nc/ title=nc class=dd-item><a href=/tools/nc/><i class="fas fa-wrench"></i>nc</a></li><li data-nav-id=/tools/nmap/ title=Nmap class=dd-item><a href=/tools/nmap/><i class="fas fa-wrench"></i>Nmap</a></li><li data-nav-id=/tools/openssl/ title=openssl class=dd-item><a href=/tools/openssl/><i class="fas fa-wrench"></i>openssl</a><ul><li data-nav-id=/tools/openssl/s_client/ title=s_client class=dd-item><a href=/tools/openssl/s_client/><i class="fas fa-wrench"></i>s_client</a></li></ul></li><li data-nav-id=/tools/psdnsdumpsterapi/ title=PSDNSDumpsterAPI class=dd-item><a href=/tools/psdnsdumpsterapi/><i class="fas fa-wrench"></i>PSDNSDumpsterAPI</a></li><li data-nav-id=/tools/sublist3r/ title=sublist3r class=dd-item><a href=/tools/sublist3r/><i class="fas fa-wrench"></i>sublist3r</a></li><li data-nav-id=/tools/theharvester/ title=theHarvester class=dd-item><a href=/tools/theharvester/><i class="fas fa-wrench"></i>theHarvester</a></li><li data-nav-id=/tools/tmux/ title=tmux class=dd-item><a href=/tools/tmux/><i class="fas fa-wrench"></i>tmux</a></li><li data-nav-id=/tools/whatweb/ title=whatweb class=dd-item><a href=/tools/whatweb/><i class="fas fa-wrench"></i>whatweb</a></li></ul></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://github.com/justin-p/><i class="fab fa-github"></i>Github</a></li><li><a class=padding href=https://justin-p.me/><i class="fas fa-kiss-wink-heart"></i>Blog</a></li><li><a class=padding href=https://twitter.com/JustinPerdok><i class="fab fa-twitter"></i>Twitter</a></li><li><a class=padding href=https://www.linkedin.com/in/justinperdok/><i class="fab fa-linkedin-in"></i>LinkedIn</a></li></ul></section><section id=footer><p>Built with
+<a href=https://github.com/matcornic/hugo-theme-learn>Hugo Learn</a>
+and
+<a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/></a>> <a href=/notes/>Notes</a> > <a href=/notes/programming/>Programming</a> > MySQL</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#mysql>MySQL</a><ul><li><a href=#create--delete-database>Create / Delete Database</a></li><li><a href=#backup-database-to-sql-file>Backup Database to SQL File</a></li><li><a href=#restore-from-backup-sql-file>Restore from backup SQL File</a></li><li><a href=#repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</a></li><li><a href=#browsing>Browsing</a></li><li><a href=#insert>Insert</a></li><li><a href=#delete>Delete</a></li><li><a href=#update>Update</a></li><li><a href=#select>Select</a></li><li><a href=#rename>Rename</a></li><li><a href=#conditions>Conditions</a></li><li><a href=#where>Where</a></li><li><a href=#not-null>Not null</a></li><li><a href=#order-by>Order by</a></li><li><a href=#order-desc>Order desc</a></li><li><a href=#order-by-multi>ORDER BY (multi)</a></li><li><a href=#limit>Limit</a></li><li><a href=#concat-and-as>Concat and As</a></li><li><a href=#like>Like</a></li><li><a href=#distinct>Distinct</a></li><li><a href=#count>COUNT</a></li><li><a href=#group-by>Group by</a></li><li><a href=#having>Having</a></li><li><a href=#math-stuff>MATH stuff</a></li><li><a href=#between>Between</a></li><li><a href=#in>In</a></li><li><a href=#join>Join</a></li><li><a href=#left-join>Left join</a></li><li><a href=#inner-join>INNER JOIN</a></li><li><a href=#create--delete--modify-table>Create / Delete / Modify Table</a></li><li><a href=#keys>Keys</a></li><li><a href=#users-and-privileges>Users and Privileges</a></li><li><a href=#main-data-types>Main Data Types</a></li><li><a href=#reset-root-password>Reset Root Password</a></li><li><a href=#also-see>Also see</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags><div class=tags><a class=tag-link href=/tags/programming>Programming</a></div></div><div id=body-inner><h2 id=mysql>MySQL</h2><h3 id=create--delete-database>Create / Delete Database</h3><pre><code class=language-sql>CREATE DATABASE dbNameYouWant
+CREATE DATABASE dbNameYouWant CHARACTER SET utf8
+DROP DATABASE dbNameYouWant
+ALTER DATABASE dbNameYouWant CHARACTER SET utf8
+</code></pre><h3 id=backup-database-to-sql-file>Backup Database to SQL File</h3><pre><code class=language-bash>mysqldump -u Username -p dbNameYouWant &gt; databasename_backup.sql
+</code></pre><h3 id=restore-from-backup-sql-file>Restore from backup SQL File</h3><pre><code class=language-bash>mysql - u Username -p dbNameYouWant &lt; databasename_backup.sql
+</code></pre><h3 id=repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</h3><pre><code class=language-bash>mysqlcheck --all-databases
+mysqlcheck --all-databases --fast
+</code></pre><h3 id=browsing>Browsing</h3><pre><code class=language-sql>SHOW DATABASES
+SHOW TABLES
+SHOW FIELDS FROM table / DESCRIBE table
+SHOW CREATE TABLE table
+SHOW PROCESSLIST
+KILL process_number
+</code></pre><h3 id=insert>Insert</h3><pre><code class=language-sql>INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
+</code></pre><h3 id=delete>Delete</h3><pre><code class=language-sql>DELETE FROM table1 / TRUNCATE table1
+DELETE FROM table1 WHERE condition
+DELETE FROM table1, table2 FROM table1, table2 WHERE table1.id1 =
+  table2.id2 AND condition
+</code></pre><h3 id=update>Update</h3><p>UPDATE scores SET score=25 WHERE student_id=4 AND test_id=4;</p><h3 id=select>Select</h3><pre><code class=language-sql>SELECT * FROM absence;
++------------+------------+
+| student_id | date       |
++------------+------------+
+|          3 | 2013-09-01 |
+|          5 | 2010-04-12 |
+|         13 | 2019-04-08 |
+|         14 | 2016-12-04 |
++------------+------------+
+4 rows in set (0.00 sec)
+</code></pre><pre><code class=language-sql>SELECT * FROM table
+SELECT * FROM table1, table2, ...
+SELECT field1, field2, ... FROM table1, table2, ...
+SELECT ... FROM ... WHERE condition
+SELECT ... FROM ... WHERE condition GROUPBY field
+SELECT ... FROM ... WHERE condition GROUPBY field HAVING condition2
+SELECT ... FROM ... WHERE condition ORDER BY field1, field2
+SELECT ... FROM ... WHERE condition ORDER BY field1, field2 DESC
+SELECT ... FROM ... WHERE condition LIMIT 10
+SELECT DISTINCT field1 FROM ...
+SELECT DISTINCT field1, field2 FROM ...
+</code></pre><h3 id=rename>Rename</h3><pre><code class=language-sql>show tables;
++------------------+
+| Tables_in_school |
++------------------+
+| absence          |
+| class            |
+| score            |
+| student          |
+| test             |
++------------------+
+5 rows in set (0.01 sec)
+
+RENAME TABLE absence to absences, class to classes, score to scores, student to students, test to tests;
+Query OK, 0 rows affected (0.02 sec)
+
+show tables;
++------------------+
+| Tables_in_school |
++------------------+
+| absences         |
+| classes          |
+| scores           |
+| students         |
+| tests            |
++------------------+
+5 rows in set (0.00 sec)
+</code></pre><h3 id=conditions>Conditions</h3><pre><code class=language-sql>field1 = value1
+field1 &lt;&gt; value1
+field1 LIKE 'value _ %'
+field1 IS NULL
+field1 IS NOT NULL
+field1 IS IN (value1, value2)
+field1 IS NOT IN (value1, value2)
+condition1 AND condition2
+condition1 OR condition2
+</code></pre><pre><code class=language-sql>eq =
+lt &lt;
+gt &gt;
+ge &gt;=
+le &lt;=
+ne !=
+</code></pre><pre><code class=language-sql>OR  ||
+AND &amp;&amp;
+NOT !
+</code></pre><h3 id=where>Where</h3><pre><code class=language-sql>select first_name, last_name, state from students where sex=&quot;F&quot;;
++------------+-----------+-------+
+| first_name | last_name | state |
++------------+-----------+-------+
+| Siena      | Herring   | tv    |
+| Paityn     | Montoya   | me    |
+| Kaylin     | Moore     | yn    |
+| Kayleigh   | Simon     | nh    |
+| Laylah     | Hobbs     | kr    |
+| Deja       | Hayes     | tx    |
+| Kenya      | Park      | sg    |
+| Araceli    | Gould     | ww    |
+| Karley     | Roman     | mn    |
+| Celeste    | Wilson    | ql    |
+| Annabella  | Nixon     | os    |
+| Yasmine    | Lawson    | ra    |
+| Meadow     | Johnson   | fd    |
+| Penelope   | Chase     | kb    |
+| Aspen      | Velez     | va    |
++------------+-----------+-------+
+15 rows in set (0.00 sec)
+</code></pre><p>select where the year of birth_date is greater than 2000</p><pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE YEAR(birth_date) &gt;= 2000;
++------------+-----------+------------+
+| first_name | last_name | birth_date |
++------------+-----------+------------+
+| Tyler      | Morales   | 2004-08-27 |
+| Deja       | Hayes     | 2003-12-10 |
+| Celeste    | Wilson    | 2005-10-16 |
+| Jaron      | Clements  | 2005-04-21 |
+| Meadow     | Johnson   | 2005-07-12 |
+| Aspen      | Velez     | 2004-06-07 |
+| Kole       | Sanders   | 2000-08-24 |
++------------+-----------+------------+
+7 rows in set (0.00 sec)
+</code></pre><p>select where the month of birth_day is 3 OR where the state has the value of WA</p><pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE MONTH(birth_date) = 3 OR state=&quot;WA&quot;;
++------------+-----------+------------+-------+
+| first_name | last_name | birth_date | state |
++------------+-----------+------------+-------+
+| Dale       | Cooper    | 1959-02-22 | WA    |
+| Yasmine    | Lawson    | 1996-03-19 | ra    |
+| Paxton     | Kerr      | 1991-03-18 | uc    |
+| Aaden      | Valentine | 1997-03-05 | vb    |
++------------+-----------+------------+-------+
+4 rows in set (0.00 sec)
+</code></pre><pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_date) &gt;= 12 AND (state=&quot;WA&quot; OR state=&quot;ra&quot;);
+SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_date) &gt;= 12 &amp;&amp; (state=&quot;WA&quot; || state=&quot;ra&quot;);
++------------+-----------+------------+-------+
+| first_name | last_name | birth_date | state |
++------------+-----------+------------+-------+
+| Dale       | Cooper    | 1959-02-22 | WA    |
+| Yasmine    | Lawson    | 1996-03-19 | ra    |
++------------+-----------+------------+-------+
+2 rows in set, 2 warnings (0.00 sec)
+</code></pre><h3 id=not-null>Not null</h3><p>select all last_name from students where a value is been supplied. Do not show null data.</p><pre><code class=language-sql>SELECT last_name FROM students WHERE last_name IS NOT NULL;
++-----------+
+| last_name |
++-----------+
+| Cooper    |
+| Herring   |
+| Montoya   |
+| Moore     |
+| Morales   |
+| Simon     |
+| Hobbs     |
+| Hayes     |
+| Park      |
+| Gould     |
+| Roman     |
+| Mitchell  |
+| Wilson    |
+| Savage    |
+| Nixon     |
+| Lawson    |
+| Clements  |
+| Johnson   |
+| Cortez    |
+| Kerr      |
+| Valentine |
+| Riley     |
+| Chase     |
+| Velez     |
+| Sanders   |
++-----------+
+25 rows in set (0.01 sec)
+</code></pre><h3 id=order-by>Order by</h3><p>order the select by last_name</p><pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name;
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Penelope   | Chase     |
+| Jaron      | Clements  |
+| Dale       | Cooper    |
+| Killian    | Cortez    |
+| Araceli    | Gould     |
+| Deja       | Hayes     |
+| Siena      | Herring   |
+| Laylah     | Hobbs     |
+| Meadow     | Johnson   |
+| Paxton     | Kerr      |
+| Yasmine    | Lawson    |
+| Marcos     | Mitchell  |
+| Paityn     | Montoya   |
+| Kaylin     | Moore     |
+| Tyler      | Morales   |
+| Annabella  | Nixon     |
+| Kenya      | Park      |
+| Greyson    | Riley     |
+| Karley     | Roman     |
+| Kole       | Sanders   |
+| Arnav      | Savage    |
+| Kayleigh   | Simon     |
+| Aaden      | Valentine |
+| Aspen      | Velez     |
+| Celeste    | Wilson    |
++------------+-----------+
+25 rows in set (0.00 sec)
+</code></pre><h3 id=order-desc>Order desc</h3><p>order the select by last_name but in descending order.</p><pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name DESC;
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Celeste    | Wilson    |
+| Aspen      | Velez     |
+| Aaden      | Valentine |
+| Kayleigh   | Simon     |
+| Arnav      | Savage    |
+| Kole       | Sanders   |
+| Karley     | Roman     |
+| Greyson    | Riley     |
+| Kenya      | Park      |
+| Annabella  | Nixon     |
+| Tyler      | Morales   |
+| Kaylin     | Moore     |
+| Paityn     | Montoya   |
+| Marcos     | Mitchell  |
+| Yasmine    | Lawson    |
+| Paxton     | Kerr      |
+| Meadow     | Johnson   |
+| Laylah     | Hobbs     |
+| Siena      | Herring   |
+| Deja       | Hayes     |
+| Araceli    | Gould     |
+| Killian    | Cortez    |
+| Dale       | Cooper    |
+| Jaron      | Clements  |
+| Penelope   | Chase     |
++------------+-----------+
+25 rows in set (0.00 sec)
+</code></pre><h3 id=order-by-multi>ORDER BY (multi)</h3><p>order by multiple values.</p><pre><code class=language-sql>SELECT first_name, last_name, state FROM students ORDER BY state DESC, last_name ASC;
++------------+-----------+-------+
+| first_name | last_name | state |
++------------+-----------+-------+
+| Kaylin     | Moore     | yn    |
+| Kole       | Sanders   | yi    |
+| Marcos     | Mitchell  | xj    |
+| Araceli    | Gould     | ww    |
+| Dale       | Cooper    | WA    |
+| Aaden      | Valentine | vb    |
+| Aspen      | Velez     | va    |
+| Paxton     | Kerr      | uc    |
+| Deja       | Hayes     | tx    |
+| Siena      | Herring   | tv    |
+| Jaron      | Clements  | te    |
+| Kenya      | Park      | sg    |
+| Tyler      | Morales   | ry    |
+| Yasmine    | Lawson    | ra    |
+| Celeste    | Wilson    | ql    |
+| Annabella  | Nixon     | os    |
+| Kayleigh   | Simon     | nh    |
+| Arnav      | Savage    | nc    |
+| Karley     | Roman     | mn    |
+| Paityn     | Montoya   | me    |
+| Laylah     | Hobbs     | kr    |
+| Penelope   | Chase     | kb    |
+| Meadow     | Johnson   | fd    |
+| Killian    | Cortez    | eb    |
+| Greyson    | Riley     | df    |
++------------+-----------+-------+
+25 rows in set (0.00 sec)
+</code></pre><h3 id=limit>Limit</h3><p>Limit the select to 5 values.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5;
++------------+------------+-----------+
+| student_id | first_name | last_name |
++------------+------------+-----------+
+|          1 | Dale       | Cooper    |
+|          2 | Siena      | Herring   |
+|          3 | Paityn     | Montoya   |
+|          4 | Kaylin     | Moore     |
+|          5 | Tyler      | Morales   |
++------------+------------+-----------+
+5 rows in set (0.00 sec)
+</code></pre><p>limit the select to the next 5 values after 5.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 5;
++------------+------------+-----------+
+| student_id | first_name | last_name |
++------------+------------+-----------+
+|          6 | Kayleigh   | Simon     |
+|          7 | Laylah     | Hobbs     |
+|          8 | Deja       | Hayes     |
+|          9 | Kenya      | Park      |
+|         10 | Araceli    | Gould     |
++------------+------------+-----------+
+5 rows in set (0.00 sec)
+</code></pre><p>limit the select to the next 1 value after 5.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 1;
++------------+------------+-----------+
+| student_id | first_name | last_name |
++------------+------------+-----------+
+|          6 | Kayleigh   | Simon     |
++------------+------------+-----------+
+1 row in set (0.00 sec)
+</code></pre><h3 id=concat-and-as>Concat and As</h3><p>CONCAT can be used to &lsquo;merge&rsquo; 2 things into something custom AS can be used to rename something.</p><pre><code class=language-sql>SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender' FROM students LIMIT 1;
++-------------+--------+
+| Name        | Gender |
++-------------+--------+
+| Dale Cooper | M      |
++-------------+--------+
+1 row in set (0.00 sec)
+
+SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender' FROM students LIMIT 1;
++-------------+--------+
+| Name        | Gender |
++-------------+--------+
+| Dale Cooper | M      |
++-------------+--------+
+1 row in set (0.00 sec)
+
+
+SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender',&quot;Ow Hi there&quot; FROM students LIMIT 1;
++-------------+--------+-------------+
+| Name        | Gender | Ow Hi there |
++-------------+--------+-------------+
+| Dale Cooper | M      | Ow Hi there |
++-------------+--------+-------------+
+
+SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender',&quot;Ow Hi there&quot; AS Comment FROM students LIMIT 1;
++-------------+--------+-------------+
+| Name        | Gender | Comment     |
++-------------+--------+-------------+
+| Dale Cooper | M      | Ow Hi there |
++-------------+--------+-------------+
+1 row in set (0.00 sec)
+</code></pre><h3 id=like>Like</h3><pre><code class=language-sql>% = wildcard
+_ = something needs to be here.
+</code></pre><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE 'D%' or last_name LIKE '%n';
++-----------+------------+
+| last_name | first_name |
++-----------+------------+
+| Cooper    | Dale       |
+| Simon     | Kayleigh   |
+| Hayes     | Deja       |
+| Roman     | Karley     |
+| Wilson    | Celeste    |
+| Nixon     | Annabella  |
+| Lawson    | Yasmine    |
+| Johnson   | Meadow     |
++-----------+------------+
+8 rows in set (0.00 sec)
+</code></pre><p>all students that have name first_name of 4 unknown letters and a known 5th letter with value of N</p><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '____n';
++-----------+------------+
+| last_name | first_name |
++-----------+------------+
+| Clements  | Jaron      |
+| Valentine | Aaden      |
+| Velez     | Aspen      |
++-----------+------------+
+3 rows in set (0.00 sec)
+</code></pre><p>all students that have name first_name of 4 or more letters, 4th must have a value of e</p><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
++-----------+------------+
+SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
++-----------+------------+
+| last_name | first_name |
++-----------+------------+
+| Cooper    | Dale       |
+| Morales   | Tyler      |
+| Wilson    | Celeste    |
+| Valentine | Aaden      |
+| Chase     | Penelope   |
+| Velez     | Aspen      |
+| Sanders   | Kole       |
++-----------+------------+
+7 rows in set (0.00 sec)
+</code></pre><h3 id=distinct>Distinct</h3><p>only show unique values</p><pre><code class=language-sql>SELECT DISTINCT type FROM tests ORDER BY type;
++------+
+| type |
++------+
+| T    |
+| Q    |
++------+
+2 rows in set (0.01 sec)
+</code></pre><h3 id=count>COUNT</h3><p>Count unique</p><pre><code class=language-sql>SELECT COUNT(DISTINCT type) FROM tests;
++----------------------+
+| COUNT(DISTINCT type) |
++----------------------+
+|                    2 |
++----------------------+
+1 row in set (0.00 sec)
+
+
+SELECT COUNT(*) as StudentCount FROM students;
++--------------+
+| StudentCount |
++--------------+
+|           25 |
++--------------+
+
+SELECT COUNT(*) as MaleStudentCount FROM students WHERE sex='M';
++------------------+
+| MaleStudentCount |
++------------------+
+|               10 |
++------------------+
+1 row in set (0.00 sec)
+
+
+SELECT sex, COUNT(*) AS GenderCount FROM students GROUP BY sex;
++-----+-------------+
+| sex | GenderCount |
++-----+-------------+
+| M   |          10 |
+| F   |          15 |
++-----+-------------+
+2 rows in set (0.00 sec)
+</code></pre><h3 id=group-by>Group by</h3><p>count the students that are born on the same month, then GROUP and ORDER by month.</p><pre><code class=language-sql>select Month(birth_date) AS 'Month', Count(*) AS Students FROM students GROUP BY Month ORDER BY Month;
++-------+----------+
+| Month | Students |
++-------+----------+
+|     1 |        1 |
+|     2 |        1 |
+|     3 |        3 |
+|     4 |        1 |
+|     6 |        4 |
+|     7 |        3 |
+|     8 |        4 |
+|    10 |        3 |
+|    11 |        2 |
+|    12 |        3 |
++-------+----------+
+10 rows in set (0.01 sec)
+
+select Month(birth_date) AS 'Month', Count(student_id) AS Students FROM students GROUP BY Month ORDER BY Month;
++-------+----------+
+| Month | Students |
++-------+----------+
+|     1 |        1 |
+|     2 |        1 |
+|     3 |        3 |
+|     4 |        1 |
+|     6 |        4 |
+|     7 |        3 |
+|     8 |        4 |
+|    10 |        3 |
+|    11 |        2 |
+|    12 |        3 |
++-------+----------+
+10 rows in set (0.00 sec)
+</code></pre><h3 id=having>Having</h3><blockquote><p>Difference between the having and where clause in sql is that the where clause can not be used with aggregates, but the having clause can. One way to think of it is that the having clause is an additional filter to the where clause.</p></blockquote><p><a href=https://stackoverflow.com/questions/16155937/mysql-having-vs-where>source</a></p><blockquote><p>To summarize the difference between WHERE and HAVING: WHERE is used to filter records before any groupings take place. HAVING is used to filter values after they have been groups. Only columns or expression in the group can be included in the HAVING clause’s conditions..</p></blockquote><p><a href=https://www.essentialsql.com/what-is-the-difference-between-where-and-having-clauses/>source</a></p><pre><code class=language-sql>SELECT sex, COUNT(sex) AS 'Amount' FROM students GROUP BY sex HAVING Amount &gt; 10;
++-----+--------+
+| sex | Amount |
++-----+--------+
+| F   |     15 |
++-----+--------+
+1 row in set (0.00 sec)
+</code></pre><h3 id=math-stuff>MATH stuff</h3><pre><code class=language-sql>SELECT test_id AS 'Test',
+MIN(score) AS min,
+MAX(score) as max,
+MAX(score)-MIN(SCORE) AS 'range',
+SUM(score) AS total,
+AVG(score) AS average
+FROM scores GROUP BY test_id;
+
++------+------+------+-------+-------+---------+
+| Test | min  | max  | range | total | average |
++------+------+------+-------+-------+---------+
+|    1 |    1 |   15 |    14 |   166 |  6.6400 |
+|    2 |    1 |   13 |    12 |   149 |  5.9600 |
+|    3 |    1 |   15 |    14 |   183 |  7.3200 |
+|    4 |    1 |   15 |    14 |   206 |  8.2400 |
+|    5 |    2 |   15 |    13 |   215 |  8.6000 |
+|    6 |    1 |   15 |    14 |   220 |  8.8000 |
+|    7 |    1 |   15 |    14 |   204 |  8.1600 |
+|    8 |    1 |   15 |    14 |   193 |  7.7200 |
+|    9 |    1 |   15 |    14 |   208 |  8.3200 |
+|   10 |    2 |   15 |    13 |   210 |  8.4000 |
++------+------+------+-------+-------+---------+
+10 rows in set (0.00 sec)
+</code></pre><h3 id=between>Between</h3><pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN '1997-1-1' AND '1995-1-1';
+Empty set (0.00 sec)
+
+SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN '1995-1-1' AND '1997-1-1';
++------------+-----------+------------+
+| first_name | last_name | birth_date |
++------------+-----------+------------+
+| Kenya      | Park      | 1996-07-11 |
+| Araceli    | Gould     | 1996-10-02 |
+| Karley     | Roman     | 1996-12-24 |
+| Annabella  | Nixon     | 1995-12-27 |
+| Yasmine    | Lawson    | 1996-03-19 |
+| Killian    | Cortez    | 1995-07-02 |
++------------+-----------+------------+
+6 rows in set (0.00 sec)
+</code></pre><h3 id=in>In</h3><p>match for &lsquo;array&rsquo; (list) of vales. Can also be used on sub query&rsquo;s.</p><pre><code class=language-sql>SELECT first_name, last_name FROM students WHERE last_name IN ('Cooper','Sanders','Johnson');
++------------+-----------+
+| first_name | last_name |
++------------+-----------+
+| Dale       | Cooper    |
+| Meadow     | Johnson   |
+| Kole       | Sanders   |
++------------+-----------+
+3 rows in set (0.00 sec)
+</code></pre><h3 id=join>Join</h3><pre><code class=language-sql>SELECT ... FROM t1 JOIN t2 ON t1.id1 = t2.id2 WHERE condition
+SELECT ... FROM t1 LEFT JOIN t2 ON t1.id1 = t2.id2 WHERE condition
+SELECT ... FROM t1 JOIN (t2 JOIN t3 ON ...) ON ...
+</code></pre><pre><code class=language-sql>SELECT student_id, date, score, maxscore FROM tests, scores WHERE date='2009-08-29' AND tests.test_id = scores.test_id;
++------------+------------+-------+----------+
+| student_id | date       | score | maxscore |
++------------+------------+-------+----------+
+|          1 | 2009-08-29 |     3 |       15 |
+|          2 | 2009-08-29 |     1 |       15 |
+|          3 | 2009-08-29 |     6 |       15 |
+|          4 | 2009-08-29 |     2 |       15 |
+|          5 | 2009-08-29 |    13 |       15 |
+|          6 | 2009-08-29 |     8 |       15 |
+|          7 | 2009-08-29 |     9 |       15 |
+|          8 | 2009-08-29 |     8 |       15 |
+|          9 | 2009-08-29 |    11 |       15 |
+|         10 | 2009-08-29 |     8 |       15 |
+|         11 | 2009-08-29 |     6 |       15 |
+|         12 | 2009-08-29 |     1 |       15 |
+|         13 | 2009-08-29 |     8 |       15 |
+|         14 | 2009-08-29 |    10 |       15 |
+|         15 | 2009-08-29 |     7 |       15 |
+|         16 | 2009-08-29 |     1 |       15 |
+|         17 | 2009-08-29 |     4 |       15 |
+|         18 | 2009-08-29 |     1 |       15 |
+|         19 | 2009-08-29 |     1 |       15 |
+|         20 | 2009-08-29 |     8 |       15 |
+|         21 | 2009-08-29 |    10 |       15 |
+|         22 | 2009-08-29 |     7 |       15 |
+|         23 | 2009-08-29 |     7 |       15 |
+|         24 | 2009-08-29 |    15 |       15 |
+|         25 | 2009-08-29 |    11 |       15 |
++------------+------------+-------+----------+
+25 rows in set (0.00 sec)
+
+
+SELECT scores.student_id, tests.date, scores.score FROM tests, scores WHERE date='2009-08-29' AND tests.test_id = scores.test_id;
+
++------------+------------+-------+
+| student_id | date       | score |
++------------+------------+-------+
+|          1 | 2009-08-29 |     3 |
+|          2 | 2009-08-29 |     1 |
+|          3 | 2009-08-29 |     6 |
+|          4 | 2009-08-29 |     2 |
+|          5 | 2009-08-29 |    13 |
+|          6 | 2009-08-29 |     8 |
+|          7 | 2009-08-29 |     9 |
+|          8 | 2009-08-29 |     8 |
+|          9 | 2009-08-29 |    11 |
+|         10 | 2009-08-29 |     8 |
+|         11 | 2009-08-29 |     6 |
+|         12 | 2009-08-29 |     1 |
+|         13 | 2009-08-29 |     8 |
+|         14 | 2009-08-29 |    10 |
+|         15 | 2009-08-29 |     7 |
+|         16 | 2009-08-29 |     1 |
+|         17 | 2009-08-29 |     4 |
+|         18 | 2009-08-29 |     1 |
+|         19 | 2009-08-29 |     1 |
+|         20 | 2009-08-29 |     8 |
+|         21 | 2009-08-29 |    10 |
+|         22 | 2009-08-29 |     7 |
+|         23 | 2009-08-29 |     7 |
+|         24 | 2009-08-29 |    15 |
+|         25 | 2009-08-29 |    11 |
++------------+------------+-------+
+25 rows in set (0.00 sec)
+
+SELECT CONCAT(students.first_name, &quot; &quot;, students.last_name) As Name,
+tests.date, scores.score, tests.maxscore
+FROM tests, scores, students
+WHERE date='2009-08-29'
+AND tests.test_id = scores.test_id
+AND scores.student_id = students.student_id;
+
+SELECT students.student_id,
+CONCAT(students.first_name, &quot; &quot;, students.last_name) As Name,
+COUNT(absences.date) As Absences
+tests.date, scores.score, tests.maxscore
+FROM students, Absences
+WHERE students.student_id = absences.student_id
+GROUP BY students.student_id;
+</code></pre><h3 id=left-join>Left join</h3><pre><code class=language-sql>SELECT students.student_id,
+CONCAT(students.first_name, &quot; &quot;, students.last_name) As Name,
+COUNT(absences.date) As Absences,
+FROM  students LEFT JOIN absences
+ON students.student_id = absences.student_id
+GROUP BY students.student_id;
+</code></pre><h3 id=inner-join>INNER JOIN</h3><pre><code class=language-sql>SELECT students.first_name,
+students.last_name,
+scores.test_id,
+scores.score
+FROM students
+INNER JOIN scores
+ON students.student_id = scores.student_id
+WHERE scores.score &lt;= 15
+ORDER BY scores.test_id;
+</code></pre><h3 id=create--delete--modify-table>Create / Delete / Modify Table</h3><h4 id=create>Create</h4><pre><code class=language-sql>CREATE TABLE table (field1 type1, field2 type2, ...)
+CREATE TABLE table (field1 type1, field2 type2, ..., INDEX (field))
+CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1))
+CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1,
+field2))
+</code></pre><pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, field2 type2, ...,
+  FOREIGN KEY (fk_field1) REFERENCES table2 (t2_fieldA))
+    [ON UPDATE|ON DELETE] [CASCADE|SET NULL]
+</code></pre><pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, fk_field2 type2, ...,
+ FOREIGN KEY (fk_field1, fk_field2) REFERENCES table2 (t2_fieldA, t2_fieldB))
+</code></pre><pre><code class=language-sql>CREATE TABLE table IF NOT EXISTS (...)
+</code></pre><pre><code class=language-sql>CREATE TEMPORARY TABLE table (...)
+</code></pre><h4 id=drop>Drop</h4><pre><code class=language-sql>DROP TABLE table
+DROP TABLE IF EXISTS table
+DROP TABLE table1, table2, ...
+</code></pre><h4 id=alter>Alter</h4><pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1
+ALTER TABLE table MODIFY field1 type1 NOT NULL ...
+ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1
+ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 NOT NULL ...
+ALTER TABLE table ALTER field1 SET DEFAULT ...
+ALTER TABLE table ALTER field1 DROP DEFAULT
+ALTER TABLE table ADD new_name_field1 type1
+ALTER TABLE table ADD new_name_field1 type1 FIRST
+ALTER TABLE table ADD new_name_field1 type1 AFTER another_field
+ALTER TABLE table DROP field1
+ALTER TABLE table ADD INDEX (field);
+</code></pre><h4 id=change-field-order>Change field order</h4><pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1 FIRST
+ALTER TABLE table MODIFY field1 type1 AFTER another_field
+ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 FIRST
+ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 AFTER
+  another_field
+</code></pre><h3 id=keys>Keys</h3><pre><code class=language-sql>CREATE TABLE table (..., PRIMARY KEY (field1, field2))
+CREATE TABLE table (..., FOREIGN KEY (field1, field2) REFERENCES table2
+(t2_field1, t2_field2))
+</code></pre><h3 id=users-and-privileges>Users and Privileges</h3><pre><code class=language-sql>GRANT ALL PRIVILEGES ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+GRANT SELECT, INSERT, DELETE ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+REVOKE ALL PRIVILEGES ON base.* FROM 'user'@'host'; -- one permission only
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'host'; -- all permissions
+</code></pre><pre><code class=language-sql>SET PASSWORD = PASSWORD('new_pass')
+SET PASSWORD FOR 'user'@'host' = PASSWORD('new_pass')
+SET PASSWORD = OLD_PASSWORD('new_pass')
+</code></pre><pre><code class=language-sql>DROP USER 'user'@'host'
+</code></pre><p>Host ‘%’ indicates any host.</p><h3 id=main-data-types>Main Data Types</h3><pre><code class=language-sql>TINYINT (1o: -217+128)
+SMALLINT (2o: +-65 000)
+MEDIUMINT (3o: +-16 000 000)
+INT (4o: +- 2 000 000 000)
+BIGINT (8o: +-9.10^18)
+</code></pre><pre><code class=language-sql>Precise interval: -(2^(8*N-1)) -&gt; (2^8*N)-1
+</code></pre><p>⚠ INT(2) = &ldquo;2 digits displayed&rdquo; &ndash; NOT &ldquo;number with 2 digits max&rdquo;</p><pre><code class=language-sql>FLOAT(M,D)
+DOUBLE(M,D)
+FLOAT(D=0-&gt;53)
+</code></pre><p>⚠ 8,3 -> 12345,678 &ndash; NOT 12345678,123!</p><pre><code class=language-sql>TIME (HH:MM)
+YEAR (AAAA)
+DATE (AAAA-MM-JJ)
+DATETIME (AAAA-MM-JJ HH:MM; années 1000-&gt;9999)
+TIMESTAMP (like DATETIME, but 1970-&gt;2038, compatible with Unix)
+</code></pre><pre><code class=language-sql>VARCHAR (single-line; explicit size)
+TEXT (multi-lines; max size=65535)
+BLOB (binary; max size=65535)
+</code></pre><p>Variants for TEXT&BLOB: <code>TINY</code> (max=255), <code>MEDIUM</code> (max=~16000), and <code>LONG</code> (max=4Go). Ex: <code>VARCHAR(32)</code>, <code>TINYTEXT</code>, <code>LONGBLOB</code>, <code>MEDIUMTEXT</code></p><pre><code class=language-sql>ENUM ('value1', 'value2', ...) -- (default NULL, or '' if NOT NULL)
+</code></pre><h3 id=reset-root-password>Reset Root Password</h3><pre><code class=language-bash>/etc/init.d/mysql stop
+</code></pre><pre><code class=language-bash>mysqld_safe --skip-grant-tables
+</code></pre><pre><code class=language-bash>$ mysql # on another terminal
+mysql&gt; UPDATE mysql.user SET password=PASSWORD('new_pass') WHERE user='root';
+</code></pre><pre><code class=language-bash>### Switch back to the mysqld_safe terminal and kill the process using Control + \
+$ /etc/init.d/mysql start
+</code></pre><h3 id=also-see>Also see</h3><ul><li><p><a href=https://github.com/justin-p/PowerShell/blob/master/random_sql_data.md>Dummy data</a></p></li><li><p><a href=https://raw.githubusercontent.com/rstacruz/cheatsheets/master/mysql.md>Sources</a></p></li></ul><footer class=footline></footer></div></div><div id=navigation></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js></script><script src=/js/perfect-scrollbar.min.js></script><script src=/js/perfect-scrollbar.jquery.min.js></script><script src=/js/jquery.sticky.js></script><script src=/js/featherlight.min.js></script><script src=/js/highlight.pack.js></script><script>hljs.initHighlightingOnLoad();</script><script src=/js/modernizr.custom-3.6.0.js></script><script src=/js/learn.js></script><script src=/js/hugo-learn.js></script><link href=/mermaid/mermaid.css rel=stylesheet><script src=/mermaid/mermaid.js></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

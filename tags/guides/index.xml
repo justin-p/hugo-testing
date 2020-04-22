@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Guides on My notes and snippets</title><link>https://confident-austin-c176a7.netlify.com/tags/guides/</link><description>Recent content in Guides on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 16:33:40 +0100</lastBuildDate><atom:link href="https://confident-austin-c176a7.netlify.com/tags/guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu VPS</title><link>https://confident-austin-c176a7.netlify.com/guides/ubuntu-vps/</link><pubDate>Tue, 10 Mar 2020 16:33:40 +0100</pubDate><guid>https://confident-austin-c176a7.netlify.com/guides/ubuntu-vps/</guid><description>Ubuntu VPS 00. Introduction Introduction to this guide.
+01. Adding users Adding users using the commandline.
+02. Managing of packages Managing packages using the commandline.
+03. File editor: vim Editing files using the commandline.
+04. UFW Setting up a basic firewall files using the commandline.
+05. SSH Keys Generating and setting up SSH Keys.
+06. Setup sshd Hardening the SSH Deamon.</description></item></channel></rss>
