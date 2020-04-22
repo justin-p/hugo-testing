@@ -5,7 +5,7 @@ on:
       - master
       
 jobs:
-  deploy:
+  build_and_deploy:
     runs-on: ubuntu-18.04
     steps:
       - name: Clone this repo
@@ -23,10 +23,9 @@ jobs:
       - name: Build hugo site
         run: hugo --minify
         
-      - name: Deploy to public branch
-        uses: s0/git-publish-subdir-action@master
-        env:
-          REPO: git@github.com/justin-p/hugo-testing.git
-          BRANCH: public
-          FOLDER: public
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: public
