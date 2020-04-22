@@ -1,4 +1,4 @@
-name: build to public branch
+name: Build and deploy hugo site to public branch
 on:
   push:
     branches:
