@@ -4,14 +4,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 {{ $assetBusting := not .Site.Params.disableAssetsBusting }}
-{{ $lunrjs := resources.Get "js/lunr.min.js" }}
-{{ $securelunrjs := $lunrjs | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $securelunrjs.Permalink | relURL }}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" integrity="{{ $securelunrjs.Data.Integrity }}"></script>
-
-{{ $autocompletejs := resources.Get "js/auto-complete.js" }}
-{{ $secureautocompletejs := $autocompletejs | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureautocompletejs.Permalink | relURL }}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" integrity="{{ $secureautocompletejs.Data.Integrity }}"></script>
-
+<script type="text/javascript" src="{{"js/lunr.min.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script type="text/javascript" src="{{"js/auto-complete.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
 <script type="text/javascript">
     {{ if .Site.IsMultiLingual }}
         var baseurl = "{{.Site.BaseURL}}{{.Site.LanguagePrefix}}";
@@ -19,7 +13,4 @@
         var baseurl = "{{.Site.BaseURL}}";
     {{ end }}
 </script>
-
-{{ $searchjs := resources.Get "js/search.js" }}
-{{ $securesearchjs := $searchjs | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $securesearchjs.Permalink | relURL }}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}" integrity="{{ $securesearchjs.Data.Integrity }}"></script>
+<script type="text/javascript" src="{{"js/search.js" | relURL}}{{ if $assetBusting }}?{{ now.Unix }}{{ end }}"></script>
