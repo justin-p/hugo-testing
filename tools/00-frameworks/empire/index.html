@@ -7,7 +7,16 @@ and
 <a href=https://gohugo.io/>Hugo</a></p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=/></a>> <a href=/tools/>Tools</a> > <a href=/tools/00-frameworks/>00-Frameworks</a> > empire</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#empire>empire</a><ul><li><a href=#install>Install</a></li><li><a href=#examples>Examples</a></li><li><a href=#also-see>Also see</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags><div class=tags><a class=tag-link href=/tags/frameworks>Frameworks</a></div></div><div id=body-inner><h2 id=empire>empire</h2><h3 id=install>Install</h3><h4 id=system>System</h4><pre><code class=language-bash>git clone https://github.com/BC-SECURITY/Empire
 cd Empire
 sudo ./setup/install.sh
-</code></pre><h4 id=docker>Docker</h4><pre><code class=language-bash>docker pull empireproject/empire
+</code></pre><h4 id=docker>Docker</h4><pre><code class=language-bash>docker pull bcsecurity/empire:{version}
+docker run -it bcsecurity/empire:{version}
+
+# with persistent storage
+docker pull bcsecurity/empire:{version}
+docker create -v /empire --name data bcsecurity/empire:{version}
+docker run -it --volumes-from data bcsecurity/empire:{version}
+
+# if you prefer to be dropped into bash instead of directly into empire
+docker run -it --volumes-from data bcsecurity/empire:{version} /bin/bash
 </code></pre><h3 id=examples>Examples</h3><h4 id=reset-db>Reset DB</h4><pre><code class=language-bash>/empire/setup/reset.sh
 </code></pre><h4 id=setup-basic-listener-and-gen-launcher>setup basic listener and gen launcher</h4><pre><code class=language-bash>(Empire) &gt; listeners
 [!] No listeners currently active
