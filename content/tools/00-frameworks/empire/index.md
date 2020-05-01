@@ -42,7 +42,7 @@ weight : 0
 #### System
 
 ```bash
-git clone https://github.com/EmpireProject/Empire
+git clone https://github.com/BC-SECURITY/Empire
 cd Empire
 sudo ./setup/install.sh
 ```
@@ -87,6 +87,5 @@ powershell -noP -sta -w 1 -enc  SQBmACgAJABQAF.....kAEsAKQApAHwASQBFAFgA
 
 ### Also see
 
-* [Github project](https://github.com/EmpireProject/Empire)
-* [Quickstart](http://www.powershellempire.com/?page_id=110)
-* [Documentation](http://www.powershellempire.com/?page_id=83)
+* [Github project](https://github.com/BC-SECURITY/Empire)
+* [Quickstart](https://github.com/BC-SECURITY/Empire/wiki/Quickstart)
