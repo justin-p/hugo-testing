@@ -4,8 +4,13 @@ SMB signing has to be disabled. (nmap &amp;ndash;script smb2-security-mode.nse -
 responder + ntlmrelayx
 Defences Enable SMB signing pro: fixes attack con: may cause slow down with file copies Disable NTLM auth. pro: fixes attack con: if kerberos goes down windows falls back to NTLM Account tiering.</description></item><item><title>WPAD</title><link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/</link><pubDate>Tue, 10 Mar 2020 16:43:46 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/</guid><description>WPAD Windows can use a upstream proxy. To make configuring this proxy easier WPAD can be used. Web Proxy Auto-Discovery Protocol (WPAD) is a method used by clients to locate the URL of a configuration file using DHCP and/or DNS.
 A attacker can serve a fake WPAD server and respond to client WPAD name resolutions. The client then requests the wpad.dat file from this fake WPAD Server. Responder creates an authentication screen and asks clients to enter the username and password they use in the domain.</description></item><item><title>LLMNR and NBT-NS</title><link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/</link><pubDate>Tue, 10 Mar 2020 16:43:45 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/</guid><description>LLMNR and NBT-NS By default when a DNS lookup fails windows tries to use 2 other components as a fallback. Link-Local Multicast Name Resolution (LLMNR) and Netbios Name Service (NBT-NS). LLLMNR was introduced in Windows Vista and is the successor to NBT-NS.
-These protocols help machines on the network identify hosts when DNS fails. So if one machine tries to resolve a particular host, but DNS resolution fails, the machine will then attempt to ask all other machines on the local network for the correct address via LLMNR or NBT-NS.</description></item><item><title>Active Directory</title><link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/</guid><description>Active Directory Attack Tools Tools of the attack.
-IPv6 DNS Takeover IPv6 DNS Takeover.
-LLMNR and NBT-NS LLMNR and NBT-NS.
-SMB Relay SMB Relay.
-WPAD WPAD description.</description></item></channel></rss>
+These protocols help machines on the network identify hosts when DNS fails. So if one machine tries to resolve a particular host, but DNS resolution fails, the machine will then attempt to ask all other machines on the local network for the correct address via LLMNR or NBT-NS.</description></item><item><title>Active Directory</title><link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/03-exploitation/active-directory/</guid><description>Active Directory Attack Tools
+Tools of the attack.
+IPv6 DNS Takeover
+IPv6 DNS Takeover.
+LLMNR and NBT-NS
+LLMNR and NBT-NS.
+SMB Relay
+SMB Relay.
+WPAD
+WPAD description.</description></item></channel></rss>
