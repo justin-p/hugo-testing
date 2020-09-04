@@ -1,2 +1,0 @@
-asciimatics
-simpleaudio
