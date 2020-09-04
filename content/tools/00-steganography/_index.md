@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "00-Steganography"
+title : "'Steganography'"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 menuTitle : "Steganography"
 ### The title of the page in menu will be prefixed by this HTML content

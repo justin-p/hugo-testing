@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS Recon on My notes and snippets</title>
+    <link>https://dev-hugo.justin-p.me/tags/dns-recon/</link>
+    <description>Recent content in DNS Recon on My notes and snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Mar 2020 15:22:08 +0100</lastBuildDate>
+    
+	<atom:link href="https://dev-hugo.justin-p.me/tags/dns-recon/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>amass</title>
+      <link>https://dev-hugo.justin-p.me/tools/amass/</link>
+      <pubDate>Wed, 11 Mar 2020 15:22:08 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/tools/amass/</guid>
+      <description>amass Installation  Usage  Flags  Examples The most basic use of the tool for subdomain enumeration amass enum -d example.com  Typical parameters for DNS enumeration amass enum -v -src -ip -brute -min-for-recursive 2 -d example.com  Also see  Github Documentation  </description>
+    </item>
+    
+    <item>
+      <title>PSDNSDumpsterAPI</title>
+      <link>https://dev-hugo.justin-p.me/tools/psdnsdumpsterapi/</link>
+      <pubDate>Wed, 11 Mar 2020 15:16:39 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/tools/psdnsdumpsterapi/</guid>
+      <description>PSDNSDumpsterAPI Installation Install-Module PSDNSDumpsterAPI  Usage Invoke-PSDNSDumpsterAPI -Domain &#39;domain.tld&#39;  Flags .PARAMETER Domains One or more domains to get DNSDumpster results for.  Examples Return the results from dnsdumpster as a PSObject $DomainInfo=Invoke-PSDnsDumpsterAPI -Domains &#39;justin-p.me&#39;  Also see  Github  </description>
+    </item>
+    
+    <item>
+      <title>sublist3r</title>
+      <link>https://dev-hugo.justin-p.me/tools/sublist3r/</link>
+      <pubDate>Wed, 11 Mar 2020 15:15:29 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/tools/sublist3r/</guid>
+      <description>Sublist3r Installation  Usage  Flags  Examples Enumerate subdomains of specific domain sublist3r -d example.com  Show only subdomains which have ports 80 and 443 open sublist3r -d example.com -p 80,443  Save results in txt file sublist3r -d example.com -o ~/output/file.txt  Also see  Github  </description>
+    </item>
+    
+    <item>
+      <title>DNS Recon</title>
+      <link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/</link>
+      <pubDate>Tue, 10 Mar 2020 16:43:44 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/</guid>
+      <description>DNS Recon External services    Service info     dnsdumpster dns recon &amp;amp; research, find &amp;amp; lookup dns records   threatcrowd ThreatCrowd is a system for finding and researching artefacts relating to cyber threats.   RIPE &amp;amp; ARIN whois search the registration database of RIPE and ARIN    DNS Bruteforce Seclists has great wordlists for DNS bruteforce.
+Try to find commonalities between domains and iterating names.</description>
+    </item>
+    
+  </channel>
+</rss>

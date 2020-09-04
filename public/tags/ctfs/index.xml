@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTFs on My notes and snippets</title>
+    <link>https://dev-hugo.justin-p.me/tags/ctfs/</link>
+    <description>Recent content in CTFs on My notes and snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Mar 2020 16:33:39 +0100</lastBuildDate>
+    
+	<atom:link href="https://dev-hugo.justin-p.me/tags/ctfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Graficom Spoorzoeker</title>
+      <link>https://dev-hugo.justin-p.me/notes/ctfs/graficomspoorzoeker/</link>
+      <pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/ctfs/graficomspoorzoeker/</guid>
+      <description>Graficom Spoorzoeker   Challanges   Challanges of the Graficom Spoorzoeker
+   Solutions   Solutions of the Graficom Spoorzoeker
+  </description>
+    </item>
+    
+    <item>
+      <title>HTB</title>
+      <link>https://dev-hugo.justin-p.me/notes/ctfs/htb/</link>
+      <pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/ctfs/htb/</guid>
+      <description>HTB   Bashed   Notes from the Bashed machine on HTB.
+   Blue   Notes from the Blue machine on HTB.
+   Devel   Notes from the Devel machine on HTB.
+   Grandpa   Notes from the Grandpa machine on HTB.
+   Granny   Notes from the Granny machine on HTB.
+   Jerry   Notes from the Jerry machine on HTB.</description>
+    </item>
+    
+    <item>
+      <title>VulnHub</title>
+      <link>https://dev-hugo.justin-p.me/notes/ctfs/vulnhub/</link>
+      <pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/ctfs/vulnhub/</guid>
+      <description>VulnHub   Fristileaks   Notes from the Fristileaks machine from Vulnhub.
+   Kioptrix   Notes from the Kioptrix machines from Vulnhub.
+   Pwnlab   Notes from the Pwnlab machine from Vulnhub.
+   Stapler   Notes from the Stapler machine from Vulnhub.
+   Vulnix   Notes from the Vulnix machine from Vulnhub.
+  </description>
+    </item>
+    
+    <item>
+      <title>Vulnserver</title>
+      <link>https://dev-hugo.justin-p.me/notes/ctfs/vulnserver/</link>
+      <pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/ctfs/vulnserver/</guid>
+      <description>Vulnserver   TRUN   Notes from the TRUN command on the Vulnserver machine.
+  </description>
+    </item>
+    
+  </channel>
+</rss>

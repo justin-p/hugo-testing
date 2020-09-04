@@ -42,56 +42,55 @@
 	{{- range .menu }}
 		{{- if and .Params.hidden (not $.showhidden) }}
 		{{- else}}
-		<span>
-		{{- if hasPrefix $.style "h"}}
-			{{- $num := sub ( int (trim $.style "h") ) 1 }}
-			{{- $numn := add $num $.count }}
+			<span>
+				<a class="clickablecard" href="{{.RelPermalink}}" >
+						{{- if hasPrefix $.style "h"}}
+							{{- $num := sub ( int (trim $.style "h") ) 1 }}
+							{{- $numn := add $num $.count }}
+							{{- (printf "<h%d>" $numn)|safeHTML}}
+								<p class="cardtitletext">{{ .Title }}</p>
+							{{- (printf "</h%d>" $numn)|safeHTML}}
+						{{- else}}
+							{{- (printf "<%s>" $.style)|safeHTML}}
+								<p class="cardtitletext">{{ .Title }}</p>
+							{{- (printf "</%s>" $.style)|safeHTML}}
 
-			{{- (printf "<h%d>" $numn)|safeHTML}}
-				<a class="test" href="{{.RelPermalink}}" >{{ .Title }}</a>
-			{{- (printf "</h%d>" $numn)|safeHTML}}
-		{{- else}}
-			{{- (printf "<%s>" $.style)|safeHTML}}
-				<a class="test" href="{{.RelPermalink}}" >{{ .Title }}</a>
-			{{- (printf "</%s>" $.style)|safeHTML}}
-		{{- end}}
-		{{- if $.description}}
-			{{- if .Description}}
-				<p>{{.Description}}</p>
-			{{- else}}
-				<p>{{.Summary}}</p>
-			{{- end}}
-		{{- end}}
-		</span>
-
-
+						{{- end}}
+						{{- if $.description}}
+							{{- if .Description}}
+								<p class="cardtext">{{.Description}}</p>
+							{{- else}}
+								<p class="cardtext">{{.Summary}}</p>
+							{{- end}}
+						{{- end}}
+				 	</a>
+			</span>
 			{{- if lt $.count $.depth}}
-{{- if eq $.style "li" }}
-<ul>
-{{- end}}
-	{{- .Scratch.Set "pages" .Pages }}
-    {{- if .Sections}}
-	    {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
-    {{- end}}
-    {{- $pages := (.Scratch.Get "pages") }}
-
-	{{- if eq $.sortTerm "Weight"}}
-		{{- template "childs" dict "menu" $pages.ByWeight  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- else if eq $.sortTerm "Name"}}
-		{{- template "childs" dict "menu" $pages.ByTitle  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- else if eq $.sortTerm "PublishDate"}}
-		{{- template "childs" dict "menu" $pages.ByPublishDate  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- else if eq $.sortTerm "Date"}}
-		{{- template "childs" dict "menu" $pages.ByDate  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- else if eq $.sortTerm "Length"}}
-		{{- template "childs" dict "menu" $pages.ByLength  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- else}}
-		{{- template "childs" dict "menu" $pages  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
-	{{- end}}
-{{- if eq $.style "li"}}
-</ul>
-{{- end }}
+				{{- if eq $.style "li" }}
+					<ul>
+				{{- end}}
+				{{- .Scratch.Set "pages" .Pages }}
+    			{{- if .Sections}}
+				    {{- .Scratch.Set "pages" (.Pages | union .Sections) }}
+    			{{- end}}
+    			{{- $pages := (.Scratch.Get "pages") }}
+				{{- if eq $.sortTerm "Weight"}}
+					{{- template "childs" dict "menu" $pages.ByWeight  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- else if eq $.sortTerm "Name"}}
+					{{- template "childs" dict "menu" $pages.ByTitle  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- else if eq $.sortTerm "PublishDate"}}
+					{{- template "childs" dict "menu" $pages.ByPublishDate  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- else if eq $.sortTerm "Date"}}
+					{{- template "childs" dict "menu" $pages.ByDate  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- else if eq $.sortTerm "Length"}}
+					{{- template "childs" dict "menu" $pages.ByLength  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- else}}
+					{{- template "childs" dict "menu" $pages  "style" $.style "showhidden" $.showhidden "count" (add $.count 1) "depth" $.depth "pages" $.pages "description" $.description "sortTerm" $.sortTerm}}
+				{{- end}}
+				{{- if eq $.style "li"}}	
+					</ul>
+				{{- end }}
 			{{- end }}
-		{{- end }}
+		{{- end }}	
 	{{- end }}
 {{- end }}

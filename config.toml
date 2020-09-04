@@ -6,7 +6,7 @@ pluralizelisttitles = false
 
 
 # Change the default theme to be use when building the site with Hugo
-theme = "hugo-theme-learn"
+theme = "hugo-theme-learn-2.5.0"
 
 # hugo-theme-learn settings
 

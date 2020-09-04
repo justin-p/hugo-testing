@@ -159,6 +159,10 @@ a:hover {
   border-color: var(--MENU-SECTION-HR-color);
 }
 
+#sidebar ul.topics li.parent > ul {
+  display: block;
+}
+
 /* single code block */
 
 code {
@@ -173,6 +177,7 @@ code {
   background: var(--TOP-BAR-backgroundcolor);
 }
 
+
 /* copy to clipboard */
 
 .copy-to-clipboard {
@@ -183,6 +188,37 @@ code {
 }
 
 /* Children shortcode card style */
+
+#body a.clickablecard {
+  line-height: 1.1;
+  display: block;
+}
+
+p.cardtitletext {
+  font-size: 100%;
+  line-height: 1.1;
+  display: inline-block;
+}
+p.cardtitletext, p.cardtitletext:hover, p.cardtitletext:focus {
+  text-decoration: none;
+  outline: none;
+  outline: 0;
+}
+
+p.cardtitletext {
+  color: var(--MAIN-LINK-color);
+}
+
+p.cardtitletext:hover {
+  color: var(--MAIN-LINK-HOVER-color);
+}
+
+p.cardtext {
+  padding: 0rem 1rem;
+  margin: 1.7rem 0;
+  box-sizing: border-box;
+  color: #e6e6e6;
+}
 
 ul.children.children-card {
   flex-wrap: wrap;
@@ -206,18 +242,13 @@ ul.children.children-card > span {
   background-color: var(--CHILD-SPAN-color);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
+
 ul.children.children-card > span card {
   margin: 0px 0px;
   display: block;
   padding: 1rem;
   background-color: var(--CHILD-CARD-color);
   font-size: 200%;
-}
-ul.children.children-card > span p {
-  padding: 0rem 1rem;
-  margin: 1.7rem 0;
-  box-sizing: border-box;
-  color: #e6e6e6;
 }
 
 /* Tables */

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>user-enumeration on My notes and snippets</title>
+    <link>https://dev-hugo.justin-p.me/tags/user-enumeration/</link>
+    <description>Recent content in user-enumeration on My notes and snippets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Mar 2020 16:43:44 +0100</lastBuildDate>
+    
+	<atom:link href="https://dev-hugo.justin-p.me/tags/user-enumeration/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>E-Mail Gathering</title>
+      <link>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/01-reconnaissance/user-enumeration/</link>
+      <pubDate>Tue, 10 Mar 2020 16:43:44 +0100</pubDate>
+      
+      <guid>https://dev-hugo.justin-p.me/notes/todo-hacking-methodology/01-reconnaissance/user-enumeration/</guid>
+      <description>User enumeration Username schema Use meta data from publicy posted documents to find internal username schemas (sAMAccountName) Tools: PowerMeta, FOCA
+Users lists LinkedIn is your friend: Tools: CrossLinked
+Validation endpoints    What Where With what     Azure/O365 https://login.microsoft.com/common/oauth2/token MSOLSpray   Onprem https://webmail.domain.com/owa/ or /ews/ MailSniper    External services    Service info     hunter.io find email addresses   emailrep get e-mail &amp;lsquo;reputation&amp;rsquo;   linkedin LinkedIn is your friend.</description>
+    </item>
+    
+  </channel>
+</rss>
