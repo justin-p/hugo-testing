@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Underthewire on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/underthewire/</link><description>Recent content in Underthewire on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 29 Sep 2020 14:47:17 +0200</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/underthewire/index.xml" rel="self" type="application/rss+xml"/><item><title>century</title><link>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/century/</link><pubDate>Tue, 29 Sep 2020 14:47:17 +0200</pubDate><guid>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/century/</guid><description>Century Century 00 -&amp;gt; 01 Goal The goal of this level is to log into the game.
+Solution sign up and get the creds.
+$ ssh century1@century.underthewire.tech:century1
+Under the Wire... PowerShell Training for the People!
+PS C:\users\century1\desktop&amp;gt;
+Century 01 -&amp;gt; 02 Goal The password for Century2 is the build version of the instance of PowerShell installed on this system.
+NOTE:
+- The format is as follows: **.*.*****.****
+- Include all periods
+- Be sure to look for build version and NOT PowerShell version Solution PS C:\users\century1\desktop&amp;gt; $PSVersionTable.</description></item><item><title>cyborg</title><link>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/cyborg/</link><pubDate>Tue, 29 Sep 2020 14:47:17 +0200</pubDate><guid>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/cyborg/</guid><description>cyborg cyborg 00 -&amp;gt; 01 Goal The goal of this level is to log into the game.
+Solution sign up and get the creds.
+$ ssh cyborg1@cyborg.underthewire.tech:cyborg1
+Under the Wire... PowerShell Training for the People!
+PS C:\users\cyborg1\desktop&amp;gt;
+cyborg 01 -&amp;gt; 02 Goal The password for cyborg2 is the state that the user Chris Rogers is from as stated within Active Directory.
+NOTE:
+- The password will be lowercase no matter how it appears on screen.</description></item><item><title>underthewire</title><link>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/</link><pubDate>Tue, 29 Sep 2020 14:46:11 +0200</pubDate><guid>https://dev-hugo.justin-p.me/notes/ctfs/underthewire/</guid><description>underthewire century
+century description.
+cyborg
+cyborg description.</description></item></channel></rss>
