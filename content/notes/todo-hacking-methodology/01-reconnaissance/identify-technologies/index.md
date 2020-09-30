@@ -39,27 +39,22 @@ tags: ["Identify Technologies"]
 
 ### Netblocks
 
-- Azure Netblocks
-  Public: https://www.microsoft.com/en-us/download/details.aspx?id=56519
-  US Gov: http://www.microsoft.com/en-us/download/details.aspx?id=57063
-  Germany: http://www.microsoft.com/en-us/download/details.aspx?id=57064
-  China: http://www.microsoft.com/en-us/download/details.aspx?id=57062
+| blocks        | URL                                                            |
+| ------------- | -------------------------------------------------------------- |
+| Azure Public  | https://www.microsoft.com/en-us/download/details.aspx?id=56519 |
+| Azure US Gov  | http://www.microsoft.com/en-us/download/details.aspx?id=57063  |
+| Azure Germany | http://www.microsoft.com/en-us/download/details.aspx?id=57064  |
+| Azure China   | http://www.microsoft.com/en-us/download/details.aspx?id=57062  |
+| AWS           | https://ip-ranges.amazonaws.com/ip-ranges.json                 |
+| GCP           | http://www.gstatic.com/ipranges/cloud.json                     |
 
-- AWS Netblocks
-  https://ip-ranges.amazonaws.com/ip-ranges.json
-
-- GCP
-  http://www.gstatic.com/ipranges/cloud.json
-
-Can be automated with https://github.com/oldrho/ip2provider
+Can be automated with https://github.com/oldrho/ip2provider # MOVE TO ITS OWN TOOL PAGE.
 
 ### Microsoft Products
 
-ADFS Usage
-
 | Notes                                                 | url                                                                                                             |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| Find out what ADFS is used to for to authenticate to. | https://adfs.domain.tld/adfs/ls/idpinitiatedsignon.aspx                                                         |
+| Find out what ADFS is used to for to authenticate to  | https://adfs.domain.tld/adfs/ls/idpinitiatedsignon.aspx                                                         |
 | Show information about O365/hybrid configs            | https://login.microsoftonline.com/getuserrealm.srf?login=user@targetdomain.com&xml=1                            |
 | Show information disclosed from autodiscover          | https://outlook.office365.com/autodiscover/autodiscover.json/v1.0/user@targetdomain.com?Protocol=autodiscoverv1 |
 

@@ -40,11 +40,17 @@ cascade:
 
 ## Discover Open Ports
 
+In order to start testing something you first want to find out if it has any network ports open. Discovering what ports are open and what service is running behind is crucial and should be one of the first things you do after recon.
+
+# MOVE TO OWN TOOLS PAGE
+
 ### netdiscover
 
 ```bash
 netdiscover -r 192.168.1.0/24
 ```
+
+# MOVE TO OWN TOOLS PAGE
 
 ### masscan
 

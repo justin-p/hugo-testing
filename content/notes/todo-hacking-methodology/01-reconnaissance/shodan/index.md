@@ -37,6 +37,8 @@ tags : ["Shodan"]
 
 ## Shodan
 
+### Example filters
+
 org:"Target name"
 
 net:"CIDR rangee"

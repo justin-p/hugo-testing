@@ -8,7 +8,7 @@ title : "Google Dorking"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Ask the almight Google Machine. It. Known. All."
+description : "Ask the almight Google Machine. It. Knowns. All."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:44+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -32,7 +32,7 @@ date : 2020-03-10T16:43:44+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags: ["Google Dorks"]
 ---
 
 ## Google Dorking

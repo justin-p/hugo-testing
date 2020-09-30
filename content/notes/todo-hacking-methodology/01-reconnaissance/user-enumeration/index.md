@@ -40,12 +40,12 @@ tags: ["user-enumeration"]
 ### Username schema
 
 Use meta data from publicy posted documents to find internal username schemas (sAMAccountName)
-Tools: PowerMeta, FOCA
+Tools: PowerMeta, FOCA # MOVE TO OWN TOOLS PAGE
 
 ### Users lists
 
 LinkedIn is your friend:
-Tools: [CrossLinked](https://github.com/m8r0wn/CrossLinked)
+Tools: [CrossLinked](https://github.com/m8r0wn/CrossLinked) # MOVE TO OWN TOOLS PAGE
 
 ### Validation endpoints
 
@@ -64,4 +64,4 @@ Tools: [CrossLinked](https://github.com/m8r0wn/CrossLinked)
 
 ### Related tools
 
-{{< related_pages_table tag="E-Mail Gathering" >}}
+{{< related_pages_table tag="user-enumeration" >}}

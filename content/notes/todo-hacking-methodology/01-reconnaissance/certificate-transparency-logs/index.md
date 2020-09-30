@@ -62,3 +62,7 @@ Inspecting the x509v3 data show external hostnames.
 Which leads us to a public accessible server.
 
 ![Public server](images/crt_sh03.png)
+
+### Related tools
+
+{{< related_pages_table tag="Certificate Transparency Logs" >}}

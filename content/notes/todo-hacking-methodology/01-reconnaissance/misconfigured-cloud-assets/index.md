@@ -32,7 +32,7 @@ date : 2020-03-10T16:43:45+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["Misconfigured Cloud Assets"]
 ---
 
 ## Misconfigured Cloud Assets
@@ -59,7 +59,7 @@ aws s3 mv evil-script.html s3://<bucketname>/evil-script.html
 ```
 
 Tools: 
-    - [cloud_enum](https://github.com/initstring/cloud_enum)
+    - [cloud_enum](https://github.com/initstring/cloud_enum) # MOVE TO OWN TOOLS PAGE
 
 #### S3 domain hijacking
 
@@ -69,7 +69,7 @@ Look for 404's to *.s3.amazonaws.com. If a bucket name is not in use you can reg
 
 AWS Virutal harddisks. They can have similar issues to s3 being public.
 
-Tool: [dufflebag](https://github.com/bishopfox/dufflebag)
+Tool: [dufflebag](https://github.com/bishopfox/dufflebag) # MOVE TO OWN TOOLS PAGE
 
 #### [Pacu](https://github.com/RhinoSecurityLabs/pacu)
 
@@ -95,12 +95,16 @@ Access can be granted on the blob or container.
 - Container access policy alowes listing contianers and blobs.
 
 Tools: 
-- [Microburst's](https://github.com/NetSPI/MicroBurst) Invoke-EnumerateAzureBlobs  
-- [cloud_enum](https://github.com/initstring/cloud_enum)
+- [Microburst's](https://github.com/NetSPI/MicroBurst) Invoke-EnumerateAzureBlobs  # MOVE TO OWN TOOLS PAGE
+- [cloud_enum](https://github.com/initstring/cloud_enum) # MOVE TO OWN TOOLS PAGE
 
 ### Google Cloud Platform (GCP)
 
 GCP has storage called buckets. 
 
 Tools:
-  - [cloud_enum](https://github.com/initstring/cloud_enum) 
+  - [cloud_enum](https://github.com/initstring/cloud_enum)  # MOVE TO OWN TOOLS PAGE
+
+### Related tools
+
+{{< related_pages_table tag="Misconfigured Cloud Assets" >}}
