@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/notes/</link><description>Recent content in Notes on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 16:33:40 +0100</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Programming</title><link>https://dev-hugo.justin-p.me/cheat-cheets/programming/</link><pubDate>Tue, 10 Mar 2020 16:33:40 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheat-cheets/programming/</guid><description>Programming Bash
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Notes on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/notes/</link><description>Recent content in Notes on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 16:33:40 +0100</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Programming</title><link>https://dev-hugo.justin-p.me/cheatsheets/programming/</link><pubDate>Tue, 10 Mar 2020 16:33:40 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheatsheets/programming/</guid><description>Programming Bash
 Bash scripting.
 Docker-Compose
 Docker-Compose YAML.
@@ -31,15 +31,9 @@ Vulnserver
 Notes from the Vulnserver machine.</description></item><item><title>Networking</title><link>https://dev-hugo.justin-p.me/notes/networking/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/networking/</guid><description>Networking It should be obvious that page is not a complete description of IP, UDP or TCP, etc!
 Dedicated pages go more in depth.
 What is &amp;ldquo;IPv4&amp;rdquo; &amp;ldquo;IPv6&amp;rdquo;? The following is the &amp;ldquo;30 second&amp;rdquo; introduction to internet protocol (IP) - which is the primary way to send packets (&amp;ldquo;datagrams&amp;rdquo;) of information from one machine to another.
-&amp;ldquo;IP4&amp;rdquo;, or more precisely, &amp;ldquo;IPv4&amp;rdquo; is version 4 of the Internet Protocol that describes how to send packets of information across a network from one machine to another .</description></item><item><title>Hacking Methodology</title><link>https://dev-hugo.justin-p.me/notes/hacking/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/hacking/</guid><description>Hacking Methodology Certificate Transparency Logs
-The art of Credential Gathering.
-cloud-provider-web-servers
-cloud-provider-web-servers.
-Credential Gathering
-The art of Credential Gathering.
-Credential Stuffing
-Stuff those POST fields.
-Discover Open Ports
-SCAN ALL THE THINGS!
-DNS Recon
-DNS Recon, if you don&amp;#39;t know where stuff is its gonna get hard to hack it.</description></item><item><title>Z_Private</title><link>https://dev-hugo.justin-p.me/notes/z_private/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/z_private/</guid><description>Private</description></item></channel></rss>
+&amp;ldquo;IP4&amp;rdquo;, or more precisely, &amp;ldquo;IPv4&amp;rdquo; is version 4 of the Internet Protocol that describes how to send packets of information across a network from one machine to another .</description></item><item><title>Hacking Methodology</title><link>https://dev-hugo.justin-p.me/notes/hacking/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/hacking/</guid><description>Hacking Methodology external
+external description.
+general
+general description.
+internal
+internal description.</description></item><item><title>Z_Private</title><link>https://dev-hugo.justin-p.me/notes/z_private/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/notes/z_private/</guid><description>Private</description></item></channel></rss>

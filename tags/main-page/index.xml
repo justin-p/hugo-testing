@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main Page on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/main-page/</link><description>Recent content in Main Page on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 19:00:54 +0100</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/main-page/index.xml" rel="self" type="application/rss+xml"/><item><title>Tools</title><link>https://dev-hugo.justin-p.me/cheat-cheets/tools/</link><pubDate>Tue, 10 Mar 2020 19:00:54 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheat-cheets/tools/</guid><description>Tools &amp;#39;C2 Frameworks&amp;#39;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main Page on My notes and snippets</title><link>https://dev-hugo.justin-p.me/tags/main-page/</link><description>Recent content in Main Page on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 19:00:54 +0100</lastBuildDate><atom:link href="https://dev-hugo.justin-p.me/tags/main-page/index.xml" rel="self" type="application/rss+xml"/><item><title>Tools</title><link>https://dev-hugo.justin-p.me/cheatsheets/tools/</link><pubDate>Tue, 10 Mar 2020 19:00:54 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheatsheets/tools/</guid><description>Tools &amp;#39;C2 Frameworks&amp;#39;
 C2 Frameworks description.
 &amp;#39;Forensic&amp;#39;
 forensic description.
@@ -20,7 +20,9 @@ Networking
 Networking description.
 Z_Private
 Private notes</description></item><item><title>Guides</title><link>https://dev-hugo.justin-p.me/guides/</link><pubDate>Tue, 10 Mar 2020 16:33:40 +0100</pubDate><guid>https://dev-hugo.justin-p.me/guides/</guid><description>Guides Ubuntu VPS
-Setup a &amp;#39;publicly accessible&amp;#39; Ubuntu VPS</description></item><item><title>Cheat Sheets</title><link>https://dev-hugo.justin-p.me/cheat-cheets/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheat-cheets/</guid><description>Unix Programming
+Setup a &amp;#39;publicly accessible&amp;#39; Ubuntu VPS</description></item><item><title>Cheat Sheets</title><link>https://dev-hugo.justin-p.me/cheatsheets/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://dev-hugo.justin-p.me/cheatsheets/</guid><description>Unix hugo
+hugo description.
+Programming
 Programming description.
 Tools
 Tools description.
