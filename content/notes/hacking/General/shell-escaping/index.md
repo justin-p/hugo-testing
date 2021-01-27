@@ -37,6 +37,8 @@ weight : 0
 
 ## shell escaping
 
+Sometimes you find your self in a locked down/pseudo shell, for example some network appliance. But under the hood it might run a full unix OS. If this is the case you might be able to use some existing programs that might be available to escape from this pseudo shell.
+
 ## editors 
 
 ### vim 
@@ -83,7 +85,7 @@ Run `!'sh'`
 
 Run `!'sh'`
 
-This to works sinse man uses more/less.
+This to works since man uses more/less.
 
 ### pinfo
 
@@ -127,7 +129,7 @@ enter `/bin/Shell`
 
 ### find
 
-when ever it finds udp,xml it will cd to root and run ls.
+when ever it finds udp.xml it will cd to root and run ls.
 
 `find . -name udp.xml -exec awk 'BEGIN {system("cd /root; ls")}' \;`
 

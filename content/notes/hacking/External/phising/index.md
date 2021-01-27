@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "phising"
+title : "Phising"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "sql injection"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "phising"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "phising."
+description : "Gaining access through people."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:45+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -37,12 +37,13 @@ tags : ["Phising"]
 
 ## Phising
 
+Misconfigurations and vulnerable software are not the only way into a targets network. Phishing can be a very valuable wrench in your toolkit, its perfect to gather credentials, sessions or even shells.
+
 ### Session Hijack
 
 Steal creds and/or session cookies. Can be useful when client has good prevention against shells.
 
-Email a link to a target employee pointing to a cloned/proxied auth portal (Microsoft Online(O365, Azure), G-suite. AWS Console).
-When they auth they get a real session cookies, and so do we.
+Email a link to a target employee pointing to a cloned/proxied auth portal (Microsoft Online(O365, Azure), G-suite. AWS Console). When they auth they get a real session cookies, and so do we.
 
 Tools: [Evilginx2](https://github.com/kgretzky/evilginx2), [Modlishka](https://github.com/drk1wi/Modlishka) # MOVE TO OWN TOOL PAGE
 
@@ -103,8 +104,7 @@ PS C:\Users\justin-p> Invoke-InjectGEventAPI -PrimaryEmail Injector@gmail.com -A
 
 ### Remote Access
 
-Try to comprise workstations. This would (depending on the user) give access to internal and other cloud resources.
-Allows us to steal tokens from disk, preform session hijack/riding or start keyloggers.
+Try to comprise workstations. This would (depending on the user) give access to internal and other cloud resources. Allows us to steal tokens from disk, preform session hijack/riding, start keyloggers and pivot in the network from this entry point.
 
 ### Related tools
 

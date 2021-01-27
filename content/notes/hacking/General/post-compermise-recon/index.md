@@ -37,6 +37,8 @@ weight : 0
 
 ## Post compromise recon
 
+Once you landed your self a shell or some credentials you need to ask your self a couple of questions.
+
 - Who do we have access as ?
 - What roles do we have ?
 - is MFA enabled ?

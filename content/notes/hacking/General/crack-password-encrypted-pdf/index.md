@@ -8,7 +8,7 @@ title : "encrypted password protected pdf"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "encrypted password protected pdf description."
+description : "Show me the hidden goods."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:47+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -32,11 +32,12 @@ date : 2020-03-10T16:43:47+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["pdf"]
 ---
 
 ## encrypted password protected pdf
 
+During your work you might stumble upon an password protected PDF. It's possible to extract a password hash that can be cracked with hashcat. 
 
 [source](https://blog.didierstevens.com/2017/12/26/cracking-encrypted-pdfs-part-1/)
 
@@ -145,6 +146,3 @@ hashcat just needs the hash, not the pdf name.
 root@kali:/mnt/hgfs/_shared_folder# /usr/share/john/pdf2john.pl "0ld is g0ld.pdf" | cut -d : -f 2
 $pdf$4*4*128*-1060*1*16*5c8f37d2a45eb64e9dbbf71ca3e86861*32*9cba5cfb1c536f1384bba7458aae3f8100000000000000000000000000000000*32*702cc7ced92b595274b7918dcb6dc74bedef6ef851b4b4b5b8c88732ba4dac0c
 ```
-
-
-see hashcat for examplesto crack

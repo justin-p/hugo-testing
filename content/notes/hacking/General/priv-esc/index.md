@@ -8,7 +8,7 @@ title: "priv esc"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "priv esc description."
+description: "Get the escalator."
 ### The datetime assigned to this page.
 date: 2020-03-10T16:43:46+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -36,6 +36,8 @@ weight: 0
 ---
 
 ## priv esc
+
+Just because you pop'ed a shell doenst mean its game over. Sometimes you find your self in a low privilage process and in order to compromise the host fully you would need to escalate your privileges
 
 | Checklists                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

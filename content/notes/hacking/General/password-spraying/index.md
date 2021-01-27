@@ -8,7 +8,7 @@ title : "Password Spraying"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Password Spraying description."
+description : "Spray it baby, spray it good."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:45+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -37,9 +37,11 @@ weight : 0
 
 ## Password Spraying
 
+Once you have found several valid usernames/e-mail address you can try some common passwords with each of the discovered users. (Keep in mind the password and lockout policy of the environment, by default in Active Directory the minimum password length is 7 and lockout is 5.)
+
 ### Microsoft Online
 
-https://github.com/justin-p/MSOLSpray
+[MSOLSpray](https://github.com/justin-p/MSOLSpray)
 
 Watch out for AzureAD Smart lockout. Use fireprox and/or the delay param.
 

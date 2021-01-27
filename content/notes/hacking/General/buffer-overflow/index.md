@@ -37,6 +37,8 @@ weight: 0
 
 ## Buffer Overflow
 
+This is mainly aimed at beginner/OCSP level BO.
+
 ### Steps
 
 1. Crash The Application

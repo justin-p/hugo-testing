@@ -8,7 +8,7 @@ title : "encrypted password protected zip"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "encrypted password protected zip description."
+description : "Show me the hidden goods."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:46+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -36,6 +36,9 @@ weight : 0
 ---
 
 ## encrypted password protected zip
+
+
+During your work you might stumble upon an password protected zip. It's possible to extract a password hash that can be cracked with hashcat/john. 
 
 ## zip2john
 

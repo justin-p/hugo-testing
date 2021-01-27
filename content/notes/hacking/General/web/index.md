@@ -35,8 +35,6 @@ weight : 0
 # tags : [""]
 ---
 
-
-
 ## gobuster
 
 ## General scan

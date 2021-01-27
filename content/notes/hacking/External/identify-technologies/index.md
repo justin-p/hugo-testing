@@ -8,7 +8,7 @@ title: "Identify Technologies"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "Find out what services they are using."
+description: "Who, What and Where."
 ### The datetime assigned to this page.
 date: 2020-03-10T16:43:44+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -36,6 +36,8 @@ tags: ["Identify Technologies"]
 ---
 
 ## Identify Technologies
+
+Being able to identity what you are targeting is critical if you want to succeed.  This can range to what CMS a website is using, where a site is hosted, to what potential targets are 'hidden' behind a ADFS server.
 
 ### Netblocks
 
@@ -95,4 +97,4 @@ If so, try dorking them for cached content.
 
 ### Related tools
 
-{{< related_pages_table tag="Identify Website Technologies" >}}
+{{< related_pages_table tag="Identify Technologies" >}}

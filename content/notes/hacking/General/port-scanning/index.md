@@ -46,6 +46,8 @@ In order to start testing something you first want to find out if it has any net
 
 ### netdiscover
 
+Uses ARP to discover hosts.
+
 ```bash
 netdiscover -r 192.168.1.0/24
 ```
@@ -53,6 +55,8 @@ netdiscover -r 192.168.1.0/24
 # MOVE TO OWN TOOLS PAGE
 
 ### masscan
+
+Usefull on larger networks where speed is important.
 
 #### scan all ports
 

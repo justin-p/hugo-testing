@@ -8,7 +8,7 @@ title : "cloud-provider-web-servers"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "cloud-provider-web-servers."
+description : "Metdata services FTW."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:45+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -41,7 +41,7 @@ Cloud provider web servers have some special things you might not have on your '
 
 ### Azure windows webserver
 
-If you are able to comprimise an azure server you might be able to use mimikatz to extract certificates and try to authenticitate to Azure with them.
+If you are able to compromise an azure server you might be able to use mimikatz to extract certificates and try to authenticitate to Azure with them.
 
 ```
 crypto::capi
@@ -54,7 +54,7 @@ crypto::certificates /systemstore:local_machine/store:my /export
 
 #### Instance Metadata
 
-Cloud server hosted on services like EC2 need a way to orient themselfs. Therefore a metadata endpoint was created that runs at 169.254.169.254. This can contain access/secrets keys to AWS and IAM credentials.
+Cloud server hosted on services like EC2 need a way to orient themselves. Therefore a metadata endpoint was created that runs at 169.254.169.254. This can contain access/secrets keys to AWS and IAM credentials.
 
 This should be reachable from localhost, can be abused after server compromise or SSRF.
 

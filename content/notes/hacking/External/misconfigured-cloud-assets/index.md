@@ -8,7 +8,7 @@ title : "Misconfigured Cloud Assets"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Misconfigured Cloud Assets."
+description : "Thats a nice open bucket you got there. Would be a shame if someone peaked inside."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:45+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -36,6 +36,8 @@ tags : ["Misconfigured Cloud Assets"]
 ---
 
 ## Misconfigured Cloud Assets
+
+Misconfigurations are bound to happen. Now more then ever when more orgs are moving to the cloud, especially in COVID times. Administrators who have generally worked with onprem infrastructure now need to 'quickly' setup services and migrate to the cloud. This can cause services to be incorrectly configured.
 
 ### AWS
 
@@ -131,7 +133,7 @@ aws s3 mv malware.html s3://bucketname/malware.html
 #### Domain Hijacking
 
 If you see a 404 to *.s3.amazonaws.com you can highjack the site that tries to load this bucket.
-s3 buckets automticlly get a cname acoridjng to their name, if they are removed but the site till uses them you can create a new bucket under that name, giving you control over the website.
+s3 buckets automatically get a CNAME according to their name, if they are removed but the site till uses them you can create a new bucket under that name, giving you control over the website.
 
 
 ### Related tools

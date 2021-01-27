@@ -37,6 +37,7 @@ weight : 0
 
 ## sql injection
 
+SQL injection usually occurs when you ask a user for input, like their username/userid, and instead of a name/id, the user gives you an SQL statement that you will unknowingly run on your database.
 
 ## External stuff
 

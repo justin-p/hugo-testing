@@ -8,7 +8,7 @@ title: "public key disclosure"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "public key disclosure description."
+description: "Sharing is caring, but this may be a but to much."
 ### The datetime assigned to this page.
 date: 2020-03-10T16:43:46+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -37,7 +37,7 @@ tags : ["public key disclosure"]
 
 ## public key disclosure
 
-Very often keys are pushed to code repositories such as Github, Bitbucket or Gitlab. You want to identify a target code repo and search all commit history to discover secerts that might have been pushed.
+Very often keys are pushed to code repositories such as Github, Bitbucket or Gitlab. You want to identify a target code repo and search all commit history to discover secrets that might have been pushed.
 
 Tools to search git repos
 
