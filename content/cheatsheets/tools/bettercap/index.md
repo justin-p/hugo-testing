@@ -93,7 +93,7 @@ sudo systemctl stop wpa_supplicant
 sudo systemctl stop NetworkManager.service
 
 # Start
-sudo ~/go/bin/bettercap -iface wlan0
+sudo ~/go/bin/bettercap -iface eth0 -eval "set wifi.interface wlan0; wifi.recon on"
 
 # After bettercap
 sudo ifconfig wlan0 down
