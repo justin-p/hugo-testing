@@ -1,4 +1,4 @@
-baseURL = "https://dev-hugo.justin-p.me/"
+baseURL = "https://notes.justin-p.me/"
 languageCode = "en-us"
 title = "My notes and snippets"
 pluralizelisttitles = false
