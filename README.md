@@ -14,3 +14,10 @@ Needed for this project
 - `echo -n ':root #header+#content>#left>#rlblock_left{display:none!important}' | openssl dgst -sha256 -binary | openssl enc -base64`
 - `echo -n 'left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px' | openssl dgst -sha256 -binary | openssl enc -base64`
 - `echo -n 'border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px' | openssl dgst -sha256 -binary | openssl enc -base64`
+
+
+## Add this content for phish infra
+
+https://www.appmaildev.com
+https://www.mail-tester.com
+https://spamcheck.postmarkapp.com/
