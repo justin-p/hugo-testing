@@ -39,67 +39,67 @@ weight : 0
 
 ### Headers
 
-```text
+```markdown
 # h1
 ## h2
 ### h3
 ```
 
-```text
+```markdown
 Header 1
 ========
 ```
 
-```text
+```markdown
 Header 2
 --------
 ```
 
 ### Emphasis
 
-```text
+```markdown
 *italic*
 _italic_
 ```
 
-```text
+```markdown
 **bold**
 __bold__
 ```
 
-```text
+```markdown
 `code`
 ```
 
 ### Lists
 
-```text
+```markdown
 * Item 1
 * Item 2
 ```
 
-```text
+```markdown
 - Item 1
 - Item 2
 ```
 
 ### Links
 
-```text
+```markdown
 [link](http://google.com)
 ```
 
-```text
+```markdown
 [link][google]
 ```
 
-```text
+```markdown
 <http://google.com>
 ```
 
 ### Images
 
-```text
+```markdown
 ![Image alt text](/path/to/img.jpg)
 ![Image alt text](/path/to/img.jpg "title")
 ![Image alt text][img]
@@ -107,22 +107,20 @@ __bold__
 
 ### Code
 
-```text
+```markdown
     4 space indent
     makes a code block
 ```
 
-code fences
+### code fences
 
-```text
-```js
-codeFences.withLanguage()
-```
+    ```js
+    codeFences.withLanguage()
+    ```
 
-```text
-# Blockquotes
+## Blockquotes
 
-```text
+```markdown
 > This is
 > a blockquote
 >
@@ -132,23 +130,23 @@ codeFences.withLanguage()
 
 ### Horizontal line
 
-```text
+```markdown
 ----
 ```
 
-```text
+```markdown
 ****
 ```
 
 ### Tables
 
-```text
+```markdown
 | Column 1 Heading | Column 2 Heading |
 | ---------------- | ---------------- |
 | Some content     | Other content    |
 ```
 
-```text
+```markdown
 Column 1 Heading | Column 2 Heading
 --- | ---
 Some content | Other content

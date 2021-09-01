@@ -41,61 +41,61 @@ weight : 0
 
 #### Inheritance
 
-```text
+```docker
 FROM ruby:2.2.2
 ```
 
 #### Variables
 
-```text
+```docker
 ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
 ```
 
 #### Initialization
 
-```text
+```docker
 RUN bundle install
 ```
 
-```text
+```docker
 WORKDIR /myapp
 ```
 
-```text
+```docker
 VOLUME ["/data"]
 # Specification for mount point
 ```
 
-```text
+```docker
 ADD file.xyz /file.xyz
 COPY --chown=user:group host_file.xyz /path/container_file.xyz
 ```
 
 #### Onbuild
 
-```text
+```docker
 ONBUILD RUN bundle install
 # when used with another file
 ```
 
 #### Commands
 
-```text
+```docker
 EXPOSE 5900
 CMD    ["bundle", "exec", "rails", "server"]
 ```
 
 #### Entrypoint
 
-```text
+```docker
 ENTRYPOINT ["executable", "param1", "param2"]
 ENTRYPOINT command param1 param2
 ```
 
 Configures a container that will run as an executable.
 
-```text
+```docker
 ENTRYPOINT exec top -b
 ```
 
@@ -103,16 +103,16 @@ This will use shell processing to substitute shell variables, and will ignore an
 
 #### Metadata
 
-```text
+```docker
 LABEL version="1.0"
 ```
 
-```text
+```docker
 LABEL "com.example.vendor"="ACME Incorporated"
 LABEL com.example.label-with-value="foo"
 ```
 
-```text
+```docker
 LABEL description="This text illustrates \
 that label-values can span multiple lines."
 ```
