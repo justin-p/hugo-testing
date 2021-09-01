@@ -5,11 +5,11 @@ Docker-Compose YAML.
 Dockerfile
 A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.
 Markdown
-Markdown description.
+Markdown is bestdown.
 MySQL
-MySQL description.
-Python
-Python description.</description></item><item><title>Courses</title><link>https://notes.justin-p.me/notes/courses/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://notes.justin-p.me/notes/courses/</guid><description>Courses Notes from courses I did. See Github for the files.
+MySQL examples.
+PHP
+Offensive PHP things.</description></item><item><title>Courses</title><link>https://notes.justin-p.me/notes/courses/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://notes.justin-p.me/notes/courses/</guid><description>Courses Notes from courses I did. See Github for the files.
 Blackhat Python
 Notes from Blackhat Python.
 Breaching The Cloud
@@ -31,7 +31,7 @@ Vulnserver
 Notes from the Vulnserver machine.</description></item><item><title>Networking</title><link>https://notes.justin-p.me/notes/networking/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://notes.justin-p.me/notes/networking/</guid><description>Networking It should be obvious that page is not a complete description of IP, UDP or TCP, etc!
 Dedicated pages go more in depth.
 What is &amp;ldquo;IPv4&amp;rdquo; &amp;ldquo;IPv6&amp;rdquo;? The following is the &amp;ldquo;30 second&amp;rdquo; introduction to internet protocol (IP) - which is the primary way to send packets (&amp;ldquo;datagrams&amp;rdquo;) of information from one machine to another.
-&amp;ldquo;IP4&amp;rdquo;, or more precisely, &amp;ldquo;IPv4&amp;rdquo; is version 4 of the Internet Protocol that describes how to send packets of information across a network from one machine to another .</description></item><item><title>Hacking Methodology</title><link>https://notes.justin-p.me/notes/hacking/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://notes.justin-p.me/notes/hacking/</guid><description>Hacking Methodology external
+&amp;ldquo;IP4&amp;rdquo;, or more precisely, &amp;ldquo;IPv4&amp;rdquo; is version 4 of the Internet Protocol that describes how to send packets of information across a network from one machine to another .</description></item><item><title>Hacking Methodology</title><link>https://notes.justin-p.me/notes/methodology/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/</guid><description>Hacking Methodology external
 external description.
 general
 general description.

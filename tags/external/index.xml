@@ -1,12 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>External on My notes and snippets</title><link>https://notes.justin-p.me/tags/external/</link><description>Recent content in External on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 26 Jan 2021 17:33:35 +0100</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/external/index.xml" rel="self" type="application/rss+xml"/><item><title>external</title><link>https://notes.justin-p.me/notes/hacking/external/</link><pubDate>Tue, 26 Jan 2021 17:33:35 +0100</pubDate><guid>https://notes.justin-p.me/notes/hacking/external/</guid><description>external Certificate Transparency Logs
-Your certs are leaking.
-cloud-provider-web-servers
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>External on My notes and snippets</title><link>https://notes.justin-p.me/tags/external/</link><description>Recent content in External on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 01 Sep 2021 22:56:49 +0200</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/external/index.xml" rel="self" type="application/rss+xml"/><item><title>rdp</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/rdp/</link><pubDate>Wed, 01 Sep 2021 22:56:49 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/rdp/</guid><description>Remote Desktop Protocol You can enable (remotely) Remote Desktop (RDP) by adjusting the register key.
+use wmiexec.py / smbexec.py or Evil-WinRM to preform the actions below.
+Enable / disable Remote Desktop Enable reg add &amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&amp;quot; /v fDenyTSConnections /t REG_DWORD /d 0 /f Disable reg add &amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&amp;quot; /v fDenyTSConnections /t REG_DWORD /d 1 /f</description></item><item><title>Remote UAC</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/remoteuac/</link><pubDate>Wed, 01 Sep 2021 22:48:38 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/remoteuac/</guid><description>Remote UAC UAC enables users to perform common day-to-day tasks as non-administrators. User accounts that are members of the local Administrators group will run most applications by using the principle of least privilege.
+How UAC remote restrictions work To better protect those users who are members of the local Administrators group, microsoft implement UAC restrictions. This mechanism helps prevent you preforming tasks remotely with a local user account, for example, lateral movement using the IPC$ share.</description></item><item><title>Post Exploit</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/</link><pubDate>Wed, 01 Sep 2021 22:41:07 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/</guid><description>Post Exploit cloud-provider-web-servers
 Metdata services FTW.
+rdp
+rdp description.
+Remote UAC
+Remote UAC description.</description></item><item><title>recon</title><link>https://notes.justin-p.me/notes/methodology/external/recon/</link><pubDate>Wed, 01 Sep 2021 22:37:32 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/recon/</guid><description>Recon Certificate Transparency Logs
+Your certs are leaking.
 Credential Gathering
 The art of Credential Gathering.
 DNS Recon
 DNS Recon, if you don&amp;#39;t know where stuff is its gonna get hard to hack it.
 E-Mail Gathering
-If you know e-mail addresses you know naming conventions and possible even passwords.</description></item><item><title>cloud-provider-web-servers</title><link>https://notes.justin-p.me/notes/hacking/external/cloud-provider-web-servers/</link><pubDate>Tue, 10 Mar 2020 16:43:45 +0100</pubDate><guid>https://notes.justin-p.me/notes/hacking/external/cloud-provider-web-servers/</guid><description>Cloud provider web servers Cloud provider web servers have some special things you might not have on your &amp;lsquo;normal&amp;rsquo; webserver.
+If you know e-mail addresses you know naming conventions and possible even passwords.
+Google Dorking</description></item><item><title>external</title><link>https://notes.justin-p.me/notes/methodology/external/</link><pubDate>Tue, 26 Jan 2021 17:33:35 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/</guid><description>external Misconfigured Cloud Assets
+Thats a nice open bucket you got there. Would be a shame if someone peaked inside.
+Phising
+Gaining access through people.
+Post Exploit
+Post Exploit information.
+recon
+Recon information.</description></item><item><title>cloud-provider-web-servers</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</link><pubDate>Tue, 10 Mar 2020 16:43:45 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</guid><description>Cloud provider web servers Cloud provider web servers have some special things you might not have on your &amp;lsquo;normal&amp;rsquo; webserver.
 Azure windows webserver If you are able to compromise an azure server you might be able to use mimikatz to extract certificates and try to authenticitate to Azure with them.
 crypto::capi privilege::debug crypto::cng crypto::certificates /systemstore:local_machine/store:my /export AWS Instance Metadata Cloud server hosted on services like EC2 need a way to orient themselves.</description></item></channel></rss>
