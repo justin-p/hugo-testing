@@ -8,7 +8,7 @@ title : "MySQL"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "MySQL description."
+description : "MySQL examples."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:43:49+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -1007,3 +1007,4 @@ $ /etc/init.d/mysql start
 - [Dummy data](https://github.com/justin-p/PowerShell/blob/master/random_sql_data.md)
 
 - [Sources](https://raw.githubusercontent.com/rstacruz/cheatsheets/master/mysql.md)
+

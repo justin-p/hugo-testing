@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-awk OPTIONS PROGRAM FILE
+awk [OPTIONS] [PROGRAM] [FILE]
 ```
 
 ### Flags

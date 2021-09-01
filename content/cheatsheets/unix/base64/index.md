@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-base64 OPTION FILE
+base64 [OPTION] [FILE]
 ```
 
 ### Flags

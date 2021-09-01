@@ -8,7 +8,7 @@ title : "PowerShell"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "PowerShell description."
+description : "PowerShell tips."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:33:40+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -24,7 +24,7 @@ date : 2020-03-10T16:33:40+01:00
 ### Set the page as a chapter, changing the way it's displayed
 # chapter : true
 ### Hide a menu entry by setting this to true
-hidden : true
+hidden : false
 ### If true, the content will not be rendered unless the --buildDrafts flag is passed to the hugo command.
 # draft : true
 ### Used for ordering your content in lists. Lower weight gets higher precedence. So content with lower weight will come first.
@@ -40,6 +40,84 @@ cascade:
 
 ## PowerShell
 
-See github
+### Base64 Encode DLL
 
-{{< children style="card" depth="1" description="true" sort="Name" >}}
+```powershell
+$Path = "$PSScriptRoot\TotallyNotMalware.dll"
+$bytes = [System.IO.File]::ReadAllBytes($Path)
+$string = [System.Convert]::ToBase64String($bytes)
+```
+
+### Copy something to clipboard
+
+```PowerShell
+$string | Set-Clipboard
+```
+
+### Load Base64 Encoded DLL
+
+```PowerShell
+$dll = 'TVqQAAMAAAAEAAAA//8AALgAAAAA...'
+$bytes = [System.Convert]::FromBase64String($dll)
+[System.Reflection.Assembly]::Load($bytes)
+```
+
+### Easy way to create an object
+
+```PowerShell
+function Add2Obj {
+    param (
+        $FirstName,
+        $LastName
+    )
+    return (New-Object psobject -Property @{FirstName=$FirstName;LastName=$LastName;})
+}
+
+$Names  = @()
+$Names += Add2Obj -FirstName "Justin" -LastName "Perdok"
+
+<#
+PS> $Names
+
+LastName FirstName
+-------- ---------
+Perdok   Justin
+#>
+```
+
+### Search NETLOGON/SYSVOL for cpassword
+
+```PowerShell
+Get-ChildItem | Where-Object {$_.name -ne 'Policydefinitions'} | Get-ChildItem -Recurse -File | ForEach-Object {$_.fullname; Get-Content $_.fullname | Select-String cpassword}
+```
+
+#### Alternative
+
+https://github.com/PowerShellMafia/PowerSploit/blob/master/Exfiltration/Get-GPPPassword.ps1
+
+### Ensure PowerShell uses TLS1.2
+
+```PowerShell
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+```
+
+### Ignore invalid certs
+
+```PowerShell
+add-type @"
+    using System.Net;
+    using System.Security.Cryptography.X509Certificates;
+    public class TrustAllCertsPolicy : ICertificatePolicy {
+        public bool CheckValidationResult(
+            ServicePoint srvPoint, X509Certificate certificate,
+            WebRequest request, int certificateProblem) {
+            return true;
+        }
+    }
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy
+```
+
+### Also see
+
+N/A

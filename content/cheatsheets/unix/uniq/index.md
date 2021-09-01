@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-uniq OPTIONS INPUT OUTPUT
+uniq [OPTIONS] INPUT OUTPUT
 ```
 
 ### Flags

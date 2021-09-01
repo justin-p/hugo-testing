@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-xxd OPTIONS INFILE OUTFILE
+xxd [OPTIONS] INFILE OUTFILE
 ```
 
 ### Flags

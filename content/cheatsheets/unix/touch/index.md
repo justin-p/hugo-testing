@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-touch OPTION FILE
+touch [OPTION] [FILE]
 ```
 
 ### Flags

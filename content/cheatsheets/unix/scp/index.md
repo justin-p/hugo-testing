@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-scp OPTIONS SOURCE_PATH DESTINATION_PATH
+scp [OPTIONS] SOURCE_PATH DESTINATION_PATH
 ```
 
 ### Flags

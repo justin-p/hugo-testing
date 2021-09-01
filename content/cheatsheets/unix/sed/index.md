@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-sed OPTIONS FILE
+sed [OPTIONS] [FILE]
 ```
 
 ### Flags

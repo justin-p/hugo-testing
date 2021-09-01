@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-curl OPTIONS URL
+curl [OPTIONS] URL
 ```
 
 ### Flags

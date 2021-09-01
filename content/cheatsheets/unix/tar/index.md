@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-tar FLAGS FILE.tar.gz
+tar [FLAGS] FILE.tar.gz
 ```
 
 ### Flags

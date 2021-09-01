@@ -40,8 +40,11 @@ weight : 0
 ### Usage
 
 ```bash
-gzip OPTIONS FILE
-gunzip OPTIONS FILE
+gzip [OPTIONS] [FILE]
+```
+
+```bash
+gunzip [OPTIONS] [FILE]
 ```
 
 ### Flags

@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-grep OPTIONS PATTERN FILE
+grep [OPTIONS] PATTERN FILE
 ```
 
 ### Flags

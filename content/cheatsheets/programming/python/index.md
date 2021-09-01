@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "Python"
+title: "Python"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "python"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,9 +8,9 @@ title : "Python"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Python description."
+description: "Offensive Python stuff."
 ### The datetime assigned to this page.
-date : 2020-03-10T16:33:40+01:00
+date: 2020-03-10T16:33:40+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
 # slug : "python"
 ### Aliases can be used to create redirects to your page from other URLs.
@@ -29,13 +29,13 @@ date : 2020-03-10T16:33:40+01:00
 # draft : true
 ### Used for ordering your content in lists. Lower weight gets higher precedence. So content with lower weight will come first.
 ### 0 does nothing !
-weight : 0
+weight: 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
 # tags : [""]
-### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade. 
+### a map of Front Matter keys whose values are passed down to the page’s descendants unless overwritten by self or a closer ancestor’s cascade.
 cascade:
-    tags: ['Python']
+  tags: ["Python"]
 ---
 
 ## Python
@@ -46,25 +46,25 @@ cascade:
 
 Start a webserver that hosts the current pwd.
 
-| Python2                         | Python3                     |
-|---------------------------------|-----------------------------|
+| Python2                           | Python3                       |
+| --------------------------------- | ----------------------------- |
 | `Python -m SimpleHTTPServer 8000` | `Python3 -m http.server 8000` |
 
 #### FTP
 
 Start a ftp that hosts the current pwd.
 
-| Python2                         | Python3                     |
-|---------------------------------|-----------------------------|
-| `Python -m pyftpdlib`             | `Python3 -m pyftpdlib`        |
+| Python2               | Python3                |
+| --------------------- | ---------------------- |
+| `Python -m pyftpdlib` | `Python3 -m pyftpdlib` |
 
 #### unicode character
 
 Print a unicode character
 
-| Python2                         | Python3                      |
-|---------------------------------|------------------------------|
-| `Python -c "print unichr(234)"`   | `Python3 -c "print(chr(234))"` |
+| Python2                         | Python3                        |
+| ------------------------------- | ------------------------------ |
+| `Python -c "print unichr(234)"` | `Python3 -c "print(chr(234))"` |
 
 ### Handystuff
 

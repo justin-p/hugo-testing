@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-rev OPTIONS FILE
+rev [OPTIONS] [FILE]
 ```
 
 ### Flags

@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-strings OPTIONS FILE
+strings [OPTIONS] [FILE]
 ```
 
 ### Flags

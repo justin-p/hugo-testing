@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-bzip2 OPTIONS FILE
+bzip2 [OPTIONS] [FILE]
 ```
 
 ### Flags

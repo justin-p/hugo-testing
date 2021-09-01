@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-sort OPTIONS FILE
+sort [OPTIONS] [FILE]
 ```
 
 ### Flags

@@ -40,7 +40,7 @@ weight : 0
 ### Usage
 
 ```bash
-md5sum OPTIONS FILE
+md5sum [OPTIONS] [FILE]
 ```
 
 ### Flags
