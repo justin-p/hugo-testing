@@ -1091,46 +1091,46 @@ Hugo
 <h2 id=dockerfile>dockerfile</h2>
 <h3 id=reference>Reference</h3>
 <h4 id=inheritance>Inheritance</h4>
-<pre><code class=language-text>FROM ruby:2.2.2
+<pre><code class=language-docker>FROM ruby:2.2.2
 </code></pre>
 <h4 id=variables>Variables</h4>
-<pre><code class=language-text>ENV APP_HOME /myapp
+<pre><code class=language-docker>ENV APP_HOME /myapp
 RUN mkdir $APP_HOME
 </code></pre>
 <h4 id=initialization>Initialization</h4>
-<pre><code class=language-text>RUN bundle install
+<pre><code class=language-docker>RUN bundle install
 </code></pre>
-<pre><code class=language-text>WORKDIR /myapp
+<pre><code class=language-docker>WORKDIR /myapp
 </code></pre>
-<pre><code class=language-text>VOLUME [&quot;/data&quot;]
+<pre><code class=language-docker>VOLUME [&quot;/data&quot;]
 # Specification for mount point
 </code></pre>
-<pre><code class=language-text>ADD file.xyz /file.xyz
+<pre><code class=language-docker>ADD file.xyz /file.xyz
 COPY --chown=user:group host_file.xyz /path/container_file.xyz
 </code></pre>
 <h4 id=onbuild>Onbuild</h4>
-<pre><code class=language-text>ONBUILD RUN bundle install
+<pre><code class=language-docker>ONBUILD RUN bundle install
 # when used with another file
 </code></pre>
 <h4 id=commands>Commands</h4>
-<pre><code class=language-text>EXPOSE 5900
+<pre><code class=language-docker>EXPOSE 5900
 CMD    [&quot;bundle&quot;, &quot;exec&quot;, &quot;rails&quot;, &quot;server&quot;]
 </code></pre>
 <h4 id=entrypoint>Entrypoint</h4>
-<pre><code class=language-text>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
+<pre><code class=language-docker>ENTRYPOINT [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]
 ENTRYPOINT command param1 param2
 </code></pre>
 <p>Configures a container that will run as an executable.</p>
-<pre><code class=language-text>ENTRYPOINT exec top -b
+<pre><code class=language-docker>ENTRYPOINT exec top -b
 </code></pre>
 <p>This will use shell processing to substitute shell variables, and will ignore any <code>CMD</code> or <code>docker run</code> command line arguments.</p>
 <h4 id=metadata>Metadata</h4>
-<pre><code class=language-text>LABEL version=&quot;1.0&quot;
+<pre><code class=language-docker>LABEL version=&quot;1.0&quot;
 </code></pre>
-<pre><code class=language-text>LABEL &quot;com.example.vendor&quot;=&quot;ACME Incorporated&quot;
+<pre><code class=language-docker>LABEL &quot;com.example.vendor&quot;=&quot;ACME Incorporated&quot;
 LABEL com.example.label-with-value=&quot;foo&quot;
 </code></pre>
-<pre><code class=language-text>LABEL description=&quot;This text illustrates \
+<pre><code class=language-docker>LABEL description=&quot;This text illustrates \
 that label-values can span multiple lines.&quot;
 </code></pre>
 <h3 id=see-also>See also</h3>

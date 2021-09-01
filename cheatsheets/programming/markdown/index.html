@@ -1078,6 +1078,11 @@ Hugo
 <li><a href=#links>Links</a></li>
 <li><a href=#images>Images</a></li>
 <li><a href=#code>Code</a></li>
+<li><a href=#code-fences>code fences</a></li>
+</ul>
+</li>
+<li><a href=#blockquotes>Blockquotes</a>
+<ul>
 <li><a href=#horizontal-line>Horizontal line</a></li>
 <li><a href=#tables>Tables</a></li>
 <li><a href=#also-see>Also see</a></li>
@@ -1097,72 +1102,71 @@ Hugo
 <div id=body-inner>
 <h2 id=markdown>Markdown</h2>
 <h3 id=headers>Headers</h3>
-<pre><code class=language-text># h1
+<pre><code class=language-markdown># h1
 ## h2
 ### h3
 </code></pre>
-<pre><code class=language-text>Header 1
+<pre><code class=language-markdown>Header 1
 ========
 </code></pre>
-<pre><code class=language-text>Header 2
+<pre><code class=language-markdown>Header 2
 --------
 </code></pre>
 <h3 id=emphasis>Emphasis</h3>
-<pre><code class=language-text>*italic*
+<pre><code class=language-markdown>*italic*
 _italic_
 </code></pre>
-<pre><code class=language-text>**bold**
+<pre><code class=language-markdown>**bold**
 __bold__
 </code></pre>
-<pre><code class=language-text>`code`
+<pre><code class=language-markdown>`code`
 </code></pre>
 <h3 id=lists>Lists</h3>
-<pre><code class=language-text>* Item 1
+<pre><code class=language-markdown>* Item 1
 * Item 2
 </code></pre>
-<pre><code class=language-text>- Item 1
+<pre><code class=language-markdown>- Item 1
 - Item 2
 </code></pre>
 <h3 id=links>Links</h3>
-<pre><code class=language-text>[link](http://google.com)
+<pre><code class=language-markdown>[link](http://google.com)
 </code></pre>
-<pre><code class=language-text>[link][google]
+<pre><code class=language-markdown>[link][google]
 </code></pre>
-<pre><code class=language-text>&lt;http://google.com&gt;
+<pre><code class=language-markdown>&lt;http://google.com&gt;
 </code></pre>
 <h3 id=images>Images</h3>
-<pre><code class=language-text>![Image alt text](/path/to/img.jpg)
+<pre><code class=language-markdown>![Image alt text](/path/to/img.jpg)
 ![Image alt text](/path/to/img.jpg &quot;title&quot;)
 ![Image alt text][img]
 </code></pre>
 <h3 id=code>Code</h3>
-<pre><code class=language-text>    4 space indent
+<pre><code class=language-markdown>    4 space indent
     makes a code block
 </code></pre>
-<p>code fences</p>
-<pre><code class=language-text>```js
+<h3 id=code-fences>code fences</h3>
+<pre><code>```js
 codeFences.withLanguage()
+```
 </code></pre>
-<pre><code class=language-text># Blockquotes
-
-```text
-&gt; This is
+<h2 id=blockquotes>Blockquotes</h2>
+<pre><code class=language-markdown>&gt; This is
 &gt; a blockquote
 &gt;
 &gt; &gt; Nested
 &gt; &gt; Blockquote
 </code></pre>
 <h3 id=horizontal-line>Horizontal line</h3>
-<pre><code class=language-text>----
+<pre><code class=language-markdown>----
 </code></pre>
-<pre><code class=language-text>****
+<pre><code class=language-markdown>****
 </code></pre>
 <h3 id=tables>Tables</h3>
-<pre><code class=language-text>| Column 1 Heading | Column 2 Heading |
+<pre><code class=language-markdown>| Column 1 Heading | Column 2 Heading |
 | ---------------- | ---------------- |
 | Some content     | Other content    |
 </code></pre>
-<pre><code class=language-text>Column 1 Heading | Column 2 Heading
+<pre><code class=language-markdown>Column 1 Heading | Column 2 Heading
 --- | ---
 Some content | Other content
 </code></pre>
