@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "internal"
+title : "Internal"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "internal"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "internal"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "internal description."
+description : "Internal description."
 ### The datetime assigned to this page.
 date : 2021-01-26T17:33:35+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.

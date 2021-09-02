@@ -135,6 +135,6 @@ aws s3 mv malware.html s3://bucketname/malware.html
 If you see a 404 to *.s3.amazonaws.com you can highjack the site that tries to load this bucket.
 s3 buckets automatically get a CNAME according to their name, if they are removed but the site till uses them you can create a new bucket under that name, giving you control over the website.
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="Misconfigured Cloud Assets" >}}

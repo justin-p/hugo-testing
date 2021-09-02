@@ -106,6 +106,6 @@ PS C:\Users\justin-p> Invoke-InjectGEventAPI -PrimaryEmail Injector@gmail.com -A
 
 Try to comprise workstations. This would (depending on the user) give access to internal and other cloud resources. Allows us to steal tokens from disk, preform session hijack/riding, start keyloggers and pivot in the network from this entry point.
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="Phising" >}}

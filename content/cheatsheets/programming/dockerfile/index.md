@@ -8,7 +8,7 @@ title : "Dockerfile"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image."
+description : "How to write a Dockerfile. A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:30+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -32,7 +32,7 @@ date : 2020-03-10T16:36:30+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags: ['Programming','docker']
 ---
 
 ## dockerfile
@@ -116,6 +116,10 @@ LABEL com.example.label-with-value="foo"
 LABEL description="This text illustrates \
 that label-values can span multiple lines."
 ```
+
+### Related pages
+
+{{< related_pages_table tag="docker" >}}
 
 ### See also
 

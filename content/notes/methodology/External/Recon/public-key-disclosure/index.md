@@ -66,6 +66,6 @@ git checkout commit
 | --------------------------------- | --------------------------- |
 | [shhgit](https://www.shhgit.com/) | Monitors github for secrets |
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="public key disclosure" >}}

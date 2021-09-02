@@ -35,7 +35,7 @@ weight : 0
 # tags : [""]
 ---
 
-## {{ replace .Name "-" " " | lower }}
+## {{ .Name | lower }}
 
 ### Installation
 
@@ -61,6 +61,10 @@ weight : 0
 
 ```
 
+### Related pages
+
+{{< related_pages_table tag="" >}}
+
 ### Also see
 
-* [a url](https://a.url)
+N/A

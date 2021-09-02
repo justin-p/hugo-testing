@@ -95,6 +95,6 @@ If so, try dorking them for cached content.
 | ----------------------------------------- | -------------------------------------- |
 | [Wappalyzer](https://www.wappalyzer.com/) | Uncovers technologies used on websites |
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="Identify Technologies" >}}

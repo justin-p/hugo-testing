@@ -1,6 +1,6 @@
 ---
 ### The title for the content.
-title : "Docker-Compose"
+title : "docker-compose"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
 # menuTitle : "docker compose"
 ### The title of the page in menu will be prefixed by this HTML content
@@ -8,7 +8,7 @@ title : "Docker-Compose"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Docker-Compose YAML."
+description : "How to write docker-compose YAML."
 ### The datetime assigned to this page.
 date : 2020-03-10T16:36:30+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -32,7 +32,7 @@ date : 2020-03-10T16:36:30+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-tags: ['Programming','docker','docker-compose']
+tags: ['Programming','docker-compose','docker']
 ---
 
 ## Docker compose
@@ -55,38 +55,6 @@ services:
      - .:/code
   redis:
     image: redis
-```
-
-### Commands
-
-#### Create resources for compose project
-
-```bash
-docker-compose up
-```
-
-#### Remove resources for compose project
-
-```bash
-docker-compose down
-```
-
-#### Start existing containers in compose project
-
-```bash
-docker-compose start
-```
-
-#### Stop existing containers in compose project
-
-```bash
-docker-compose stop
-```
-
-#### List containers in compose project
-
-```bash
-docker-compose ps
 ```
 
 ### Reference
@@ -256,6 +224,10 @@ networks:
     external:
       name: frontend
 ```
+
+### Related pages
+
+{{< related_pages_table tag="docker" >}}
 
 ### Also see
 

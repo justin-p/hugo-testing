@@ -72,6 +72,6 @@ Once you have generated user list you should try to validate if these are actual
 | [emailrep](https://emailrep.io/)      | get e-mail 'reputation'  |
 | [linkedin](https://www.linkedin.com/) | LinkedIn is your friend. |
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="user-enumeration" >}}

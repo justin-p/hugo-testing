@@ -8,7 +8,7 @@ title : "hugo"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "hugo description."
+description : "Hugo is a Fast and Flexible Static Site Generator."
 ### The datetime assigned to this page.
 date : 2021-01-26T17:27:07+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -37,6 +37,12 @@ weight : 0
 
 ## hugo
 
+### Installation
+
+```bash
+snap install hugo --channel=extended
+```
+
 ### Usage
 
 ```bash
@@ -46,13 +52,6 @@ hugo [command] [flags]
 ### Flags
 
 ```bash
-hugo is the main command, used to build your Hugo site.
-
-Hugo is a Fast and Flexible Static Site Generator
-built with love by spf13 and friends in Go.
-
-Complete documentation is available at http://gohugo.io/.
-
 Usage:
   hugo [flags]
   hugo [command]
@@ -141,8 +140,66 @@ hugo new --kind cheatsheet-bundle cheatsheets/hugo
 hugo new --kind new-folder notes/hacking/External/_index.md
 ```
 
-#### Run live debug server 
+#### Run live debug server
 
 ```bash
 hugo server
+```
+
+### Shortcodes
+
+#### Attachments
+
+    {{%/* attachments title="Related files" pattern=".*(pdf|mp4)"/*/%}}
+
+#### Button
+
+    {{%/* button href="https://getgrav.org/" icon="fas fa-download" icon-position="right" %}}Get Grav with icon right{{% /button %}}
+
+#### Children
+
+    {{% children style="h2" depth="3" description="true" %}}
+
+#### Expand
+
+    {{% expand "Is this learn theme rocks ?" %}}Yes !.{{% /expand%}}
+
+#### Notice
+
+##### Note (blue)
+
+```
+{{% notice note */%}}
+A notice disclaimer
+{{%/* /notice */%}}
+```
+
+##### Info (orange)
+
+```
+{{%/* notice info */%}}
+An information disclaimer
+{{%/* /notice */%}}
+```
+
+##### Tip (green)
+
+```
+{{%/* notice tip */%}}
+A tip disclaimer
+{{%/* /notice */%}}
+```
+
+##### Warning (red)
+
+```
+{{%/* notice warning */%}}
+A warning disclaimer
+{{%/* /notice */%}}
+```
+
+#### Releated pages
+
+```
+{ {< related_pages_table tag="password-cracking" >}}
 ```

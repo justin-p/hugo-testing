@@ -63,6 +63,6 @@ Which leads us to a public accessible server.
 
 ![Public server](images/crt_sh03.png)
 
-### Related tools
+### Related pages
 
 {{< related_pages_table tag="Certificate Transparency Logs" >}}

@@ -57,6 +57,6 @@ Looking at SPF/MX records can give you additional hostnames/ip addresses. Try to
 | [threatcrowd](https://www.threatcrowd.org/) | ThreatCrowd is a system for finding and researching artefacts relating to cyber threats. |
 | [RIPE](https://apps.db.ripe.net/db-web-ui/query) & [ARIN](https://whois.arin.net/ui/) whois | search the registration database of RIPE and ARIN |
 
-## Related tools
+## Related pages
 
 {{< related_pages_table tag="DNS Recon" >}}

@@ -8,7 +8,7 @@ title: "bettercap"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description: "bettercap description."
+description: "The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking and IPv4 and IPv6 networks reconnaissance and MITM attacks."
 ### The datetime assigned to this page.
 date: 2021-02-04T15:21:13+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -35,7 +35,7 @@ weight: 0
 # tags : [""]
 ---
 
-## bettercap
+## Bettercap
 
 ### Installation
 
@@ -152,7 +152,7 @@ Enable channel hopping on all supported channels.
 
 Inject fake management beacons in order to create a rogue access point ( requires `wifi.recon` to run ).
 
-### Parameters
+#### Parameters
 
 | parameter                | default                            | description                                                                                                                                                                                     |
 | ------------------------ | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -180,7 +180,7 @@ Inject fake management beacons in order to create a rogue access point ( require
 | `wifi.ap.channel`        | `1`                                | Channel of the fake access point.                                                                                                                                                               |
 | `wifi.ap.encryption`     | `true`                             | If true, the fake access point will use WPA2, otherwise it'll result as an open AP.                                                                                                             |
 
-### Examples
+##### Examples
 
 Run bettercap using `eth0` as the main interface but start the wifi module on `wlan0` instead:
 
@@ -225,4 +225,5 @@ Will send management beacons as the fake access point "Banana" with BSSID `DE:AD
 ```
 
 ### Also see
-[Bettercap](https://www.bettercap.org/modules/)
+
+[Bettercap wiki](https://www.bettercap.org/)
