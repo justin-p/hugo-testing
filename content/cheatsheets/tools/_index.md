@@ -8,7 +8,7 @@ pre: "<i class='fas fa-tools'></i> "
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Tools description."
+description : "Tools cheatsheets."
 ### The datetime assigned to this page.
 date : 2020-03-10T19:00:54+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.

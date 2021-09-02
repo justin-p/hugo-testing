@@ -8,7 +8,7 @@ title : "ntp"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "ntp description."
+description : "Network Time Protocol"
 ### The datetime assigned to this page.
 date : 2021-09-01T17:31:24+02:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.

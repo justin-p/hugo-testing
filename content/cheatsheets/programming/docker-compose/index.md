@@ -32,7 +32,7 @@ date : 2020-03-10T16:36:30+01:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags: ['Programming','docker','docker-compose']
 ---
 
 ## Docker compose
@@ -59,20 +59,34 @@ services:
 
 ### Commands
 
+#### Create resources for compose project
+
+```bash
+docker-compose up
+```
+
+#### Remove resources for compose project
+
+```bash
+docker-compose down
+```
+
+#### Start existing containers in compose project
+
 ```bash
 docker-compose start
+```
+
+#### Stop existing containers in compose project
+
+```bash
 docker-compose stop
 ```
 
-```bash
-docker-compose pause
-docker-compose unpause
-```
+#### List containers in compose project
 
 ```bash
 docker-compose ps
-docker-compose up
-docker-compose down
 ```
 
 ### Reference
@@ -245,4 +259,4 @@ networks:
 
 ### Also see
 
-N/A
+[Overview of Docker Compose](https://docs.docker.com/compose/)

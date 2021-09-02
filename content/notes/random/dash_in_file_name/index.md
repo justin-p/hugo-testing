@@ -1,18 +1,18 @@
 ---
 ### The title for the content.
-title : "ftp"
+title : "dash in file name"
 ### If set, this will be used for the page's menu entry (instead of the `title` attribute)
-# menuTitle : "ftp"
+# menuTitle : "random"
 ### The title of the page in menu will be prefixed by this HTML content
 # pre : ""
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "File Tranfser Protocol."
+description : "Usage of dash in place of a filename."
 ### The datetime assigned to this page.
-date : 2021-09-01T16:00:46+02:00
+date : 2020-03-10T16:38:53+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
-# slug : "ftp"
+# slug : "random"
 ### Aliases can be used to create redirects to your page from other URLs.
 # aliases : [""]
 ### Display name of this page modifier. If set, it will be displayed in the footer.
@@ -35,68 +35,16 @@ weight : 0
 # tags : [""]
 ---
 
-## ftp
+# Usage of dash \(-\) in place of a filename
 
-### Usage
+Using - as a filename to mean stdin/stdout is a convention that a lot of programs use. It is not a special property of the filename. The kernel does not recognize - as special so any system calls referring to - as a filename will use - literally as the filename.
 
-```bash
-ftp [[OPTIONS]] [hostname]
-```
+With bash redirection, - is not recognized as a special filename, so bash will use that as the literal filename.
 
-### Flags
+When cat sees the string - as a filename, it treats it as a synonym for stdin. To get around this, you need to alter the string that cat sees in such a way that it still refers to a file called -. The usual way of doing this is to prefix the filename with a path - ./-, or /home/Tim/-. This technique is also used to get around similar issues where command line options clash with filenames, so a file referred to as ./-e does not appear as the -e command line option to a program, for example.
 
 ```bash
-Usage: { ftp | pftp } [-46pinegvtd] [hostname]
-   -4: use IPv4 addresses only
-   -6: use IPv6, nothing else
-   -p: enable passive mode (default for pftp)
-   -i: turn off prompting during mget
-   -n: inhibit auto-login
-   -e: disable readline support, if present
-   -g: disable filename globbing
-   -v: verbose mode
-   -t: enable packet tracing [nonfunctional]
-   -d: enable debugging
-```
-
-### Examples
-
-#### Connect to FTP host
-
-```bash
-ftp <host>
-```
-
-#### List files 
-
-```bash
-ls
-```
-
-#### Move around
-
-```bash
-cd <dir>
-```
-
-#### Download
-
-```bash
-get <file>
-```
-
-#### Upload
-
-(file should be in CWD where ftp was started, else use full path)
-
-```bash
-put <file>
-```
-
-#### Get all TXT files
-
-```bash
-mget *.txt
+cat ./-
 ```
 
 ### Also see

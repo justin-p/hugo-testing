@@ -48,15 +48,19 @@ Start a webserver that hosts the current pwd.
 
 | Python2                           | Python3                       |
 | --------------------------------- | ----------------------------- |
-| `Python -m SimpleHTTPServer 8000` | `Python3 -m http.server 8000` |
+| `python -m SimpleHTTPServer 8000` | `python3 -m http.server 8000` |
 
 #### FTP
 
-Start a ftp that hosts the current pwd.
+Start a ftp that hosts the current pwd, allows writing and is protected by a username/password.
 
-| Python2               | Python3                |
-| --------------------- | ---------------------- |
-| `Python -m pyftpdlib` | `Python3 -m pyftpdlib` |
+Install
+
+`pip3 install pyftpdlib`
+
+| Python2                                                            | Python3                                                             |
+| ------------------------------------------------------------------ | ------------------------------------------------------------------- |
+| `python -m pyftpdlib -p 21 -w --user=username --password=password` | `python3 -m pyftpdlib -p 21 -w --user=username --password=password` |
 
 #### unicode character
 
@@ -64,7 +68,7 @@ Print a unicode character
 
 | Python2                         | Python3                        |
 | ------------------------------- | ------------------------------ |
-| `Python -c "print unichr(234)"` | `Python3 -c "print(chr(234))"` |
+| `python -c "print unichr(234)"` | `python3 -c "print(chr(234))"` |
 
 ### Handystuff
 
@@ -79,3 +83,7 @@ functionname = inspect.stack()[0][3]
 ```python
 functionname = inspect.stack()[1][3]
 ```
+
+### Files
+
+{{%attachments style="blue" pattern=".*(py)"/%}}
