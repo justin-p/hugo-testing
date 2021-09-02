@@ -368,11 +368,6 @@ parent">
 <i class="fas fa-terminal"></i> ntp
 </a>
 </li>
-<li data-nav-id=/cheatsheets/unix/random/ title=random class=dd-item>
-<a href=/cheatsheets/unix/random/>
-<i class="fas fa-terminal"></i> random
-</a>
-</li>
 <li data-nav-id=/cheatsheets/unix/rev/ title=rev class=dd-item>
 <a href=/cheatsheets/unix/rev/>
 <i class="fas fa-terminal"></i> rev
@@ -1011,6 +1006,18 @@ steal access tokens
 </li>
 </ul>
 </li>
+<li data-nav-id=/notes/random/ title="Random Things" class=dd-item>
+<a href=/notes/random/>
+<i class="fas fa-random"></i> Random Things
+</a>
+<ul>
+<li data-nav-id=/notes/random/dash_in_file_name/ title="dash in file name" class=dd-item>
+<a href=/notes/random/dash_in_file_name/>
+<i class="fas fa-random"></i> dash in file name
+</a>
+</li>
+</ul>
+</li>
 <li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item>
 <a href=/notes/z_private/>
 <i class="fas fa-lock"></i> Private
@@ -1074,6 +1081,7 @@ Hugo
 <ul>
 <li><a href=#oneliners>Oneliners</a></li>
 <li><a href=#handystuff>Handystuff</a></li>
+<li><a href=#files>Files</a></li>
 </ul>
 </li>
 </ul>
@@ -1101,13 +1109,15 @@ Hugo
 </thead>
 <tbody>
 <tr>
-<td><code>Python -m SimpleHTTPServer 8000</code></td>
-<td><code>Python3 -m http.server 8000</code></td>
+<td><code>python -m SimpleHTTPServer 8000</code></td>
+<td><code>python3 -m http.server 8000</code></td>
 </tr>
 </tbody>
 </table>
 <h4 id=ftp>FTP</h4>
-<p>Start a ftp that hosts the current pwd.</p>
+<p>Start a ftp that hosts the current pwd, allows writing and is protected by a username/password.</p>
+<p>Install</p>
+<p><code>pip3 install pyftpdlib</code></p>
 <table>
 <thead>
 <tr>
@@ -1117,8 +1127,8 @@ Hugo
 </thead>
 <tbody>
 <tr>
-<td><code>Python -m pyftpdlib</code></td>
-<td><code>Python3 -m pyftpdlib</code></td>
+<td><code>python -m pyftpdlib -p 21 -w --user=username --password=password</code></td>
+<td><code>python3 -m pyftpdlib -p 21 -w --user=username --password=password</code></td>
 </tr>
 </tbody>
 </table>
@@ -1133,8 +1143,8 @@ Hugo
 </thead>
 <tbody>
 <tr>
-<td><code>Python -c "print unichr(234)"</code></td>
-<td><code>Python3 -c "print(chr(234))"</code></td>
+<td><code>python -c "print unichr(234)"</code></td>
+<td><code>python3 -c "print(chr(234))"</code></td>
 </tr>
 </tbody>
 </table>
@@ -1145,6 +1155,57 @@ Hugo
 <h4 id=get-callers-name-of-current-function>get callers name of current function</h4>
 <pre><code class=language-python>functionname = inspect.stack()[1][3]
 </code></pre>
+<h3 id=files>Files</h3>
+<section class="attachments blue">
+<label>
+<i class="fas fa-paperclip" aria-hidden=true></i>
+Attachments
+</label>
+<div class=attachments-files>
+<li>
+<a href=/cheatsheets/programming/python/files/char_print.py>
+char_print.py
+</a>
+(0 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/enum-automation.py>
+enum-automation.py
+</a>
+(4 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/gen_php_shell.py>
+gen_php_shell.py
+</a>
+(0 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/python-simple-sftp-tester>
+python-simple-sftp-tester
+</a>
+(4 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/recursive-unzip-morseimg.py>
+recursive-unzip-morseimg.py
+</a>
+(10 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/recursive-unzip.py>
+recursive-unzip.py
+</a>
+(2 kb)
+</li>
+<li>
+<a href=/cheatsheets/programming/python/files/sftp.py>
+sftp.py
+</a>
+(1 kb)
+</li>
+<div>
+</section>
 <footer class=footline>
 </footer>
 </div>

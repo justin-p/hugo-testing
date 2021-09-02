@@ -368,11 +368,6 @@ parent">
 <i class="fas fa-terminal"></i> ntp
 </a>
 </li>
-<li data-nav-id=/cheatsheets/unix/random/ title=random class=dd-item>
-<a href=/cheatsheets/unix/random/>
-<i class="fas fa-terminal"></i> random
-</a>
-</li>
 <li data-nav-id=/cheatsheets/unix/rev/ title=rev class=dd-item>
 <a href=/cheatsheets/unix/rev/>
 <i class="fas fa-terminal"></i> rev
@@ -1011,6 +1006,18 @@ steal access tokens
 </li>
 </ul>
 </li>
+<li data-nav-id=/notes/random/ title="Random Things" class=dd-item>
+<a href=/notes/random/>
+<i class="fas fa-random"></i> Random Things
+</a>
+<ul>
+<li data-nav-id=/notes/random/dash_in_file_name/ title="dash in file name" class=dd-item>
+<a href=/notes/random/dash_in_file_name/>
+<i class="fas fa-random"></i> dash in file name
+</a>
+</li>
+</ul>
+</li>
 <li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item>
 <a href=/notes/z_private/>
 <i class="fas fa-lock"></i> Private
@@ -1088,6 +1095,8 @@ Hugo
 <div id=head-tags>
 <div class=tags>
 <a class=tag-link href=/tags/programming>Programming</a>
+<a class=tag-link href=/tags/docker>docker</a>
+<a class=tag-link href=/tags/docker-compose>docker-compose</a>
 </div>
 </div>
 <div id=body-inner>
@@ -1110,15 +1119,20 @@ services:
     image: redis
 </code></pre>
 <h3 id=commands>Commands</h3>
+<h4 id=create-resources-for-compose-project>Create resources for compose project</h4>
+<pre><code class=language-bash>docker-compose up
+</code></pre>
+<h4 id=remove-resources-for-compose-project>Remove resources for compose project</h4>
+<pre><code class=language-bash>docker-compose down
+</code></pre>
+<h4 id=start-existing-containers-in-compose-project>Start existing containers in compose project</h4>
 <pre><code class=language-bash>docker-compose start
-docker-compose stop
 </code></pre>
-<pre><code class=language-bash>docker-compose pause
-docker-compose unpause
+<h4 id=stop-existing-containers-in-compose-project>Stop existing containers in compose project</h4>
+<pre><code class=language-bash>docker-compose stop
 </code></pre>
+<h4 id=list-containers-in-compose-project>List containers in compose project</h4>
 <pre><code class=language-bash>docker-compose ps
-docker-compose up
-docker-compose down
 </code></pre>
 <h3 id=reference>Reference</h3>
 <h4 id=building>Building</h4>
@@ -1234,7 +1248,7 @@ networks:
       name: frontend
 </code></pre>
 <h3 id=also-see>Also see</h3>
-<p>N/A</p>
+<p><a href=https://docs.docker.com/compose/>Overview of Docker Compose</a></p>
 <footer class=footline>
 </footer>
 </div>
