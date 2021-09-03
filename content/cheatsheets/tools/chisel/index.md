@@ -32,7 +32,7 @@ date : 2021-09-03T11:34:00+02:00
 weight : 0
 ### Used to tag content. By default this is inherited using cascading from _index.md files
 ### Only set of you want to overwrite these inherited values.
-# tags : [""]
+tags : ["Tools","pivoting","socks"]
 ---
 
 ## chisel
