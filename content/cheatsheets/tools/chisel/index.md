@@ -232,7 +232,7 @@ On the chisel server you can now access the service hosted on port 8080 on port 
 
 #### Reverse Socks
 
-![Reverse Socks](images/reverse_sock.png)
+[![Reverse Socks](images/reverse_sock.png)](https://youtu.be/Yp4oxoQIBAM?t=5454)
 
 Start a server on the server node
 
