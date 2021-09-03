@@ -1187,20 +1187,21 @@ Filtering options:
   --ignore-nofqdn       Ignore DHCPv6 queries that do not contain the Fully Qualified Domain Name (FQDN) option.
 </code></pre>
 <h3 id=examples>Examples</h3>
-<div class="notices warning"><p>To run mitm6 without interrupting the use of internet from the clients, you need to forward packets do this by running the following besides mitm6.</p>
+<div class="notices warning"><p>To run mitm6 without interrupting the use of internet from the clients, you need to forward packets do this by running the following besides mitm6. (need to verify this)</p>
 <pre><code class=language-bash>sudo sysctl -w net.ipv4.ip_forward=1
 sudo sysctl -p
 </code></pre>
 </div>
 <h4 id=mitm-the-whole-network>MITM the whole network</h4>
-<pre><code class=language-bash>sudo mitm6
+<p>(run in root terminal <code>sudo zsh</code>)</p>
+<pre><code class=language-bash>mitm6
 </code></pre>
 <h4 id=specific-domain>Specific domain</h4>
 <p>Command below will send out IPv6 RA and catch DNS requests for lab.justin-p.me.</p>
-<pre><code class=language-bash>sudo mitm6 -i eth0 -d lab.justin-p.me
+<pre><code class=language-bash>mitm6 -i eth0 -d lab.justin-p.me
 </code></pre>
 <h4 id=specific-target>Specific target</h4>
-<pre><code class=language-bash>sudo mitm6 -i eth0 -hw dc01.lab.justin-p.me.
+<pre><code class=language-bash>mitm6 -i eth0 -hw dc01.lab.justin-p.me.
 </code></pre>
 <h3 id=also-see>Also see</h3>
 <p><a href=https://github.com/fox-it/mitm6>Github project</a></p>

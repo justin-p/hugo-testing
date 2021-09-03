@@ -173,8 +173,11 @@ Install
 pip3 install pyftpdlib
 Python2 Python3 python -m pyftpdlib -p 21 -w --user=username --password=password python3 -m pyftpdlib -p 21 -w --user=username --password=password unicode character Print a unicode character</description></item><item><title>Configs</title><link>https://notes.justin-p.me/notes/networking/configs/</link><pubDate>Tue, 10 Mar 2020 16:33:39 +0100</pubDate><guid>https://notes.justin-p.me/notes/networking/configs/</guid><description>Configs See github</description></item><item><title>Discover Open Ports</title><link>https://notes.justin-p.me/notes/methodology/general/port-scanning/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/port-scanning/</guid><description>Discover Open Ports In order to start testing something you first want to find out if it has any network ports open. Discovering what ports are open and what service is running behind is crucial and should be one of the first things you do after recon.
 MOVE TO OWN TOOLS PAGE netdiscover Uses ARP to discover hosts.
-netdiscover -r 192.168.1.0/24 MOVE TO OWN TOOLS PAGE masscan Usefull on larger networks where speed is important.</description></item><item><title>Metasploit</title><link>https://notes.justin-p.me/cheatsheets/tools/metasploit/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://notes.justin-p.me/cheatsheets/tools/metasploit/</guid><description>Metasploit Install https://github.com/rapid7/metasploit-framework/releases
-Usage msfconsole [options]]
+netdiscover -r 192.168.1.0/24 MOVE TO OWN TOOLS PAGE masscan Usefull on larger networks where speed is important.</description></item><item><title>Metasploit</title><link>https://notes.justin-p.me/cheatsheets/tools/metasploit/</link><pubDate>Tue, 10 Mar 2020 16:33:38 +0100</pubDate><guid>https://notes.justin-p.me/cheatsheets/tools/metasploit/</guid><description>Metasploit Install Easiest way is to use Kali/Parrot and install from repo
+apt install metasploit-framework
+otherwise download from
+https://github.com/rapid7/metasploit-framework/releases
+Usage msfconsole [options]
 Flags Common options:
 -E, --environment ENVIRONMENT Set Rails environment, defaults to RAIL_ENV environment variable or 'production'
 Database options:

