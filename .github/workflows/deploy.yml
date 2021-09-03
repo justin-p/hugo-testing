@@ -9,13 +9,13 @@ on:
       
 jobs:
   build_and_deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - name: Clone this repo
         uses: actions/checkout@v2
           
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v2.5.0
         with:
           hugo-version: 'latest'
           extended: true
