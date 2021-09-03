@@ -1,16 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main Page on My notes and snippets</title><link>https://notes.justin-p.me/tags/main-page/</link><description>Recent content in Main Page on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 19:00:54 +0100</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/main-page/index.xml" rel="self" type="application/rss+xml"/><item><title>Tools</title><link>https://notes.justin-p.me/cheatsheets/tools/</link><pubDate>Tue, 10 Mar 2020 19:00:54 +0100</pubDate><guid>https://notes.justin-p.me/cheatsheets/tools/</guid><description>Tools &amp;#39;C2 Frameworks&amp;#39;
-C2 Frameworks description.
-&amp;#39;Forensic&amp;#39;
-forensic description.
-&amp;#39;Steganography&amp;#39;
-Steganography description.
-amass
-amass description.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main Page on My notes and snippets</title><link>https://notes.justin-p.me/tags/main-page/</link><description>Recent content in Main Page on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 10 Mar 2020 19:00:54 +0100</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/main-page/index.xml" rel="self" type="application/rss+xml"/><item><title>Tools</title><link>https://notes.justin-p.me/cheatsheets/tools/</link><pubDate>Tue, 10 Mar 2020 19:00:54 +0100</pubDate><guid>https://notes.justin-p.me/cheatsheets/tools/</guid><description>Tools AMSITrigger
+AMSITrigger is a tool to identify malicious strings in PowerShell files.
+aria2
+aria2 description.
 bettercap
-bettercap description.
-h8mail
-Password Breach Hunting &amp;amp; Email OSINT tool, locally or using premium services. Supports chasing down related email.
-hash identifier</description></item><item><title>Notes</title><link>https://notes.justin-p.me/notes/</link><pubDate>Tue, 10 Mar 2020 18:59:42 +0100</pubDate><guid>https://notes.justin-p.me/notes/</guid><description>Notes Courses
+The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking and IPv4 and IPv6 networks reconnaissance and MITM attacks.
+binwalk
+Binwalk is a tool for searching binary files like images and audio files for embedded files and data.</description></item><item><title>Notes</title><link>https://notes.justin-p.me/notes/</link><pubDate>Tue, 10 Mar 2020 18:59:42 +0100</pubDate><guid>https://notes.justin-p.me/notes/</guid><description>Notes Courses
 Notes from cources I did.
 CTFs
 Notes and (semi-) Writeups of CTFs

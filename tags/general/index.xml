@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>general on My notes and snippets</title><link>https://notes.justin-p.me/tags/general/</link><description>Recent content in general on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 26 Jan 2021 17:33:35 +0100</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/general/index.xml" rel="self" type="application/rss+xml"/><item><title>general</title><link>https://notes.justin-p.me/notes/methodology/general/</link><pubDate>Tue, 26 Jan 2021 17:33:35 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/</guid><description>general Buffer Overflow
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>General on My notes and snippets</title><link>https://notes.justin-p.me/tags/general/</link><description>Recent content in General on My notes and snippets</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 17:11:21 +0200</lastBuildDate><atom:link href="https://notes.justin-p.me/tags/general/index.xml" rel="self" type="application/rss+xml"/><item><title>AV Bypass</title><link>https://notes.justin-p.me/notes/methodology/general/avbypass/</link><pubDate>Thu, 02 Sep 2021 17:11:21 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/avbypass/</guid><description>AV Bypass Malware Test VM
+Test VM that ensures that no samples leave the system.</description></item><item><title>backscatter</title><link>https://notes.justin-p.me/notes/random/backscatter/</link><pubDate>Thu, 02 Sep 2021 17:11:21 +0200</pubDate><guid>https://notes.justin-p.me/notes/random/backscatter/</guid><description>backscatter Examples Single test nc &amp;lt;mailhost&amp;gt; 25 EHLO domain.tld MAIL FROM:victim@domain.tld RCPT TO:notexistingmailbox@domain.tld DATA backscattering is fun . Automated test Create a file with this content (backscatter.txt)
+EHLO example.com MAIL FROM:victim@example.com RCPT TO:notexistingmailbox@target.com DATA backscattering is fun . #!/bin/sh while true; do cat backscatter.txt | while read L; do sleep &amp;quot;1&amp;quot;; echo &amp;quot;$L&amp;quot;; done | &amp;quot;nc&amp;quot; -w 3 -C -v &amp;quot;&amp;lt;mailhost&amp;gt;&amp;quot; &amp;quot;25&amp;quot;; done</description></item><item><title>password cracking</title><link>https://notes.justin-p.me/notes/methodology/general/password-cracking/</link><pubDate>Thu, 02 Sep 2021 17:11:21 +0200</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/password-cracking/</guid><description>Password cracking rules
+rules.
+wordlists
+wordlists.</description></item><item><title>General</title><link>https://notes.justin-p.me/notes/methodology/general/</link><pubDate>Tue, 26 Jan 2021 17:33:35 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/</guid><description>general AV Bypass
+AV Bypass.
+Buffer Overflow
 Buffer Overflowaaaaaaaaaaaaaaaaaaaaaaaaaa.
 Discover Open Ports
 SCAN ALL THE THINGS!
@@ -6,10 +13,9 @@ encrypted password protected pdf
 Show me the hidden goods.
 encrypted password protected zip
 Show me the hidden goods.
-Password Spraying
-Spray it baby, spray it good.
-post compromise recon
-post compromise recon.</description></item><item><title>encrypted password protected zip</title><link>https://notes.justin-p.me/notes/methodology/general/crack-password-protected-zip/</link><pubDate>Tue, 10 Mar 2020 16:43:46 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/crack-password-protected-zip/</guid><description>encrypted password protected zip During your work you might stumble upon an password protected zip. It&amp;rsquo;s possible to extract a password hash that can be cracked with hashcat/john.
+password cracking
+password cracking.
+Password Spraying</description></item><item><title>encrypted password protected zip</title><link>https://notes.justin-p.me/notes/methodology/general/crack-password-protected-zip/</link><pubDate>Tue, 10 Mar 2020 16:43:46 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/crack-password-protected-zip/</guid><description>encrypted password protected zip During your work you might stumble upon an password protected zip. It&amp;rsquo;s possible to extract a password hash that can be cracked with hashcat/john.
 zip2john extract zip hash
 zip2john crackme.zip &amp;gt; crackeziphash.txt ver 2.0 efh 5455 efh 7875 crackme.zip/DoNotTouch PKZIP Encr: 2b chk, TS_chk, cmplen=335181, decmplen=884736, crc=E8183254 hashcat format remove zipfilename
 zip2john crackme.zip | cut -d &amp;quot;:&amp;quot; -f 2 &amp;gt; ziphash.txt ver 2.0 efh 5455 efh 7875 crackme.</description></item><item><title>priv esc</title><link>https://notes.justin-p.me/notes/methodology/general/priv-esc/</link><pubDate>Tue, 10 Mar 2020 16:43:46 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/general/priv-esc/</guid><description>priv esc Just because you pop&amp;rsquo;ed a shell doenst mean its game over. Sometimes you find your self in a low privilage process and in order to compromise the host fully you would need to escalate your privileges
