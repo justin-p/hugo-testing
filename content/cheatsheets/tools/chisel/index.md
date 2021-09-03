@@ -249,7 +249,7 @@ chisel client <server_ip:server_port> R:8001:127.0.0.1:9000
 Start a server instance on the client that suports socks5
 
 ```bash
-chisel.exe server -p 9000 --socks5
+chisel server -p 9000 --socks5
 ```
 
 Start a client on the server node.
