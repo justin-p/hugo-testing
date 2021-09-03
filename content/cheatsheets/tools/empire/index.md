@@ -81,7 +81,6 @@ docker run -it -p 1337:1337 -p 5000:5000 --volumes-from data --entrypoint /bin/b
 ./ps-empire server
 ```
 
-
 #### Start the client
 
 ```bash

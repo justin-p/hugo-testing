@@ -84,7 +84,7 @@ Filtering options:
 
 {{% notice warning %}}
 
-To run mitm6 without interrupting the use of internet from the clients, you need to forward packets do this by running the following besides mitm6.
+To run mitm6 without interrupting the use of internet from the clients, you need to forward packets do this by running the following besides mitm6. (need to verify this)
 
 ```bash
 sudo sysctl -w net.ipv4.ip_forward=1
@@ -93,12 +93,12 @@ sudo sysctl -p
 
 {{% /notice %}}
 
-
-
 #### MITM the whole network
 
+(run in root terminal `sudo zsh`)
+
 ```bash
-sudo mitm6
+mitm6
 ```
 
 #### Specific domain
@@ -106,13 +106,13 @@ sudo mitm6
 Command below will send out IPv6 RA and catch DNS requests for lab.justin-p.me.
 
 ```bash
-sudo mitm6 -i eth0 -d lab.justin-p.me
+mitm6 -i eth0 -d lab.justin-p.me
 ```
 
 #### Specific target
 
 ```bash
-sudo mitm6 -i eth0 -hw dc01.lab.justin-p.me.
+mitm6 -i eth0 -hw dc01.lab.justin-p.me.
 ```
 
 ### Also see

