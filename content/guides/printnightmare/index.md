@@ -75,7 +75,7 @@ mkdir payloads
 git clone https://github.com/justin-p/CVE-2021-1675
 ```
 
-Then if you are lazy just use the [Taskfile](https://taskfile.dev/#/) inlclude in the repo.
+Then if you are lazy just use the [Taskfile](https://taskfile.dev/#/) included in the repo.
 
 ```bash
 task payload_folder
