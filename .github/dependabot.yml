@@ -5,7 +5,7 @@ updates:
   schedule:
     interval: "daily"
     time: '16:00'
-    timezone: Amsterdam
+    timezone: Europe/Amsterdam
   labels:
   - "CI/CD"
   commit-message:
