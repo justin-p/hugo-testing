@@ -11,7 +11,7 @@
     #1c1e20
     #121212   
 */
-  --MAIN-BACKGROUND-color: #121212;
+  --MAIN-BACKGROUND-color: #121212; /* Color of the body by default */
   --MAIN-TEXT-color: #9da8bf; /* Color of text by default */
   --MAIN-TITLES-TEXT-color: #3c4e73; /* Color of titles h2-h3-h4-h5 */
   --MAIN-LINK-color: #3c4e73; /* Color of links */
@@ -30,10 +30,10 @@
 
   --TOP-BAR-backgroundcolor: #1c1e20; /* top bar menu thingy */
 
-  --TABLE-bordercolor:#1c1e20;
-  --TABLE-TH-backgroundcolor:#1c1e20;
-  --TABLE-TH-bordercolor:#1c1e20;
-  --TABLE-TD-backgroundcolor:#1F2226;
+  --TABLE-bordercolor:#1c1e20; /* border color for tables */
+  --TABLE-TH-backgroundcolor:#1c1e20; /* header background color for tables */
+  --TABLE-TH-bordercolor:#1c1e20; /* header border color for tables */
+  --TABLE-TD-backgroundcolor:#1F2226; /* data cell background color for tables */
 
   --MENU-HEADER-BG-color: #212b40; /* Background color of menu header */
   --MENU-HEADER-BORDER-color: #3c4e73; /*Color of menu header border */
