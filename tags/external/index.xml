@@ -21,6 +21,6 @@ Gaining access through people.
 Post Exploit
 Post Exploit information.
 recon
-Recon information.</description></item><item><title>cloud-provider-web-servers</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</link><pubDate>Tue, 10 Mar 2020 16:43:45 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</guid><description>Cloud provider web servers Cloud provider web servers have some special things you might not have on your &amp;lsquo;normal&amp;rsquo; webserver.
+Recon information.</description></item><item><title>cloud-provider-web-servers</title><link>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</link><pubDate>Tue, 10 Mar 2020 16:43:45 +0100</pubDate><guid>https://notes.justin-p.me/notes/methodology/external/postexploit/cloud-provider-web-servers/</guid><description>Cloud provider web servers Cloud provider web servers have some special things you might not have on your &amp;rsquo;normal&amp;rsquo; webserver.
 Azure windows webserver If you are able to compromise an azure server you might be able to use mimikatz to extract certificates and try to authenticitate to Azure with them.
 crypto::capi privilege::debug crypto::cng crypto::certificates /systemstore:local_machine/store:my /export AWS Instance Metadata Cloud server hosted on services like EC2 need a way to orient themselves.</description></item></channel></rss>

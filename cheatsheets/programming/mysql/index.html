@@ -2,12 +2,11 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=generator content="Hugo 0.88.1">
+<meta name=generator content="Hugo 0.93.0">
 <meta name=description content="MySQL examples.">
 <meta name=author content="Justin Perdok">
 <link rel=icon href=/images/favicon.png type=image/png>
-<title>MySQL :: My notes and snippets</title>
-<link href=/css/nucleus.css rel=stylesheet>
+<title>MySQL :: My notes and snippets</title><link href=/css/nucleus.css rel=stylesheet>
 <link href=/css/fontawesome-all.min.css rel=stylesheet>
 <link href=/css/hybrid.css rel=stylesheet>
 <link href=/css/featherlight.min.css rel=stylesheet>
@@ -18,26 +17,21 @@
 <link href=/css/hugo-theme.css rel=stylesheet>
 <link href=/css/theme-darkblue.css rel=stylesheet>
 <script src=/js/jquery-3.3.1.min.js></script>
-<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
-</head>
-<body data-url=/cheatsheets/programming/mysql/>
+<style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/cheatsheets/programming/mysql/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
 <a id=logo href=https://notes.justin-p.me/>
 </a>
-</div>
-<div class=searchbox>
+</div><div class=searchbox>
 <label for=search-by><i class="fas fa-search"></i></label>
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
-</div>
-<script type=text/javascript src=/js/lunr.min.js></script>
+</div><script type=text/javascript src=/js/lunr.min.js></script>
 <script type=text/javascript src=/js/auto-complete.js></script>
 <script type=text/javascript>var baseurl="https://notes.justin-p.me/"</script>
 <script type=text/javascript src=/js/search.js></script>
-</div>
-<div class=highlightable>
+</div><div class=highlightable>
 <ul class=topics>
 <li data-nav-id=/cheatsheets/ title="Cheat Sheets" class="dd-item
 parent">
@@ -55,45 +49,35 @@ parent">
 <a href=/cheatsheets/programming/bash/>
 <i class="fas fa-layer-group"></i> Bash
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/docker-compose/ title=docker-compose class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/docker-compose/ title=docker-compose class=dd-item>
 <a href=/cheatsheets/programming/docker-compose/>
 <i class="fas fa-layer-group"></i> docker-compose
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/dockerfile/ title=Dockerfile class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/dockerfile/ title=Dockerfile class=dd-item>
 <a href=/cheatsheets/programming/dockerfile/>
 <i class="fas fa-layer-group"></i> Dockerfile
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/markdown/ title=Markdown class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/markdown/ title=Markdown class=dd-item>
 <a href=/cheatsheets/programming/markdown/>
 <i class="fas fa-layer-group"></i> Markdown
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/mysql/ title=MySQL class="dd-item active">
+</li><li data-nav-id=/cheatsheets/programming/mysql/ title=MySQL class="dd-item active">
 <a href=/cheatsheets/programming/mysql/>
 <i class="fas fa-layer-group"></i> MySQL
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/php/ title=PHP class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/php/ title=PHP class=dd-item>
 <a href=/cheatsheets/programming/php/>
 <i class="fas fa-layer-group"></i> PHP
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/powershell/ title=PowerShell class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/powershell/ title=PowerShell class=dd-item>
 <a href=/cheatsheets/programming/powershell/>
 <i class="fas fa-layer-group"></i> PowerShell
 </a>
-</li>
-<li data-nav-id=/cheatsheets/programming/python/ title=Python class=dd-item>
+</li><li data-nav-id=/cheatsheets/programming/python/ title=Python class=dd-item>
 <a href=/cheatsheets/programming/python/>
 <i class="fas fa-layer-group"></i> Python
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/cheatsheets/tools/ title=Tools class=dd-item>
+</li></ul></li><li data-nav-id=/cheatsheets/tools/ title=Tools class=dd-item>
 <a href=/cheatsheets/tools/>
 <i class="fas fa-tools"></i> Tools
 </a>
@@ -102,118 +86,95 @@ parent">
 <a href=/cheatsheets/tools/amsitrigger/>
 <i class="fas fa-wrench"></i> AMSITrigger
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/aria2/ title=aria2 class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/aria2/ title=aria2 class=dd-item>
 <a href=/cheatsheets/tools/aria2/>
 <i class="fas fa-wrench"></i> aria2
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/bettercap/ title=bettercap class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/bettercap/ title=bettercap class=dd-item>
 <a href=/cheatsheets/tools/bettercap/>
 <i class="fas fa-wrench"></i> bettercap
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/binwalk/ title=binwalk class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/binwalk/ title=binwalk class=dd-item>
 <a href=/cheatsheets/tools/binwalk/>
 <i class="fas fa-wrench"></i> binwalk
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/chisel/ title=chisel class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/chisel/ title=chisel class=dd-item>
 <a href=/cheatsheets/tools/chisel/>
 <i class="fas fa-wrench"></i> chisel
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/ciphey/ title=ciphey class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/ciphey/ title=ciphey class=dd-item>
 <a href=/cheatsheets/tools/ciphey/>
 <i class="fas fa-wrench"></i> ciphey
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/docker/ title=docker class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/docker/ title=docker class=dd-item>
 <a href=/cheatsheets/tools/docker/>
 <i class="fas fa-wrench"></i> docker
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/docker-compose/ title=docker-compose class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/docker-compose/ title=docker-compose class=dd-item>
 <a href=/cheatsheets/tools/docker-compose/>
 <i class="fas fa-wrench"></i> docker-compose
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/empire/ title=Empire class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/empire/ title=Empire class=dd-item>
 <a href=/cheatsheets/tools/empire/>
 <i class="fas fa-wrench"></i> Empire
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/exiftool/ title=exiftool class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/exiftool/ title=exiftool class=dd-item>
 <a href=/cheatsheets/tools/exiftool/>
 <i class="fas fa-wrench"></i> exiftool
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/foremost/ title=foremost class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/foremost/ title=foremost class=dd-item>
 <a href=/cheatsheets/tools/foremost/>
 <i class="fas fa-wrench"></i> foremost
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/h8mail/ title=h8mail class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/h8mail/ title=h8mail class=dd-item>
 <a href=/cheatsheets/tools/h8mail/>
 <i class="fas fa-wrench"></i> h8mail
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/hashcat/ title=hashcat class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/hashcat/ title=hashcat class=dd-item>
 <a href=/cheatsheets/tools/hashcat/>
 <i class="fas fa-wrench"></i> hashcat
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/hcxtools/ title=hcxtools class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/hcxtools/ title=hcxtools class=dd-item>
 <a href=/cheatsheets/tools/hcxtools/>
 <i class="fas fa-wrench"></i> hcxtools
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/hugo/ title=hugo class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/hugo/ title=hugo class=dd-item>
 <a href=/cheatsheets/tools/hugo/>
 <i class="fas fa-wrench"></i> hugo
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/hydra/ title=Hydra class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/hydra/ title=Hydra class=dd-item>
 <a href=/cheatsheets/tools/hydra/>
 <i class="fas fa-wrench"></i> Hydra
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/metasploit/ title=Metasploit class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/metasploit/ title=Metasploit class=dd-item>
 <a href=/cheatsheets/tools/metasploit/>
 <i class="fas fa-wrench"></i> Metasploit
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/mitm6/ title=mitm6 class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/mitm6/ title=mitm6 class=dd-item>
 <a href=/cheatsheets/tools/mitm6/>
 <i class="fas fa-wrench"></i> mitm6
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/msfvenom/ title=msfvenom class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/msfvenom/ title=msfvenom class=dd-item>
 <a href=/cheatsheets/tools/msfvenom/>
 <i class="fas fa-wrench"></i> msfvenom
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/name-that-hash/ title=Name-That-Hash class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/name-that-hash/ title=Name-That-Hash class=dd-item>
 <a href=/cheatsheets/tools/name-that-hash/>
 <i class="fas fa-wrench"></i> Name-That-Hash
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/ncat/ title=ncat class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/ncat/ title=ncat class=dd-item>
 <a href=/cheatsheets/tools/ncat/>
 <i class="fas fa-wrench"></i> ncat
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/nmap/ title=Nmap class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/nmap/ title=Nmap class=dd-item>
 <a href=/cheatsheets/tools/nmap/>
 <i class="fas fa-wrench"></i> Nmap
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/ntlmrelayx/ title=ntlmrelayx class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/ntlmrelayx/ title=ntlmrelayx class=dd-item>
 <a href=/cheatsheets/tools/ntlmrelayx/>
 <i class="fas fa-wrench"></i> ntlmrelayx
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/openssl/ title=openssl class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/openssl/ title=openssl class=dd-item>
 <a href=/cheatsheets/tools/openssl/>
 <i class="fas fa-wrench"></i> openssl
 </a>
@@ -222,77 +183,59 @@ parent">
 <a href=/cheatsheets/tools/openssl/s_client/>
 <i class="fas fa-wrench"></i> s_client
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/cheatsheets/tools/psdnsdumpsterapi/ title=PSDNSDumpsterAPI class=dd-item>
+</li></ul></li><li data-nav-id=/cheatsheets/tools/psdnsdumpsterapi/ title=PSDNSDumpsterAPI class=dd-item>
 <a href=/cheatsheets/tools/psdnsdumpsterapi/>
 <i class="fas fa-wrench"></i> PSDNSDumpsterAPI
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/psexec/ title=psexec class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/psexec/ title=psexec class=dd-item>
 <a href=/cheatsheets/tools/psexec/>
 <i class="fas fa-wrench"></i> psexec
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/rdesktop/ title=Rdesktop class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/rdesktop/ title=Rdesktop class=dd-item>
 <a href=/cheatsheets/tools/rdesktop/>
 <i class="fas fa-wrench"></i> Rdesktop
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/responder/ title=responder class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/responder/ title=responder class=dd-item>
 <a href=/cheatsheets/tools/responder/>
 <i class="fas fa-wrench"></i> responder
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/search-that-hash/ title=Search-That-Hash class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/search-that-hash/ title=Search-That-Hash class=dd-item>
 <a href=/cheatsheets/tools/search-that-hash/>
 <i class="fas fa-wrench"></i> Search-That-Hash
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/searchsploit/ title=searchsploit class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/searchsploit/ title=searchsploit class=dd-item>
 <a href=/cheatsheets/tools/searchsploit/>
 <i class="fas fa-wrench"></i> searchsploit
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/smbclient/ title=smb class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/smbclient/ title=smb class=dd-item>
 <a href=/cheatsheets/tools/smbclient/>
 <i class="fas fa-wrench"></i> smb
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/steghide/ title=steghide class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/steghide/ title=steghide class=dd-item>
 <a href=/cheatsheets/tools/steghide/>
 <i class="fas fa-wrench"></i> steghide
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/sublist3r/ title=sublist3r class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/sublist3r/ title=sublist3r class=dd-item>
 <a href=/cheatsheets/tools/sublist3r/>
 <i class="fas fa-wrench"></i> sublist3r
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/theharvester/ title=theHarvester class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/theharvester/ title=theHarvester class=dd-item>
 <a href=/cheatsheets/tools/theharvester/>
 <i class="fas fa-wrench"></i> theHarvester
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/threatcheck/ title=ThreatCheck class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/threatcheck/ title=ThreatCheck class=dd-item>
 <a href=/cheatsheets/tools/threatcheck/>
 <i class="fas fa-wrench"></i> ThreatCheck
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/usbrip/ title=usbrip class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/usbrip/ title=usbrip class=dd-item>
 <a href=/cheatsheets/tools/usbrip/>
 <i class="fas fa-wrench"></i> usbrip
 </a>
-</li>
-<li data-nav-id=/cheatsheets/tools/whatweb/ title=whatweb class=dd-item>
+</li><li data-nav-id=/cheatsheets/tools/whatweb/ title=whatweb class=dd-item>
 <a href=/cheatsheets/tools/whatweb/>
 <i class="fas fa-wrench"></i> whatweb
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/cheatsheets/unix/ title=Unix class=dd-item>
+</li></ul></li><li data-nav-id=/cheatsheets/unix/ title=Unix class=dd-item>
 <a href=/cheatsheets/unix/>
 <i class="fab fa-linux"></i> Unix
 </a>
@@ -301,160 +244,127 @@ parent">
 <a href=/cheatsheets/unix/apt/>
 <i class="fas fa-terminal"></i> apt
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/awk/ title=awk class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/awk/ title=awk class=dd-item>
 <a href=/cheatsheets/unix/awk/>
 <i class="fas fa-terminal"></i> awk
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/base64/ title=base64 class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/base64/ title=base64 class=dd-item>
 <a href=/cheatsheets/unix/base64/>
 <i class="fas fa-terminal"></i> base64
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/bzip2/ title=bzip2 class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/bzip2/ title=bzip2 class=dd-item>
 <a href=/cheatsheets/unix/bzip2/>
 <i class="fas fa-terminal"></i> bzip2
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/chmod/ title=chmod class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/chmod/ title=chmod class=dd-item>
 <a href=/cheatsheets/unix/chmod/>
 <i class="fas fa-terminal"></i> chmod
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/cron/ title=cron class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/cron/ title=cron class=dd-item>
 <a href=/cheatsheets/unix/cron/>
 <i class="fas fa-terminal"></i> cron
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/curl/ title=curl class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/curl/ title=curl class=dd-item>
 <a href=/cheatsheets/unix/curl/>
 <i class="fas fa-terminal"></i> curl
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/cut/ title=cut class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/cut/ title=cut class=dd-item>
 <a href=/cheatsheets/unix/cut/>
 <i class="fas fa-terminal"></i> cut
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/dig/ title=dig class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/dig/ title=dig class=dd-item>
 <a href=/cheatsheets/unix/dig/>
 <i class="fas fa-terminal"></i> dig
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/file/ title=file class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/file/ title=file class=dd-item>
 <a href=/cheatsheets/unix/file/>
 <i class="fas fa-terminal"></i> file
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/find/ title=find class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/find/ title=find class=dd-item>
 <a href=/cheatsheets/unix/find/>
 <i class="fas fa-terminal"></i> find
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/ftp/ title=ftp class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/ftp/ title=ftp class=dd-item>
 <a href=/cheatsheets/unix/ftp/>
 <i class="fas fa-terminal"></i> ftp
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/gpg/ title=gpg class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/gpg/ title=gpg class=dd-item>
 <a href=/cheatsheets/unix/gpg/>
 <i class="fas fa-terminal"></i> gpg
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/grep/ title=grep class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/grep/ title=grep class=dd-item>
 <a href=/cheatsheets/unix/grep/>
 <i class="fas fa-terminal"></i> grep
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/gzip-gunzip-zcat/ title="gzip gunzip zcat" class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/gzip-gunzip-zcat/ title="gzip gunzip zcat" class=dd-item>
 <a href=/cheatsheets/unix/gzip-gunzip-zcat/>
 <i class="fas fa-terminal"></i> gzip gunzip zcat
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/md5sum/ title=md5sum class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/md5sum/ title=md5sum class=dd-item>
 <a href=/cheatsheets/unix/md5sum/>
 <i class="fas fa-terminal"></i> md5sum
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/ntp/ title=ntp class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/ntp/ title=ntp class=dd-item>
 <a href=/cheatsheets/unix/ntp/>
 <i class="fas fa-terminal"></i> ntp
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/rev/ title=rev class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/rev/ title=rev class=dd-item>
 <a href=/cheatsheets/unix/rev/>
 <i class="fas fa-terminal"></i> rev
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/scp/ title=scp class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/scp/ title=scp class=dd-item>
 <a href=/cheatsheets/unix/scp/>
 <i class="fas fa-terminal"></i> scp
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/sed/ title=sed class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/sed/ title=sed class=dd-item>
 <a href=/cheatsheets/unix/sed/>
 <i class="fas fa-terminal"></i> sed
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/showmount/ title=showmount class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/showmount/ title=showmount class=dd-item>
 <a href=/cheatsheets/unix/showmount/>
 <i class="fas fa-terminal"></i> showmount
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/sort/ title=sort class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/sort/ title=sort class=dd-item>
 <a href=/cheatsheets/unix/sort/>
 <i class="fas fa-terminal"></i> sort
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/strings/ title=strings class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/strings/ title=strings class=dd-item>
 <a href=/cheatsheets/unix/strings/>
 <i class="fas fa-terminal"></i> strings
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/tar/ title=tar class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/tar/ title=tar class=dd-item>
 <a href=/cheatsheets/unix/tar/>
 <i class="fas fa-terminal"></i> tar
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/tmux/ title=tmux class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/tmux/ title=tmux class=dd-item>
 <a href=/cheatsheets/unix/tmux/>
 <i class="fas fa-terminal"></i> tmux
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/touch/ title=touch class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/touch/ title=touch class=dd-item>
 <a href=/cheatsheets/unix/touch/>
 <i class="fas fa-terminal"></i> touch
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/tr/ title=tr class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/tr/ title=tr class=dd-item>
 <a href=/cheatsheets/unix/tr/>
 <i class="fas fa-terminal"></i> tr
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/uniq/ title=uniq class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/uniq/ title=uniq class=dd-item>
 <a href=/cheatsheets/unix/uniq/>
 <i class="fas fa-terminal"></i> uniq
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/watch/ title=watch class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/watch/ title=watch class=dd-item>
 <a href=/cheatsheets/unix/watch/>
 <i class="fas fa-terminal"></i> watch
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/wc/ title=wc class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/wc/ title=wc class=dd-item>
 <a href=/cheatsheets/unix/wc/>
 <i class="fas fa-terminal"></i> wc
 </a>
-</li>
-<li data-nav-id=/cheatsheets/unix/xxd/ title=xxd class=dd-item>
+</li><li data-nav-id=/cheatsheets/unix/xxd/ title=xxd class=dd-item>
 <a href=/cheatsheets/unix/xxd/>
 <i class="fas fa-terminal"></i> xxd
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/cheatsheets/windows/ title=Windows class=dd-item>
+</li></ul></li><li data-nav-id=/cheatsheets/windows/ title=Windows class=dd-item>
 <a href=/cheatsheets/windows/>
 <i class="fas fa-terminal"></i> Windows
 </a>
@@ -463,17 +373,11 @@ parent">
 <a href=/cheatsheets/windows/net/>
 <i class="fas fa-terminal"></i> NET
 </a>
-</li>
-<li data-nav-id=/cheatsheets/windows/runas/ title=runas class=dd-item>
+</li><li data-nav-id=/cheatsheets/windows/runas/ title=runas class=dd-item>
 <a href=/cheatsheets/windows/runas/>
 <i class="fas fa-terminal"></i> runas
 </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/guides/ title=Guides class=dd-item>
+</li></ul></li></ul></li><li data-nav-id=/guides/ title=Guides class=dd-item>
 <a href=/guides/>
 <i class="fas fa-arrow-alt-circle-right"></i> Guides
 </a>
@@ -482,8 +386,7 @@ parent">
 <a href=/guides/printnightmare/>
 printnightmare
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/ title="Ubuntu VPS" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/ title="Ubuntu VPS" class=dd-item>
 <a href=/guides/ubuntu-vps/>
 <i class="fab fa-ubuntu"></i> Ubuntu VPS
 </a>
@@ -492,62 +395,47 @@ printnightmare
 <a href=/guides/ubuntu-vps/00-intro/>
 00. Introduction
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/01-users/ title="01. Adding users" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/01-users/ title="01. Adding users" class=dd-item>
 <a href=/guides/ubuntu-vps/01-users/>
 01. Adding users
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/02-packges/ title="02. Managing of packages" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/02-packges/ title="02. Managing of packages" class=dd-item>
 <a href=/guides/ubuntu-vps/02-packges/>
 02. Managing of packages
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/03-vim/ title="03. File editor: vim" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/03-vim/ title="03. File editor: vim" class=dd-item>
 <a href=/guides/ubuntu-vps/03-vim/>
 03. File editor: vim
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/04-ufw/ title="04. UFW" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/04-ufw/ title="04. UFW" class=dd-item>
 <a href=/guides/ubuntu-vps/04-ufw/>
 04. UFW
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/05-ssh-keys/ title="05. SSH Keys" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/05-ssh-keys/ title="05. SSH Keys" class=dd-item>
 <a href=/guides/ubuntu-vps/05-ssh-keys/>
 05. SSH Keys
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/06-setup-sshd/ title="06. Setup sshd" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/06-setup-sshd/ title="06. Setup sshd" class=dd-item>
 <a href=/guides/ubuntu-vps/06-setup-sshd/>
 06. Setup sshd
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/07-unattended-upgrades/ title="07. Unattended Upgrades" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/07-unattended-upgrades/ title="07. Unattended Upgrades" class=dd-item>
 <a href=/guides/ubuntu-vps/07-unattended-upgrades/>
 07. Unattended Upgrades
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/08-fail2ban/ title="08. Fail2ban" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/08-fail2ban/ title="08. Fail2ban" class=dd-item>
 <a href=/guides/ubuntu-vps/08-fail2ban/>
 08. Fail2ban
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/09-logwatch/ title="09. Logwatch" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/09-logwatch/ title="09. Logwatch" class=dd-item>
 <a href=/guides/ubuntu-vps/09-logwatch/>
 09. Logwatch
 </a>
-</li>
-<li data-nav-id=/guides/ubuntu-vps/10-sysctl-optimization/ title="10. Sysctl Optimization" class=dd-item>
+</li><li data-nav-id=/guides/ubuntu-vps/10-sysctl-optimization/ title="10. Sysctl Optimization" class=dd-item>
 <a href=/guides/ubuntu-vps/10-sysctl-optimization/>
 10. Sysctl Optimization
 </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ title=Notes class=dd-item>
+</li></ul></li></ul></li><li data-nav-id=/notes/ title=Notes class=dd-item>
 <a href=/notes/>
 <i class="fas fa-book-reader"></i> Notes
 </a>
@@ -561,25 +449,19 @@ printnightmare
 <a href=/notes/courses/blackhat-python/>
 <i class="fas fa-folder"></i> Blackhat Python
 </a>
-</li>
-<li data-nav-id=/notes/courses/breaching-the-cloud/ title="Breaching The Cloud" class=dd-item>
+</li><li data-nav-id=/notes/courses/breaching-the-cloud/ title="Breaching The Cloud" class=dd-item>
 <a href=/notes/courses/breaching-the-cloud/>
 <i class="fas fa-folder"></i> Breaching The Cloud
 </a>
-</li>
-<li data-nav-id=/notes/courses/python4n00bs/ title=Python4N00bs class=dd-item>
+</li><li data-nav-id=/notes/courses/python4n00bs/ title=Python4N00bs class=dd-item>
 <a href=/notes/courses/python4n00bs/>
 <i class="fas fa-folder"></i> Python4N00bs
 </a>
-</li>
-<li data-nav-id=/notes/courses/the-cyber-mentor/ title="The Cyber Mentor" class=dd-item>
+</li><li data-nav-id=/notes/courses/the-cyber-mentor/ title="The Cyber Mentor" class=dd-item>
 <a href=/notes/courses/the-cyber-mentor/>
 <i class="fas fa-folder"></i> The Cyber Mentor
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/ title=CTFs class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/ title=CTFs class=dd-item>
 <a href=/notes/ctfs/>
 <i class="fas fa-flag"></i> CTFs
 </a>
@@ -593,15 +475,11 @@ printnightmare
 <a href=/notes/ctfs/graficomspoorzoeker/challanges/>
 <i class="fas fa-question-circle"></i> Challanges
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/graficomspoorzoeker/solutions/ title=Solutions class=dd-item>
+</li><li data-nav-id=/notes/ctfs/graficomspoorzoeker/solutions/ title=Solutions class=dd-item>
 <a href=/notes/ctfs/graficomspoorzoeker/solutions/>
 <i class="fas fa-check-circle"></i> Solutions
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/htb/ title=HTB class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/htb/ title=HTB class=dd-item>
 <a href=/notes/ctfs/htb/>
 <i class="fas fa-folder"></i> HTB
 </a>
@@ -610,60 +488,47 @@ printnightmare
 <a href=/notes/ctfs/htb/bashed/>
 <i class="fas fa-server"></i> Bashed
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/blue/ title=Blue class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/blue/ title=Blue class=dd-item>
 <a href=/notes/ctfs/htb/blue/>
 <i class="fas fa-server"></i> Blue
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/devel/ title=Devel class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/devel/ title=Devel class=dd-item>
 <a href=/notes/ctfs/htb/devel/>
 <i class="fas fa-server"></i> Devel
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/grandpa/ title=Grandpa class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/grandpa/ title=Grandpa class=dd-item>
 <a href=/notes/ctfs/htb/grandpa/>
 <i class="fas fa-server"></i> Grandpa
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/granny/ title=Granny class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/granny/ title=Granny class=dd-item>
 <a href=/notes/ctfs/htb/granny/>
 <i class="fas fa-server"></i> Granny
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/jerry/ title=Jerry class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/jerry/ title=Jerry class=dd-item>
 <a href=/notes/ctfs/htb/jerry/>
 <i class="fas fa-server"></i> Jerry
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/lame/ title=Lame class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/lame/ title=Lame class=dd-item>
 <a href=/notes/ctfs/htb/lame/>
 <i class="fas fa-server"></i> Lame
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/legacy/ title=Legacy class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/legacy/ title=Legacy class=dd-item>
 <a href=/notes/ctfs/htb/legacy/>
 <i class="fas fa-server"></i> Legacy
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/metmon/ title=Netmon class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/metmon/ title=Netmon class=dd-item>
 <a href=/notes/ctfs/htb/metmon/>
 <i class="fas fa-server"></i> Netmon
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/nibbles/ title=Nibbles class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/nibbles/ title=Nibbles class=dd-item>
 <a href=/notes/ctfs/htb/nibbles/>
 <i class="fas fa-server"></i> Nibbles
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/htb/optimum/ title=Optimum class=dd-item>
+</li><li data-nav-id=/notes/ctfs/htb/optimum/ title=Optimum class=dd-item>
 <a href=/notes/ctfs/htb/optimum/>
 <i class="fas fa-server"></i> Optimum
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/overthewire/ title=OverTheWire class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/overthewire/ title=OverTheWire class=dd-item>
 <a href=/notes/ctfs/overthewire/>
 <i class="fas fa-folder"></i> OverTheWire
 </a>
@@ -672,15 +537,11 @@ printnightmare
 <a href=/notes/ctfs/overthewire/bandit/>
 <i class="fas fa-layer-group"></i> Bandit
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/overthewire/natasa/ title=Natasa class=dd-item>
+</li><li data-nav-id=/notes/ctfs/overthewire/natasa/ title=Natasa class=dd-item>
 <a href=/notes/ctfs/overthewire/natasa/>
 <i class="fas fa-layer-group"></i> Natasa
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/underthewire/ title=underthewire class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/underthewire/ title=underthewire class=dd-item>
 <a href=/notes/ctfs/underthewire/>
 <i class="fas fa-folder"></i> underthewire
 </a>
@@ -689,15 +550,11 @@ printnightmare
 <a href=/notes/ctfs/underthewire/century/>
 <i class="fas fa-folder"></i> century
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/underthewire/cyborg/ title=cyborg class=dd-item>
+</li><li data-nav-id=/notes/ctfs/underthewire/cyborg/ title=cyborg class=dd-item>
 <a href=/notes/ctfs/underthewire/cyborg/>
 <i class="fas fa-folder"></i> cyborg
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/ title=VulnHub class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/ title=VulnHub class=dd-item>
 <a href=/notes/ctfs/vulnhub/>
 <i class="fas fa-folder"></i> VulnHub
 </a>
@@ -706,8 +563,7 @@ printnightmare
 <a href=/notes/ctfs/vulnhub/fristileaks/>
 <i class="fas fa-folder"></i> Fristileaks
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/kioptrix/ title=Kioptrix class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/ title=Kioptrix class=dd-item>
 <a href=/notes/ctfs/vulnhub/kioptrix/>
 <i class="fas fa-folder"></i> Kioptrix
 </a>
@@ -716,42 +572,31 @@ printnightmare
 <a href=/notes/ctfs/vulnhub/kioptrix/level1/>
 <i class="fas fa-layer-group"></i> Level 1
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level2/ title="Level 2" class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level2/ title="Level 2" class=dd-item>
 <a href=/notes/ctfs/vulnhub/kioptrix/level2/>
 <i class="fas fa-layer-group"></i> Level 2
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level3/ title="Level 3" class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level3/ title="Level 3" class=dd-item>
 <a href=/notes/ctfs/vulnhub/kioptrix/level3/>
 <i class="fas fa-layer-group"></i> Level 3
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level4/ title="Level 4" class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/kioptrix/level4/ title="Level 4" class=dd-item>
 <a href=/notes/ctfs/vulnhub/kioptrix/level4/>
 <i class="fas fa-layer-group"></i> Level 4
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/pwnlab/ title=Pwnlab class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/vulnhub/pwnlab/ title=Pwnlab class=dd-item>
 <a href=/notes/ctfs/vulnhub/pwnlab/>
 <i class="fas fa-folder"></i> Pwnlab
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/stapler/ title=Stapler class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/stapler/ title=Stapler class=dd-item>
 <a href=/notes/ctfs/vulnhub/stapler/>
 <i class="fas fa-folder"></i> Stapler
 </a>
-</li>
-<li data-nav-id=/notes/ctfs/vulnhub/vulnix/ title=Vulnix class=dd-item>
+</li><li data-nav-id=/notes/ctfs/vulnhub/vulnix/ title=Vulnix class=dd-item>
 <a href=/notes/ctfs/vulnhub/vulnix/>
 <i class="fas fa-folder"></i> Vulnix
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/ctfs/vulnserver/ title=Vulnserver class=dd-item>
+</li></ul></li><li data-nav-id=/notes/ctfs/vulnserver/ title=Vulnserver class=dd-item>
 <a href=/notes/ctfs/vulnserver/>
 <i class="fas fa-folder"></i> Vulnserver
 </a>
@@ -760,12 +605,7 @@ printnightmare
 <a href=/notes/ctfs/vulnserver/trun/>
 <i class="fas fa-layer-group"></i> TRUN
 </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/ title="Hacking Methodology" class=dd-item>
+</li></ul></li></ul></li><li data-nav-id=/notes/methodology/ title="Hacking Methodology" class=dd-item>
 <a href=/notes/methodology/>
 <i class="fas fa-road"></i> Hacking Methodology
 </a>
@@ -779,13 +619,11 @@ External
 <a href=/notes/methodology/external/misconfigured-cloud-assets/>
 Misconfigured Cloud Assets
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/phising/ title=Phising class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/phising/ title=Phising class=dd-item>
 <a href=/notes/methodology/external/phising/>
 Phising
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/postexploit/ title="Post Exploit" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/postexploit/ title="Post Exploit" class=dd-item>
 <a href=/notes/methodology/external/postexploit/>
 Post Exploit
 </a>
@@ -794,20 +632,15 @@ Post Exploit
 <a href=/notes/methodology/external/postexploit/cloud-provider-web-servers/>
 cloud-provider-web-servers
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/postexploit/rdp/ title=rdp class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/postexploit/rdp/ title=rdp class=dd-item>
 <a href=/notes/methodology/external/postexploit/rdp/>
 rdp
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/postexploit/remoteuac/ title="Remote UAC" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/postexploit/remoteuac/ title="Remote UAC" class=dd-item>
 <a href=/notes/methodology/external/postexploit/remoteuac/>
 Remote UAC
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/ title=recon class=dd-item>
+</li></ul></li><li data-nav-id=/notes/methodology/external/recon/ title=recon class=dd-item>
 <a href=/notes/methodology/external/recon/>
 recon
 </a>
@@ -816,47 +649,35 @@ recon
 <a href=/notes/methodology/external/recon/certificate-transparency-logs/>
 Certificate Transparency Logs
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/credential-gathering/ title="Credential Gathering" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/credential-gathering/ title="Credential Gathering" class=dd-item>
 <a href=/notes/methodology/external/recon/credential-gathering/>
 Credential Gathering
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/dns-recon/ title="DNS Recon" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/dns-recon/ title="DNS Recon" class=dd-item>
 <a href=/notes/methodology/external/recon/dns-recon/>
 DNS Recon
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/user-enumeration/ title="E-Mail Gathering" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/user-enumeration/ title="E-Mail Gathering" class=dd-item>
 <a href=/notes/methodology/external/recon/user-enumeration/>
 E-Mail Gathering
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/google-dorking/ title="Google Dorking" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/google-dorking/ title="Google Dorking" class=dd-item>
 <a href=/notes/methodology/external/recon/google-dorking/>
 Google Dorking
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/identify-technologies/ title="Identify Technologies" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/identify-technologies/ title="Identify Technologies" class=dd-item>
 <a href=/notes/methodology/external/recon/identify-technologies/>
 Identify Technologies
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/public-key-disclosure/ title="public key disclosure" class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/public-key-disclosure/ title="public key disclosure" class=dd-item>
 <a href=/notes/methodology/external/recon/public-key-disclosure/>
 public key disclosure
 </a>
-</li>
-<li data-nav-id=/notes/methodology/external/recon/shodan/ title=Shodan class=dd-item>
+</li><li data-nav-id=/notes/methodology/external/recon/shodan/ title=Shodan class=dd-item>
 <a href=/notes/methodology/external/recon/shodan/>
 Shodan
 </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/general/ title=General class=dd-item>
+</li></ul></li></ul></li><li data-nav-id=/notes/methodology/general/ title=General class=dd-item>
 <a href=/notes/methodology/general/>
 General
 </a>
@@ -870,30 +691,23 @@ AV Bypass
 <a href=/notes/methodology/general/avbypass/malwaretestvm/>
 Malware Test VM
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/general/buffer-overflow/ title="Buffer Overflow" class=dd-item>
+</li></ul></li><li data-nav-id=/notes/methodology/general/buffer-overflow/ title="Buffer Overflow" class=dd-item>
 <a href=/notes/methodology/general/buffer-overflow/>
 <i class="fas fa-layer-group"></i> Buffer Overflow
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/port-scanning/ title="Discover Open Ports" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/port-scanning/ title="Discover Open Ports" class=dd-item>
 <a href=/notes/methodology/general/port-scanning/>
 Discover Open Ports
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/crack-password-encrypted-pdf/ title="encrypted password protected pdf" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/crack-password-encrypted-pdf/ title="encrypted password protected pdf" class=dd-item>
 <a href=/notes/methodology/general/crack-password-encrypted-pdf/>
 encrypted password protected pdf
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/crack-password-protected-zip/ title="encrypted password protected zip" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/crack-password-protected-zip/ title="encrypted password protected zip" class=dd-item>
 <a href=/notes/methodology/general/crack-password-protected-zip/>
 encrypted password protected zip
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/password-cracking/ title="password cracking" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/password-cracking/ title="password cracking" class=dd-item>
 <a href=/notes/methodology/general/password-cracking/>
 password cracking
 </a>
@@ -902,52 +716,39 @@ password cracking
 <a href=/notes/methodology/general/password-cracking/rules/>
 rules
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/password-cracking/wordlists/ title=wordlists class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/password-cracking/wordlists/ title=wordlists class=dd-item>
 <a href=/notes/methodology/general/password-cracking/wordlists/>
 wordlists
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/general/password-spraying/ title="Password Spraying" class=dd-item>
+</li></ul></li><li data-nav-id=/notes/methodology/general/password-spraying/ title="Password Spraying" class=dd-item>
 <a href=/notes/methodology/general/password-spraying/>
 Password Spraying
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/post-compermise-recon/ title="post compromise recon" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/post-compermise-recon/ title="post compromise recon" class=dd-item>
 <a href=/notes/methodology/general/post-compermise-recon/>
 post compromise recon
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/priv-esc/ title="priv esc" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/priv-esc/ title="priv esc" class=dd-item>
 <a href=/notes/methodology/general/priv-esc/>
 priv esc
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/redis-exploitation/ title=Redis class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/redis-exploitation/ title=Redis class=dd-item>
 <a href=/notes/methodology/general/redis-exploitation/>
 Redis
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/shell-escaping/ title="shell escaping" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/shell-escaping/ title="shell escaping" class=dd-item>
 <a href=/notes/methodology/general/shell-escaping/>
 shell escaping
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/sql-injection/ title="SQL Injection" class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/sql-injection/ title="SQL Injection" class=dd-item>
 <a href=/notes/methodology/general/sql-injection/>
 SQL Injection
 </a>
-</li>
-<li data-nav-id=/notes/methodology/general/web/ title=Web class=dd-item>
+</li><li data-nav-id=/notes/methodology/general/web/ title=Web class=dd-item>
 <a href=/notes/methodology/general/web/>
 Web
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/internal/ title=Internal class=dd-item>
+</li></ul></li><li data-nav-id=/notes/methodology/internal/ title=Internal class=dd-item>
 <a href=/notes/methodology/internal/>
 Internal
 </a>
@@ -961,30 +762,23 @@ Active Directory
 <a href=/notes/methodology/internal/active-directory/credential-access/>
 credentialaccess
 </a>
-</li>
-<li data-nav-id=/notes/methodology/internal/active-directory/ipv6-dns-takeover/ title="IPv6 DNS Takeover" class=dd-item>
+</li><li data-nav-id=/notes/methodology/internal/active-directory/ipv6-dns-takeover/ title="IPv6 DNS Takeover" class=dd-item>
 <a href=/notes/methodology/internal/active-directory/ipv6-dns-takeover/>
 IPv6 DNS Takeover
 </a>
-</li>
-<li data-nav-id=/notes/methodology/internal/active-directory/llmnr-and-nbt-ns/ title="LLMNR and NBT-NS" class=dd-item>
+</li><li data-nav-id=/notes/methodology/internal/active-directory/llmnr-and-nbt-ns/ title="LLMNR and NBT-NS" class=dd-item>
 <a href=/notes/methodology/internal/active-directory/llmnr-and-nbt-ns/>
 LLMNR and NBT-NS
 </a>
-</li>
-<li data-nav-id=/notes/methodology/internal/active-directory/smb-relay/ title="SMB Relay" class=dd-item>
+</li><li data-nav-id=/notes/methodology/internal/active-directory/smb-relay/ title="SMB Relay" class=dd-item>
 <a href=/notes/methodology/internal/active-directory/smb-relay/>
 SMB Relay
 </a>
-</li>
-<li data-nav-id=/notes/methodology/internal/active-directory/wpad/ title=WPAD class=dd-item>
+</li><li data-nav-id=/notes/methodology/internal/active-directory/wpad/ title=WPAD class=dd-item>
 <a href=/notes/methodology/internal/active-directory/wpad/>
 WPAD
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/methodology/internal/postexploit/ title=postexploit class=dd-item>
+</li></ul></li><li data-nav-id=/notes/methodology/internal/postexploit/ title=postexploit class=dd-item>
 <a href=/notes/methodology/internal/postexploit/>
 postexploit
 </a>
@@ -993,14 +787,7 @@ postexploit
 <a href=/notes/methodology/internal/postexploit/steal-access-tokens/>
 steal access tokens
 </a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/networking/ title=Networking class=dd-item>
+</li></ul></li></ul></li></ul></li><li data-nav-id=/notes/networking/ title=Networking class=dd-item>
 <a href=/notes/networking/>
 <i class="fas fa-network-wired"></i> Networking
 </a>
@@ -1014,47 +801,35 @@ steal access tokens
 <a href=/notes/networking/osi-model/layer1/>
 <i class="fas fa-ethernet"></i> Layer 1
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer2/ title="Layer 2" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer2/ title="Layer 2" class=dd-item>
 <a href=/notes/networking/osi-model/layer2/>
 <i class="fas fa-ethernet"></i> Layer 2
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer3/ title="Layer 3" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer3/ title="Layer 3" class=dd-item>
 <a href=/notes/networking/osi-model/layer3/>
 <i class="fas fa-ethernet"></i> Layer 3
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer4/ title="Layer 4" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer4/ title="Layer 4" class=dd-item>
 <a href=/notes/networking/osi-model/layer4/>
 <i class="fas fa-ethernet"></i> Layer 4
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer5/ title="Layer 5" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer5/ title="Layer 5" class=dd-item>
 <a href=/notes/networking/osi-model/layer5/>
 <i class="fas fa-ethernet"></i> Layer 5
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer6/ title="Layer 6" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer6/ title="Layer 6" class=dd-item>
 <a href=/notes/networking/osi-model/layer6/>
 <i class="fas fa-ethernet"></i> Layer 6
 </a>
-</li>
-<li data-nav-id=/notes/networking/osi-model/layer7/ title="Layer 7" class=dd-item>
+</li><li data-nav-id=/notes/networking/osi-model/layer7/ title="Layer 7" class=dd-item>
 <a href=/notes/networking/osi-model/layer7/>
 <i class="fas fa-ethernet"></i> Layer 7
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/networking/tcpip-model/ title="TCP/IP Model" class=dd-item>
+</li></ul></li><li data-nav-id=/notes/networking/tcpip-model/ title="TCP/IP Model" class=dd-item>
 <a href=/notes/networking/tcpip-model/>
 <i class="fas fa-ethernet"></i> TCP/IP Model
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/random/ title="Random Things" class=dd-item>
+</li></ul></li><li data-nav-id=/notes/random/ title="Random Things" class=dd-item>
 <a href=/notes/random/>
 <i class="fas fa-random"></i> Random Things
 </a>
@@ -1063,45 +838,29 @@ steal access tokens
 <a href=/notes/random/backscatter/>
 <i class="fas fa-random"></i> backscatter
 </a>
-</li>
-<li data-nav-id=/notes/random/dash_in_file_name/ title="dash in file name" class=dd-item>
+</li><li data-nav-id=/notes/random/dash_in_file_name/ title="dash in file name" class=dd-item>
 <a href=/notes/random/dash_in_file_name/>
 <i class="fas fa-random"></i> dash in file name
 </a>
-</li>
-<li data-nav-id=/notes/random/ssh-sha256-to-public-key/ title="ssh sha256 to public key" class=dd-item>
+</li><li data-nav-id=/notes/random/ssh-sha256-to-public-key/ title="ssh sha256 to public key" class=dd-item>
 <a href=/notes/random/ssh-sha256-to-public-key/>
 <i class="fas fa-random"></i> ssh sha256 to public key
 </a>
-</li>
-</ul>
-</li>
-<li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item>
+</li></ul></li><li data-nav-id=/notes/z_private/ title=Z_Private class=dd-item>
 <a href=/notes/z_private/>
 <i class="fas fa-lock"></i> Private
 </a>
-</li>
-</ul>
-</li>
-</ul>
-<section id=shortcuts>
-<h3>More</h3>
-<ul>
+</li></ul></li></ul><section id=shortcuts>
+<h3>More</h3><ul>
 <li>
 <a class=padding href=https://github.com/justin-p/><i class="fab fa-github"></i> Github</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://justin-p.me/><i class="fas fa-kiss-wink-heart"></i> Blog</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://twitter.com/JustinPerdok><i class="fab fa-twitter"></i> Twitter</a>
-</li>
-<li>
+</li><li>
 <a class=padding href=https://www.linkedin.com/in/justinperdok/><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-</li>
-</ul>
-</section>
-<section id=footer>
+</li></ul></section><section id=footer>
 <p>
 Built with
 <a href=https://github.com/matcornic/hugo-theme-learn>
@@ -1111,13 +870,8 @@ and
 <a href=https://gohugo.io/>
 Hugo
 </a>
-</p>
-</section>
-</div>
-</nav>
-<section id=body>
-<div id=overlay></div>
-<div class="padding highlightable">
+</p></section></div></nav><section id=body>
+<div id=overlay></div><div class="padding highlightable">
 <div>
 <div id=top-bar>
 <div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb>
@@ -1130,100 +884,36 @@ Hugo
 <span class=links>
 <a href=/></a> > <a href=/cheatsheets/>Cheat Sheets</a> > <a href=/cheatsheets/programming/>Programming</a> > MySQL
 </span>
-</div>
-<div class=progress>
+</div><div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
 <li><a href=#mysql>MySQL</a>
 <ul>
-<li><a href=#create--delete-database>Create / Delete Database</a></li>
-<li><a href=#backup-database-to-sql-file>Backup Database to SQL File</a></li>
-<li><a href=#restore-from-backup-sql-file>Restore from backup SQL File</a></li>
-<li><a href=#repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</a></li>
-<li><a href=#browsing>Browsing</a></li>
-<li><a href=#insert>Insert</a></li>
-<li><a href=#delete>Delete</a></li>
-<li><a href=#update>Update</a></li>
-<li><a href=#select>Select</a></li>
-<li><a href=#rename>Rename</a></li>
-<li><a href=#conditions>Conditions</a></li>
-<li><a href=#where>Where</a></li>
-<li><a href=#not-null>Not null</a></li>
-<li><a href=#order-by>Order by</a></li>
-<li><a href=#order-desc>Order desc</a></li>
-<li><a href=#order-by-multi>ORDER BY (multi)</a></li>
-<li><a href=#limit>Limit</a></li>
-<li><a href=#concat-and-as>Concat and As</a></li>
-<li><a href=#like>Like</a></li>
-<li><a href=#distinct>Distinct</a></li>
-<li><a href=#count>COUNT</a></li>
-<li><a href=#group-by>Group by</a></li>
-<li><a href=#having>Having</a></li>
-<li><a href=#math-stuff>MATH stuff</a></li>
-<li><a href=#between>Between</a></li>
-<li><a href=#in>In</a></li>
-<li><a href=#join>Join</a></li>
-<li><a href=#left-join>Left join</a></li>
-<li><a href=#inner-join>INNER JOIN</a></li>
-<li><a href=#create--delete--modify-table>Create / Delete / Modify Table</a></li>
-<li><a href=#keys>Keys</a></li>
-<li><a href=#users-and-privileges>Users and Privileges</a></li>
-<li><a href=#main-data-types>Main Data Types</a></li>
-<li><a href=#reset-root-password>Reset Root Password</a></li>
-<li><a href=#also-see>Also see</a></li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</div>
-</div>
-</div>
-<div id=head-tags>
+<li><a href=#create--delete-database>Create / Delete Database</a></li><li><a href=#backup-database-to-sql-file>Backup Database to SQL File</a></li><li><a href=#restore-from-backup-sql-file>Restore from backup SQL File</a></li><li><a href=#repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</a></li><li><a href=#browsing>Browsing</a></li><li><a href=#insert>Insert</a></li><li><a href=#delete>Delete</a></li><li><a href=#update>Update</a></li><li><a href=#select>Select</a></li><li><a href=#rename>Rename</a></li><li><a href=#conditions>Conditions</a></li><li><a href=#where>Where</a></li><li><a href=#not-null>Not null</a></li><li><a href=#order-by>Order by</a></li><li><a href=#order-desc>Order desc</a></li><li><a href=#order-by-multi>ORDER BY (multi)</a></li><li><a href=#limit>Limit</a></li><li><a href=#concat-and-as>Concat and As</a></li><li><a href=#like>Like</a></li><li><a href=#distinct>Distinct</a></li><li><a href=#count>COUNT</a></li><li><a href=#group-by>Group by</a></li><li><a href=#having>Having</a></li><li><a href=#math-stuff>MATH stuff</a></li><li><a href=#between>Between</a></li><li><a href=#in>In</a></li><li><a href=#join>Join</a></li><li><a href=#left-join>Left join</a></li><li><a href=#inner-join>INNER JOIN</a></li><li><a href=#create--delete--modify-table>Create / Delete / Modify Table</a></li><li><a href=#keys>Keys</a></li><li><a href=#users-and-privileges>Users and Privileges</a></li><li><a href=#main-data-types>Main Data Types</a></li><li><a href=#reset-root-password>Reset Root Password</a></li><li><a href=#also-see>Also see</a></li></ul></li></ul></nav></div></div></div></div><div id=head-tags>
 <div class=tags>
 <a class=tag-link href=/tags/programming>Programming</a>
-</div>
-</div>
-<div id=body-inner>
-<h2 id=mysql>MySQL</h2>
-<h3 id=create--delete-database>Create / Delete Database</h3>
-<pre><code class=language-sql>CREATE DATABASE dbNameYouWant
+</div></div><div id=body-inner>
+<h2 id=mysql>MySQL</h2><h3 id=create--delete-database>Create / Delete Database</h3><pre><code class=language-sql>CREATE DATABASE dbNameYouWant
 CREATE DATABASE dbNameYouWant CHARACTER SET utf8
 DROP DATABASE dbNameYouWant
 ALTER DATABASE dbNameYouWant CHARACTER SET utf8
-</code></pre>
-<h3 id=backup-database-to-sql-file>Backup Database to SQL File</h3>
-<pre><code class=language-bash>mysqldump -u Username -p dbNameYouWant &gt; databasename_backup.sql
-</code></pre>
-<h3 id=restore-from-backup-sql-file>Restore from backup SQL File</h3>
-<pre><code class=language-bash>mysql - u Username -p dbNameYouWant &lt; databasename_backup.sql
-</code></pre>
-<h3 id=repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</h3>
-<pre><code class=language-bash>mysqlcheck --all-databases
+</code></pre><h3 id=backup-database-to-sql-file>Backup Database to SQL File</h3><pre><code class=language-bash>mysqldump -u Username -p dbNameYouWant &gt; databasename_backup.sql
+</code></pre><h3 id=restore-from-backup-sql-file>Restore from backup SQL File</h3><pre><code class=language-bash>mysql - u Username -p dbNameYouWant &lt; databasename_backup.sql
+</code></pre><h3 id=repair-tables-after-unclean-shutdown>Repair Tables After Unclean Shutdown</h3><pre><code class=language-bash>mysqlcheck --all-databases
 mysqlcheck --all-databases --fast
-</code></pre>
-<h3 id=browsing>Browsing</h3>
-<pre><code class=language-sql>SHOW DATABASES
+</code></pre><h3 id=browsing>Browsing</h3><pre><code class=language-sql>SHOW DATABASES
 SHOW TABLES
 SHOW FIELDS FROM table / DESCRIBE table
 SHOW CREATE TABLE table
 SHOW PROCESSLIST
 KILL process_number
-</code></pre>
-<h3 id=insert>Insert</h3>
-<pre><code class=language-sql>INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
-</code></pre>
-<h3 id=delete>Delete</h3>
-<pre><code class=language-sql>DELETE FROM table1 / TRUNCATE table1
+</code></pre><h3 id=insert>Insert</h3><pre><code class=language-sql>INSERT INTO table1 (field1, field2, ...) VALUES (value1, value2, ...)
+</code></pre><h3 id=delete>Delete</h3><pre><code class=language-sql>DELETE FROM table1 / TRUNCATE table1
 DELETE FROM table1 WHERE condition
 DELETE FROM table1, table2 FROM table1, table2 WHERE table1.id1 =
   table2.id2 AND condition
-</code></pre>
-<h3 id=update>Update</h3>
-<p>UPDATE scores SET score=25 WHERE student_id=4 AND test_id=4;</p>
-<h3 id=select>Select</h3>
-<pre><code class=language-sql>SELECT * FROM absence;
+</code></pre><h3 id=update>Update</h3><p>UPDATE scores SET score=25 WHERE student_id=4 AND test_id=4;</p><h3 id=select>Select</h3><pre><code class=language-sql>SELECT * FROM absence;
 +------------+------------+
 | student_id | date       |
 +------------+------------+
@@ -1233,8 +923,7 @@ DELETE FROM table1, table2 FROM table1, table2 WHERE table1.id1 =
 |         14 | 2016-12-04 |
 +------------+------------+
 4 rows in set (0.00 sec)
-</code></pre>
-<pre><code class=language-sql>SELECT * FROM table
+</code></pre><pre><code class=language-sql>SELECT * FROM table
 SELECT * FROM table1, table2, ...
 SELECT field1, field2, ... FROM table1, table2, ...
 SELECT ... FROM ... WHERE condition
@@ -1245,9 +934,7 @@ SELECT ... FROM ... WHERE condition ORDER BY field1, field2 DESC
 SELECT ... FROM ... WHERE condition LIMIT 10
 SELECT DISTINCT field1 FROM ...
 SELECT DISTINCT field1, field2 FROM ...
-</code></pre>
-<h3 id=rename>Rename</h3>
-<pre><code class=language-sql>show tables;
+</code></pre><h3 id=rename>Rename</h3><pre><code class=language-sql>show tables;
 +------------------+
 | Tables_in_school |
 +------------------+
@@ -1273,9 +960,7 @@ show tables;
 | tests            |
 +------------------+
 5 rows in set (0.00 sec)
-</code></pre>
-<h3 id=conditions>Conditions</h3>
-<pre><code class=language-sql>field1 = value1
+</code></pre><h3 id=conditions>Conditions</h3><pre><code class=language-sql>field1 = value1
 field1 &lt;&gt; value1
 field1 LIKE 'value _ %'
 field1 IS NULL
@@ -1284,20 +969,16 @@ field1 IS IN (value1, value2)
 field1 IS NOT IN (value1, value2)
 condition1 AND condition2
 condition1 OR condition2
-</code></pre>
-<pre><code class=language-sql>eq =
+</code></pre><pre><code class=language-sql>eq =
 lt &lt;
 gt &gt;
 ge &gt;=
 le &lt;=
 ne !=
-</code></pre>
-<pre><code class=language-sql>OR  ||
+</code></pre><pre><code class=language-sql>OR  ||
 AND &amp;&amp;
 NOT !
-</code></pre>
-<h3 id=where>Where</h3>
-<pre><code class=language-sql>select first_name, last_name, state from students where sex=&quot;F&quot;;
+</code></pre><h3 id=where>Where</h3><pre><code class=language-sql>select first_name, last_name, state from students where sex=&quot;F&quot;;
 +------------+-----------+-------+
 | first_name | last_name | state |
 +------------+-----------+-------+
@@ -1318,9 +999,7 @@ NOT !
 | Aspen      | Velez     | va    |
 +------------+-----------+-------+
 15 rows in set (0.00 sec)
-</code></pre>
-<p>select where the year of birth_date is greater than 2000</p>
-<pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE YEAR(birth_date) &gt;= 2000;
+</code></pre><p>select where the year of birth_date is greater than 2000</p><pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE YEAR(birth_date) &gt;= 2000;
 +------------+-----------+------------+
 | first_name | last_name | birth_date |
 +------------+-----------+------------+
@@ -1333,9 +1012,7 @@ NOT !
 | Kole       | Sanders   | 2000-08-24 |
 +------------+-----------+------------+
 7 rows in set (0.00 sec)
-</code></pre>
-<p>select where the month of birth_day is 3 OR where the state has the value of WA</p>
-<pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE MONTH(birth_date) = 3 OR state=&quot;WA&quot;;
+</code></pre><p>select where the month of birth_day is 3 OR where the state has the value of WA</p><pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE MONTH(birth_date) = 3 OR state=&quot;WA&quot;;
 +------------+-----------+------------+-------+
 | first_name | last_name | birth_date | state |
 +------------+-----------+------------+-------+
@@ -1345,8 +1022,7 @@ NOT !
 | Aaden      | Valentine | 1997-03-05 | vb    |
 +------------+-----------+------------+-------+
 4 rows in set (0.00 sec)
-</code></pre>
-<pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_date) &gt;= 12 AND (state=&quot;WA&quot; OR state=&quot;ra&quot;);
+</code></pre><pre><code class=language-sql>SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_date) &gt;= 12 AND (state=&quot;WA&quot; OR state=&quot;ra&quot;);
 SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_date) &gt;= 12 &amp;&amp; (state=&quot;WA&quot; || state=&quot;ra&quot;);
 +------------+-----------+------------+-------+
 | first_name | last_name | birth_date | state |
@@ -1355,10 +1031,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 | Yasmine    | Lawson    | 1996-03-19 | ra    |
 +------------+-----------+------------+-------+
 2 rows in set, 2 warnings (0.00 sec)
-</code></pre>
-<h3 id=not-null>Not null</h3>
-<p>select all last_name from students where a value is been supplied. Do not show null data.</p>
-<pre><code class=language-sql>SELECT last_name FROM students WHERE last_name IS NOT NULL;
+</code></pre><h3 id=not-null>Not null</h3><p>select all last_name from students where a value is been supplied. Do not show null data.</p><pre><code class=language-sql>SELECT last_name FROM students WHERE last_name IS NOT NULL;
 +-----------+
 | last_name |
 +-----------+
@@ -1389,10 +1062,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 | Sanders   |
 +-----------+
 25 rows in set (0.01 sec)
-</code></pre>
-<h3 id=order-by>Order by</h3>
-<p>order the select by last_name</p>
-<pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name;
+</code></pre><h3 id=order-by>Order by</h3><p>order the select by last_name</p><pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name;
 +------------+-----------+
 | first_name | last_name |
 +------------+-----------+
@@ -1423,10 +1093,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 | Celeste    | Wilson    |
 +------------+-----------+
 25 rows in set (0.00 sec)
-</code></pre>
-<h3 id=order-desc>Order desc</h3>
-<p>order the select by last_name but in descending order.</p>
-<pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name DESC;
+</code></pre><h3 id=order-desc>Order desc</h3><p>order the select by last_name but in descending order.</p><pre><code class=language-sql>select first_name, last_name FROM students ORDER BY last_name DESC;
 +------------+-----------+
 | first_name | last_name |
 +------------+-----------+
@@ -1457,10 +1124,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 | Penelope   | Chase     |
 +------------+-----------+
 25 rows in set (0.00 sec)
-</code></pre>
-<h3 id=order-by-multi>ORDER BY (multi)</h3>
-<p>order by multiple values.</p>
-<pre><code class=language-sql>SELECT first_name, last_name, state FROM students ORDER BY state DESC, last_name ASC;
+</code></pre><h3 id=order-by-multi>ORDER BY (multi)</h3><p>order by multiple values.</p><pre><code class=language-sql>SELECT first_name, last_name, state FROM students ORDER BY state DESC, last_name ASC;
 +------------+-----------+-------+
 | first_name | last_name | state |
 +------------+-----------+-------+
@@ -1491,10 +1155,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 | Greyson    | Riley     | df    |
 +------------+-----------+-------+
 25 rows in set (0.00 sec)
-</code></pre>
-<h3 id=limit>Limit</h3>
-<p>Limit the select to 5 values.</p>
-<pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5;
+</code></pre><h3 id=limit>Limit</h3><p>Limit the select to 5 values.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5;
 +------------+------------+-----------+
 | student_id | first_name | last_name |
 +------------+------------+-----------+
@@ -1505,9 +1166,7 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 |          5 | Tyler      | Morales   |
 +------------+------------+-----------+
 5 rows in set (0.00 sec)
-</code></pre>
-<p>limit the select to the next 5 values after 5.</p>
-<pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 5;
+</code></pre><p>limit the select to the next 5 values after 5.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 5;
 +------------+------------+-----------+
 | student_id | first_name | last_name |
 +------------+------------+-----------+
@@ -1518,19 +1177,14 @@ SELECT first_name, last_name, birth_date,state FROM students WHERE day(birth_dat
 |         10 | Araceli    | Gould     |
 +------------+------------+-----------+
 5 rows in set (0.00 sec)
-</code></pre>
-<p>limit the select to the next 1 value after 5.</p>
-<pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 1;
+</code></pre><p>limit the select to the next 1 value after 5.</p><pre><code class=language-sql>select student_id,first_name, last_name FROM students LIMIT 5, 1;
 +------------+------------+-----------+
 | student_id | first_name | last_name |
 +------------+------------+-----------+
 |          6 | Kayleigh   | Simon     |
 +------------+------------+-----------+
 1 row in set (0.00 sec)
-</code></pre>
-<h3 id=concat-and-as>Concat and As</h3>
-<p>CONCAT can be used to &lsquo;merge&rsquo; 2 things into something custom AS can be used to rename something.</p>
-<pre><code class=language-sql>SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender' FROM students LIMIT 1;
+</code></pre><h3 id=concat-and-as>Concat and As</h3><p>CONCAT can be used to &lsquo;merge&rsquo; 2 things into something custom AS can be used to rename something.</p><pre><code class=language-sql>SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender' FROM students LIMIT 1;
 +-------------+--------+
 | Name        | Gender |
 +-------------+--------+
@@ -1561,12 +1215,9 @@ SELECT CONCAT(first_name, &quot; &quot;, last_name) AS 'Name',Sex AS 'Gender',&q
 | Dale Cooper | M      | Ow Hi there |
 +-------------+--------+-------------+
 1 row in set (0.00 sec)
-</code></pre>
-<h3 id=like>Like</h3>
-<pre><code class=language-sql>% = wildcard
+</code></pre><h3 id=like>Like</h3><pre><code class=language-sql>% = wildcard
 _ = something needs to be here.
-</code></pre>
-<pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE 'D%' or last_name LIKE '%n';
+</code></pre><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE 'D%' or last_name LIKE '%n';
 +-----------+------------+
 | last_name | first_name |
 +-----------+------------+
@@ -1580,9 +1231,7 @@ _ = something needs to be here.
 | Johnson   | Meadow     |
 +-----------+------------+
 8 rows in set (0.00 sec)
-</code></pre>
-<p>all students that have name first_name of 4 unknown letters and a known 5th letter with value of N</p>
-<pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '____n';
+</code></pre><p>all students that have name first_name of 4 unknown letters and a known 5th letter with value of N</p><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '____n';
 +-----------+------------+
 | last_name | first_name |
 +-----------+------------+
@@ -1591,9 +1240,7 @@ _ = something needs to be here.
 | Velez     | Aspen      |
 +-----------+------------+
 3 rows in set (0.00 sec)
-</code></pre>
-<p>all students that have name first_name of 4 or more letters, 4th must have a value of e</p>
-<pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
+</code></pre><p>all students that have name first_name of 4 or more letters, 4th must have a value of e</p><pre><code class=language-sql>SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
 +-----------+------------+
 SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
 +-----------+------------+
@@ -1608,10 +1255,7 @@ SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
 | Sanders   | Kole       |
 +-----------+------------+
 7 rows in set (0.00 sec)
-</code></pre>
-<h3 id=distinct>Distinct</h3>
-<p>only show unique values</p>
-<pre><code class=language-sql>SELECT DISTINCT type FROM tests ORDER BY type;
+</code></pre><h3 id=distinct>Distinct</h3><p>only show unique values</p><pre><code class=language-sql>SELECT DISTINCT type FROM tests ORDER BY type;
 +------+
 | type |
 +------+
@@ -1619,10 +1263,7 @@ SELECT last_name, first_name FROM students WHERE first_name LIKE '___e%';
 | Q    |
 +------+
 2 rows in set (0.01 sec)
-</code></pre>
-<h3 id=count>COUNT</h3>
-<p>Count unique</p>
-<pre><code class=language-sql>SELECT COUNT(DISTINCT type) FROM tests;
+</code></pre><h3 id=count>COUNT</h3><p>Count unique</p><pre><code class=language-sql>SELECT COUNT(DISTINCT type) FROM tests;
 +----------------------+
 | COUNT(DISTINCT type) |
 +----------------------+
@@ -1655,10 +1296,7 @@ SELECT sex, COUNT(*) AS GenderCount FROM students GROUP BY sex;
 | F   |          15 |
 +-----+-------------+
 2 rows in set (0.00 sec)
-</code></pre>
-<h3 id=group-by>Group by</h3>
-<p>count the students that are born on the same month, then GROUP and ORDER by month.</p>
-<pre><code class=language-sql>select Month(birth_date) AS 'Month', Count(*) AS Students FROM students GROUP BY Month ORDER BY Month;
+</code></pre><h3 id=group-by>Group by</h3><p>count the students that are born on the same month, then GROUP and ORDER by month.</p><pre><code class=language-sql>select Month(birth_date) AS 'Month', Count(*) AS Students FROM students GROUP BY Month ORDER BY Month;
 +-------+----------+
 | Month | Students |
 +-------+----------+
@@ -1691,26 +1329,16 @@ select Month(birth_date) AS 'Month', Count(student_id) AS Students FROM students
 |    12 |        3 |
 +-------+----------+
 10 rows in set (0.00 sec)
-</code></pre>
-<h3 id=having>Having</h3>
-<blockquote>
-<p>Difference between the having and where clause in sql is that the where clause can not be used with aggregates, but the having clause can. One way to think of it is that the having clause is an additional filter to the where clause.</p>
-</blockquote>
-<p><a href=https://stackoverflow.com/questions/16155937/mysql-having-vs-where>source</a></p>
-<blockquote>
-<p>To summarize the difference between WHERE and HAVING: WHERE is used to filter records before any groupings take place. HAVING is used to filter values after they have been groups. Only columns or expression in the group can be included in the HAVING clause’s conditions..</p>
-</blockquote>
-<p><a href=https://www.essentialsql.com/what-is-the-difference-between-where-and-having-clauses/>source</a></p>
-<pre><code class=language-sql>SELECT sex, COUNT(sex) AS 'Amount' FROM students GROUP BY sex HAVING Amount &gt; 10;
+</code></pre><h3 id=having>Having</h3><blockquote>
+<p>Difference between the having and where clause in sql is that the where clause can not be used with aggregates, but the having clause can. One way to think of it is that the having clause is an additional filter to the where clause.</p></blockquote><p><a href=https://stackoverflow.com/questions/16155937/mysql-having-vs-where>source</a></p><blockquote>
+<p>To summarize the difference between WHERE and HAVING: WHERE is used to filter records before any groupings take place. HAVING is used to filter values after they have been groups. Only columns or expression in the group can be included in the HAVING clause’s conditions..</p></blockquote><p><a href=https://www.essentialsql.com/what-is-the-difference-between-where-and-having-clauses/>source</a></p><pre><code class=language-sql>SELECT sex, COUNT(sex) AS 'Amount' FROM students GROUP BY sex HAVING Amount &gt; 10;
 +-----+--------+
 | sex | Amount |
 +-----+--------+
 | F   |     15 |
 +-----+--------+
 1 row in set (0.00 sec)
-</code></pre>
-<h3 id=math-stuff>MATH stuff</h3>
-<pre><code class=language-sql>SELECT test_id AS 'Test',
+</code></pre><h3 id=math-stuff>MATH stuff</h3><pre><code class=language-sql>SELECT test_id AS 'Test',
 MIN(score) AS min,
 MAX(score) as max,
 MAX(score)-MIN(SCORE) AS 'range',
@@ -1733,9 +1361,7 @@ FROM scores GROUP BY test_id;
 |   10 |    2 |   15 |    13 |   210 |  8.4000 |
 +------+------+------+-------+-------+---------+
 10 rows in set (0.00 sec)
-</code></pre>
-<h3 id=between>Between</h3>
-<pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN '1997-1-1' AND '1995-1-1';
+</code></pre><h3 id=between>Between</h3><pre><code class=language-sql>SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN '1997-1-1' AND '1995-1-1';
 Empty set (0.00 sec)
 
 SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN '1995-1-1' AND '1997-1-1';
@@ -1750,10 +1376,7 @@ SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN 
 | Killian    | Cortez    | 1995-07-02 |
 +------------+-----------+------------+
 6 rows in set (0.00 sec)
-</code></pre>
-<h3 id=in>In</h3>
-<p>match for &lsquo;array&rsquo; (list) of vales. Can also be used on sub query&rsquo;s.</p>
-<pre><code class=language-sql>SELECT first_name, last_name FROM students WHERE last_name IN ('Cooper','Sanders','Johnson');
+</code></pre><h3 id=in>In</h3><p>match for &lsquo;array&rsquo; (list) of vales. Can also be used on sub query&rsquo;s.</p><pre><code class=language-sql>SELECT first_name, last_name FROM students WHERE last_name IN ('Cooper','Sanders','Johnson');
 +------------+-----------+
 | first_name | last_name |
 +------------+-----------+
@@ -1762,13 +1385,10 @@ SELECT first_name, last_name, birth_date FROM students WHERE birth_date BETWEEN 
 | Kole       | Sanders   |
 +------------+-----------+
 3 rows in set (0.00 sec)
-</code></pre>
-<h3 id=join>Join</h3>
-<pre><code class=language-sql>SELECT ... FROM t1 JOIN t2 ON t1.id1 = t2.id2 WHERE condition
+</code></pre><h3 id=join>Join</h3><pre><code class=language-sql>SELECT ... FROM t1 JOIN t2 ON t1.id1 = t2.id2 WHERE condition
 SELECT ... FROM t1 LEFT JOIN t2 ON t1.id1 = t2.id2 WHERE condition
 SELECT ... FROM t1 JOIN (t2 JOIN t3 ON ...) ON ...
-</code></pre>
-<pre><code class=language-sql>SELECT student_id, date, score, maxscore FROM tests, scores WHERE date='2009-08-29' AND tests.test_id = scores.test_id;
+</code></pre><pre><code class=language-sql>SELECT student_id, date, score, maxscore FROM tests, scores WHERE date='2009-08-29' AND tests.test_id = scores.test_id;
 +------------+------------+-------+----------+
 | student_id | date       | score | maxscore |
 +------------+------------+-------+----------+
@@ -1848,17 +1468,13 @@ tests.date, scores.score, tests.maxscore
 FROM students, Absences
 WHERE students.student_id = absences.student_id
 GROUP BY students.student_id;
-</code></pre>
-<h3 id=left-join>Left join</h3>
-<pre><code class=language-sql>SELECT students.student_id,
+</code></pre><h3 id=left-join>Left join</h3><pre><code class=language-sql>SELECT students.student_id,
 CONCAT(students.first_name, &quot; &quot;, students.last_name) As Name,
 COUNT(absences.date) As Absences,
 FROM  students LEFT JOIN absences
 ON students.student_id = absences.student_id
 GROUP BY students.student_id;
-</code></pre>
-<h3 id=inner-join>INNER JOIN</h3>
-<pre><code class=language-sql>SELECT students.first_name,
+</code></pre><h3 id=inner-join>INNER JOIN</h3><pre><code class=language-sql>SELECT students.first_name,
 students.last_name,
 scores.test_id,
 scores.score
@@ -1867,33 +1483,22 @@ INNER JOIN scores
 ON students.student_id = scores.student_id
 WHERE scores.score &lt;= 15
 ORDER BY scores.test_id;
-</code></pre>
-<h3 id=create--delete--modify-table>Create / Delete / Modify Table</h3>
-<h4 id=create>Create</h4>
-<pre><code class=language-sql>CREATE TABLE table (field1 type1, field2 type2, ...)
+</code></pre><h3 id=create--delete--modify-table>Create / Delete / Modify Table</h3><h4 id=create>Create</h4><pre><code class=language-sql>CREATE TABLE table (field1 type1, field2 type2, ...)
 CREATE TABLE table (field1 type1, field2 type2, ..., INDEX (field))
 CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1))
 CREATE TABLE table (field1 type1, field2 type2, ..., PRIMARY KEY (field1,
 field2))
-</code></pre>
-<pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, field2 type2, ...,
+</code></pre><pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, field2 type2, ...,
   FOREIGN KEY (fk_field1) REFERENCES table2 (t2_fieldA))
     [ON UPDATE|ON DELETE] [CASCADE|SET NULL]
-</code></pre>
-<pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, fk_field2 type2, ...,
+</code></pre><pre><code class=language-sql>CREATE TABLE table1 (fk_field1 type1, fk_field2 type2, ...,
  FOREIGN KEY (fk_field1, fk_field2) REFERENCES table2 (t2_fieldA, t2_fieldB))
-</code></pre>
-<pre><code class=language-sql>CREATE TABLE table IF NOT EXISTS (...)
-</code></pre>
-<pre><code class=language-sql>CREATE TEMPORARY TABLE table (...)
-</code></pre>
-<h4 id=drop>Drop</h4>
-<pre><code class=language-sql>DROP TABLE table
+</code></pre><pre><code class=language-sql>CREATE TABLE table IF NOT EXISTS (...)
+</code></pre><pre><code class=language-sql>CREATE TEMPORARY TABLE table (...)
+</code></pre><h4 id=drop>Drop</h4><pre><code class=language-sql>DROP TABLE table
 DROP TABLE IF EXISTS table
 DROP TABLE table1, table2, ...
-</code></pre>
-<h4 id=alter>Alter</h4>
-<pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1
+</code></pre><h4 id=alter>Alter</h4><pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1
 ALTER TABLE table MODIFY field1 type1 NOT NULL ...
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 NOT NULL ...
@@ -1904,91 +1509,53 @@ ALTER TABLE table ADD new_name_field1 type1 FIRST
 ALTER TABLE table ADD new_name_field1 type1 AFTER another_field
 ALTER TABLE table DROP field1
 ALTER TABLE table ADD INDEX (field);
-</code></pre>
-<h4 id=change-field-order>Change field order</h4>
-<pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1 FIRST
+</code></pre><h4 id=change-field-order>Change field order</h4><pre><code class=language-sql>ALTER TABLE table MODIFY field1 type1 FIRST
 ALTER TABLE table MODIFY field1 type1 AFTER another_field
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 FIRST
 ALTER TABLE table CHANGE old_name_field1 new_name_field1 type1 AFTER
   another_field
-</code></pre>
-<h3 id=keys>Keys</h3>
-<pre><code class=language-sql>CREATE TABLE table (..., PRIMARY KEY (field1, field2))
+</code></pre><h3 id=keys>Keys</h3><pre><code class=language-sql>CREATE TABLE table (..., PRIMARY KEY (field1, field2))
 CREATE TABLE table (..., FOREIGN KEY (field1, field2) REFERENCES table2
 (t2_field1, t2_field2))
-</code></pre>
-<h3 id=users-and-privileges>Users and Privileges</h3>
-<pre><code class=language-sql>GRANT ALL PRIVILEGES ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
+</code></pre><h3 id=users-and-privileges>Users and Privileges</h3><pre><code class=language-sql>GRANT ALL PRIVILEGES ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT SELECT, INSERT, DELETE ON base.* TO 'user'@'localhost' IDENTIFIED BY 'password';
 REVOKE ALL PRIVILEGES ON base.* FROM 'user'@'host'; -- one permission only
 REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'host'; -- all permissions
-</code></pre>
-<pre><code class=language-sql>SET PASSWORD = PASSWORD('new_pass')
+</code></pre><pre><code class=language-sql>SET PASSWORD = PASSWORD('new_pass')
 SET PASSWORD FOR 'user'@'host' = PASSWORD('new_pass')
 SET PASSWORD = OLD_PASSWORD('new_pass')
-</code></pre>
-<pre><code class=language-sql>DROP USER 'user'@'host'
-</code></pre>
-<p>Host ‘%’ indicates any host.</p>
-<h3 id=main-data-types>Main Data Types</h3>
-<pre><code class=language-sql>TINYINT (1o: -217+128)
+</code></pre><pre><code class=language-sql>DROP USER 'user'@'host'
+</code></pre><p>Host ‘%’ indicates any host.</p><h3 id=main-data-types>Main Data Types</h3><pre><code class=language-sql>TINYINT (1o: -217+128)
 SMALLINT (2o: +-65 000)
 MEDIUMINT (3o: +-16 000 000)
 INT (4o: +- 2 000 000 000)
 BIGINT (8o: +-9.10^18)
-</code></pre>
-<pre><code class=language-sql>Precise interval: -(2^(8*N-1)) -&gt; (2^8*N)-1
-</code></pre>
-<p>⚠ INT(2) = &ldquo;2 digits displayed&rdquo; &ndash; NOT &ldquo;number with 2 digits max&rdquo;</p>
-<pre><code class=language-sql>FLOAT(M,D)
+</code></pre><pre><code class=language-sql>Precise interval: -(2^(8*N-1)) -&gt; (2^8*N)-1
+</code></pre><p>⚠ INT(2) = &ldquo;2 digits displayed&rdquo; &ndash; NOT &ldquo;number with 2 digits max&rdquo;</p><pre><code class=language-sql>FLOAT(M,D)
 DOUBLE(M,D)
 FLOAT(D=0-&gt;53)
-</code></pre>
-<p>⚠ 8,3 -> 12345,678 &ndash; NOT 12345678,123!</p>
-<pre><code class=language-sql>TIME (HH:MM)
+</code></pre><p>⚠ 8,3 -> 12345,678 &ndash; NOT 12345678,123!</p><pre><code class=language-sql>TIME (HH:MM)
 YEAR (AAAA)
 DATE (AAAA-MM-JJ)
 DATETIME (AAAA-MM-JJ HH:MM; années 1000-&gt;9999)
 TIMESTAMP (like DATETIME, but 1970-&gt;2038, compatible with Unix)
-</code></pre>
-<pre><code class=language-sql>VARCHAR (single-line; explicit size)
+</code></pre><pre><code class=language-sql>VARCHAR (single-line; explicit size)
 TEXT (multi-lines; max size=65535)
 BLOB (binary; max size=65535)
-</code></pre>
-<p>Variants for TEXT&BLOB: <code>TINY</code> (max=255), <code>MEDIUM</code> (max=~16000), and <code>LONG</code> (max=4Go). Ex: <code>VARCHAR(32)</code>, <code>TINYTEXT</code>, <code>LONGBLOB</code>, <code>MEDIUMTEXT</code></p>
-<pre><code class=language-sql>ENUM ('value1', 'value2', ...) -- (default NULL, or '' if NOT NULL)
-</code></pre>
-<h3 id=reset-root-password>Reset Root Password</h3>
-<pre><code class=language-bash>/etc/init.d/mysql stop
-</code></pre>
-<pre><code class=language-bash>mysqld_safe --skip-grant-tables
-</code></pre>
-<pre><code class=language-bash>$ mysql # on another terminal
+</code></pre><p>Variants for TEXT&BLOB: <code>TINY</code> (max=255), <code>MEDIUM</code> (max=~16000), and <code>LONG</code> (max=4Go). Ex: <code>VARCHAR(32)</code>, <code>TINYTEXT</code>, <code>LONGBLOB</code>, <code>MEDIUMTEXT</code></p><pre><code class=language-sql>ENUM ('value1', 'value2', ...) -- (default NULL, or '' if NOT NULL)
+</code></pre><h3 id=reset-root-password>Reset Root Password</h3><pre><code class=language-bash>/etc/init.d/mysql stop
+</code></pre><pre><code class=language-bash>mysqld_safe --skip-grant-tables
+</code></pre><pre><code class=language-bash>$ mysql # on another terminal
 mysql&gt; UPDATE mysql.user SET password=PASSWORD('new_pass') WHERE user='root';
-</code></pre>
-<pre><code class=language-bash>### Switch back to the mysqld_safe terminal and kill the process using Control + \
+</code></pre><pre><code class=language-bash>### Switch back to the mysqld_safe terminal and kill the process using Control + \
 $ /etc/init.d/mysql start
-</code></pre>
-<h3 id=also-see>Also see</h3>
-<ul>
+</code></pre><h3 id=also-see>Also see</h3><ul>
 <li>
-<p><a href=https://github.com/justin-p/PowerShell/blob/master/random_sql_data.md>Dummy data</a></p>
-</li>
-<li>
-<p><a href=https://raw.githubusercontent.com/rstacruz/cheatsheets/master/mysql.md>Sources</a></p>
-</li>
-</ul>
-<footer class=footline>
-</footer>
-</div>
-</div>
-<div id=navigation>
-</div>
-</section>
-<div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
-<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
-</div>
-<script src=/js/clipboard.min.js></script>
+<p><a href=https://github.com/justin-p/PowerShell/blob/master/random_sql_data.md>Dummy data</a></p></li><li>
+<p><a href=https://raw.githubusercontent.com/rstacruz/cheatsheets/master/mysql.md>Sources</a></p></li></ul><footer class=footline>
+</footer></div></div><div id=navigation>
+</div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
+<div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js></script>
 <script src=/js/perfect-scrollbar.min.js></script>
 <script src=/js/perfect-scrollbar.jquery.min.js></script>
 <script src=/js/jquery.sticky.js></script>
@@ -2001,5 +1568,4 @@ $ /etc/init.d/mysql start
 <link href=/mermaid/mermaid.css rel=stylesheet>
 <script src=/mermaid/mermaid.js></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
-</body>
-</html>
+</body></html>
