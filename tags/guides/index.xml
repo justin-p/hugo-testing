@@ -11,4 +11,10 @@ Managing packages using the commandline.
 Editing files using the commandline.
 04. UFW
 Setting up a basic firewall files using the commandline.
-05.</description></item></channel></rss>
+05. SSH Keys
+Generating and setting up SSH Keys.
+06. Setup sshd
+Hardening the SSH Deamon.
+07. Unattended Upgrades
+Automating security updates and reboots.
+08. Fail2ban</description></item></channel></rss>

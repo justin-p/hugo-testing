@@ -7,4 +7,9 @@ awk
 awk is a complete pattern scanning and processing language, it is most commonly used as a Unix command-line filter to reformat the output of other commands.
 base64
 base64 encode/decode data and print to standard output.
-bzip2</description></item></channel></rss>
+bzip2
+a block-sorting file compressor.
+chmod
+Change file rights.
+cron
+daemon to execute scheduled commands.</description></item></channel></rss>

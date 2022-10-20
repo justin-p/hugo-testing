@@ -5,7 +5,9 @@ aria2 description.
 bettercap
 The Swiss Army knife for WiFi, Bluetooth Low Energy, wireless HID hijacking and IPv4 and IPv6 networks reconnaissance and MITM attacks.
 binwalk
-Binwalk is a tool for searching binary files like images and audio files for embedded files and data.</description></item><item><title>Notes</title><link>https://notes.justin-p.me/notes/</link><pubDate>Tue, 10 Mar 2020 18:59:42 +0100</pubDate><guid>https://notes.justin-p.me/notes/</guid><description>Notes Courses
+Binwalk is a tool for searching binary files like images and audio files for embedded files and data.
+chisel
+Chisel is a fast TCP tunnel, transported over HTTP, secured via SSH.</description></item><item><title>Notes</title><link>https://notes.justin-p.me/notes/</link><pubDate>Tue, 10 Mar 2020 18:59:42 +0100</pubDate><guid>https://notes.justin-p.me/notes/</guid><description>Notes Courses
 Notes from cources I did.
 CTFs
 Notes and (semi-) Writeups of CTFs

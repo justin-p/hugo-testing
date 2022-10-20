@@ -2,4 +2,5 @@
 Tools to search git repos
 gitleaks # MOVE TO OWN TOOLS PAGE
 gitrob # MOVE TO OWN TOOLS PAGE
-truffleHog # MOVE TO OWN TOOLS PAGE</description></item></channel></rss>
+truffleHog # MOVE TO OWN TOOLS PAGE
+Example docker pull zricethezav/gitleaks docker run --rm --name=gitleaks zricethezav/gitleaks -v -r https://github.</description></item></channel></rss>
